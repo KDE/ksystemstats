@@ -77,9 +77,9 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         m_totalUploadSensor->setValue(newUpload);
     });
 
-    std::vector<SensorProperty*> statisticSensors{m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
+    std::vector<KSysGuard::SensorProperty*> statisticSensors{m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
     for (auto property : statisticSensors) {
-        connect(property, &SensorProperty::subscribedChanged, this, [this, statisticSensors](bool subscribed) {
+        connect(property, &KSysGuard::SensorProperty::subscribedChanged, this, [this, statisticSensors](bool subscribed) {
             if (subscribed && !m_statisticsTimer->isActive()) {
                 m_statisticsTimer->start();
             } else if (std::none_of(statisticSensors.begin(), statisticSensors.end(), [](auto property) { return property->isSubscribed(); })) {
@@ -163,7 +163,7 @@ void NetworkManagerDevice::updateWifi()
     const auto networks = m_wifiDevice->networks();
     std::for_each(networks.begin(), networks.end(), [this, activeConnectionName](QSharedPointer<NetworkManager::WirelessNetwork> network) {
         if (network->ssid() == activeConnectionName) {
-            connect(network.data(), &NetworkManager::WirelessNetwork::signalStrengthChanged, m_signalSensor, &SensorProperty::setValue, Qt::UniqueConnection);
+            connect(network.data(), &NetworkManager::WirelessNetwork::signalStrengthChanged, m_signalSensor, &KSysGuard::SensorProperty::setValue, Qt::UniqueConnection);
             m_signalSensor->setValue(network->signalStrength());
         } else {
             network->disconnect(m_signalSensor);

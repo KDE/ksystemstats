@@ -20,43 +20,43 @@
 #ifndef CPU_H
 #define CPU_H
 
-#include <SensorObject.h>
+#include <systemstats/SensorObject.h>
 
-class BaseCpuObject : public SensorObject {
+class BaseCpuObject : public KSysGuard::SensorObject {
 public:
 protected:
-    BaseCpuObject(const QString &id, const QString &name, SensorContainer *parent);
+    BaseCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent);
 
     virtual void initialize();
     virtual void makeSensors();
 
-    SensorProperty *m_usage;
-    SensorProperty *m_system;
-    SensorProperty *m_user;
-    SensorProperty *m_wait;
+    KSysGuard::SensorProperty *m_usage;
+    KSysGuard::SensorProperty *m_system;
+    KSysGuard::SensorProperty *m_user;
+    KSysGuard::SensorProperty *m_wait;
 };
 
 class CpuObject : public BaseCpuObject {
 public:
-    CpuObject(const QString &id, const QString &name, SensorContainer *parent);
+    CpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent);
     void initialize() override;
 protected:
     void makeSensors() override;
 
-    SensorProperty *m_frequency;
-    SensorProperty *m_temperature;
+    KSysGuard::SensorProperty *m_frequency;
+    KSysGuard::SensorProperty *m_temperature;
 };
 
 class AllCpusObject : public BaseCpuObject {
 public:
-    AllCpusObject(SensorContainer *parent);
+    AllCpusObject(KSysGuard::SensorContainer *parent);
     void setCounts(unsigned int cpuCount, unsigned int coreCount);
     void initialize() override;
 protected:
     void makeSensors() override;
 
-    SensorProperty *m_cpuCount;
-    SensorProperty *m_coreCount;
+    KSysGuard::SensorProperty *m_cpuCount;
+    KSysGuard::SensorProperty *m_coreCount;
 };
 
 #endif

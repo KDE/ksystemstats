@@ -18,13 +18,15 @@
 #ifndef BACKEND_H
 #define BACKEND_H
 
-class SensorContainer;
-class SensorObject;
-class SensorProperty;
+namespace KSysGuard {
+    class SensorContainer;
+    class SensorObject;
+    class SensorProperty;
+}
 
 class MemoryBackend {
 public:
-    MemoryBackend(SensorContainer *container);
+    MemoryBackend(KSysGuard::SensorContainer *container);
     virtual ~MemoryBackend() = default;
 
     void initSensors();
@@ -32,17 +34,17 @@ public:
 protected:
     virtual void makeSensors();
 
-    SensorProperty *m_total;
-    SensorProperty *m_used;
-    SensorProperty *m_free;
-    SensorProperty *m_application;
-    SensorProperty *m_cache;
-    SensorProperty *m_buffer;
-    SensorProperty *m_swapTotal;
-    SensorProperty *m_swapUsed;
-    SensorProperty *m_swapFree;
-    SensorObject *m_physicalObject;
-    SensorObject *m_swapObject;
+    KSysGuard::SensorProperty *m_total;
+    KSysGuard::SensorProperty *m_used;
+    KSysGuard::SensorProperty *m_free;
+    KSysGuard::SensorProperty *m_application;
+    KSysGuard::SensorProperty *m_cache;
+    KSysGuard::SensorProperty *m_buffer;
+    KSysGuard::SensorProperty *m_swapTotal;
+    KSysGuard::SensorProperty *m_swapUsed;
+    KSysGuard::SensorProperty *m_swapFree;
+    KSysGuard::SensorObject *m_physicalObject;
+    KSysGuard::SensorObject *m_swapObject;
 };
 
 #endif

@@ -23,7 +23,7 @@
 #include <QObject>
 #include <QElapsedTimer>
 
-#include "SensorPlugin.h"
+#include "systemstats/SensorPlugin.h"
 
 namespace Solid {
     class Device;
@@ -32,7 +32,7 @@ namespace Solid {
 
 class VolumeObject;
 
-class DisksPlugin : public SensorPlugin
+class DisksPlugin : public KSysGuard::SensorPlugin
 
 {
     Q_OBJECT

@@ -8,9 +8,9 @@
 
 #include <memory>
 
-#include "SensorPlugin.h"
+#include <systemstats/SensorPlugin.h>
 
-class GpuPlugin : public SensorPlugin
+class GpuPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
 public:

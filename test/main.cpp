@@ -29,10 +29,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <iostream>
 
-#include <ksysguard/formatter/Formatter.h>
-
-
-#include "kstatsiface.h"
+#include <formatter/Formatter.h>
+#include <systemstats/DBusInterface.h>
 
 class SensorWatcher : public QCoreApplication
 {
@@ -49,19 +47,19 @@ public:
     void setShowDetails(bool details);
 
 private:
-    void onNewSensorData(const SensorDataList &changes);
-    void onSensorMetaDataChanged(const SensorInfoMap &sensors);
-    void showSensorDetails(const SensorInfoMap &sensors);
-    OrgKdeKSysGuardDaemonInterface *m_iface;
+    void onNewSensorData(const KSysGuard::SensorDataList &changes);
+    void onSensorMetaDataChanged(const KSysGuard::SensorInfoMap &sensors);
+    void showSensorDetails(const KSysGuard::SensorInfoMap &sensors);
+    KSysGuard::SystemStats::DBusInterface *m_iface;
     bool m_showDetails = false;
 };
 
 int main(int argc, char **argv)
 {
-    qDBusRegisterMetaType<SensorData>();
-    qDBusRegisterMetaType<SensorInfo>();
-    qDBusRegisterMetaType<SensorDataList>();
-    qDBusRegisterMetaType<QHash<QString, SensorInfo>>();
+    qDBusRegisterMetaType<KSysGuard::SensorData>();
+    qDBusRegisterMetaType<KSysGuard::SensorInfo>();
+    qDBusRegisterMetaType<KSysGuard::SensorDataList>();
+    qDBusRegisterMetaType<QHash<QString, KSysGuard::SensorInfo>>();
     qDBusRegisterMetaType<QStringList>();
 
     SensorWatcher app(argc, argv);
@@ -90,13 +88,13 @@ int main(int argc, char **argv)
 
 SensorWatcher::SensorWatcher(int &argc, char **argv)
     : QCoreApplication(argc, argv)
-    , m_iface(new OrgKdeKSysGuardDaemonInterface("org.kde.ksystemstats",
+    , m_iface(new KSysGuard::SystemStats::DBusInterface("org.kde.ksystemstats",
           "/",
           QDBusConnection::sessionBus(),
           this))
 {
-    connect(m_iface, &OrgKdeKSysGuardDaemonInterface::newSensorData, this, &SensorWatcher::onNewSensorData);
-    connect(m_iface, &OrgKdeKSysGuardDaemonInterface::sensorMetaDataChanged, this, &SensorWatcher::onSensorMetaDataChanged);
+    connect(m_iface, &KSysGuard::SystemStats::DBusInterface::newSensorData, this, &SensorWatcher::onNewSensorData);
+    connect(m_iface, &KSysGuard::SystemStats::DBusInterface::sensorMetaDataChanged, this, &SensorWatcher::onSensorMetaDataChanged);
 }
 
 void SensorWatcher::subscribe(const QStringList &sensorNames)
@@ -116,14 +114,14 @@ void SensorWatcher::subscribe(const QStringList &sensorNames)
     }
 }
 
-void SensorWatcher::onNewSensorData(const SensorDataList &changes)
+void SensorWatcher::onNewSensorData(const KSysGuard::SensorDataList &changes)
 {
     for (const auto &entry : changes) {
         std::cout << qPrintable(entry.sensorProperty) << ' ' << qPrintable(entry.payload.toString()) << std::endl;
     }
 }
 
-void SensorWatcher::onSensorMetaDataChanged(const SensorInfoMap &sensors)
+void SensorWatcher::onSensorMetaDataChanged(const KSysGuard::SensorInfoMap &sensors)
 {
     if (!m_showDetails) {
         return;
@@ -148,7 +146,7 @@ void SensorWatcher::setShowDetails(bool details)
     m_showDetails = details;
 }
 
-void SensorWatcher::showSensorDetails(const SensorInfoMap &sensors)
+void SensorWatcher::showSensorDetails(const KSysGuard::SensorInfoMap &sensors)
 {
     for (auto it = sensors.constBegin(); it != sensors.constEnd(); ++it) {
         auto info = it.value();

@@ -20,11 +20,11 @@
 #ifndef CPUPLUGIN_H
 #define CPUPLUGIN_H
 
-#include <SensorPlugin.h>
+#include <systemstats/SensorPlugin.h>
 
 class CpuPluginPrivate;
 
-class CpuPlugin : public SensorPlugin
+class CpuPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
 public:

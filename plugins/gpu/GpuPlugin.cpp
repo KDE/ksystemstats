@@ -9,7 +9,7 @@
 #include <KPluginFactory>
 #include <KLocalizedString>
 
-#include <SensorContainer.h>
+#include <systemstats/SensorContainer.h>
 
 #include "GpuDevice.h"
 #include "LinuxBackend.h"
@@ -18,7 +18,7 @@
 class GpuPlugin::Private
 {
 public:
-    std::unique_ptr<SensorContainer> container;
+    std::unique_ptr<KSysGuard::SensorContainer> container;
     std::unique_ptr<GpuBackend> backend;
 
     AllGpus *allGpus = nullptr;
@@ -28,7 +28,7 @@ GpuPlugin::GpuPlugin(QObject *parent, const QVariantList &args)
     : SensorPlugin(parent, args)
     , d(std::make_unique<Private>())
 {
-    d->container = std::make_unique<SensorContainer>(QStringLiteral("gpu"), i18nc("@title", "GPU"), this);
+    d->container = std::make_unique<KSysGuard::SensorContainer>(QStringLiteral("gpu"), i18nc("@title", "GPU"), this);
 
     d->allGpus = new AllGpus(d->container.get());
 

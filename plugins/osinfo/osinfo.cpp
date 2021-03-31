@@ -30,7 +30,9 @@
 #include <KCoreAddons>
 #include <KOSRelease>
 
-#include <SensorContainer.h>
+#include <systemstats/SensorContainer.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorProperty.h>
 
 // Uppercase the first letter of each word.
 QString upperCaseFirst(const QString &input)
@@ -75,25 +77,25 @@ public:
 
     OSInfoPlugin *q;
 
-    SensorContainer *container = nullptr;
+    KSysGuard::SensorContainer *container = nullptr;
 
-    SensorObject *kernelObject = nullptr;
-    SensorProperty *kernelNameProperty = nullptr;
-    SensorProperty *kernelVersionProperty = nullptr;
-    SensorProperty *kernelPrettyNameProperty = nullptr;
+    KSysGuard::SensorObject *kernelObject = nullptr;
+    KSysGuard::SensorProperty *kernelNameProperty = nullptr;
+    KSysGuard::SensorProperty *kernelVersionProperty = nullptr;
+    KSysGuard::SensorProperty *kernelPrettyNameProperty = nullptr;
 
-    SensorObject *systemObject = nullptr;
-    SensorProperty *hostnameProperty = nullptr;
-    SensorProperty *osNameProperty = nullptr;
-    SensorProperty *osVersionProperty = nullptr;
-    SensorProperty *osPrettyNameProperty = nullptr;
-    SensorProperty *osLogoProperty = nullptr;
-    SensorProperty *osUrlProperty = nullptr;
+    KSysGuard::SensorObject *systemObject = nullptr;
+    KSysGuard::SensorProperty *hostnameProperty = nullptr;
+    KSysGuard::SensorProperty *osNameProperty = nullptr;
+    KSysGuard::SensorProperty *osVersionProperty = nullptr;
+    KSysGuard::SensorProperty *osPrettyNameProperty = nullptr;
+    KSysGuard::SensorProperty *osLogoProperty = nullptr;
+    KSysGuard::SensorProperty *osUrlProperty = nullptr;
 
-    SensorObject *plasmaObject = nullptr;
-    SensorProperty *qtVersionProperty = nullptr;
-    SensorProperty *kfVersionProperty = nullptr;
-    SensorProperty *plasmaVersionProperty = nullptr;
+    KSysGuard::SensorObject *plasmaObject = nullptr;
+    KSysGuard::SensorProperty *qtVersionProperty = nullptr;
+    KSysGuard::SensorProperty *kfVersionProperty = nullptr;
+    KSysGuard::SensorProperty *plasmaVersionProperty = nullptr;
 };
 
 class LinuxPrivate : public OSInfoPrivate
@@ -107,27 +109,27 @@ public:
 OSInfoPrivate::OSInfoPrivate(OSInfoPlugin *qq)
     : q(qq)
 {
-    container = new SensorContainer(QStringLiteral("os"), i18nc("@title", "Operating System"), q);
+    container = new KSysGuard::SensorContainer(QStringLiteral("os"), i18nc("@title", "Operating System"), q);
 
-    kernelObject = new SensorObject(QStringLiteral("kernel"), i18nc("@title", "Kernel"), container);
-    kernelNameProperty = new SensorProperty(QStringLiteral("name"), i18nc("@title", "Kernel Name"), QString{}, kernelObject);
-    kernelVersionProperty = new SensorProperty(QStringLiteral("version"), i18nc("@title", "Kernel Version"), QString{}, kernelObject);
-    kernelPrettyNameProperty = new SensorProperty(QStringLiteral("prettyName"), i18nc("@title", "Kernel Name and Version"), QString{}, kernelObject);
+    kernelObject = new KSysGuard::SensorObject(QStringLiteral("kernel"), i18nc("@title", "Kernel"), container);
+    kernelNameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), i18nc("@title", "Kernel Name"), QString{}, kernelObject);
+    kernelVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("version"), i18nc("@title", "Kernel Version"), QString{}, kernelObject);
+    kernelPrettyNameProperty = new KSysGuard::SensorProperty(QStringLiteral("prettyName"), i18nc("@title", "Kernel Name and Version"), QString{}, kernelObject);
     kernelPrettyNameProperty->setShortName(i18nc("@title Kernel Name and Version", "Kernel"));
 
-    systemObject = new SensorObject(QStringLiteral("system"), i18nc("@title", "System"), container);
-    hostnameProperty = new SensorProperty(QStringLiteral("hostname"), i18nc("@title", "Hostname"), QString{}, systemObject);
-    osNameProperty = new SensorProperty(QStringLiteral("name"), i18nc("@title", "Operating System Name"), QString{}, systemObject);
-    osVersionProperty = new SensorProperty(QStringLiteral("version"), i18nc("@title", "Operating System Version"), QString{}, systemObject);
-    osPrettyNameProperty = new SensorProperty(QStringLiteral("prettyName"), i18nc("@title", "Operating System Name and Version"), QString{}, systemObject);
+    systemObject = new KSysGuard::SensorObject(QStringLiteral("system"), i18nc("@title", "System"), container);
+    hostnameProperty = new KSysGuard::SensorProperty(QStringLiteral("hostname"), i18nc("@title", "Hostname"), QString{}, systemObject);
+    osNameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), i18nc("@title", "Operating System Name"), QString{}, systemObject);
+    osVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("version"), i18nc("@title", "Operating System Version"), QString{}, systemObject);
+    osPrettyNameProperty = new KSysGuard::SensorProperty(QStringLiteral("prettyName"), i18nc("@title", "Operating System Name and Version"), QString{}, systemObject);
     osPrettyNameProperty->setShortName(i18nc("@title Operating System Name and Version", "OS"));
-    osLogoProperty = new SensorProperty(QStringLiteral("logo"), i18nc("@title", "Operating System Logo"), QString{}, systemObject);
-    osUrlProperty = new SensorProperty(QStringLiteral("url"), i18nc("@title", "Operating System URL"), QString{}, systemObject);
+    osLogoProperty = new KSysGuard::SensorProperty(QStringLiteral("logo"), i18nc("@title", "Operating System Logo"), QString{}, systemObject);
+    osUrlProperty = new KSysGuard::SensorProperty(QStringLiteral("url"), i18nc("@title", "Operating System URL"), QString{}, systemObject);
 
-    plasmaObject = new SensorObject(QStringLiteral("plasma"), i18nc("@title", "KDE Plasma"), container);
-    qtVersionProperty = new SensorProperty(QStringLiteral("qtVersion"), i18nc("@title", "Qt Version"), QString{}, plasmaObject);
-    kfVersionProperty = new SensorProperty(QStringLiteral("kfVersion"), i18nc("@title", "KDE Frameworks Version"), QString{}, plasmaObject);
-    plasmaVersionProperty = new SensorProperty(QStringLiteral("plasmaVersion"), i18nc("@title", "KDE Plasma Version"), QString{}, plasmaObject);
+    plasmaObject = new KSysGuard::SensorObject(QStringLiteral("plasma"), i18nc("@title", "KDE Plasma"), container);
+    qtVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("qtVersion"), i18nc("@title", "Qt Version"), QString{}, plasmaObject);
+    kfVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("kfVersion"), i18nc("@title", "KDE Frameworks Version"), QString{}, plasmaObject);
+    plasmaVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("plasmaVersion"), i18nc("@title", "KDE Plasma Version"), QString{}, plasmaObject);
 }
 
 OSInfoPlugin::~OSInfoPlugin() = default;

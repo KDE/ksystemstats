@@ -9,7 +9,7 @@
 #include <KLocalizedString>
 
 GpuDevice::GpuDevice(const QString& id, const QString& name)
-    : SensorObject(id, name)
+    : KSysGuard::SensorObject(id, name)
 {
 }
 
@@ -57,11 +57,11 @@ void GpuDevice::update()
 
 void GpuDevice::makeSensors()
 {
-    m_nameProperty = new SensorProperty(QStringLiteral("name"), this);
-    m_usageProperty = new SensorProperty(QStringLiteral("usage"), this);
-    m_totalVramProperty = new SensorProperty(QStringLiteral("totalVram"), this);
-    m_usedVramProperty = new SensorProperty(QStringLiteral("usedVram"), this);
-    m_coreFrequencyProperty = new SensorProperty(QStringLiteral("coreFrequency"), this);
-    m_memoryFrequencyProperty = new SensorProperty(QStringLiteral("memoryFrequency"), this);
-    m_temperatureProperty = new SensorProperty(QStringLiteral("temperature"), this);
+    m_nameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), this);
+    m_usageProperty = new KSysGuard::SensorProperty(QStringLiteral("usage"), this);
+    m_totalVramProperty = new KSysGuard::SensorProperty(QStringLiteral("totalVram"), this);
+    m_usedVramProperty = new KSysGuard::SensorProperty(QStringLiteral("usedVram"), this);
+    m_coreFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("coreFrequency"), this);
+    m_memoryFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("memoryFrequency"), this);
+    m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
 }

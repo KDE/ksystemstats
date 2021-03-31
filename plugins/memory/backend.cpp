@@ -17,30 +17,30 @@
 
 #include "backend.h"
 
-#include <AggregateSensor.h>
-#include <SensorObject.h>
-#include <SensorProperty.h>
+#include <systemstats/AggregateSensor.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorProperty.h>
 
 #include <KLocalizedString>
 
-MemoryBackend::MemoryBackend(SensorContainer *container)
+MemoryBackend::MemoryBackend(KSysGuard::SensorContainer *container)
 {
-    m_physicalObject = new SensorObject(QStringLiteral("physical"), i18nc("@title", "Physical Memory"), container);
-    m_swapObject = new SensorObject(QStringLiteral("swap"), i18nc("@title", "Swap Memory"), container);
+    m_physicalObject = new KSysGuard::SensorObject(QStringLiteral("physical"), i18nc("@title", "Physical Memory"), container);
+    m_swapObject = new KSysGuard::SensorObject(QStringLiteral("swap"), i18nc("@title", "Swap Memory"), container);
 }
 
 void MemoryBackend::makeSensors()
 {
-    m_total = new SensorProperty(QStringLiteral("total"), m_physicalObject);
-    m_used = new SensorProperty(QStringLiteral("used"), m_physicalObject);
-    m_free = new SensorProperty(QStringLiteral("free"), m_physicalObject);
-    m_application = new SensorProperty(QStringLiteral("application"), m_physicalObject);
-    m_cache = new SensorProperty(QStringLiteral("cache"), m_physicalObject);
-    m_buffer = new SensorProperty(QStringLiteral("buffer"), m_physicalObject);
+    m_total = new KSysGuard::SensorProperty(QStringLiteral("total"), m_physicalObject);
+    m_used = new KSysGuard::SensorProperty(QStringLiteral("used"), m_physicalObject);
+    m_free = new KSysGuard::SensorProperty(QStringLiteral("free"), m_physicalObject);
+    m_application = new KSysGuard::SensorProperty(QStringLiteral("application"), m_physicalObject);
+    m_cache = new KSysGuard::SensorProperty(QStringLiteral("cache"), m_physicalObject);
+    m_buffer = new KSysGuard::SensorProperty(QStringLiteral("buffer"), m_physicalObject);
 
-    m_swapTotal = new SensorProperty(QStringLiteral("total"), m_swapObject);
-    m_swapUsed = new SensorProperty(QStringLiteral("used"), m_swapObject);
-    m_swapFree = new SensorProperty(QStringLiteral("free"), m_swapObject);
+    m_swapTotal = new KSysGuard::SensorProperty(QStringLiteral("total"), m_swapObject);
+    m_swapUsed = new KSysGuard::SensorProperty(QStringLiteral("used"), m_swapObject);
+    m_swapFree = new KSysGuard::SensorProperty(QStringLiteral("free"), m_swapObject);
 }
 
 void MemoryBackend::initSensors()
@@ -57,7 +57,7 @@ void MemoryBackend::initSensors()
     m_used->setUnit(KSysGuard::UnitByte);
     m_used->setVariantType(QVariant::ULongLong);
     m_used->setMax(m_total);
-    auto usedPercentage = new PercentageSensor(m_physicalObject, QStringLiteral("usedPercent"), i18nc("@title", "Used Physical Memory Percentage"));
+    auto usedPercentage = new KSysGuard::PercentageSensor(m_physicalObject, QStringLiteral("usedPercent"), i18nc("@title", "Used Physical Memory Percentage"));
     usedPercentage->setShortName(m_used->info().shortName);
     usedPercentage->setBaseSensor(m_used);
 
@@ -66,7 +66,7 @@ void MemoryBackend::initSensors()
     m_free->setUnit(KSysGuard::UnitByte);
     m_free->setVariantType(QVariant::ULongLong);
     m_free->setMax(m_total);
-    auto freePercentage = new PercentageSensor(m_physicalObject, QStringLiteral("freePercent"), i18nc("@title", "Free Physical Memory Percentage"));
+    auto freePercentage = new KSysGuard::PercentageSensor(m_physicalObject, QStringLiteral("freePercent"), i18nc("@title", "Free Physical Memory Percentage"));
     freePercentage->setShortName(m_free->info().shortName);
     freePercentage->setBaseSensor(m_free);
 
@@ -75,7 +75,7 @@ void MemoryBackend::initSensors()
     m_application->setUnit(KSysGuard::UnitByte);
     m_application->setVariantType(QVariant::ULongLong);
     m_application->setMax(m_total);
-    auto applicationPercentage = new PercentageSensor(m_physicalObject, QStringLiteral("applicationPercent"), i18nc("@title", "Application Memory Percentage"));
+    auto applicationPercentage = new KSysGuard::PercentageSensor(m_physicalObject, QStringLiteral("applicationPercent"), i18nc("@title", "Application Memory Percentage"));
     applicationPercentage->setShortName(m_application->info().shortName);
     applicationPercentage->setBaseSensor(m_application);
 
@@ -84,7 +84,7 @@ void MemoryBackend::initSensors()
     m_cache->setUnit(KSysGuard::UnitByte);
     m_cache->setVariantType(QVariant::ULongLong);
     m_cache->setMax(m_total);
-    auto cachePercentage = new PercentageSensor(m_physicalObject, QStringLiteral("cachePercent"), i18nc("@title", "Cache Memory Percentage"));
+    auto cachePercentage = new KSysGuard::PercentageSensor(m_physicalObject, QStringLiteral("cachePercent"), i18nc("@title", "Cache Memory Percentage"));
     cachePercentage->setShortName(m_cache->info().shortName);
     cachePercentage->setBaseSensor(m_cache);
 
@@ -94,7 +94,7 @@ void MemoryBackend::initSensors()
     m_buffer->setUnit(KSysGuard::UnitByte);
     m_buffer->setVariantType(QVariant::ULongLong);
     m_buffer->setMax(m_total);
-    auto bufferPercentage = new PercentageSensor(m_physicalObject, QStringLiteral("bufferPercent"), i18nc("@title", "Buffer Memory Percentage"));
+    auto bufferPercentage = new KSysGuard::PercentageSensor(m_physicalObject, QStringLiteral("bufferPercent"), i18nc("@title", "Buffer Memory Percentage"));
     bufferPercentage->setShortName(m_buffer->info().shortName);
     bufferPercentage->setBaseSensor(m_buffer);
 
@@ -108,7 +108,7 @@ void MemoryBackend::initSensors()
     m_swapUsed->setUnit(KSysGuard::UnitByte);
     m_swapUsed->setVariantType(QVariant::ULongLong);
     m_swapUsed->setMax(m_swapTotal);
-    auto usedSwapPercentage = new PercentageSensor(m_swapObject, QStringLiteral("usedPercent"), i18nc("@title", "Used Swap Memory Percentage"));
+    auto usedSwapPercentage = new KSysGuard::PercentageSensor(m_swapObject, QStringLiteral("usedPercent"), i18nc("@title", "Used Swap Memory Percentage"));
     usedSwapPercentage->setShortName(m_swapUsed->info().shortName);
     usedSwapPercentage->setBaseSensor(m_swapUsed);
 
@@ -117,7 +117,7 @@ void MemoryBackend::initSensors()
     m_swapFree->setUnit(KSysGuard::UnitByte);
     m_swapFree->setVariantType(QVariant::ULongLong);
     m_swapFree->setMax(m_swapTotal);
-    auto freeSwapPercentage = new PercentageSensor(m_swapObject, QStringLiteral("freePercent"), i18nc("@title", "Free Swap Memory Percentage"));
+    auto freeSwapPercentage = new KSysGuard::PercentageSensor(m_swapObject, QStringLiteral("freePercent"), i18nc("@title", "Free Swap Memory Percentage"));
     freeSwapPercentage->setShortName(m_swapFree->info().shortName);
     freeSwapPercentage->setBaseSensor(m_swapFree);
 }

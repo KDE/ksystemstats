@@ -21,7 +21,10 @@
 #define CPUPLUGIN_P_H
 
 class CpuPlugin;
-class SensorContainer;
+namespace KSysGuard
+{
+    class SensorContainer;
+}
 
 class CpuPluginPrivate {
 public:
@@ -29,7 +32,7 @@ public:
     virtual ~CpuPluginPrivate() =  default;
     virtual void update() {};
 
-    SensorContainer *m_container;
+    KSysGuard::SensorContainer *m_container;
 };
 
 #endif

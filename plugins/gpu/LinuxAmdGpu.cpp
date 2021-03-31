@@ -10,7 +10,7 @@
 
 #include <QDir>
 
-#include "SysFsSensor.h"
+#include <systemstats/SysFsSensor.h>
 
 int ppTableGetMax(const QByteArray &table)
 {
@@ -94,32 +94,32 @@ void LinuxAmdGpu::makeSensors()
 {
     auto devicePath = QString::fromLocal8Bit(udev_device_get_syspath(m_device));
 
-    m_nameProperty = new SensorProperty(QStringLiteral("name"), this);
-    m_totalVramProperty = new SensorProperty(QStringLiteral("totalVram"),  this);
+    m_nameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), this);
+    m_totalVramProperty = new KSysGuard::SensorProperty(QStringLiteral("totalVram"),  this);
 
-    auto sensor = new SysFsSensor(QStringLiteral("usage"), devicePath % QStringLiteral("/gpu_busy_percent"), this);
+    auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("usage"), devicePath % QStringLiteral("/gpu_busy_percent"), this);
     m_usageProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new SysFsSensor(QStringLiteral("usedVram"), devicePath % QStringLiteral("/mem_info_vram_used"), this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("usedVram"), devicePath % QStringLiteral("/mem_info_vram_used"), this);
     m_usedVramProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new SysFsSensor(QStringLiteral("coreFrequency"), devicePath % QStringLiteral("/pp_dpm_sclk"), this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("coreFrequency"), devicePath % QStringLiteral("/pp_dpm_sclk"), this);
     sensor->setConvertFunction([](const QByteArray &input) {
         return ppTableGetCurrent(input);
     });
     m_coreFrequencyProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new SysFsSensor(QStringLiteral("memoryFrequency"), devicePath % QStringLiteral("/pp_dpm_mclk"), this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("memoryFrequency"), devicePath % QStringLiteral("/pp_dpm_mclk"), this);
     sensor->setConvertFunction([](const QByteArray &input) {
         return ppTableGetCurrent(input);
     });
     m_memoryFrequencyProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new SysFsSensor(QStringLiteral("temperature"), devicePath % QLatin1Char('/') % m_coreTemperatureCurrentPath, this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("temperature"), devicePath % QLatin1Char('/') % m_coreTemperatureCurrentPath, this);
     sensor->setConvertFunction([](const QByteArray &input) {
         auto result = std::atoi(input);
         return result / 1000;

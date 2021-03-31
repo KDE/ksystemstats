@@ -3,12 +3,12 @@ set(SOURCES
     ksysguarddaemon.cpp
 )
 
-set_source_files_properties("ksysguard_iface.xml"
-    PROPERTIES INCLUDE "../ksysguard-backend/types.h" )
-qt5_add_dbus_adaptor(SOURCES "ksysguard_iface.xml" ksysguarddaemon.h KSysGuardDaemon)
+find_file(SYSTEMSTATS_DBUS_INTERFACE NAMES dbus-1/interfaces/org.kde.ksystemstats.xml HINTS ${KDE_INSTALL_FULL_DATADIR})
+message(STATUS ${SYSTEMSTATS_DBUS_INTERFACE})
+qt5_add_dbus_adaptor(SOURCES ${SYSTEMSTATS_DBUS_INTERFACE} ksysguarddaemon.h KSysGuardDaemon)
 
 add_library(ksystemstats_core STATIC ${SOURCES})
-target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF5::CoreAddons KF5::DBusAddons KSysGuard::StatsBackend )
+target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF5::CoreAddons KF5::DBusAddons KSysGuard::SystemStats)
 
 add_executable(ksystemstats main.cpp)
 target_link_libraries(ksystemstats ksystemstats_core)
@@ -26,9 +26,3 @@ ecm_install_configured_files(
    INPUT plasma-ksystemstats.service.in
    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
-
-add_subdirectory(test)
-
-if (BUILD_TESTING)
-    add_subdirectory(autotests)
-endif()

@@ -27,11 +27,11 @@ struct sensors_feature;
 #include "usagecomputer.h"
 
 
-class TemperatureSensor : public SensorProperty {
+class TemperatureSensor : public KSysGuard::SensorProperty {
 public:
-    TemperatureSensor(const QString &id, SensorObject *parent);
+    TemperatureSensor(const QString &id, KSysGuard::SensorObject *parent);
     void setFeature(const sensors_chip_name * const chipName, const sensors_feature * const feature);
-    void update();
+    void update() override;
 private:
     const sensors_chip_name * m_sensorChipName;
     int m_temperatureSubfeature;
@@ -40,7 +40,7 @@ private:
 class LinuxCpuObject : public CpuObject
 {
 public:
-    LinuxCpuObject(const QString &id, const QString &name, SensorContainer *parent);
+    LinuxCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent);
 
     void update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle);
     TemperatureSensor* temperatureSensor();

@@ -29,7 +29,7 @@ class SysctlSensor;
 
 class FreeBsdCpuObject : public CpuObject {
 public:
-    FreeBsdCpuObject(const QString &id, const QString &name, SensorContainer *parent);
+    FreeBsdCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent);
     void update(long system, long user, long idle);
     void initialize() override;
 private:

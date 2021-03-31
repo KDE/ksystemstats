@@ -1,6 +1,6 @@
 
 add_library(ksysguard_plugin_disk MODULE  disks.cpp)
-target_link_libraries(ksysguard_plugin_disk Qt::Core KSysGuard::StatsBackend KF5::CoreAddons KF5::I18n KF5::KIOCore KF5::Solid)
+target_link_libraries(ksysguard_plugin_disk Qt::Core KF5::CoreAddons KF5::I18n KF5::KIOCore KF5::Solid KSysGuard::SystemStats)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
     target_link_libraries(ksysguard_plugin_disk geom devstat)

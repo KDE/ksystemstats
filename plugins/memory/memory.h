@@ -18,7 +18,7 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
-#include "SensorPlugin.h"
+#include <systemstats/SensorPlugin.h>
 
 #include <QObject>
 
@@ -26,7 +26,7 @@
 
 class MemoryBackend;
 
-class MemoryPlugin : public SensorPlugin
+class MemoryPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
 public:

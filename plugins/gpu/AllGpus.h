@@ -6,19 +6,22 @@
 
 #pragma once
 
-#include "SensorObject.h"
+#include "systemstats/SensorObject.h"
 
-class AggregateSensor;
+namespace KSysGuard
+{
+    class AggregateSensor;
+}
 
-class AllGpus : public SensorObject
+class AllGpus : public KSysGuard::SensorObject
 {
     Q_OBJECT
 
 public:
-    AllGpus(SensorContainer *parent);
+    AllGpus(KSysGuard::SensorContainer *parent);
 
 private:
-    AggregateSensor *m_usageSensor = nullptr;
-    AggregateSensor *m_totalVramSensor = nullptr;
-    AggregateSensor *m_usedVramSensor = nullptr;
+    KSysGuard::AggregateSensor *m_usageSensor = nullptr;
+    KSysGuard::AggregateSensor *m_totalVramSensor = nullptr;
+    KSysGuard::AggregateSensor *m_usedVramSensor = nullptr;
 };

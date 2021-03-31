@@ -28,15 +28,15 @@
 
 #include <KLocalizedString>
 
-#include <SensorContainer.h>
-#include <SysctlSensor.h>
+#include <systemstats/SensorContainer.h>
+#include <systemstats/SysctlSensor.h>
 
 template <typename T>
 bool readSysctl(const char *name, T *buffer, size_t size = sizeof(T)) {
     return sysctlbyname(name, buffer, &size, nullptr, 0) != -1;
 }
 
-FreeBsdCpuObject::FreeBsdCpuObject(const QString &id, const QString &name, SensorContainer *parent)
+FreeBsdCpuObject::FreeBsdCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : CpuObject(id, name, parent)
 {
 }
@@ -46,8 +46,8 @@ void FreeBsdCpuObject::makeSensors()
     BaseCpuObject::makeSensors();
 
     const QByteArray prefix = QByteArrayLiteral("dev.cpu.") + id().right(1).toLocal8Bit();
-    auto freq = new SysctlSensor<int>(QStringLiteral("frequency"), prefix + QByteArrayLiteral(".freq"), this);
-    auto temp = new SysctlSensor<int>(QStringLiteral("temperature"), prefix + QByteArrayLiteral(".freq"), this);
+    auto freq = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), prefix + QByteArrayLiteral(".freq"), this);
+    auto temp = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), prefix + QByteArrayLiteral(".freq"), this);
     m_sysctlSensors.append({freq, temp});
     m_frequency = freq;
     m_temperature = temp;
@@ -134,7 +134,7 @@ FreeBsdCpuPluginPrivate::FreeBsdCpuPluginPrivate(CpuPlugin* q)
 
 void FreeBsdCpuPluginPrivate::update()
 {
-    auto isSubscribed = [] (const SensorObject *o) {return o->isSubscribed();};
+    auto isSubscribed = [] (const KSysGuard::SensorObject *o) {return o->isSubscribed();};
     const auto objects = m_container->objects();
     if (std::none_of(objects.cbegin(), objects.cend(), isSubscribed)) {
         return;

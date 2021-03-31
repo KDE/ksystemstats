@@ -23,7 +23,7 @@
 
 #include <KLocalizedString>
 
-#include <SensorContainer.h>
+#include <systemstats/SensorContainer.h>
 
 #ifdef HAVE_SENSORS
 #include <sensors/sensors.h>
@@ -96,7 +96,7 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
 
 void LinuxCpuPluginPrivate::update()
 {
-    auto isSubscribed = [] (const SensorObject *o) {return o->isSubscribed();};
+    auto isSubscribed = [] (const KSysGuard::SensorObject *o) {return o->isSubscribed();};
     const auto objects = m_container->objects();
     if (std::none_of(objects.cbegin(), objects.cend(), isSubscribed)) {
         return;

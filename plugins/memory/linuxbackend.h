@@ -22,7 +22,7 @@
 
 class LinuxMemoryBackend : public MemoryBackend {
 public:
-    LinuxMemoryBackend(SensorContainer *container);
+    LinuxMemoryBackend(KSysGuard::SensorContainer *container);
     void update() override;
 };
 

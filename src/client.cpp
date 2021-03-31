@@ -25,10 +25,11 @@
 
 #include <algorithm>
 
+#include <systemstats/SensorPlugin.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorProperty.h>
+
 #include "ksysguarddaemon.h"
-#include "SensorPlugin.h"
-#include "SensorObject.h"
-#include "SensorProperty.h"
 
 Client::Client(KSysGuardDaemon *parent, const QString &serviceName)
     : QObject(parent)
@@ -49,18 +50,18 @@ Client::~Client()
 
 void Client::subscribeSensors(const QStringList &sensorPaths)
 {
-    SensorDataList entries;
+    KSysGuard::SensorDataList entries;
 
     for (const QString &sensorPath : sensorPaths) {
         if (auto sensor = m_daemon->findSensor(sensorPath)) {
-            m_connections.insert(sensor, connect(sensor, &SensorProperty::valueChanged, this, [this, sensor]() {
+            m_connections.insert(sensor, connect(sensor, &KSysGuard::SensorProperty::valueChanged, this, [this, sensor]() {
                 const QVariant value = sensor->value();
                 if (!value.isValid()) {
                     return;
                 }
-                m_pendingUpdates << SensorData(sensor->path(), value);
+                m_pendingUpdates << KSysGuard::SensorData(sensor->path(), value);
             }));
-            m_connections.insert(sensor, connect(sensor, &SensorProperty::sensorInfoChanged, this, [this, sensor]() {
+            m_connections.insert(sensor, connect(sensor, &KSysGuard::SensorProperty::sensorInfoChanged, this, [this, sensor]() {
                 m_pendingMetaDataChanges[sensor->path()] = sensor->info();
             }));
 
@@ -90,7 +91,7 @@ void Client::sendFrame()
     m_pendingMetaDataChanges.clear();
 }
 
-void Client::sendValues(const SensorDataList &entries)
+void Client::sendValues(const KSysGuard::SensorDataList &entries)
 {
     if (entries.isEmpty()) {
         return;
@@ -100,7 +101,7 @@ void Client::sendValues(const SensorDataList &entries)
     QDBusConnection::sessionBus().send(msg);
 }
 
-void Client::sendMetaDataChanged(const SensorInfoMap &sensors)
+void Client::sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors)
 {
     if (sensors.isEmpty()) {
         return;

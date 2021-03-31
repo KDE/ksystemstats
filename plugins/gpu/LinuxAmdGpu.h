@@ -12,7 +12,10 @@
 
 struct udev_device;
 
-class SysFsSensor;
+namespace KSysGuard
+{
+    class SysFsSensor;
+}
 
 class LinuxAmdGpu : public GpuDevice
 {
@@ -30,7 +33,7 @@ protected:
 
 private:
     udev_device *m_device;
-    QVector<SysFsSensor*> m_sysFsSensors;
+    QVector<KSysGuard::SysFsSensor*> m_sysFsSensors;
     QString m_coreTemperatureCurrentPath;
     QString m_coreTemperatureMaxPath;
 };

@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include "SensorObject.h"
+#include "systemstats/SensorObject.h"
 
-class NetworkDevice : public SensorObject
+class NetworkDevice : public KSysGuard::SensorObject
 {
     Q_OBJECT
 
@@ -17,12 +17,12 @@ public:
     ~NetworkDevice() override = default;
 
 protected:
-    SensorProperty *m_networkSensor;
-    SensorProperty *m_signalSensor;
-    SensorProperty *m_ipv4Sensor;
-    SensorProperty *m_ipv6Sensor;
-    SensorProperty *m_downloadSensor;
-    SensorProperty *m_uploadSensor;
-    SensorProperty *m_totalDownloadSensor;
-    SensorProperty *m_totalUploadSensor;
+    KSysGuard::SensorProperty *m_networkSensor;
+    KSysGuard::SensorProperty *m_signalSensor;
+    KSysGuard::SensorProperty *m_ipv4Sensor;
+    KSysGuard::SensorProperty *m_ipv6Sensor;
+    KSysGuard::SensorProperty *m_downloadSensor;
+    KSysGuard::SensorProperty *m_uploadSensor;
+    KSysGuard::SensorProperty *m_totalDownloadSensor;
+    KSysGuard::SensorProperty *m_totalUploadSensor;
 };

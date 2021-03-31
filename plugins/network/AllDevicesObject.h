@@ -6,24 +6,28 @@
 
 #pragma once
 
-#include <SensorObject.h>
+#include <systemstats/SensorObject.h>
 
 class NetworkDevice;
-class AggregateSensor;
+
+namespace KSysGuard
+{
+    class AggregateSensor;
+}
 
 /**
  * This object aggregates the network usage of all devices.
  */
-class AllDevicesObject : public SensorObject
+class AllDevicesObject : public KSysGuard::SensorObject
 {
     Q_OBJECT
 
 public:
-    AllDevicesObject(SensorContainer* parent);
+    AllDevicesObject(KSysGuard::SensorContainer* parent);
 
 private:
-    AggregateSensor *m_downloadSensor = nullptr;
-    AggregateSensor *m_uploadSensor = nullptr;
-    AggregateSensor *m_totalDownloadSensor = nullptr;
-    AggregateSensor *m_totalUploadSensor = nullptr;
+    KSysGuard::AggregateSensor *m_downloadSensor = nullptr;
+    KSysGuard::AggregateSensor *m_uploadSensor = nullptr;
+    KSysGuard::AggregateSensor *m_totalDownloadSensor = nullptr;
+    KSysGuard::AggregateSensor *m_totalUploadSensor = nullptr;
 };

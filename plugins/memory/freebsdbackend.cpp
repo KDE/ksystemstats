@@ -17,9 +17,9 @@
 
 #include "freebsdbackend.h"
 
-#include <SensorObject.h>
-#include <SensorProperty.h>
-#include <SysctlSensor.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorProperty.h>
+#include <systemstats/SysctlSensor.h>
 
 #include <fcntl.h>
 #include <sys/types.h>
@@ -32,7 +32,7 @@ bool readSysctl(const char *name, T *buffer, size_t size = sizeof(T))
     return sysctlbyname(name, buffer, &size, nullptr, 0) != -1;
 }
 
-FreeBsdMemoryBackend::FreeBsdMemoryBackend(SensorContainer* container)
+FreeBsdMemoryBackend::FreeBsdMemoryBackend(KSysGuard::SensorContainer* container)
     : MemoryBackend(container)
     , m_pageSize(getpagesize())
     , m_kd(nullptr)
@@ -48,32 +48,32 @@ FreeBsdMemoryBackend::FreeBsdMemoryBackend(SensorContainer* container)
 
 void FreeBsdMemoryBackend::makeSensors()
 {
-    auto totalSensor = new SysctlSensor<unsigned long long>(QStringLiteral("total"), "hw.physmem",  m_physicalObject);
+    auto totalSensor = new KSysGuard::SysctlSensor<unsigned long long>(QStringLiteral("total"), "hw.physmem",  m_physicalObject);
     m_total = totalSensor;
     m_sysctlSensors.append(totalSensor);
 
-    m_used = new SensorProperty(QStringLiteral("used"), m_physicalObject);
-    m_application = new SensorProperty(QStringLiteral("application"), m_physicalObject);
+    m_used = new KSysGuard::SensorProperty(QStringLiteral("used"), m_physicalObject);
+    m_application = new KSysGuard::SensorProperty(QStringLiteral("application"), m_physicalObject);
 
     auto capturedPagesToBytes = [this] (auto pages) {return pagesToBytes(pages);};
 
-    auto freeSensor = new SysctlSensor<uint32_t>(QStringLiteral("free"), "vm.stats.vm.v_free_count", m_physicalObject);
+    auto freeSensor = new KSysGuard::SysctlSensor<uint32_t>(QStringLiteral("free"), "vm.stats.vm.v_free_count", m_physicalObject);
     freeSensor->setConversionFunction(capturedPagesToBytes);
     m_free = freeSensor;
     m_sysctlSensors.push_back(freeSensor);
 
-    auto cacheSensor = new SysctlSensor<uint32_t>(QStringLiteral("cache"),"vm.v_cache_count", m_physicalObject);
+    auto cacheSensor = new KSysGuard::SysctlSensor<uint32_t>(QStringLiteral("cache"),"vm.v_cache_count", m_physicalObject);
     cacheSensor->setConversionFunction(capturedPagesToBytes);
     m_cache = cacheSensor;
     m_sysctlSensors.push_back(cacheSensor);
 
-    auto bufferSensor = new SysctlSensor<uint64_t>(QStringLiteral("buffer"), "vfs.bufspace", m_physicalObject);
+    auto bufferSensor = new KSysGuard::SysctlSensor<uint64_t>(QStringLiteral("buffer"), "vfs.bufspace", m_physicalObject);
     m_buffer = bufferSensor;
     m_sysctlSensors.push_back(bufferSensor);
 
-    m_swapTotal = new SensorProperty(QStringLiteral("total"), m_swapObject);
-    m_swapUsed = new SensorProperty(QStringLiteral("used"), m_swapObject);
-    m_swapFree = new SensorProperty(QStringLiteral("free"), m_swapObject);
+    m_swapTotal = new KSysGuard::SensorProperty(QStringLiteral("total"), m_swapObject);
+    m_swapUsed = new KSysGuard::SensorProperty(QStringLiteral("used"), m_swapObject);
+    m_swapFree = new KSysGuard::SensorProperty(QStringLiteral("free"), m_swapObject);
 
 }
 

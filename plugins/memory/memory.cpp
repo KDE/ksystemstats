@@ -24,7 +24,7 @@
 #include "freebsdbackend.h"
 #endif
 
-#include <SensorContainer.h>
+#include <systemstats/SensorContainer.h>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -34,7 +34,7 @@
 MemoryPlugin::MemoryPlugin(QObject *parent, const QVariantList &args)
     : SensorPlugin(parent, args)
 {
-    auto container = new SensorContainer(QStringLiteral("memory"), i18nc("@title", "Memory"), this);
+    auto container = new KSysGuard::SensorContainer(QStringLiteral("memory"), i18nc("@title", "Memory"), this);
 #if defined Q_OS_LINUX
     m_backend = std::make_unique<LinuxMemoryBackend>(container);
 #elif defined Q_OS_FREEBSD

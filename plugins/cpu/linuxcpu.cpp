@@ -37,7 +37,7 @@ static double readCpuFreq(const QString &cpuId, const QString &attribute, bool &
     return 0;
 }
 
-TemperatureSensor::TemperatureSensor(const QString& id, SensorObject* parent)
+TemperatureSensor::TemperatureSensor(const QString& id, KSysGuard::SensorObject* parent)
     : SensorProperty(id, parent)
     , m_sensorChipName{nullptr}
     , m_temperatureSubfeature{-1}
@@ -77,7 +77,7 @@ void TemperatureSensor::update()
 #endif
 }
 
-LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, SensorContainer *parent)
+LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : CpuObject(id, name, parent)
 
 {
@@ -101,7 +101,7 @@ void LinuxCpuObject::initialize(double initialFrequency)
 void LinuxCpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
-    m_frequency = new SensorProperty(QStringLiteral("frequency"), this);
+    m_frequency = new KSysGuard::SensorProperty(QStringLiteral("frequency"), this);
     m_temperatureSensor = new TemperatureSensor(QStringLiteral("temperature"), this);
     m_temperature = m_temperatureSensor;
 }

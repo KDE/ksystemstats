@@ -17,11 +17,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QtTest>
 
-#include "../ksysguarddaemon.h"
+#include "../src/ksysguarddaemon.h"
 
-#include <SensorContainer.h>
-#include <SensorObject.h>
-#include <SensorPlugin.h>
+#include <systemstats/SensorContainer.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorPlugin.h>
+#include <systemstats/DBusInterface.h>
 
 #include <QDBusArgument>
 #include <QDBusConnection>
@@ -29,24 +30,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDBusMessage>
 #include <QDBusMetaType>
 
-#include "kstatsiface.h"
 #include <QDebug>
 
-class TestPlugin : public SensorPlugin
+class TestPlugin : public KSysGuard::SensorPlugin
 {
 public:
     TestPlugin(QObject *parent)
         : SensorPlugin(parent, {})
     {
-        m_testContainer = new SensorContainer("testContainer", "Test Container", this);
-        m_testObject = new SensorObject("testObject", "Test Object", m_testContainer);
-        m_property1 = new SensorProperty("property1", m_testObject);
+        m_testContainer = new KSysGuard::SensorContainer("testContainer", "Test Container", this);
+        m_testObject = new KSysGuard::SensorObject("testObject", "Test Object", m_testContainer);
+        m_property1 = new KSysGuard::SensorProperty("property1", m_testObject);
         m_property1->setMin(0);
         m_property1->setMax(100);
         m_property1->setShortName("Some Sensor 1");
         m_property1->setName("Some Sensor Name 1");
 
-        m_property2 = new SensorProperty("property2", m_testObject);
+        m_property2 = new KSysGuard::SensorProperty("property2", m_testObject);
     }
     QString providerName() const override
     {
@@ -56,10 +56,10 @@ public:
     {
         m_updateCount++;
     }
-    SensorContainer *m_testContainer;
-    SensorObject *m_testObject;
-    SensorProperty *m_property1;
-    SensorProperty *m_property2;
+    KSysGuard::SensorContainer *m_testContainer;
+    KSysGuard::SensorObject *m_testObject;
+    KSysGuard::SensorProperty *m_property1;
+    KSysGuard::SensorProperty *m_property2;
     int m_updateCount = 0;
 };
 
@@ -85,10 +85,10 @@ private:
 
 KStatsTest::KStatsTest()
 {
-    qDBusRegisterMetaType<SensorData>();
-    qDBusRegisterMetaType<SensorInfo>();
-    qDBusRegisterMetaType<SensorDataList>();
-    qDBusRegisterMetaType<QHash<QString, SensorInfo>>();
+    qDBusRegisterMetaType<KSysGuard::SensorData>();
+    qDBusRegisterMetaType<KSysGuard::SensorInfo>();
+    qDBusRegisterMetaType<KSysGuard::SensorDataList>();
+    qDBusRegisterMetaType<QHash<QString, KSysGuard::SensorInfo>>();
     qDBusRegisterMetaType<QStringList>();
 }
 
@@ -121,9 +121,9 @@ void KStatsTest::update()
 
 void KStatsTest::subscription()
 {
-    QSignalSpy property1Subscribed(m_testPlugin->m_property1, &SensorProperty::subscribedChanged);
-    QSignalSpy property2Subscribed(m_testPlugin->m_property2, &SensorProperty::subscribedChanged);
-    QSignalSpy objectSubscribed(m_testPlugin->m_testObject, &SensorObject::subscribedChanged);
+    QSignalSpy property1Subscribed(m_testPlugin->m_property1, &KSysGuard::SensorProperty::subscribedChanged);
+    QSignalSpy property2Subscribed(m_testPlugin->m_property2, &KSysGuard::SensorProperty::subscribedChanged);
+    QSignalSpy objectSubscribed(m_testPlugin->m_testObject, &KSysGuard::SensorObject::subscribedChanged);
 
     m_testPlugin->m_property1->subscribe();
     QCOMPARE(property1Subscribed.count(), 1);
@@ -144,7 +144,7 @@ void KStatsTest::subscription()
 
 void KStatsTest::changes()
 {
-    QSignalSpy property1Changed(m_testPlugin->m_property1, &SensorProperty::valueChanged);
+    QSignalSpy property1Changed(m_testPlugin->m_property1, &KSysGuard::SensorProperty::valueChanged);
     m_testPlugin->m_property1->setValue(14);
     QCOMPARE(property1Changed.count(), 1);
     QCOMPARE(m_testPlugin->m_property1->value(), QVariant(14));
@@ -152,7 +152,7 @@ void KStatsTest::changes()
 
 void KStatsTest::dbusApi()
 {
-    OrgKdeKSysGuardDaemonInterface iface(QDBusConnection::sessionBus().baseService(),
+    KSysGuard::SystemStats::DBusInterface iface(QDBusConnection::sessionBus().baseService(),
         "/",
         QDBusConnection::sessionBus(),
         this);
@@ -174,7 +174,7 @@ void KStatsTest::dbusApi()
     QCOMPARE(pendingValues.value().first().payload.toInt(), 100);
 
     // change updates
-    QSignalSpy changesSpy(&iface, &OrgKdeKSysGuardDaemonInterface::newSensorData);
+    QSignalSpy changesSpy(&iface, &KSysGuard::SystemStats::DBusInterface::newSensorData);
 
     iface.subscribe({ "testContainer/testObject/property1" });
 
@@ -188,8 +188,8 @@ void KStatsTest::dbusApi()
     sendFrame();
 
     QVERIFY(changesSpy.wait(20));
-    QCOMPARE(changesSpy.first().first().value<SensorDataList>().first().sensorProperty, "testContainer/testObject/property1");
-    QCOMPARE(changesSpy.first().first().value<SensorDataList>().first().payload, QVariant(101));
+    QCOMPARE(changesSpy.first().first().value<KSysGuard::SensorDataList>().first().sensorProperty, "testContainer/testObject/property1");
+    QCOMPARE(changesSpy.first().first().value<KSysGuard::SensorDataList>().first().payload, QVariant(101));
 
     // we're not subscribed to property 2 so if that updates we should not get anything
     m_testPlugin->m_property2->setValue(102);

@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "SensorPlugin.h"
+#include "systemstats/SensorPlugin.h"
 
 class NetworkPrivate;
 class NetworkDevice;
 
-class NetworkPlugin : public SensorPlugin
+class NetworkPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
 public:

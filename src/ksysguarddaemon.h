@@ -19,13 +19,18 @@
 
 #pragma once
 
-#include <types.h>
 #include <QDBusContext>
 #include <QObject>
 
-class SensorPlugin;
-class SensorContainer;
-class SensorProperty;
+#include <systemstats/SensorInfo.h>
+
+namespace KSysGuard
+{
+    class SensorPlugin;
+    class SensorContainer;
+    class SensorProperty;
+}
+
 class Client;
 class QDBusServiceWatcher;
 
@@ -44,36 +49,36 @@ public:
     KSysGuardDaemon();
     ~KSysGuardDaemon();
     void init(ReplaceIfRunning replaceIfRunning);
-    SensorProperty *findSensor(const QString &path) const;
+    KSysGuard::SensorProperty *findSensor(const QString &path) const;
 
 public Q_SLOTS:
     // DBus
-    SensorInfoMap allSensors() const;
-    SensorInfoMap sensors(const QStringList &sensorsIds) const;
+    KSysGuard::SensorInfoMap allSensors() const;
+    KSysGuard::SensorInfoMap sensors(const QStringList &sensorsIds) const;
 
     void subscribe(const QStringList &sensorIds);
     void unsubscribe(const QStringList &sensorIds);
 
-    SensorDataList sensorData(const QStringList &sensorIds);
+    KSysGuard::SensorDataList sensorData(const QStringList &sensorIds);
 
 Q_SIGNALS:
     // DBus
     void sensorAdded(const QString &sensorId);
     void sensorRemoved(const QString &sensorId);
     // not emitted directly as we use targetted signals via lower level API
-    void newSensorData(const SensorDataList &sensorData);
+    void newSensorData(const KSysGuard::SensorDataList &sensorData);
 
 protected:
     // virtual for autotest to override and not load real plugins
     virtual void loadProviders();
 
     void sendFrame();
-    void registerProvider(SensorPlugin *);
+    void registerProvider(KSysGuard::SensorPlugin *);
 
 private:
     void onServiceDisconnected(const QString &service);
-    QVector<SensorPlugin *> m_providers;
+    QVector<KSysGuard::SensorPlugin *> m_providers;
     QHash<QString /*subscriber DBus base name*/, Client*> m_clients;
-    QHash<QString /*id*/, SensorContainer *> m_containers;
+    QHash<QString /*id*/, KSysGuard::SensorContainer *> m_containers;
     QDBusServiceWatcher *m_serviceWatcher;
 };

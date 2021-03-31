@@ -18,12 +18,12 @@
 
 #include "linuxbackend.h"
 
-#include <SensorObject.h>
-#include <SensorProperty.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorProperty.h>
 
 #include <QFile>
 
-LinuxMemoryBackend::LinuxMemoryBackend(SensorContainer *container)
+LinuxMemoryBackend::LinuxMemoryBackend(KSysGuard::SensorContainer *container)
     : MemoryBackend(container)
 {
 }

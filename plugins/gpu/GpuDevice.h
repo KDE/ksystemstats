@@ -8,9 +8,9 @@
 
 #include <QObject>
 
-#include "SensorObject.h"
+#include "systemstats/SensorObject.h"
 
-class GpuDevice : public SensorObject
+class GpuDevice : public KSysGuard::SensorObject
 {
     Q_OBJECT
 
@@ -24,11 +24,11 @@ public:
 protected:
     virtual void makeSensors();
 
-    SensorProperty *m_nameProperty;
-    SensorProperty *m_usageProperty;
-    SensorProperty *m_totalVramProperty;
-    SensorProperty *m_usedVramProperty;
-    SensorProperty *m_temperatureProperty;
-    SensorProperty *m_coreFrequencyProperty;
-    SensorProperty *m_memoryFrequencyProperty;
+    KSysGuard::SensorProperty *m_nameProperty;
+    KSysGuard::SensorProperty *m_usageProperty;
+    KSysGuard::SensorProperty *m_totalVramProperty;
+    KSysGuard::SensorProperty *m_usedVramProperty;
+    KSysGuard::SensorProperty *m_temperatureProperty;
+    KSysGuard::SensorProperty *m_coreFrequencyProperty;
+    KSysGuard::SensorProperty *m_memoryFrequencyProperty;
 };

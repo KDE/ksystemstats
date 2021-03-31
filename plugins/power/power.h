@@ -19,16 +19,18 @@
 #ifndef POWER_H
 #define POWER_H
 
-#include "SensorPlugin.h"
+#include <systemstats/SensorPlugin.h>
 
 namespace Solid {
 class Device;
 }
-
+namespace KSysGuard
+{
+    class SensorContainer;
+}
 class Battery;
-class SensorContainer;
 
-class PowerPlugin : public SensorPlugin {
+class PowerPlugin : public KSysGuard::SensorPlugin {
     Q_OBJECT
 public:
     PowerPlugin(QObject *parent, const QVariantList &args);
@@ -37,7 +39,7 @@ public:
         return QStringLiteral("power");
     };
 private:
-    SensorContainer *m_container;
+    KSysGuard::SensorContainer *m_container;
     QHash<QString, Battery*> m_batteriesByUdi;
 };
 

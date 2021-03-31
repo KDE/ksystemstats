@@ -21,18 +21,18 @@
 
 #include <KLocalizedString>
 
-BaseCpuObject::BaseCpuObject(const QString &id, const QString &name, SensorContainer *parent)
+BaseCpuObject::BaseCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : SensorObject(id, name, parent)
 {
 }
 
 void BaseCpuObject::makeSensors()
 {
-    m_usage = new SensorProperty(QStringLiteral("usage"), this);
-    m_system = new SensorProperty(QStringLiteral("system"), this);
-    m_user = new SensorProperty(QStringLiteral("user"), this);
-    m_wait = new SensorProperty(QStringLiteral("wait"), this);
-    auto n = new SensorProperty(QStringLiteral("name"), i18nc("@title", "Name"), name(), this);
+    m_usage = new KSysGuard::SensorProperty(QStringLiteral("usage"), this);
+    m_system = new KSysGuard::SensorProperty(QStringLiteral("system"), this);
+    m_user = new KSysGuard::SensorProperty(QStringLiteral("user"), this);
+    m_wait = new KSysGuard::SensorProperty(QStringLiteral("wait"), this);
+    auto n = new KSysGuard::SensorProperty(QStringLiteral("name"), i18nc("@title", "Name"), name(), this);
     n->setVariantType(QVariant::String);
 }
 
@@ -71,7 +71,7 @@ void BaseCpuObject::initialize()
 }
 
 
-CpuObject::CpuObject(const QString &id, const QString &name, SensorContainer *parent)
+CpuObject::CpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : BaseCpuObject(id, name, parent)
 {
 }
@@ -80,8 +80,8 @@ void CpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
 
-    m_frequency = new SensorProperty(QStringLiteral("frequency"), this);
-    m_temperature = new SensorProperty(QStringLiteral("temperature"), this);
+    m_frequency = new KSysGuard::SensorProperty(QStringLiteral("frequency"), this);
+    m_temperature = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
 }
 
 void CpuObject::initialize()
@@ -103,7 +103,7 @@ void CpuObject::initialize()
 }
 
 
-AllCpusObject::AllCpusObject(SensorContainer *parent)
+AllCpusObject::AllCpusObject(KSysGuard::SensorContainer *parent)
     : BaseCpuObject(QStringLiteral("all"), i18nc("@title", "All"), parent)
 {
 }
@@ -112,8 +112,8 @@ void AllCpusObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
 
-    m_cpuCount = new SensorProperty(QStringLiteral("cpuCount"), this);
-    m_coreCount = new SensorProperty(QStringLiteral("coreCount"), this);
+    m_cpuCount = new KSysGuard::SensorProperty(QStringLiteral("cpuCount"), this);
+    m_coreCount = new KSysGuard::SensorProperty(QStringLiteral("coreCount"), this);
 }
 
 void AllCpusObject::initialize()

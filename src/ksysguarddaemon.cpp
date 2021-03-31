@@ -30,17 +30,18 @@
 
 #include <QTimer>
 
-#include "SensorPlugin.h"
-#include "SensorObject.h"
-#include "SensorContainer.h"
-#include "SensorProperty.h"
+#include <systemstats/SensorPlugin.h>
+#include <systemstats/SensorObject.h>
+#include <systemstats/SensorContainer.h>
+#include <systemstats/SensorProperty.h>
 
 #include <KDBusService>
 #include <KPluginLoader>
 #include <KPluginMetaData>
 #include <KPluginFactory>
 
-#include "ksysguard_ifaceadaptor.h"
+#include "ksystemstatsadaptor.h"
+
 #include "client.h"
 
 constexpr auto UpdateRate = std::chrono::milliseconds{500};
@@ -48,14 +49,14 @@ constexpr auto UpdateRate = std::chrono::milliseconds{500};
 KSysGuardDaemon::KSysGuardDaemon()
     : m_serviceWatcher(new QDBusServiceWatcher(this))
 {
-    qDBusRegisterMetaType<SensorData>();
-    qDBusRegisterMetaType<SensorInfo>();
-    qRegisterMetaType<SensorDataList>("SDL");
-    qDBusRegisterMetaType<SensorDataList>();
-    qDBusRegisterMetaType<SensorInfoMap>();
+    qDBusRegisterMetaType<KSysGuard::SensorData>();
+    qDBusRegisterMetaType<KSysGuard::SensorInfo>();
+    qRegisterMetaType<KSysGuard::SensorDataList>("SDL");
+    qDBusRegisterMetaType<KSysGuard::SensorDataList>();
+    qDBusRegisterMetaType<KSysGuard::SensorInfoMap>();
     qDBusRegisterMetaType<QStringList>();
 
-    new KSysGuardDaemonAdaptor(this);
+    new KsystemstatsAdaptor(this);
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &KSysGuardDaemon::onServiceDisconnected);
@@ -89,7 +90,7 @@ void KSysGuardDaemon::loadProviders()
 {
     //instantiate all plugins
     QSet<QString> knownPlugins;
-    std::for_each(m_providers.cbegin(), m_providers.cend(), [&knownPlugins] (const SensorPlugin *plugin) {
+    std::for_each(m_providers.cbegin(), m_providers.cend(), [&knownPlugins] (const KSysGuard::SensorPlugin *plugin) {
         knownPlugins.insert(plugin->providerName());
     });
     const auto plugins = KPluginLoader::instantiatePlugins(QStringLiteral("ksysguard"), [this, &knownPlugins](const KPluginMetaData &metaData) {
@@ -107,7 +108,7 @@ void KSysGuardDaemon::loadProviders()
             qWarning() << "Plugin object" << object << "did not provide a proper KPluginFactory";
             continue;
         }
-        auto provider = factory->create<SensorPlugin>(this);
+        auto provider = factory->create<KSysGuard::SensorPlugin>(this);
         if (!provider) {
             qWarning() << "Plugin object" << object << "did not provide a proper SensorPlugin";
             continue;
@@ -120,17 +121,17 @@ void KSysGuardDaemon::loadProviders()
     }
 }
 
-void KSysGuardDaemon::registerProvider(SensorPlugin *provider) {
+void KSysGuardDaemon::registerProvider(KSysGuard::SensorPlugin *provider) {
     m_providers.append(provider);
     const auto containers = provider->containers();
     for (auto container : containers) {
         m_containers[container->id()] = container;
-        connect(container, &SensorContainer::objectAdded, this, [this](SensorObject *obj) {
+        connect(container, &KSysGuard::SensorContainer::objectAdded, this, [this](KSysGuard::SensorObject *obj) {
             for (auto sensor: obj->sensors()) {
                 emit sensorAdded(sensor->path());
             }
         });
-        connect(container, &SensorContainer::objectRemoved, this, [this](SensorObject *obj) {
+        connect(container, &KSysGuard::SensorContainer::objectRemoved, this, [this](KSysGuard::SensorObject *obj) {
             for (auto sensor: obj->sensors()) {
                 emit sensorRemoved(sensor->path());
             }
@@ -138,17 +139,17 @@ void KSysGuardDaemon::registerProvider(SensorPlugin *provider) {
     }
 }
 
-SensorInfoMap KSysGuardDaemon::allSensors() const
+KSysGuard::SensorInfoMap KSysGuardDaemon::allSensors() const
 {
-    SensorInfoMap infoMap;
+    KSysGuard::SensorInfoMap infoMap;
     for (auto c : qAsConst(m_containers)) {
-        auto containerInfo = SensorInfo{};
+        auto containerInfo = KSysGuard::SensorInfo{};
         containerInfo.name = c->name();
         infoMap.insert(c->id(), containerInfo);
 
         const auto objects = c->objects();
         for(auto object : objects) {
-            auto objectInfo = SensorInfo{};
+            auto objectInfo = KSysGuard::SensorInfo{};
             objectInfo.name = object->name();
             infoMap.insert(object->path(), objectInfo);
 
@@ -161,9 +162,9 @@ SensorInfoMap KSysGuardDaemon::allSensors() const
     return infoMap;
 }
 
-SensorInfoMap KSysGuardDaemon::sensors(const QStringList &sensorPaths) const
+KSysGuard::SensorInfoMap KSysGuardDaemon::sensors(const QStringList &sensorPaths) const
 {
-    SensorInfoMap si;
+    KSysGuard::SensorInfoMap si;
     for (const QString &path : sensorPaths) {
         if (auto sensor = findSensor(path)) {
             si[path] = sensor->info();
@@ -195,21 +196,21 @@ void KSysGuardDaemon::unsubscribe(const QStringList &sensorIds)
     client->unsubscribeSensors(sensorIds);
 }
 
-SensorDataList KSysGuardDaemon::sensorData(const QStringList &sensorIds)
+KSysGuard::SensorDataList KSysGuardDaemon::sensorData(const QStringList &sensorIds)
 {
-    SensorDataList sensorData;
+    KSysGuard::SensorDataList sensorData;
     for (const QString &sensorId: sensorIds) {
-        if (SensorProperty *sensorProperty = findSensor(sensorId)) {
+        if (KSysGuard::SensorProperty *sensorProperty = findSensor(sensorId)) {
             const QVariant value = sensorProperty->value();
             if (value.isValid()) {
-                sensorData << SensorData(sensorId, value);
+                sensorData << KSysGuard::SensorData(sensorId, value);
             }
         }
     }
     return sensorData;
 }
 
-SensorProperty *KSysGuardDaemon::findSensor(const QString &path) const
+KSysGuard::SensorProperty *KSysGuardDaemon::findSensor(const QString &path) const
 {
     int subsystemIndex = path.indexOf('/');
     int propertyIndex = path.lastIndexOf('/');

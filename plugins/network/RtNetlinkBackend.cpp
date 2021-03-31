@@ -7,7 +7,7 @@
 
 #include "RtNetlinkBackend.h"
 
-#include <SysFsSensor.h>
+#include <systemstats/SysFsSensor.h>
 
 #include <QDir>
 #include <QFile>
@@ -31,7 +31,7 @@ RtNetlinkDevice::RtNetlinkDevice(const QString &id)
     // of plasma-systemmonitor
     m_networkSensor->setValue(id);
 
-    std::array<SensorProperty*, 4> statisticSensors {m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
+    std::array<KSysGuard::SensorProperty*, 4> statisticSensors {m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
     auto resetStatistics = [this, statisticSensors]() {
         if (std::none_of(statisticSensors.begin(), statisticSensors.end(), [](auto property) {return property->isSubscribed();})) {
             m_totalDownloadSensor->setValue(0);
@@ -39,7 +39,7 @@ RtNetlinkDevice::RtNetlinkDevice(const QString &id)
         }
     };
     for (auto property : statisticSensors) {
-        connect(property, &SensorProperty::subscribedChanged, this, resetStatistics);
+        connect(property, &KSysGuard::SensorProperty::subscribedChanged, this, resetStatistics);
     }
     connect(this, &RtNetlinkDevice::disconnected, this, resetStatistics);
 }

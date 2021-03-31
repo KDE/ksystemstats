@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include <SensorContainer.h>
+#include <systemstats/SensorContainer.h>
 
 #include "NetworkDevice.h"
 #include "NetworkBackend.h"
@@ -40,7 +40,7 @@
 class NetworkPrivate
 {
 public:
-    SensorContainer *container = nullptr;
+    KSysGuard::SensorContainer *container = nullptr;
 
     AllDevicesObject *allDevices = nullptr;
 
@@ -53,7 +53,7 @@ NetworkPlugin::NetworkPlugin(QObject *parent, const QVariantList &args)
     : SensorPlugin(parent, args)
     , d(std::make_unique<NetworkPrivate>())
 {
-    d->container = new SensorContainer(QStringLiteral("network"), i18nc("@title", "Network Devices"), this);
+    d->container = new KSysGuard::SensorContainer(QStringLiteral("network"), i18nc("@title", "Network Devices"), this);
 
     d->allDevices = new AllDevicesObject(d->container);
 

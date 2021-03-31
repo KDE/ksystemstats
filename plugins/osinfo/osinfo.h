@@ -19,13 +19,11 @@
 
 #pragma once
 
-#include "SensorObject.h"
-#include "SensorPlugin.h"
-#include "SensorProperty.h"
+#include <systemstats/SensorPlugin.h>
 
 class OSInfoPrivate;
 
-class OSInfoPlugin : public SensorPlugin
+class OSInfoPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
 public:

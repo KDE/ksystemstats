@@ -24,11 +24,14 @@
 
 #include <kvm.h> // can't forward declare typedefed kvm_t
 
-class SensorProperty;
+namespace KSysGuard
+{
+    class SensorProperty;
+}
 
 class FreeBsdMemoryBackend : public MemoryBackend {
 public:
-    FreeBsdMemoryBackend(SensorContainer *container);
+    FreeBsdMemoryBackend(KSysGuard::SensorContainer *container);
     void update() override;
 private:
     void makeSensors() override;
@@ -36,7 +39,7 @@ private:
 
     unsigned int m_pageSize;
     kvm_t *m_kd;
-    QVector<SensorProperty*> m_sysctlSensors;
+    QVector<KSysGuard::SensorProperty*> m_sysctlSensors;
 };
 
 #endif

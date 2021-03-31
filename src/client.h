@@ -19,10 +19,14 @@
 
 #pragma once
 
-#include "types.h"
 #include <QObject>
 
-class SensorProperty;
+#include <systemstats/SensorInfo.h>
+
+namespace KSysGuard
+{
+    class SensorProperty;
+}
 class KSysGuardDaemon;
 
 /**
@@ -39,13 +43,13 @@ public:
     void sendFrame();
 
 private:
-    void sendValues(const SensorDataList &updates);
-    void sendMetaDataChanged(const SensorInfoMap &sensors);
+    void sendValues(const KSysGuard::SensorDataList &updates);
+    void sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors);
 
     const QString m_serviceName;
     KSysGuardDaemon *m_daemon;
-    QHash<QString, SensorProperty *> m_subscribedSensors;
-    QMultiHash<SensorProperty *, QMetaObject::Connection> m_connections;
-    SensorDataList m_pendingUpdates;
-    SensorInfoMap m_pendingMetaDataChanges;
+    QHash<QString, KSysGuard::SensorProperty *> m_subscribedSensors;
+    QMultiHash<KSysGuard::SensorProperty *, QMetaObject::Connection> m_connections;
+    KSysGuard::SensorDataList m_pendingUpdates;
+    KSysGuard::SensorInfoMap m_pendingMetaDataChanges;
 };

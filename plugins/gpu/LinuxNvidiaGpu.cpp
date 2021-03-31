@@ -35,7 +35,7 @@ void LinuxNvidiaGpu::initialize()
     GpuDevice::initialize();
 
     for (auto sensor : {m_usageProperty, m_totalVramProperty, m_usedVramProperty, m_temperatureProperty, m_coreFrequencyProperty, m_memoryFrequencyProperty}) {
-        connect(sensor, &SensorProperty::subscribedChanged, sensor, [sensor]() {
+        connect(sensor, &KSysGuard::SensorProperty::subscribedChanged, sensor, [sensor]() {
             if (sensor->isSubscribed()) {
                 LinuxNvidiaGpu::s_smiProcess->ref();
             } else {
