@@ -15,3 +15,7 @@ add_subdirectory(memory)
 if(UDev_FOUND)
     add_subdirectory(gpu)
 endif()
+
+if(SENSORS_FOUND)
+    add_subdirectory(lmsensors)
+endif()
