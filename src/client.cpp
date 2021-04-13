@@ -12,18 +12,19 @@
 
 #include <algorithm>
 
-#include <systemstats/SensorPlugin.h>
+#include <systemstats/DBusInterface.h>
 #include <systemstats/SensorObject.h>
+#include <systemstats/SensorPlugin.h>
 #include <systemstats/SensorProperty.h>
 
-#include "ksysguarddaemon.h"
+#include "daemon.h"
 
-Client::Client(KSysGuardDaemon *parent, const QString &serviceName)
+Client::Client(Daemon *parent, const QString &serviceName)
     : QObject(parent)
     , m_serviceName(serviceName)
     , m_daemon(parent)
 {
-    connect(m_daemon, &KSysGuardDaemon::sensorRemoved, this, [this](const QString &sensor) {
+    connect(m_daemon, &Daemon::sensorRemoved, this, [this](const QString &sensor) {
         m_subscribedSensors.remove(sensor);
     });
 }

@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#include "ksysguarddaemon.h"
+#include "daemon.h"
 
 #include <chrono>
 
@@ -33,7 +33,7 @@
 
 constexpr auto UpdateRate = std::chrono::milliseconds{500};
 
-KSysGuardDaemon::KSysGuardDaemon()
+Daemon::Daemon()
     : m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     qDBusRegisterMetaType<KSysGuard::SensorData>();
@@ -46,22 +46,22 @@ KSysGuardDaemon::KSysGuardDaemon()
     new KsystemstatsAdaptor(this);
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
-    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &KSysGuardDaemon::onServiceDisconnected);
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &Daemon::onServiceDisconnected);
 
     auto timer = new QTimer(this);
     timer->setInterval(UpdateRate);
-    connect(timer, &QTimer::timeout, this, &KSysGuardDaemon::sendFrame);
+    connect(timer, &QTimer::timeout, this, &Daemon::sendFrame);
     timer->start();
 }
 
-KSysGuardDaemon::~KSysGuardDaemon()
+Daemon::~Daemon()
 {
     for (Client* c : m_clients) {
         delete c;
     }
 }
 
-void KSysGuardDaemon::init(ReplaceIfRunning replaceIfRunning)
+void Daemon::init(ReplaceIfRunning replaceIfRunning)
 {
     loadProviders();
     KDBusService::StartupOptions options = KDBusService::Unique;
@@ -73,12 +73,12 @@ void KSysGuardDaemon::init(ReplaceIfRunning replaceIfRunning)
     service->setExitValue(1);
 }
 
-void KSysGuardDaemon::setQuitOnLastClientDisconnect(bool quit)
+void Daemon::setQuitOnLastClientDisconnect(bool quit)
 {
     m_quitOnLastClientDisconnect = quit;
 }
 
-void KSysGuardDaemon::loadProviders()
+void Daemon::loadProviders()
 {
     //instantiate all plugins
     QSet<QString> knownPlugins;
@@ -113,7 +113,7 @@ void KSysGuardDaemon::loadProviders()
     }
 }
 
-void KSysGuardDaemon::registerProvider(KSysGuard::SensorPlugin *provider) {
+void Daemon::registerProvider(KSysGuard::SensorPlugin *provider) {
     m_providers.append(provider);
     const auto containers = provider->containers();
     for (auto container : containers) {
@@ -131,7 +131,7 @@ void KSysGuardDaemon::registerProvider(KSysGuard::SensorPlugin *provider) {
     }
 }
 
-KSysGuard::SensorInfoMap KSysGuardDaemon::allSensors() const
+KSysGuard::SensorInfoMap Daemon::allSensors() const
 {
     KSysGuard::SensorInfoMap infoMap;
     for (auto c : qAsConst(m_containers)) {
@@ -154,7 +154,7 @@ KSysGuard::SensorInfoMap KSysGuardDaemon::allSensors() const
     return infoMap;
 }
 
-KSysGuard::SensorInfoMap KSysGuardDaemon::sensors(const QStringList &sensorPaths) const
+KSysGuard::SensorInfoMap Daemon::sensors(const QStringList &sensorPaths) const
 {
     KSysGuard::SensorInfoMap si;
     for (const QString &path : sensorPaths) {
@@ -165,7 +165,7 @@ KSysGuard::SensorInfoMap KSysGuardDaemon::sensors(const QStringList &sensorPaths
     return si;
 }
 
-void KSysGuardDaemon::subscribe(const QStringList &sensorIds)
+void Daemon::subscribe(const QStringList &sensorIds)
 {
     const QString sender = QDBusContext::message().service();
     m_serviceWatcher->addWatchedService(sender);
@@ -178,7 +178,7 @@ void KSysGuardDaemon::subscribe(const QStringList &sensorIds)
     client->subscribeSensors(sensorIds);
 }
 
-void KSysGuardDaemon::unsubscribe(const QStringList &sensorIds)
+void Daemon::unsubscribe(const QStringList &sensorIds)
 {
     const QString sender = QDBusContext::message().service();
     Client *client = m_clients.value(sender);
@@ -188,7 +188,7 @@ void KSysGuardDaemon::unsubscribe(const QStringList &sensorIds)
     client->unsubscribeSensors(sensorIds);
 }
 
-KSysGuard::SensorDataList KSysGuardDaemon::sensorData(const QStringList &sensorIds)
+KSysGuard::SensorDataList Daemon::sensorData(const QStringList &sensorIds)
 {
     KSysGuard::SensorDataList sensorData;
     for (const QString &sensorId: sensorIds) {
@@ -202,7 +202,7 @@ KSysGuard::SensorDataList KSysGuardDaemon::sensorData(const QStringList &sensorI
     return sensorData;
 }
 
-KSysGuard::SensorProperty *KSysGuardDaemon::findSensor(const QString &path) const
+KSysGuard::SensorProperty *Daemon::findSensor(const QString &path) const
 {
     int subsystemIndex = path.indexOf('/');
     int propertyIndex = path.lastIndexOf('/');
@@ -222,7 +222,7 @@ KSysGuard::SensorProperty *KSysGuardDaemon::findSensor(const QString &path) cons
     return o->sensor(property);
 }
 
-void KSysGuardDaemon::onServiceDisconnected(const QString &service)
+void Daemon::onServiceDisconnected(const QString &service)
 {
     delete m_clients.take(service);
     if (m_clients.isEmpty() && m_quitOnLastClientDisconnect) {
@@ -230,7 +230,7 @@ void KSysGuardDaemon::onServiceDisconnected(const QString &service)
     };
 }
 
-void KSysGuardDaemon::sendFrame()
+void Daemon::sendFrame()
 {
     for (auto provider : qAsConst(m_providers)) {
         provider->update();

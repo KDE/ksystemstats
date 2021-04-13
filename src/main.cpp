@@ -9,7 +9,7 @@
 #include <QCommandLineParser>
 #include <QDebug>
 
-#include "ksysguarddaemon.h"
+#include "daemon.h"
 
 int main(int argc, char **argv)
 {
@@ -23,8 +23,8 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    KSysGuardDaemon d;
-    d.init(parser.isSet(QStringLiteral("replace")) ? KSysGuardDaemon::ReplaceIfRunning::Replace : KSysGuardDaemon::ReplaceIfRunning::DoNotReplace);
+    Daemon d;
+    d.init(parser.isSet(QStringLiteral("replace")) ? Daemon::ReplaceIfRunning::Replace : Daemon::ReplaceIfRunning::DoNotReplace);
     d.setQuitOnLastClientDisconnect(!parser.isSet(QStringLiteral("remain")));
     app.exec();
 }

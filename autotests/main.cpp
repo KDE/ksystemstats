@@ -6,7 +6,7 @@
 
 #include <QtTest>
 
-#include "../src/ksysguarddaemon.h"
+#include "../src/daemon.h"
 
 #include <systemstats/SensorContainer.h>
 #include <systemstats/SensorObject.h>
@@ -52,7 +52,7 @@ public:
     int m_updateCount = 0;
 };
 
-class KStatsTest : public KSysGuardDaemon
+class KStatsTest : public Daemon
 {
     Q_OBJECT
 public:

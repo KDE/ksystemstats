@@ -14,7 +14,7 @@ namespace KSysGuard
 {
     class SensorProperty;
 }
-class KSysGuardDaemon;
+class Daemon;
 
 /**
  * This class represents an individual connection to the daemon
@@ -23,7 +23,7 @@ class Client : public QObject
 {
     Q_OBJECT
 public:
-    Client(KSysGuardDaemon *parent, const QString &serviceName);
+    Client(Daemon *parent, const QString &serviceName);
     ~Client() override;
     void subscribeSensors(const QStringList &sensorIds);
     void unsubscribeSensors(const QStringList &sensorIds);
@@ -34,7 +34,7 @@ private:
     void sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors);
 
     const QString m_serviceName;
-    KSysGuardDaemon *m_daemon;
+    Daemon *m_daemon;
     QHash<QString, KSysGuard::SensorProperty *> m_subscribedSensors;
     QMultiHash<KSysGuard::SensorProperty *, QMetaObject::Connection> m_connections;
     KSysGuard::SensorDataList m_pendingUpdates;

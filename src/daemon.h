@@ -24,7 +24,7 @@ class QDBusServiceWatcher;
 /**
  * The main central application
  */
-class KSysGuardDaemon : public QObject, public QDBusContext
+class Daemon : public QObject, public QDBusContext
 {
     Q_OBJECT
 public:
@@ -33,8 +33,8 @@ public:
         DoNotReplace
     };
 
-    KSysGuardDaemon();
-    ~KSysGuardDaemon();
+    Daemon();
+    ~Daemon();
     void init(ReplaceIfRunning replaceIfRunning);
     KSysGuard::SensorProperty *findSensor(const QString &path) const;
 
