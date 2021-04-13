@@ -2,11 +2,11 @@
 # SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
-add_library(ksysguard_plugin_disk MODULE  disks.cpp)
-target_link_libraries(ksysguard_plugin_disk Qt::Core KF5::CoreAddons KF5::I18n KF5::KIOCore KF5::Solid KSysGuard::SystemStats)
+add_library(ksystemstats_plugin_disk MODULE  disks.cpp)
+target_link_libraries(ksystemstats_plugin_disk Qt::Core KF5::CoreAddons KF5::I18n KF5::KIOCore KF5::Solid KSysGuard::SystemStats)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-    target_link_libraries(ksysguard_plugin_disk geom devstat)
+    target_link_libraries(ksystemstats_plugin_disk geom devstat)
 endif()
 
-install(TARGETS ksysguard_plugin_disk DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
+install(TARGETS ksystemstats_plugin_disk DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

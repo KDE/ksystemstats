@@ -12,7 +12,7 @@ set(KSYSGUARD_GPU_PLUGIN_SOURCES
     AllGpus.cpp
 )
 
-add_library(ksysguard_plugin_gpu MODULE ${KSYSGUARD_GPU_PLUGIN_SOURCES})
-target_link_libraries(ksysguard_plugin_gpu Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats UDev::UDev)
+add_library(ksystemstats_plugin_gpu MODULE ${KSYSGUARD_GPU_PLUGIN_SOURCES})
+target_link_libraries(ksystemstats_plugin_gpu Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats UDev::UDev)
 
-install(TARGETS ksysguard_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
+install(TARGETS ksystemstats_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

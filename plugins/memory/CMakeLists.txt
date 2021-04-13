@@ -3,16 +3,16 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-    add_library(ksysguard_plugin_memory MODULE memory.cpp backend.cpp)
+    add_library(ksystemstats_plugin_memory MODULE memory.cpp backend.cpp)
 
     if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-        target_sources(ksysguard_plugin_memory PRIVATE linuxbackend.cpp)
+        target_sources(ksystemstats_plugin_memory PRIVATE linuxbackend.cpp)
     elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-        target_sources(ksysguard_plugin_memory PRIVATE freebsdbackend.cpp)
-        target_link_libraries(ksysguard_plugin_memory kvm)
+        target_sources(ksystemstats_plugin_memory PRIVATE freebsdbackend.cpp)
+        target_link_libraries(ksystemstats_plugin_memory kvm)
     endif()
 
-    target_link_libraries(ksysguard_plugin_memory Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
+    target_link_libraries(ksystemstats_plugin_memory Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
 
-    install(TARGETS ksysguard_plugin_memory DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
+    install(TARGETS ksystemstats_plugin_memory DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
 endif()
