@@ -61,7 +61,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 add_subdirectory(src)
 add_subdirectory(plugins)
-add_subdirectory(test)
+add_subdirectory(tools/kstatsviewer)
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
