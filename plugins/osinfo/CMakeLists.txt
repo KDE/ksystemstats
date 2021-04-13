@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+
 set(KSYSGUARD_OSINFO_PLUGIN_SOURCES
     osinfo.cpp
 )

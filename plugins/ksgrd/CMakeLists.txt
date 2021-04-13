@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2019 David Edmundson <davidedmundson@kde.org>
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+
 set(KSYSGUARD_KSGRD_PLUGIN_SOURCES
     ksgrdiface.cpp
 )

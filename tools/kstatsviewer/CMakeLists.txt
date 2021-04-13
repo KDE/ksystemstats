@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 David Edmundson <davidedmundson@kde.org>
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+# SPDX-License-Identifier: BSD-2-Clause
+
 set(SOURCES
     main.cpp
 )

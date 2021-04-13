@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+
 set(KSYSGUARD_NETWORK_PLUGIN_SOURCES
     NetworkPlugin.cpp
     NetworkDevice.cpp

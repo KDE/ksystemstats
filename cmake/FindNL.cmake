@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2013 Jörg Mayer
+# SPDX-FileCopyrightText: 2017 Peter Wu
 #
 # Find the native netlink includes and library
 #

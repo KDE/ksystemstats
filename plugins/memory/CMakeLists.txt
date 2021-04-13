@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
     add_library(ksysguard_plugin_memory MODULE memory.cpp backend.cpp)
 

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2020 David Edmundson <davidedmundson@kde.org>
+
 [Unit]
 Description=Track hardware statistics
 PartOf=graphical-session.target

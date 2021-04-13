@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2005 Laurent Montel
+
 # - Try to find the sensors directory library
 # Once done this will define
 #

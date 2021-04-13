@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+
 set(KSYSGUARD_GPU_PLUGIN_SOURCES
     GpuPlugin.cpp
     GpuBackend.cpp
