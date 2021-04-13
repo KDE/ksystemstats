@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 
-    SPDX-License-Identifier: LGPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.1-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
 #include "cpu.h"
