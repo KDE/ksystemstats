@@ -51,6 +51,8 @@ public:
     void init(ReplaceIfRunning replaceIfRunning);
     KSysGuard::SensorProperty *findSensor(const QString &path) const;
 
+    void setQuitOnLastClientDisconnect(bool quit);
+
 public Q_SLOTS:
     // DBus
     KSysGuard::SensorInfoMap allSensors() const;
@@ -81,4 +83,5 @@ private:
     QHash<QString /*subscriber DBus base name*/, Client*> m_clients;
     QHash<QString /*id*/, KSysGuard::SensorContainer *> m_containers;
     QDBusServiceWatcher *m_serviceWatcher;
+    bool m_quitOnLastClientDisconnect = true;
 };

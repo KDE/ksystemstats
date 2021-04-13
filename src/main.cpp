@@ -32,9 +32,12 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("replace"), QStringLiteral("Replace the running instance")));
+    parser.addOption({QStringLiteral("remain"), QStringLiteral("Do not quit when last client has disconnected")});
+    parser.addHelpOption();
     parser.process(app);
 
     KSysGuardDaemon d;
     d.init(parser.isSet(QStringLiteral("replace")) ? KSysGuardDaemon::ReplaceIfRunning::Replace : KSysGuardDaemon::ReplaceIfRunning::DoNotReplace);
+    d.setQuitOnLastClientDisconnect(!parser.isSet(QStringLiteral("remain")));
     app.exec();
 }

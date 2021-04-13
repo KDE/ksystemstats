@@ -86,6 +86,11 @@ void KSysGuardDaemon::init(ReplaceIfRunning replaceIfRunning)
     service->setExitValue(1);
 }
 
+void KSysGuardDaemon::setQuitOnLastClientDisconnect(bool quit)
+{
+    m_quitOnLastClientDisconnect = quit;
+}
+
 void KSysGuardDaemon::loadProviders()
 {
     //instantiate all plugins
@@ -233,7 +238,7 @@ KSysGuard::SensorProperty *KSysGuardDaemon::findSensor(const QString &path) cons
 void KSysGuardDaemon::onServiceDisconnected(const QString &service)
 {
     delete m_clients.take(service);
-    if (m_clients.isEmpty()) {
+    if (m_clients.isEmpty() && m_quitOnLastClientDisconnect) {
         QCoreApplication::quit();
     };
 }
