@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
-add_definitions(-DTRANSLATION_DOMAIN=\"ksysguard_plugins_global\")
+add_definitions(-DTRANSLATION_DOMAIN=\"ksystemstats_plugins\")
 
 set(KSYSTEMSTATS_PLUGIN_INSTALL_DIR ${KDE_INSTALL_PLUGINDIR}/ksystemstats)
 
