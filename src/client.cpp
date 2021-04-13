@@ -84,7 +84,10 @@ void Client::sendValues(const KSysGuard::SensorDataList &entries)
     if (entries.isEmpty()) {
         return;
     }
-    auto msg = QDBusMessage::createTargetedSignal(m_serviceName, "/", "org.kde.KSysGuardDaemon", "newSensorData");
+    auto msg = QDBusMessage::createTargetedSignal(m_serviceName,
+                                                  KSysGuard::SystemStats::ObjectPath,
+                                                  KSysGuard::SystemStats::DBusInterface::staticInterfaceName(),
+                                                  "newSensorData");
     msg.setArguments({QVariant::fromValue(entries)});
     QDBusConnection::sessionBus().send(msg);
 }
@@ -94,7 +97,10 @@ void Client::sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors)
     if (sensors.isEmpty()) {
         return;
     }
-    auto msg = QDBusMessage::createTargetedSignal(m_serviceName, "/", "org.kde.KSysGuardDaemon", "sensorMetaDataChanged");
+    auto msg = QDBusMessage::createTargetedSignal(m_serviceName,
+                                                  KSysGuard::SystemStats::ObjectPath,
+                                                  KSysGuard::SystemStats::DBusInterface::staticInterfaceName(),
+                                                  "sensorMetaDataChanged");
     msg.setArguments({QVariant::fromValue(sensors)});
     QDBusConnection::sessionBus().send(msg);
 }
