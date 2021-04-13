@@ -12,4 +12,4 @@ set(KSYSGUARD_GPU_PLUGIN_SOURCES
 add_library(ksysguard_plugin_gpu MODULE ${KSYSGUARD_GPU_PLUGIN_SOURCES})
 target_link_libraries(ksysguard_plugin_gpu Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats UDev::UDev)
 
-install(TARGETS ksysguard_plugin_gpu DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+install(TARGETS ksysguard_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

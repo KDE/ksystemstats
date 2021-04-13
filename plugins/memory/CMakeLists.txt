@@ -10,5 +10,5 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
 
     target_link_libraries(ksysguard_plugin_memory Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
 
-    install(TARGETS ksysguard_plugin_memory DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+    install(TARGETS ksysguard_plugin_memory DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
 endif()

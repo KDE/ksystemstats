@@ -93,7 +93,7 @@ void KSysGuardDaemon::loadProviders()
     std::for_each(m_providers.cbegin(), m_providers.cend(), [&knownPlugins] (const KSysGuard::SensorPlugin *plugin) {
         knownPlugins.insert(plugin->providerName());
     });
-    const auto plugins = KPluginLoader::instantiatePlugins(QStringLiteral("ksysguard"), [this, &knownPlugins](const KPluginMetaData &metaData) {
+    const auto plugins = KPluginLoader::instantiatePlugins(QStringLiteral("ksystemstats"), [this, &knownPlugins](const KPluginMetaData &metaData) {
         auto providerName = metaData.rawData().value("providerName").toString();
         if (knownPlugins.contains(providerName)) {
             return false;

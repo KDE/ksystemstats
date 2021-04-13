@@ -6,4 +6,4 @@ if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
     target_link_libraries(ksysguard_plugin_disk geom devstat)
 endif()
 
-install(TARGETS ksysguard_plugin_disk DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+install(TARGETS ksysguard_plugin_disk DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

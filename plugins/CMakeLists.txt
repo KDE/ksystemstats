@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"ksysguard_plugins_global\")
 
+set(KSYSTEMSTATS_PLUGIN_INSTALL_DIR ${KDE_INSTALL_PLUGINDIR}/ksystemstats)
+
 add_subdirectory(osinfo)
 add_subdirectory(network)
 add_subdirectory(power)

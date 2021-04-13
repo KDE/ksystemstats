@@ -13,4 +13,4 @@ if(SENSORS_FOUND)
     target_compile_definitions(ksysguard_plugin_cpu PRIVATE HAVE_SENSORS)
 endif()
 
-install(TARGETS ksysguard_plugin_cpu DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+install(TARGETS ksysguard_plugin_cpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

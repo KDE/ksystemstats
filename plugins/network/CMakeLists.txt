@@ -22,4 +22,4 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_include_directories(ksysguard_globalplugin_network PRIVATE ${NL_INCLUDE_DIRS})
 endif()
 
-install(TARGETS ksysguard_globalplugin_network DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+install(TARGETS ksysguard_globalplugin_network DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
