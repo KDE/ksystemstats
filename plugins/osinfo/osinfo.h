@@ -22,6 +22,8 @@ public:
         return QStringLiteral("osinfo");
     }
 
+    void update() override;
+
 private:
     std::unique_ptr<OSInfoPrivate> d;
 };
