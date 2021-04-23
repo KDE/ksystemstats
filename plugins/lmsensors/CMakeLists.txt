@@ -6,4 +6,5 @@ add_library(ksysguard_plugin_lmsensors MODULE lmsensors.cpp SensorsFeatureSensor
 target_include_directories(ksysguard_plugin_lmsensors PRIVATE ${SENSORS_INCLUDE_DIR})
 target_link_libraries(ksysguard_plugin_lmsensors PRIVATE Qt5::Core KF5::CoreAddons KF5::I18n  KSysGuard::SystemStats ${SENSORS_LIBRARIES})
 
-install(TARGETS ksysguard_plugin_lmsensors DESTINATION ${KDE_INSTALL_PLUGINDIR}/ksysguard)
+install(TARGETS ksysguard_plugin_lmsensors DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
+
