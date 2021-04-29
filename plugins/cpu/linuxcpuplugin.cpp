@@ -62,6 +62,10 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
         cpuCount = std::max(cpuCount, info.cpu);
     }
 
+    // cpuCount is based on the indices of the cpus, which means it is off by
+    // one compared to the actual number of CPUs. Correct that here.
+    cpuCount += 1;
+
     QHash<int, int> numCores;
     for (const auto &entry : qAsConst(cpus)) {
         const QString name = cpuCount > 1
