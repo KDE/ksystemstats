@@ -20,7 +20,7 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
     : KSysGuard::SensorPlugin(parent, args)
 {
     auto container = new KSysGuard::SensorContainer(QStringLiteral("lmsensors"), i18n( "Hardware Sensors" ), this);
-    if (sensors_init(nullptr) != 0) {
+    if (!initLibSensors()) {
         return;
     }
 
@@ -50,7 +50,6 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
 
 LmSensorsPlugin::~LmSensorsPlugin()
 {
-    sensors_cleanup();
 }
 
 

@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 
 #include <systemstats/SensorContainer.h>
+#include <systemstats/SensorPlugin.h>
 
 #ifdef HAVE_SENSORS
 #include <sensors/sensors.h>
@@ -127,7 +128,9 @@ void LinuxCpuPluginPrivate::update()
 void LinuxCpuPluginPrivate::addSensors()
 {
 #ifdef HAVE_SENSORS
-    sensors_init(nullptr);
+    if (!KSysGuard::SensorPlugin::initLibSensors()) {
+        return;
+    }
     int number = 0;
     while (const sensors_chip_name * const chipName = sensors_get_detected_chips(nullptr, &number)) {
         char name[100];
