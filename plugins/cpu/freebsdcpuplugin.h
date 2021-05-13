@@ -11,8 +11,10 @@
 #include "cpuplugin_p.h"
 #include "usagecomputer.h"
 
+namespace KSysGuard {
 template <typename T>
 class SysctlSensor;
+}
 
 class FreeBsdCpuObject : public CpuObject {
 public:
@@ -22,7 +24,7 @@ public:
 private:
     void makeSensors() override;
     UsageComputer m_usageComputer;
-    QVector<SysctlSensor<int>*> m_sysctlSensors;
+    QVector<KSysGuard::SysctlSensor<int>*> m_sysctlSensors;
 };
 
 class FreeBsdAllCpusObject : public AllCpusObject {
