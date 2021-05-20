@@ -90,36 +90,23 @@ void Daemon::setQuitOnLastClientDisconnect(bool quit)
 
 void Daemon::loadProviders()
 {
-    //instantiate all plugins
-    QSet<QString> knownPlugins;
-    std::for_each(m_providers.cbegin(), m_providers.cend(), [&knownPlugins] (const KSysGuard::SensorPlugin *plugin) {
-        knownPlugins.insert(plugin->providerName());
-    });
-    const auto plugins = KPluginLoader::instantiatePlugins(QStringLiteral("ksystemstats"), [this, &knownPlugins](const KPluginMetaData &metaData) {
-        auto providerName = metaData.rawData().value("providerName").toString();
-        if (knownPlugins.contains(providerName)) {
-            return false;
-        }
-        knownPlugins.insert(providerName);
-        return true;
-    }, this);
-
-    for (auto object : plugins) {
-        auto factory = qobject_cast<KPluginFactory*>(object);
-        if (!factory) {
-            qWarning() << "Plugin object" << object << "did not provide a proper KPluginFactory";
-            continue;
-        }
-        auto provider = factory->create<KSysGuard::SensorPlugin>(this);
-        if (!provider) {
-            qWarning() << "Plugin object" << object << "did not provide a proper SensorPlugin";
-            continue;
-        }
-        registerProvider(provider);
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("ksystemstats"));
+    if (plugins.isEmpty()) {
+        qWarning() << "No plugins found";
     }
 
-    if (m_providers.isEmpty()) {
-        qWarning() << "No plugins found";
+    for (const KPluginMetaData &metaData : plugins) {
+        KPluginLoader pluginLoader(metaData.fileName());
+        KSysGuard::SensorPlugin *provider = nullptr;
+        if (KPluginFactory *factory = pluginLoader.factory()) {
+            provider = factory->create<KSysGuard::SensorPlugin>(this);
+            if (provider) {
+                registerProvider(provider);
+            }
+        }
+        if (!provider) {
+            qWarning() << "Could not load plugin:" << metaData.pluginId() << "with file name" << metaData.fileName();
+        }
     }
 }
 
