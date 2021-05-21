@@ -24,3 +24,9 @@ CMakeLists.txt.user*
 *.unc-backup*
 .clang-format
 /build*/
+cmake-build-debug*
+.idea
+.vscode
+/compile_commands.json
+.clangd
+.cache
