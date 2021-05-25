@@ -11,5 +11,5 @@ set(SOURCES
 ecm_add_test(
     ${SOURCES}
     TEST_NAME ksystemstatstest
-    LINK_LIBRARIES Qt::Test ksystemstats_core
+    LINK_LIBRARIES Qt::Test ksystemstats_core ${SENSORS_LIBRARIES}
 )

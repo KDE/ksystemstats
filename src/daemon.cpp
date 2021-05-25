@@ -9,6 +9,10 @@
 
 #include <chrono>
 
+#ifdef HAVE_SENSORS
+#include <sensors/sensors.h>
+#endif
+
 #include <QDBusArgument>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -59,10 +63,16 @@ Daemon::~Daemon()
     for (Client* c : m_clients) {
         delete c;
     }
+#ifdef HAVE_SENSORS
+    sensors_cleanup();
+#endif
 }
 
 void Daemon::init(ReplaceIfRunning replaceIfRunning)
 {
+#ifdef HAVE_SENSORS
+    sensors_init(nullptr);
+#endif
     loadProviders();
     KDBusService::StartupOptions options = KDBusService::Unique;
     if (replaceIfRunning == ReplaceIfRunning::Replace) {
