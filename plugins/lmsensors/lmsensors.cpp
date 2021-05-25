@@ -20,9 +20,6 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
     : KSysGuard::SensorPlugin(parent, args)
 {
     auto container = new KSysGuard::SensorContainer(QStringLiteral("lmsensors"), i18n( "Hardware Sensors" ), this);
-    if (sensors_init(nullptr) != 0) {
-        return;
-    }
 
     const std::array<QByteArray, 3> blacklist{"coretemp","k10temp","amdgpu"}; //already handled by other plugins
     int chipNumber = 0;
@@ -50,7 +47,6 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
 
 LmSensorsPlugin::~LmSensorsPlugin()
 {
-    sensors_cleanup();
 }
 
 
