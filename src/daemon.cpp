@@ -7,6 +7,7 @@
 
 #include "daemon.h"
 
+#include <algorithm>
 #include <chrono>
 
 #ifdef HAVE_SENSORS
@@ -111,6 +112,13 @@ void Daemon::loadProviders()
 }
 
 void Daemon::registerProvider(KSysGuard::SensorPlugin *provider) {
+    bool alreadyHasProvider = std::any_of(m_providers.begin(), m_providers.end(), [provider](KSysGuard::SensorPlugin *provider2){
+        return provider2->providerName() == provider->providerName();
+    });
+    if (alreadyHasProvider) {
+        qWarning() << "Provider" << provider->providerName() << "is already registered";
+        return;
+    }
     m_providers.append(provider);
     const auto containers = provider->containers();
     for (auto container : containers) {
