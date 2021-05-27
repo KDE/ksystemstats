@@ -12,7 +12,7 @@ qt5_add_dbus_adaptor(SOURCES ${SYSTEMSTATS_DBUS_INTERFACE} daemon.h Daemon)
 
 add_library(ksystemstats_core STATIC ${SOURCES})
 target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF5::CoreAddons KF5::DBusAddons KSysGuard::SystemStats)
-if (${SENSORS_FOUND})
+if (SENSORS_FOUND)
     target_include_directories(ksystemstats_core PRIVATE ${SENSORS_INCLUDE_DIR})
     target_link_libraries(ksystemstats_core PRIVATE ${SENSORS_LIBRARIES})
     target_compile_definitions(ksystemstats_core PRIVATE HAVE_SENSORS)
