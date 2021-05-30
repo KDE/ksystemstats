@@ -8,7 +8,7 @@ set(SOURCES
 )
 
 find_file(SYSTEMSTATS_DBUS_INTERFACE NAMES dbus-1/interfaces/org.kde.ksystemstats.xml HINTS ${KDE_INSTALL_FULL_DATADIR})
-qt5_add_dbus_adaptor(SOURCES ${SYSTEMSTATS_DBUS_INTERFACE} daemon.h Daemon)
+qt_add_dbus_adaptor(SOURCES ${SYSTEMSTATS_DBUS_INTERFACE} daemon.h Daemon)
 
 add_library(ksystemstats_core STATIC ${SOURCES})
 target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF5::CoreAddons KF5::DBusAddons KSysGuard::SystemStats)
