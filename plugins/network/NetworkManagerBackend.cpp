@@ -13,6 +13,9 @@
 #include <NetworkManagerQt/WirelessDevice>
 #include <NetworkManagerQt/ModemDevice>
 
+// Update rate in ms
+static const int UpdateRate = 500;
+
 NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<NetworkManager::Device> device)
     : NetworkDevice(id, id)
     , m_device(device)
@@ -44,7 +47,7 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         static bool updatingRefreshRate = true;
         if (!updatingRefreshRate) {
             m_initialStatisticsRate = rate;
-            m_statistics->setRefreshRateMs(1000);
+            m_statistics->setRefreshRateMs(UpdateRate);
         }
         updatingRefreshRate = !updatingRefreshRate;
     });
@@ -52,27 +55,27 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
     // We want to display speed in bytes per second, so use a fixed one-second
     // update interval here so we are independant of the actual update rate of
     // the daemon.
-    m_statistics->setRefreshRateMs(1000);
+    m_statistics->setRefreshRateMs(UpdateRate);
 
     // Unfortunately, the statistics interface does not emit change signals if
     // no change happened. This makes the change signals rather useless for our
     // case because we also need to know when no change happened, so that we
     // can update rate sensors to show 0. So instead use a timer and query the
-    // statistics every second, updating the sensors as needed.
+    // statistics every UpdateRate ms, updating the sensors as needed.
     m_statisticsTimer = std::make_unique<QTimer>();
-    m_statisticsTimer->setInterval(1000);
+    m_statisticsTimer->setInterval(UpdateRate);
     connect(m_statisticsTimer.get(), &QTimer::timeout, this, [this]() {
         auto newDownload = m_statistics->rxBytes();
         auto previousDownload = m_totalDownloadSensor->value().toULongLong();
         if (previousDownload > 0) {
-            m_downloadSensor->setValue(newDownload - previousDownload);
+            m_downloadSensor->setValue((newDownload - previousDownload) * (1000 / UpdateRate));
         }
         m_totalDownloadSensor->setValue(newDownload);
 
         auto newUpload = m_statistics->txBytes();
         auto previousUpload = m_totalUploadSensor->value().toULongLong();
         if (previousUpload > 0) {
-            m_uploadSensor->setValue(newUpload - previousUpload);
+            m_uploadSensor->setValue((newUpload - previousUpload) * (1000 / UpdateRate));
         }
         m_totalUploadSensor->setValue(newUpload);
     });
