@@ -30,8 +30,6 @@ GpuPlugin::GpuPlugin(QObject *parent, const QVariantList &args)
 {
     d->container = std::make_unique<KSysGuard::SensorContainer>(QStringLiteral("gpu"), i18nc("@title", "GPU"), this);
 
-    d->allGpus = new AllGpus(d->container.get());
-
 #ifdef Q_OS_LINUX
     d->backend = std::make_unique<LinuxBackend>();
 #endif
@@ -44,6 +42,10 @@ GpuPlugin::GpuPlugin(QObject *parent, const QVariantList &args)
             d->container->removeObject(device);
         });
         d->backend->start();
+
+        if (d->backend->deviceCount() > 0) {
+            d->allGpus = new AllGpus(d->container.get());
+        }
     }
 }
 

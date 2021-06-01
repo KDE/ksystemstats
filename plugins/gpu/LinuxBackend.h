@@ -22,6 +22,8 @@ public:
     void stop() override;
     void update() override;
 
+    int deviceCount() override;
+
 private:
     udev *m_udev = nullptr;
     QVector<GpuDevice*> m_devices;

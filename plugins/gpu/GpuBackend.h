@@ -21,6 +21,8 @@ public:
     virtual void stop() = 0;
     virtual void update() = 0;
 
+    virtual int deviceCount() = 0;
+
     Q_SIGNAL void deviceAdded(GpuDevice *device);
     Q_SIGNAL void deviceRemoved(GpuDevice *device);
 };
