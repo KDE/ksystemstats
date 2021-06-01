@@ -82,3 +82,8 @@ void LinuxBackend::update()
         device->update();
     }
 }
+
+int LinuxBackend::deviceCount()
+{
+    return m_devices.count();
+}
