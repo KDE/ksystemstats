@@ -17,6 +17,7 @@
 #endif
 
 #include "linuxcpu.h"
+#include "loadaverages.h"
 
 struct CpuInfo
 {
@@ -29,6 +30,8 @@ struct CpuInfo
 LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     : CpuPluginPrivate(q)
 {
+    m_loadAverages = new LoadAverages(m_container);
+
     // Parse /proc/cpuinfo for information about cpus
     QFile cpuinfo("/proc/cpuinfo");
     cpuinfo.open(QIODevice::ReadOnly);
@@ -87,9 +90,10 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
 
 void LinuxCpuPluginPrivate::update()
 {
+    m_loadAverages->update();
+
     auto isSubscribed = [] (const KSysGuard::SensorObject *o) {return o->isSubscribed();};
-    const auto objects = m_container->objects();
-    if (std::none_of(objects.cbegin(), objects.cend(), isSubscribed)) {
+    if (std::none_of(m_cpusBySystemIds.cbegin(), m_cpusBySystemIds.cend(), isSubscribed) && !m_allCpus->isSubscribed()) {
         return;
     }
 

@@ -6,6 +6,8 @@
 
 #include "freebsdcpuplugin.h"
 
+#include "loadaverages.h"
+
 #include <algorithm>
 #include <vector>
 
@@ -107,6 +109,7 @@ void FreeBsdAllCpusObject::update(long system, long user, long idle)
 FreeBsdCpuPluginPrivate::FreeBsdCpuPluginPrivate(CpuPlugin* q)
     : CpuPluginPrivate(q)
 {
+    m_loadAverages = new LoadAverages(m_container);
     // The values used here can be found in smp(4)
     int numCpu;
     readSysctl("hw.ncpu", &numCpu);
@@ -121,9 +124,10 @@ FreeBsdCpuPluginPrivate::FreeBsdCpuPluginPrivate(CpuPlugin* q)
 
 void FreeBsdCpuPluginPrivate::update()
 {
+    m_loadAverages->update();
+
     auto isSubscribed = [] (const KSysGuard::SensorObject *o) {return o->isSubscribed();};
-    const auto objects = m_container->objects();
-    if (std::none_of(objects.cbegin(), objects.cend(), isSubscribed)) {
+    if (std::none_of(m_cpus.cbegin(), m_cpus.cend(), isSubscribed) && !m_allCpus->isSubscribed()) {
         return;
     }
     auto updateCpu = [] (auto *cpu, long *cp_time){

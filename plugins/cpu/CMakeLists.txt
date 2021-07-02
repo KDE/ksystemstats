@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
-add_library(ksystemstats_plugin_cpu MODULE  cpu.cpp cpuplugin.cpp usagecomputer.cpp)
+add_library(ksystemstats_plugin_cpu MODULE  cpu.cpp cpuplugin.cpp loadaverages.cpp usagecomputer.cpp)
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_sources(ksystemstats_plugin_cpu PRIVATE linuxcpu.cpp linuxcpuplugin.cpp)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")

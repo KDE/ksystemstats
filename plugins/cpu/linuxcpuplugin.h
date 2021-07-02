@@ -13,6 +13,7 @@
 struct sensors_chip_name;
 class LinuxCpuObject;
 class LinuxAllCpusObject;
+class LoadAverages;
 
 class LinuxCpuPluginPrivate : public CpuPluginPrivate {
 public:
@@ -26,6 +27,7 @@ private:
     LinuxAllCpusObject *m_allCpus;
     QVector<LinuxCpuObject *> m_cpus;
     QMultiHash<QPair<unsigned int, unsigned int>, LinuxCpuObject * const> m_cpusBySystemIds;
+    LoadAverages *m_loadAverages;
 };
 
 #endif

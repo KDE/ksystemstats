@@ -15,6 +15,7 @@ namespace KSysGuard {
 template <typename T>
 class SysctlSensor;
 }
+class LoadAverages;
 
 class FreeBsdCpuObject : public CpuObject {
 public:
@@ -42,6 +43,7 @@ public:
 private:
     FreeBsdAllCpusObject *m_allCpus;
     QVector<FreeBsdCpuObject*> m_cpus;
+    LoadAverages *m_loadAverages;
 };
 
 #endif
