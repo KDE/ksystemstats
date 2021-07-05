@@ -1,16 +1,20 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
- * 
+ * SPDX-FileCopyrightText: 2021 David Redondo <kde@david-redondo.de>
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 #include "LinuxAmdGpu.h"
 
 #include <libudev.h>
+#include <linux/pci.h>
+#include <sensors/sensors.h>
 
 #include <QDir>
 
 #include <systemstats/SysFsSensor.h>
+#include <systemstats/SensorsFeatureSensor.h>
 
 int ppTableGetMax(const QByteArray &table)
 {
@@ -49,22 +53,6 @@ LinuxAmdGpu::~LinuxAmdGpu()
 
 void LinuxAmdGpu::initialize()
 {
-    // Find temprature sensor paths.
-    // Temperature sensors are exposed in the "hwmon" subdirectory of the
-    // device, but in a subdirectory with a number appended that differs per
-    // device. So search through the hwmon directory for the files that we want.
-    QDir hwmonDir(QString::fromLocal8Bit(udev_device_get_syspath(m_device)) % QStringLiteral("/hwmon"));
-    const auto entries = hwmonDir.entryList({QStringLiteral("hwmon*")});
-    for (auto entry : entries) {
-        QString inputPath = entry % QStringLiteral("/temp1_input");
-        QString critPath = entry % QStringLiteral("/temp1_crit");
-        if (hwmonDir.exists(inputPath) && hwmonDir.exists(critPath)) {
-            m_coreTemperatureCurrentPath = QStringLiteral("hwmon/") % inputPath;
-            m_coreTemperatureMaxPath = QStringLiteral("hwmon/") % critPath;
-            break;
-        }
-    }
-
     GpuDevice::initialize();
 
     m_nameProperty->setValue(QString::fromLocal8Bit(udev_device_get_property_value(m_device, "ID_MODEL_FROM_DATABASE")));
@@ -76,11 +64,6 @@ void LinuxAmdGpu::initialize()
 
     m_coreFrequencyProperty->setMax(ppTableGetMax(udev_device_get_sysattr_value(m_device, "pp_dpm_sclk")));
     m_memoryFrequencyProperty->setMax(ppTableGetMax(udev_device_get_sysattr_value(m_device, "pp_dpm_mclk")));
-
-    result = udev_device_get_sysattr_value(m_device, m_coreTemperatureMaxPath.toLocal8Bit());
-    if (result) {
-        m_temperatureProperty->setMax(std::atoi(result) / 1000);
-    }
 }
 
 void LinuxAmdGpu::update()
@@ -88,6 +71,7 @@ void LinuxAmdGpu::update()
     for (auto sensor : m_sysFsSensors) {
         sensor->update();
     }
+    m_temperatureProperty->update();
 }
 
 void LinuxAmdGpu::makeSensors()
@@ -119,11 +103,25 @@ void LinuxAmdGpu::makeSensors()
     m_memoryFrequencyProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new KSysGuard::SysFsSensor(QStringLiteral("temperature"), devicePath % QLatin1Char('/') % m_coreTemperatureCurrentPath, this);
-    sensor->setConvertFunction([](const QByteArray &input) {
-        auto result = std::atoi(input);
-        return result / 1000;
-    });
-    m_temperatureProperty = sensor;
-    m_sysFsSensors << sensor;
+    sensors_chip_name match;
+    sensors_parse_chip_name("amdgpu-*", &match);
+    int number = 0;
+    const sensors_chip_name *chip;
+    while ((chip = sensors_get_detected_chips(&match, &number))) {
+        int domain, bus, device, function;
+        if (std::sscanf(udev_device_get_sysname(m_device), "%d:%d:%d.%d", &domain, &bus, &device, &function) == 4 &&
+            ((domain << 16) + (bus << 8) + PCI_DEVFN(device, function)) == chip->addr) {
+            break;
+        }
+    }
+    number = 0;
+    const sensors_feature * feature;
+    while (chip && (feature = sensors_get_features(chip, &number))) {
+        if (feature->type == SENSORS_FEATURE_TEMP && qstrcmp(feature->name, "temp1") == 0) {
+            m_temperatureProperty = KSysGuard::makeSensorsFeatureSensor(QStringLiteral("temperature"), chip, feature, this);
+        }
+    }
+    if (!m_temperatureProperty) {
+        m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    }
 }

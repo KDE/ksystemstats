@@ -34,6 +34,4 @@ protected:
 private:
     udev_device *m_device;
     QVector<KSysGuard::SysFsSensor*> m_sysFsSensors;
-    QString m_coreTemperatureCurrentPath;
-    QString m_coreTemperatureMaxPath;
 };

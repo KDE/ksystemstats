@@ -1,18 +1,11 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
-set(KSYSGUARD_GPU_PLUGIN_SOURCES
-    GpuPlugin.cpp
-    GpuBackend.cpp
-    GpuDevice.cpp
-    LinuxAmdGpu.cpp
-    LinuxNvidiaGpu.cpp
-    LinuxBackend.cpp
-    NvidiaSmiProcess.cpp
-    AllGpus.cpp
-)
-
-add_library(ksystemstats_plugin_gpu MODULE ${KSYSGUARD_GPU_PLUGIN_SOURCES})
+add_library(ksystemstats_plugin_gpu MODULE GpuPlugin.cpp GpuBackend.cpp GpuDevice.cpp AllGpus.cpp)
 target_link_libraries(ksystemstats_plugin_gpu Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats UDev::UDev)
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+   target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaSmiProcess.cpp)
+endif()
 
 install(TARGETS ksystemstats_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
