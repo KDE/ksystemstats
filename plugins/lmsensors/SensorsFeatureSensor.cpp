@@ -118,6 +118,10 @@ SensorsFeatureSensor* makeSensorsFeatureSensor(const sensors_chip_name * const c
         return nullptr;
     }
 
+    if (!valueFeature) {
+        return nullptr;
+    }
+
     auto sensor = new SensorsFeatureSensor(QString::fromUtf8(feature->name), chipName, valueFeature, parent);
     sensor->setName(prettyName(chipName, feature));
     sensor->setUnit(unit);
