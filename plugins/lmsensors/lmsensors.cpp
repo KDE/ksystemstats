@@ -6,10 +6,9 @@
 
 #include "lmsensors.h"
 
-#include "SensorsFeatureSensor.h"
-
 #include <systemstats/SensorContainer.h>
 #include <systemstats/SensorObject.h>
+#include <systemstats/SensorsFeatureSensor.h>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -38,7 +37,11 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
         }
         int featureNumber = 0;
         while (const sensors_feature * const feature = sensors_get_features(chipName, &featureNumber)) {
-            if (auto sensor = makeSensorsFeatureSensor(chipName, feature, sensorObject)) {
+            const QString id = QString::fromUtf8(feature->name);
+            if (sensorObject->sensor(id)) {
+                continue;
+            }
+            if (auto sensor = KSysGuard::makeSensorsFeatureSensor(id, chipName, feature, sensorObject)) {
                 m_sensors.push_back(sensor);
             }
         }

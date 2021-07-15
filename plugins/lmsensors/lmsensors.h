@@ -9,8 +9,10 @@
 
 #include <systemstats/SensorPlugin.h>
 
+namespace KSysGuard
+{
 class SensorsFeatureSensor;
-
+}
 class LmSensorsPlugin : public KSysGuard::SensorPlugin
 {
     Q_OBJECT
@@ -20,6 +22,6 @@ public:
     QString providerName() const override;
     void update() override;
 private:
-    QVector<SensorsFeatureSensor*> m_sensors;
+    QVector<KSysGuard::SensorsFeatureSensor *> m_sensors;
 };
 #endif
