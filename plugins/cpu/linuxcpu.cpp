@@ -9,6 +9,7 @@
 #include <QFile>
 
 #include <sensors/sensors.h>
+#include <systemstats/SensorsFeatureSensor.h>
 
 static double readCpuFreq(const QString &cpuId, const QString &attribute, bool &ok)
 {
@@ -22,46 +23,15 @@ static double readCpuFreq(const QString &cpuId, const QString &attribute, bool &
     return 0;
 }
 
-TemperatureSensor::TemperatureSensor(const QString& id, KSysGuard::SensorObject* parent)
-    : SensorProperty(id, parent)
-    , m_sensorChipName{nullptr}
-    , m_temperatureSubfeature{-1}
-{
-}
-
-void TemperatureSensor::setFeature(const sensors_chip_name *const chipName, const sensors_feature *const feature)
-{
-    m_sensorChipName = chipName;
-    const sensors_subfeature * const temperature = sensors_get_subfeature(chipName, feature, SENSORS_SUBFEATURE_TEMP_INPUT);
-    if (temperature) {
-        m_temperatureSubfeature = temperature->number;
-    }
-    // Typically temp_emergency > temp_crit > temp_max, but not every processor has them
-    // see https://www.kernel.org/doc/html/latest/hwmon/sysfs-interface.html
-    double value;
-    for (auto subfeatureType : {SENSORS_SUBFEATURE_TEMP_EMERGENCY, SENSORS_SUBFEATURE_TEMP_CRIT, SENSORS_SUBFEATURE_TEMP_MAX}) {
-        const sensors_subfeature * const subfeature = sensors_get_subfeature(chipName, feature, subfeatureType);
-        if (subfeature && sensors_get_value(chipName, subfeature->number, &value) == 0) {
-            setMax(value);
-            break;
-        }
-    }
-}
-
-void TemperatureSensor::update()
-{
-    if (m_sensorChipName && m_temperatureSubfeature != -1) {
-        double value;
-        if (sensors_get_value(m_sensorChipName, m_temperatureSubfeature, &value) == 0) {
-            setValue(value);
-        }
-    }
-}
-
 LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : CpuObject(id, name, parent)
 
 {
+}
+
+void LinuxCpuObject::makeTemperatureSensor(const sensors_chip_name * const chipName, const sensors_feature * const feature)
+{
+    m_temperature = KSysGuard::makeSensorsFeatureSensor(QStringLiteral("temperature"), chipName, feature, this);
 }
 
 void LinuxCpuObject::initialize(double initialFrequency)
@@ -83,8 +53,9 @@ void LinuxCpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
     m_frequency = new KSysGuard::SensorProperty(QStringLiteral("frequency"), this);
-    m_temperatureSensor = new TemperatureSensor(QStringLiteral("temperature"), this);
-    m_temperature = m_temperatureSensor;
+    if (!m_temperature) {
+        m_temperature = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    }
 }
 
 void LinuxCpuObject::update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle)
@@ -115,7 +86,7 @@ void LinuxCpuObject::update(unsigned long long system, unsigned long long user, 
     // frequency value changed even if the cpu apparently doesn't use CPUFreq?
 
     // Third update temperature
-    m_temperatureSensor->update();
+    m_temperature->update();
 }
 
 void LinuxAllCpusObject::update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle) {
@@ -126,10 +97,3 @@ void LinuxAllCpusObject::update(unsigned long long system, unsigned long long us
     m_wait->setValue(m_usageComputer.waitUsage);
     m_usage->setValue(m_usageComputer.totalUsage);
 }
-
-TemperatureSensor *LinuxCpuObject::temperatureSensor()
-{
-    return m_temperatureSensor;
-}
-
-

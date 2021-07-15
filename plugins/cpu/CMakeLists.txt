@@ -5,8 +5,6 @@
 add_library(ksystemstats_plugin_cpu MODULE  cpu.cpp cpuplugin.cpp loadaverages.cpp usagecomputer.cpp)
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_sources(ksystemstats_plugin_cpu PRIVATE linuxcpu.cpp linuxcpuplugin.cpp)
-    target_include_directories(ksystemstats_plugin_cpu PRIVATE ${SENSORS_INCLUDE_DIR})
-    target_link_libraries(ksystemstats_plugin_cpu ${SENSORS_LIBRARIES})
 elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
     target_sources(ksystemstats_plugin_cpu PRIVATE freebsdcpuplugin.cpp)
 endif()

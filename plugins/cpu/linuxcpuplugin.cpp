@@ -74,16 +74,18 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
                              : i18nc("@title", "Core %1", ++numCores[entry.cpu]);
 
         auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), name, m_container);
-        cpu->initialize(entry.frequency);
         m_cpus.push_back(cpu);
         m_cpusBySystemIds.insert({entry.cpu, entry.core}, cpu);
     }
 
+    addSensors();
+    for (int i = 0; i < m_cpus.size(); ++i) {
+        m_cpus.at(i)->initialize(cpus.at(i).frequency);
+    }
     m_allCpus = new LinuxAllCpusObject(m_container);
     m_allCpus->initialize();
     m_allCpus->setCounts(cpuCount, m_cpus.size());
 
-    addSensors();
 }
 
 void LinuxCpuPluginPrivate::update()
@@ -169,7 +171,7 @@ void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chip
             // Naturally they share the same temperature sensor and have the same coreId.
             auto cpu_range = m_cpusBySystemIds.equal_range({physicalId, feature.key()});
             for (auto cpu_it = cpu_range.first; cpu_it != cpu_range.second; ++cpu_it) {
-                (*cpu_it)->temperatureSensor()->setFeature(chipName, feature.value());
+                (*cpu_it)->makeTemperatureSensor(chipName, feature.value());
             }
         }
     }
@@ -208,7 +210,7 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
 
     auto setSingleSensor = [this, chipName] (const sensors_feature * const feature) {
         for (auto &cpu : m_cpusBySystemIds) {
-            cpu->temperatureSensor()->setFeature(chipName, feature);
+            cpu->makeTemperatureSensor(chipName, feature);
         }
     };
     if (tdie) {
