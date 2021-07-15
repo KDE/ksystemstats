@@ -13,7 +13,3 @@ ecm_add_test(
     TEST_NAME ksystemstatstest
     LINK_LIBRARIES Qt::Test ksystemstats_core
 )
-
-if(SENSORS_FOUND)
-    target_link_libraries(ksystemstatstest ${SENSORS_LIBRARIES})
-endif()

@@ -12,9 +12,7 @@
 
 #include <systemstats/SensorContainer.h>
 
-#ifdef HAVE_SENSORS
 #include <sensors/sensors.h>
-#endif
 
 #include "linuxcpu.h"
 #include "loadaverages.h"
@@ -130,7 +128,6 @@ void LinuxCpuPluginPrivate::update()
 
 void LinuxCpuPluginPrivate::addSensors()
 {
-#ifdef HAVE_SENSORS
     int number = 0;
     while (const sensors_chip_name * const chipName = sensors_get_detected_chips(nullptr, &number)) {
         char name[100];
@@ -141,13 +138,11 @@ void LinuxCpuPluginPrivate::addSensors()
             addSensorsAmd(chipName);
         }
     }
-#endif
 }
 
 // Documentation: https://www.kernel.org/doc/html/latest/hwmon/coretemp.html
 void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chipName)
 {
-#ifdef HAVE_SENSORS
     int featureNumber = 0;
     QHash<unsigned int,  sensors_feature const *> coreFeatures;
     int physicalId = -1;
@@ -178,12 +173,10 @@ void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chip
             }
         }
     }
-#endif
 }
 
 void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipName)
 {
-#ifdef HAVE_SENSORS
     // All Processors should have the Tctl pseudo temperature as temp1. Newer ones have the real die
     // temperature Tdie as temp2. Some of those have temperatures for each core complex die (CCD) as
     // temp3-6 or temp3-10 depending on the number of CCDS.
@@ -223,5 +216,4 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
     } else if (tctl) {
         setSingleSensor(tctl);
     }
-#endif
 }

@@ -40,11 +40,6 @@ add_definitions(-DQT_USE_QSTRINGBUILDER)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-find_package(Sensors)
-set_package_properties(Sensors PROPERTIES
-                       TYPE OPTIONAL
-                       PURPOSE "Allows to show sensor information")
-
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     find_package(NL)
     set_package_properties(NL PROPERTIES

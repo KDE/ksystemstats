@@ -8,9 +8,7 @@
 
 #include <QFile>
 
-#ifdef HAVE_SENSORS
 #include <sensors/sensors.h>
-#endif
 
 static double readCpuFreq(const QString &cpuId, const QString &attribute, bool &ok)
 {
@@ -33,7 +31,6 @@ TemperatureSensor::TemperatureSensor(const QString& id, KSysGuard::SensorObject*
 
 void TemperatureSensor::setFeature(const sensors_chip_name *const chipName, const sensors_feature *const feature)
 {
-#ifdef HAVE_SENSORS
     m_sensorChipName = chipName;
     const sensors_subfeature * const temperature = sensors_get_subfeature(chipName, feature, SENSORS_SUBFEATURE_TEMP_INPUT);
     if (temperature) {
@@ -49,19 +46,16 @@ void TemperatureSensor::setFeature(const sensors_chip_name *const chipName, cons
             break;
         }
     }
-#endif
 }
 
 void TemperatureSensor::update()
 {
-#ifdef HAVE_SENSORS
     if (m_sensorChipName && m_temperatureSubfeature != -1) {
         double value;
         if (sensors_get_value(m_sensorChipName, m_temperatureSubfeature, &value) == 0) {
             setValue(value);
         }
     }
-#endif
 }
 
 LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)

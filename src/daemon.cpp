@@ -10,10 +10,6 @@
 #include <algorithm>
 #include <chrono>
 
-#ifdef HAVE_SENSORS
-#include <sensors/sensors.h>
-#endif
-
 #include <QDBusArgument>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -31,6 +27,10 @@
 #include <KPluginLoader>
 #include <KPluginMetaData>
 #include <KPluginFactory>
+
+#ifdef Q_OS_LINUX
+#include <sensors/sensors.h>
+#endif
 
 #include "ksystemstatsadaptor.h"
 
@@ -64,14 +64,14 @@ Daemon::~Daemon()
     for (Client* c : m_clients) {
         delete c;
     }
-#ifdef HAVE_SENSORS
+#ifdef Q_OS_LINUX
     sensors_cleanup();
 #endif
 }
 
 void Daemon::init(ReplaceIfRunning replaceIfRunning)
 {
-#ifdef HAVE_SENSORS
+#ifdef Q_OS_LINUX
     sensors_init(nullptr);
 #endif
     loadProviders();
