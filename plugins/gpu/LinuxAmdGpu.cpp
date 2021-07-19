@@ -64,6 +64,10 @@ void LinuxAmdGpu::initialize()
 
     m_coreFrequencyProperty->setMax(ppTableGetMax(udev_device_get_sysattr_value(m_device, "pp_dpm_sclk")));
     m_memoryFrequencyProperty->setMax(ppTableGetMax(udev_device_get_sysattr_value(m_device, "pp_dpm_mclk")));
+
+    std::for_each(m_sensorsSensors.begin(), m_sensorsSensors.end(), [this] (KSysGuard::SensorProperty *sensor) {
+        sensor->setPrefix(name());
+    });
 }
 
 void LinuxAmdGpu::update()
@@ -103,6 +107,16 @@ void LinuxAmdGpu::makeSensors()
     m_memoryFrequencyProperty = sensor;
     m_sysFsSensors << sensor;
 
+    discoverSensors();
+
+    // Potentially found by discoverSensors, if not create it so it's not missing
+    if (!m_temperatureProperty) {
+        m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    }
+}
+
+void LinuxAmdGpu::discoverSensors()
+{
     sensors_chip_name match;
     sensors_parse_chip_name("amdgpu-*", &match);
     int number = 0;
@@ -114,14 +128,21 @@ void LinuxAmdGpu::makeSensors()
             break;
         }
     }
-    number = 0;
-    const sensors_feature * feature;
-    while (chip && (feature = sensors_get_features(chip, &number))) {
-        if (feature->type == SENSORS_FEATURE_TEMP && qstrcmp(feature->name, "temp1") == 0) {
-            m_temperatureProperty = KSysGuard::makeSensorsFeatureSensor(QStringLiteral("temperature"), chip, feature, this);
-        }
+    if (!chip) {
+        return;
     }
-    if (!m_temperatureProperty) {
-        m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    number = 0;
+    while (const sensors_feature * const feature = sensors_get_features(chip, &number)) {
+        // We want a special id for the device temperature
+        KSysGuard::SensorProperty *sensor;
+        if (feature->type == SENSORS_FEATURE_TEMP && qstrcmp(feature->name, "temp1") == 0) {
+            sensor = KSysGuard::makeSensorsFeatureSensor(QStringLiteral("temperature"), chip, feature, this);
+            m_temperatureProperty = sensor;
+        }  else {
+            sensor = makeSensorsFeatureSensor(feature->name, chip, feature, this);
+        }
+        if (sensor) {
+            m_sensorsSensors << sensor;
+        }
     }
 }

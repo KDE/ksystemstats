@@ -32,6 +32,9 @@ protected:
     void makeSensors() override;
 
 private:
+    void discoverSensors();
+
     udev_device *m_device;
     QVector<KSysGuard::SysFsSensor*> m_sysFsSensors;
+    QVector<KSysGuard::SensorProperty*> m_sensorsSensors;
 };
