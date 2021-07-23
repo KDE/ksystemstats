@@ -34,6 +34,7 @@ void LinuxBackend::start()
     auto enumerate = udev_enumerate_new(m_udev);
 
     udev_enumerate_add_match_property(enumerate, "ID_PCI_CLASS_FROM_DATABASE", "Display controller");
+    udev_enumerate_add_match_subsystem(enumerate, "pci");
     udev_enumerate_scan_devices(enumerate);
 
     int gpuCounter = 0;
