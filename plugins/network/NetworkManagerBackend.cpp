@@ -147,7 +147,7 @@ void NetworkManagerDevice::update()
     if (m_device->ipV6Config().isValid()) {
         m_ipv6Sensor->setValue(m_device->ipV6Config().addresses().at(0).ip().toString());
     } else {
-        m_ipv4Sensor->setValue(QString{});
+        m_ipv6Sensor->setValue(QString{});
     }
 }
 
