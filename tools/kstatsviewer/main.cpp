@@ -56,6 +56,7 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addOption({ QStringLiteral("list"), QStringLiteral("List Available Sensors") });
     parser.addOption({ QStringLiteral("details"), QStringLiteral("Show detailed information about selected sensors") });
+    parser.addOption({ QStringLiteral("quit"), QStringLiteral("Exit after showing sensor data") });
 
     parser.addPositionalArgument(QStringLiteral("sensorNames"), QStringLiteral("List of sensors to monitor"), QStringLiteral("sensorId1 sensorId2  ..."));
     parser.addHelpOption();
@@ -69,6 +70,9 @@ int main(int argc, char **argv)
     } else {
         app.setShowDetails(parser.isSet(QStringLiteral("details")));
         app.subscribe(parser.positionalArguments());
+        if (parser.isSet(QStringLiteral("quit"))) {
+            QTimer::singleShot(std::chrono::seconds(1), &app, &QCoreApplication::quit);
+        }
         app.exec();
     }
 }
