@@ -125,6 +125,9 @@ void SensorWatcher::list()
     auto pendingSensors = m_iface->allSensors();
     pendingSensors.waitForFinished();
     auto sensors = pendingSensors.value();
+    if (sensors.count() < 1) {
+        std::cout << "No sensors available.";
+    }
     for (auto it = sensors.constBegin(); it != sensors.constEnd(); it++) {
         std::cout << qPrintable(it.key()) << ' ' << qPrintable(it.value().name) << std::endl;
     }
