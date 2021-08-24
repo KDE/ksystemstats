@@ -36,7 +36,7 @@ void FreeBsdCpuObject::makeSensors()
 
     const QByteArray prefix = QByteArrayLiteral("dev.cpu.") + id().right(1).toLocal8Bit();
     auto freq = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), prefix + QByteArrayLiteral(".freq"), this);
-    auto temp = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), prefix + QByteArrayLiteral(".freq"), this);
+    auto temp = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), prefix + QByteArrayLiteral(".temperature"), this);
     m_sysctlSensors.append({freq, temp});
     m_frequency = freq;
     m_temperature = temp;
