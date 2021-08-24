@@ -86,13 +86,41 @@ SensorWatcher::SensorWatcher(int &argc, char **argv)
     connect(m_iface, &KSysGuard::SystemStats::DBusInterface::sensorMetaDataChanged, this, &SensorWatcher::onSensorMetaDataChanged);
 }
 
+namespace
+{
+/** Complain about sensor-name mismatches
+ *
+ * Check that all the @p sensorNames have data; those that do not are
+ * **possibly** typo's in the sensor names, so warn the user about that.
+ */
+void showMissingSensors(const KSysGuard::SensorDataList &data, const QStringList& sensorNames)
+{
+    QSet<QString> setNames(sensorNames.begin(), sensorNames.end());
+    for (const auto &sensor : qAsConst(data)) {
+        const QString name = sensor.sensorProperty;
+        if (setNames.contains(name)) {
+            setNames.remove(name);
+        } else {
+            std::cout << "Unexpected data for sensor '" << qPrintable(name) << "'\n";
+        }
+    }
+    for (const auto& name : setNames) {
+        std::cout << "No data for sensor '" << qPrintable(name) << "'\n";
+    }
+}
+}
+
 void SensorWatcher::subscribe(const QStringList &sensorNames)
 {
     m_iface->subscribe(sensorNames);
 
     auto pendingInitialValues = m_iface->sensorData(sensorNames);
     pendingInitialValues.waitForFinished();
-    onNewSensorData(pendingInitialValues.value());
+    {
+        auto sensorValues = pendingInitialValues.value();
+        showMissingSensors(sensorValues, sensorNames);
+        onNewSensorData(sensorValues);
+    }
 
     if (m_showDetails) {
         auto pendingSensors = m_iface->sensors(sensorNames);
