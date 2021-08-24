@@ -19,13 +19,14 @@ class LoadAverages;
 
 class FreeBsdCpuObject : public CpuObject {
 public:
-    FreeBsdCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent);
+    FreeBsdCpuObject(int cpuNumber, const QString &name, KSysGuard::SensorContainer *parent);
     void update(long system, long user, long idle);
     void initialize() override;
 private:
     void makeSensors() override;
+
     UsageComputer m_usageComputer;
-    QVector<KSysGuard::SysctlSensor<int>*> m_sysctlSensors;
+    const QByteArray m_sysctlPrefix;  // "dev.cpu.<n>"
 };
 
 class FreeBsdAllCpusObject : public AllCpusObject {

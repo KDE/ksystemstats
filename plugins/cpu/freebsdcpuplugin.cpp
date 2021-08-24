@@ -20,13 +20,51 @@
 #include <systemstats/SensorContainer.h>
 #include <systemstats/SysctlSensor.h>
 
+namespace {
+
+/** Reads a sysctl into a typed buffer, return success-value
+ *
+ * Returns @c false if the sysctl fails, otherwise @c true (even if
+ * the returned size is a mismatch or whatever).
+ */
 template <typename T>
 bool readSysctl(const char *name, T *buffer, size_t size = sizeof(T)) {
     return sysctlbyname(name, buffer, &size, nullptr, 0) != -1;
 }
 
-FreeBsdCpuObject::FreeBsdCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
-    : CpuObject(id, name, parent)
+/** Calls update() with sysctl cp_time data
+ *
+ * For a CPU object, or an AllCpus object, calls update() with the relevant data.
+ */
+template<typename cpu_t>
+inline void updateCpu(cpu_t *cpu, long *cp_time)
+{
+    cpu->update(cp_time[CP_SYS] + cp_time[CP_INTR], cp_time[CP_USER] + cp_time[CP_NICE], cp_time[CP_IDLE]);
+}
+
+/** Reads cp_times from sysctl and applies to the vector of CPU objects
+ *
+ * Assumes that the CPU objects are ordered in the vector in the same order
+ * that their data show up in the sysctl return value.
+ */
+inline void read_cp_times(QVector<FreeBsdCpuObject*> &cpus)
+{
+    unsigned int numCores = cpus.count();
+    std::vector<long> cp_times(numCores * CPUSTATES);
+    size_t cpTimesSize = sizeof(long) *  cp_times.size();
+    if (readSysctl("kern.cp_times", cp_times.data(), cpTimesSize)) {//, &cpTimesSize, nullptr, 0) != -1) {
+        for (unsigned int  i = 0; i < numCores; ++i) {
+            auto cpu = cpus[i];
+            updateCpu(cpu, &cp_times[CPUSTATES * i]);
+        }
+    }
+}
+
+}
+
+FreeBsdCpuObject::FreeBsdCpuObject(int cpuNumber, const QString &name, KSysGuard::SensorContainer *parent)
+    : CpuObject(QStringLiteral("cpu%1").arg(cpuNumber), name, parent),
+    m_sysctlPrefix(QByteArrayLiteral("dev.cpu.") + QByteArray::number(cpuNumber))
 {
 }
 
@@ -34,23 +72,18 @@ void FreeBsdCpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
 
-    const QByteArray prefix = QByteArrayLiteral("dev.cpu.") + id().right(1).toLocal8Bit();
-    auto freq = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), prefix + QByteArrayLiteral(".freq"), this);
-    auto temp = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), prefix + QByteArrayLiteral(".temperature"), this);
-    m_sysctlSensors.append({freq, temp});
-    m_frequency = freq;
-    m_temperature = temp;
+    m_frequency = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), m_sysctlPrefix + QByteArrayLiteral(".freq"), this);
+    m_temperature = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), m_sysctlPrefix + QByteArrayLiteral(".temperature"), this);
 }
 
 void FreeBsdCpuObject::initialize()
 {
     CpuObject::initialize();
 
-    const QByteArray prefix = QByteArrayLiteral("dev.cpu.") + id().right(1).toLocal8Bit();
     // For min and max frequency we have to parse the values return by freq_levels because only
     // minimum is exposed as a single value
     size_t size;
-    const QByteArray levelsName = prefix + QByteArrayLiteral(".freq_levels");
+    const QByteArray levelsName = m_sysctlPrefix + QByteArrayLiteral(".freq_levels");
     // calling sysctl with nullptr writes the needed size to size
     if (sysctlbyname(levelsName, nullptr, &size, nullptr, 0) != -1) {
         QByteArray freqLevels(size, Qt::Uninitialized);
@@ -69,7 +102,7 @@ void FreeBsdCpuObject::initialize()
             m_frequency->setMax(max);
         }
     }
-    const QByteArray tjmax = prefix + QByteArrayLiteral(".coretemp.tjmax");
+    const QByteArray tjmax = m_sysctlPrefix + QByteArrayLiteral(".coretemp.tjmax");
     int maxTemperature;
     // This is only availabel on Intel (using the coretemp driver)
     if (readSysctl(tjmax.constData(), &maxTemperature)) {
@@ -79,10 +112,6 @@ void FreeBsdCpuObject::initialize()
 
 void FreeBsdCpuObject::update(long system, long user, long idle)
 {
-    if (!isSubscribed()) {
-        return;
-    }
-
     // No wait usage on FreeBSD
     m_usageComputer.setTicks(system, user, 0, idle);
 
@@ -90,9 +119,15 @@ void FreeBsdCpuObject::update(long system, long user, long idle)
     m_user->setValue(m_usageComputer.userUsage);
     m_usage->setValue(m_usageComputer.totalUsage);
 
-    for (auto sensor : m_sysctlSensors) {
-        sensor->update();
+    // The calculations above are "free" because we already have the data;
+    // is we are not subscribed, don't bother updating the data that needs
+    // extra work to be done.
+    if (!isSubscribed()) {
+        return;
     }
+
+    m_temperature->update();
+    m_frequency->update();
 }
 
 void FreeBsdAllCpusObject::update(long system, long user, long idle)
@@ -105,7 +140,6 @@ void FreeBsdAllCpusObject::update(long system, long user, long idle)
     m_usage->setValue(m_usageComputer.totalUsage);
 }
 
-
 FreeBsdCpuPluginPrivate::FreeBsdCpuPluginPrivate(CpuPlugin* q)
     : CpuPluginPrivate(q)
 {
@@ -114,12 +148,14 @@ FreeBsdCpuPluginPrivate::FreeBsdCpuPluginPrivate(CpuPlugin* q)
     int numCpu;
     readSysctl("hw.ncpu", &numCpu);
     for (int i = 0; i < numCpu; ++i) {
-        auto cpu = new FreeBsdCpuObject(QStringLiteral("cpu%1").arg(i), i18nc("@title", "CPU %1", i + 1), m_container);
+        auto cpu = new FreeBsdCpuObject(i, i18nc("@title", "CPU %1", i + 1), m_container);
         cpu->initialize();
         m_cpus.push_back(cpu);
     }
     m_allCpus = new FreeBsdAllCpusObject(m_container);
     m_allCpus->initialize();
+
+    read_cp_times(m_cpus);
 }
 
 void FreeBsdCpuPluginPrivate::update()
@@ -130,18 +166,7 @@ void FreeBsdCpuPluginPrivate::update()
     if (std::none_of(m_cpus.cbegin(), m_cpus.cend(), isSubscribed) && !m_allCpus->isSubscribed()) {
         return;
     }
-    auto updateCpu = [] (auto *cpu, long *cp_time){
-        cpu->update(cp_time[CP_SYS] + cp_time[CP_INTR], cp_time[CP_USER] + cp_time[CP_NICE], cp_time[CP_IDLE]);
-    };
-    unsigned int numCores = m_container->objects().count() - 1;
-    std::vector<long> cp_times(numCores * CPUSTATES);
-    size_t cpTimesSize = sizeof(long) *  cp_times.size();
-    if (readSysctl("kern.cp_times", cp_times.data(), cpTimesSize)) {//, &cpTimesSize, nullptr, 0) != -1) {
-        for (unsigned int  i = 0; i < numCores; ++i) {
-            auto cpu = m_cpus[i];
-            updateCpu(cpu, &cp_times[CPUSTATES * i]);
-        }
-    }
+    read_cp_times(m_cpus);
     // update total values
     long cp_time[CPUSTATES];
     if (readSysctl("kern.cp_time", &cp_time)) {
