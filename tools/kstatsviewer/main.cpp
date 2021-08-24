@@ -54,16 +54,14 @@ int main(int argc, char **argv)
     SensorWatcher app(argc, argv);
 
     QCommandLineParser parser;
-    auto listSensorsOption = QCommandLineOption(QStringLiteral("list"), QStringLiteral("List Available Sensors"));
-    parser.addOption(listSensorsOption);
-
+    parser.addOption({ QStringLiteral("list"), QStringLiteral("List Available Sensors") });
     parser.addOption({ QStringLiteral("details"), QStringLiteral("Show detailed information about selected sensors") });
 
     parser.addPositionalArgument(QStringLiteral("sensorNames"), QStringLiteral("List of sensors to monitor"), QStringLiteral("sensorId1 sensorId2  ..."));
     parser.addHelpOption();
     parser.process(app);
 
-    if (parser.isSet(listSensorsOption)) {
+    if (parser.isSet(QStringLiteral("list"))) {
         app.list();
     } else if (parser.positionalArguments().isEmpty()) {
         qDebug() << "No sensors specified.";
