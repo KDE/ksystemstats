@@ -107,6 +107,8 @@ void Daemon::loadProviders()
         }
         if (!provider) {
             qWarning() << "Could not load plugin:" << metaData.pluginId() << "with file name" << metaData.fileName();
+        } else {
+            qDebug() << "Loaded plugin" << metaData.pluginId() << "from file" << metaData.fileName();
         }
     }
 }
