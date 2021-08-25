@@ -70,10 +70,9 @@ int main(int argc, char **argv)
     } else {
         app.setShowDetails(parser.isSet(QStringLiteral("details")));
         app.subscribe(parser.positionalArguments());
-        if (parser.isSet(QStringLiteral("quit"))) {
-            QTimer::singleShot(std::chrono::seconds(1), &app, &QCoreApplication::quit);
+        if (!parser.isSet(QStringLiteral("quit"))) {
+            app.exec();
         }
-        app.exec();
     }
 }
 
