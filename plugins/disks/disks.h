@@ -37,6 +37,7 @@ public:
 private:
     void addDevice(const Solid::Device &device);
     void addAggregateSensors();
+    void createAccessibleVolumeObject(const Solid::Device &device);
 
     QHash<QString, VolumeObject*> m_volumesByDevice;
     QElapsedTimer m_elapsedTimer;

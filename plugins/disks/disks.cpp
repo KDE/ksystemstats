@@ -37,6 +37,7 @@ public:
     void setBytes(quint64 read, quint64 written, qint64 elapsedTime);
 
     const QString udi;
+    const QString mountPoint;
 private:
     static QString idHelper(const Solid::Device &device);
 
@@ -48,7 +49,6 @@ private:
     KSysGuard::SensorProperty *m_writeRate;
     quint64 m_bytesRead;
     quint64 m_bytesWritten;
-    const QString m_mountPoint;
 };
 
 QString VolumeObject::idHelper(const Solid::Device &device)
@@ -61,7 +61,7 @@ QString VolumeObject::idHelper(const Solid::Device &device)
 VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContainer* parent)
     : SensorObject(idHelper(device), device.displayName(),  parent)
     , udi(device.udi())
-    , m_mountPoint(device.as<Solid::StorageAccess>()->filePath())
+    , mountPoint(device.as<Solid::StorageAccess>()->filePath())
 {
     auto volume = device.as<Solid::StorageVolume>();
 
@@ -112,7 +112,7 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
 
 void VolumeObject::update()
 {
-    auto job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(m_mountPoint));
+    auto job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(mountPoint));
     connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this] (KJob *job, KIO::filesize_t size, KIO::filesize_t available) {
         if (!job->error()) {
             m_total->setValue(size);
@@ -194,14 +194,12 @@ void DisksPlugin::addDevice(const Solid::Device& device)
     }
 
     if (access->filePath() != QString()) {
-        auto block = device.as<Solid::Block>();
-        m_volumesByDevice.insert(block->device(), new VolumeObject(device, container));
+        createAccessibleVolumeObject(device);
     }
     connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this, container] (bool accessible, const QString &udi) {
         if (accessible) {
             Solid::Device device(udi);
-            auto block = device.as<Solid::Block>();
-            m_volumesByDevice.insert(block->device(), new VolumeObject(device, container));
+            createAccessibleVolumeObject(device);
         } else {
             auto it = std::find_if(m_volumesByDevice.begin(), m_volumesByDevice.end(), [&udi] (VolumeObject *disk) {
                 return disk->udi == udi;
@@ -214,6 +212,20 @@ void DisksPlugin::addDevice(const Solid::Device& device)
     });
 }
 
+void DisksPlugin::createAccessibleVolumeObject(const Solid::Device &device)
+{
+    auto block = device.as<Solid::Block>();
+    auto access = device.as<Solid::StorageAccess>();
+    Q_ASSERT(access->isAccessible());
+    const QString  mountPoint = access->filePath();
+    const bool hasMountPoint = std::any_of(m_volumesByDevice.cbegin(), m_volumesByDevice.cend(), [mountPoint] (const VolumeObject* volume) {
+        return volume->mountPoint == mountPoint;
+    });
+    if (hasMountPoint) {
+        return;
+    }
+    m_volumesByDevice.insert(block->device(), new VolumeObject(device,  containers()[0]));
+}
 
 void DisksPlugin::addAggregateSensors()
 {
