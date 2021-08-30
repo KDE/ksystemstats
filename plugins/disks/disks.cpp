@@ -153,8 +153,8 @@ DisksPlugin::DisksPlugin(QObject *parent, const QVariantList &args)
                 return volume->udi == udi;
             });
             if (it != m_volumesByDevice.end()) {
-                m_volumesByDevice.erase(it);
                 container->removeObject(*it);
+                m_volumesByDevice.erase(it);
             }
         }
     });
@@ -205,8 +205,8 @@ void DisksPlugin::addDevice(const Solid::Device& device)
                 return disk->udi == udi;
             });
             if (it != m_volumesByDevice.end()) {
-                m_volumesByDevice.erase(it);
                 container->removeObject(*it);
+                m_volumesByDevice.erase(it);
             }
         }
     });
