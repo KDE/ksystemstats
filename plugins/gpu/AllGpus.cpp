@@ -21,6 +21,7 @@ AllGpus::AllGpus(KSysGuard::SensorContainer *parent)
         return QVariant::fromValue(first.toDouble() + (second.toDouble() / gpuCount));
     });
     m_usageSensor->setUnit(KSysGuard::UnitPercent);
+    m_usageSensor->setMax(100);
 
     m_totalVramSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("totalVram"), i18nc("@title", "All GPUs Total Memory"));
     m_totalVramSensor->setShortName(i18nc("@title Short for 'All GPUs Total Memory'", "Total"));
