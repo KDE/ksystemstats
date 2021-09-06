@@ -24,11 +24,11 @@ public:
 protected:
     virtual void makeSensors();
 
-    KSysGuard::SensorProperty *m_nameProperty;
-    KSysGuard::SensorProperty *m_usageProperty;
-    KSysGuard::SensorProperty *m_totalVramProperty;
-    KSysGuard::SensorProperty *m_usedVramProperty;
-    KSysGuard::SensorProperty *m_temperatureProperty;
-    KSysGuard::SensorProperty *m_coreFrequencyProperty;
-    KSysGuard::SensorProperty *m_memoryFrequencyProperty;
+    KSysGuard::SensorProperty *m_nameProperty = nullptr;
+    KSysGuard::SensorProperty *m_usageProperty = nullptr;
+    KSysGuard::SensorProperty *m_totalVramProperty = nullptr;
+    KSysGuard::SensorProperty *m_usedVramProperty = nullptr;
+    KSysGuard::SensorProperty *m_temperatureProperty = nullptr;
+    KSysGuard::SensorProperty *m_coreFrequencyProperty = nullptr;
+    KSysGuard::SensorProperty *m_memoryFrequencyProperty = nullptr;
 };
