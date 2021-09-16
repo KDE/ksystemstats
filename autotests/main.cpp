@@ -85,13 +85,15 @@ void KStatsTest::loadProviders()
 {
     m_testPlugin = new TestPlugin(this);
     registerProvider(m_testPlugin);
+
+    // Sensor registration in containers uses queued connections, trigger those
+    QTest::qWait(0);
 }
 
 void KStatsTest::initTestCase()
 {
     QDBusConnection::sessionBus().registerObject("/", this, QDBusConnection::ExportAdaptors);
     loadProviders();
-
 }
 
 void KStatsTest::findById()
