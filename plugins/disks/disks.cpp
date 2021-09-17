@@ -41,12 +41,12 @@ public:
 private:
     static QString idHelper(const Solid::Device &device);
 
-    KSysGuard::SensorProperty *m_name;
-    KSysGuard::SensorProperty *m_total;
-    KSysGuard::SensorProperty *m_used;
-    KSysGuard::SensorProperty *m_free;
-    KSysGuard::SensorProperty *m_readRate;
-    KSysGuard::SensorProperty *m_writeRate;
+    KSysGuard::SensorProperty *m_name = nullptr;
+    KSysGuard::SensorProperty *m_total = nullptr;
+    KSysGuard::SensorProperty *m_used = nullptr;
+    KSysGuard::SensorProperty *m_free = nullptr;
+    KSysGuard::SensorProperty *m_readRate = nullptr;
+    KSysGuard::SensorProperty *m_writeRate = nullptr;
     quint64 m_bytesRead;
     quint64 m_bytesWritten;
 };
