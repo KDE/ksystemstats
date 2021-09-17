@@ -23,17 +23,17 @@ public:
 protected:
     virtual void makeSensors();
 
-    KSysGuard::SensorProperty *m_total;
-    KSysGuard::SensorProperty *m_used;
-    KSysGuard::SensorProperty *m_free;
-    KSysGuard::SensorProperty *m_application;
-    KSysGuard::SensorProperty *m_cache;
-    KSysGuard::SensorProperty *m_buffer;
-    KSysGuard::SensorProperty *m_swapTotal;
-    KSysGuard::SensorProperty *m_swapUsed;
-    KSysGuard::SensorProperty *m_swapFree;
-    KSysGuard::SensorObject *m_physicalObject;
-    KSysGuard::SensorObject *m_swapObject;
+    KSysGuard::SensorProperty *m_total = nullptr;
+    KSysGuard::SensorProperty *m_used = nullptr;
+    KSysGuard::SensorProperty *m_free = nullptr;
+    KSysGuard::SensorProperty *m_application = nullptr;
+    KSysGuard::SensorProperty *m_cache = nullptr;
+    KSysGuard::SensorProperty *m_buffer = nullptr;
+    KSysGuard::SensorProperty *m_swapTotal = nullptr;
+    KSysGuard::SensorProperty *m_swapUsed = nullptr;
+    KSysGuard::SensorProperty *m_swapFree = nullptr;
+    KSysGuard::SensorObject *m_physicalObject = nullptr;
+    KSysGuard::SensorObject *m_swapObject = nullptr;
 };
 
 #endif

@@ -17,10 +17,10 @@ protected:
     virtual void initialize();
     virtual void makeSensors();
 
-    KSysGuard::SensorProperty *m_usage;
-    KSysGuard::SensorProperty *m_system;
-    KSysGuard::SensorProperty *m_user;
-    KSysGuard::SensorProperty *m_wait;
+    KSysGuard::SensorProperty *m_usage = nullptr;
+    KSysGuard::SensorProperty *m_system = nullptr;
+    KSysGuard::SensorProperty *m_user = nullptr;
+    KSysGuard::SensorProperty *m_wait = nullptr;
 };
 
 class CpuObject : public BaseCpuObject {
@@ -30,8 +30,8 @@ public:
 protected:
     void makeSensors() override;
 
-    KSysGuard::SensorProperty *m_frequency;
-    KSysGuard::SensorProperty *m_temperature;
+    KSysGuard::SensorProperty *m_frequency = nullptr;
+    KSysGuard::SensorProperty *m_temperature = nullptr;
 };
 
 class AllCpusObject : public BaseCpuObject {
@@ -42,8 +42,8 @@ public:
 protected:
     void makeSensors() override;
 
-    KSysGuard::SensorProperty *m_cpuCount;
-    KSysGuard::SensorProperty *m_coreCount;
+    KSysGuard::SensorProperty *m_cpuCount = nullptr;
+    KSysGuard::SensorProperty *m_coreCount = nullptr;
 };
 
 #endif

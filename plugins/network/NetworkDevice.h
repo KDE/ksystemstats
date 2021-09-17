@@ -17,12 +17,12 @@ public:
     ~NetworkDevice() override = default;
 
 protected:
-    KSysGuard::SensorProperty *m_networkSensor;
-    KSysGuard::SensorProperty *m_signalSensor;
-    KSysGuard::SensorProperty *m_ipv4Sensor;
-    KSysGuard::SensorProperty *m_ipv6Sensor;
-    KSysGuard::SensorProperty *m_downloadSensor;
-    KSysGuard::SensorProperty *m_uploadSensor;
-    KSysGuard::SensorProperty *m_totalDownloadSensor;
-    KSysGuard::SensorProperty *m_totalUploadSensor;
+    KSysGuard::SensorProperty *m_networkSensor = nullptr;
+    KSysGuard::SensorProperty *m_signalSensor = nullptr;
+    KSysGuard::SensorProperty *m_ipv4Sensor = nullptr;
+    KSysGuard::SensorProperty *m_ipv6Sensor = nullptr;
+    KSysGuard::SensorProperty *m_downloadSensor = nullptr;
+    KSysGuard::SensorProperty *m_uploadSensor = nullptr;
+    KSysGuard::SensorProperty *m_totalDownloadSensor = nullptr;
+    KSysGuard::SensorProperty *m_totalUploadSensor = nullptr;
 };
