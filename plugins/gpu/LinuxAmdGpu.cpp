@@ -75,6 +75,9 @@ void LinuxAmdGpu::update()
     for (auto sensor : m_sysFsSensors) {
         sensor->update();
     }
+    for (auto sensor : m_sensorsSensors) {
+        sensor->update();
+    }
     m_temperatureProperty->update();
 }
 
