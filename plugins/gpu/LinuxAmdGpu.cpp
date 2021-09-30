@@ -123,7 +123,7 @@ void LinuxAmdGpu::discoverSensors()
     const sensors_chip_name *chip;
     while ((chip = sensors_get_detected_chips(&match, &number))) {
         int domain, bus, device, function;
-        if (std::sscanf(udev_device_get_sysname(m_device), "%d:%d:%d.%d", &domain, &bus, &device, &function) == 4 &&
+        if (std::sscanf(udev_device_get_sysname(m_device), "%x:%x:%x.%x", &domain, &bus, &device, &function) == 4 &&
             ((domain << 16) + (bus << 8) + PCI_DEVFN(device, function)) == chip->addr) {
             break;
         }
