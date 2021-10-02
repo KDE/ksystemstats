@@ -49,6 +49,10 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     )
 endif()
 
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    find_package(Sensors REQUIRED)
+endif()
+
 find_package(UDev)
 set_package_properties(
     UDev PROPERTIES
