@@ -7,6 +7,6 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@stable'
     'frameworks/kcoreaddons': '@stable'
     'frameworks/kdbusaddons': '@stable'
-    'frameworks/ksolid': '@stable'
+    'frameworks/solid': '@stable'
     'frameworks/kio': '@stable'
-    'kde/workspace/libksysguard': '@same'
+    'plasma/libksysguard': '@same'
