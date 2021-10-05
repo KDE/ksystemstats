@@ -41,16 +41,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    find_package(Sensors REQUIRED)
+
     find_package(NL)
     set_package_properties(NL PROPERTIES
         TYPE REQUIRED
         PURPOSE "Used for gathering socket info via the sock_diag netlink subsystem and for the network plugin when NetworkManagerQt is not available."
         URL "https://github.com/thom311/libnl/"
     )
-endif()
-
-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    find_package(Sensors REQUIRED)
 endif()
 
 find_package(UDev)
