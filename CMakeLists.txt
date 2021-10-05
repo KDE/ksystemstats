@@ -41,7 +41,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    find_package(Sensors REQUIRED)
+    find_package(Sensors)
+    set_package_properties(Sensors PROPERTIES
+            TYPE REQUIRED
+            PURPOSE "Used for reading hardware sensors that aren't covered by other plugins."
+            URL "https://github.com/lm-sensors/lm-sensors"
+        )
 
     find_package(NL)
     set_package_properties(NL PROPERTIES
