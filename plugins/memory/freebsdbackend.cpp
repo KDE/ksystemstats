@@ -51,7 +51,7 @@ void FreeBsdMemoryBackend::makeSensors()
     m_free = freeSensor;
     m_sysctlSensors.push_back(freeSensor);
 
-    auto cacheSensor = new KSysGuard::SysctlSensor<uint32_t>(QStringLiteral("cache"),"vm.v_cache_count", m_physicalObject);
+    auto cacheSensor = new KSysGuard::SysctlSensor<uint32_t>(QStringLiteral("cache"),"vm.stats.vm.v_cache_count", m_physicalObject);
     cacheSensor->setConversionFunction(capturedPagesToBytes);
     m_cache = cacheSensor;
     m_sysctlSensors.push_back(cacheSensor);
