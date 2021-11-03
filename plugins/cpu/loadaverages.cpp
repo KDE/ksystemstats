@@ -7,6 +7,7 @@
 #include "loadaverages.h"
 
 #include <KLocalizedString>
+#include <array>
 
 LoadAverages::LoadAverages(KSysGuard::SensorContainer *parent)
     : KSysGuard::SensorObject(QStringLiteral("loadaverages"), i18nc("@title", "Load Averages"), parent)
