@@ -12,6 +12,7 @@
 
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <array>
 
 #include <sensors/sensors.h>
 
