@@ -9,7 +9,20 @@ if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
 endif()
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaGpu.cpp NvidiaSmiProcess.cpp)
+    target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxIntelGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaGpu.cpp NvidiaSmiProcess.cpp)
+
+    add_executable(ksystemstats_intel_helper IntelHelper.cpp)
+    configure_file(IntelHelperLocation.h.cmake IntelHelperLocation.h)
+    install(TARGETS ksystemstats_intel_helper DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+
+    if (Libcap_FOUND)
+        install(
+            CODE "execute_process(
+            COMMAND ${SETCAP_EXECUTABLE}
+            CAP_PERFMON=+ep
+            \$ENV{DESTDIR}${KDE_INSTALL_FULL_LIBEXECDIR}/ksystemstats_intel_helper)"
+        )
+    endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
@@ -28,3 +41,4 @@ ecm_qt_declare_logging_category(ksystemstats_plugin_gpu HEADER debug.h
 )
 
 install(TARGETS ksystemstats_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
+
