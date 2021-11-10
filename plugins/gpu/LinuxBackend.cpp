@@ -12,6 +12,7 @@
 #include <libudev.h>
 
 #include "LinuxAmdGpu.h"
+#include "LinuxIntelGpu.h"
 #include "LinuxNvidiaGpu.h"
 
 // Vendor ID strings, as used in sysfs
@@ -58,6 +59,8 @@ void LinuxBackend::start()
             gpu = new LinuxAmdGpu{gpuId, gpuName, pciDevice};
         } else if (vendor == nvidiaVendor) {
             gpu = new LinuxNvidiaGpu{drmNumber, gpuId, gpuName};
+        } else if (vendor == intelVendor) {
+            gpu = new LinuxIntelGpu{gpuId, gpuName};
         } else {
             qDebug() << "Found unsupported GPU:" << path;
             udev_device_unref(drmDevice);
