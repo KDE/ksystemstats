@@ -12,6 +12,7 @@
 #include <libudev.h>
 
 #include "LinuxAmdGpu.h"
+#include "LinuxIntelGpu.h"
 #include "LinuxNvidiaGpu.h"
 #include "debug.h"
 
@@ -51,6 +52,9 @@ void LinuxBackend::start()
         auto vendor = QByteArray(udev_device_get_sysattr_value(pciDevice, "vendor"));
         auto drmNumber = std::atoi(udev_device_get_sysnum(drmDevice));
 
+        qDebug() << path;
+        qDebug() << udev_device_get_devpath(drmDevice) << udev_device_get_syspath(drmDevice) << udev_device_get_devnode(drmDevice);
+        qDebug() << udev_device_get_devpath(pciDevice) << udev_device_get_syspath(pciDevice) << udev_device_get_devnode(pciDevice);
         auto gpuId = QStringLiteral("gpu%1").arg(drmNumber);
         auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", drmNumber + 1);
 
@@ -59,6 +63,8 @@ void LinuxBackend::start()
             gpu = new LinuxAmdGpu{gpuId, gpuName, pciDevice};
         } else if (vendor == nvidiaVendor) {
             gpu = new LinuxNvidiaGpu{gpuId, gpuName, pciDevice};
+        } else if (vendor == intelVendor) {
+            gpu = new LinuxIntelGpu{gpuId, gpuName, pciDevice};
         } else {
             qCDebug(KSYSTEMSTATS_GPU) << "Found unsupported GPU:" << path;
             udev_device_unref(drmDevice);
