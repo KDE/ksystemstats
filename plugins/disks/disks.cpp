@@ -280,9 +280,18 @@ void DisksPlugin::addAggregateSensors()
 
 void DisksPlugin::update()
 {
+    bool anySubscribed = false;
     for (auto volume : m_volumesByDevice) {
-        volume->update();
+        if (volume->isSubscribed()) {
+            anySubscribed = true;
+            volume->update();
+        }
     }
+
+    if (!anySubscribed) {
+        return;
+    }
+
     qint64 elapsed = 0;
     if (m_elapsedTimer.isValid()) {
         elapsed = m_elapsedTimer.restart();
