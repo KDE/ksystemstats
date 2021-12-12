@@ -31,7 +31,7 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     m_loadAverages = new LoadAverages(m_container);
 
     // Parse /proc/cpuinfo for information about cpus
-    QFile cpuinfo("/proc/cpuinfo");
+    QFile cpuinfo(QStringLiteral("/proc/cpuinfo"));
     cpuinfo.open(QIODevice::ReadOnly);
 
     int cpuCount = 0;
@@ -99,9 +99,8 @@ void LinuxCpuPluginPrivate::update()
 
     // Parse /proc/stat to get usage values. The format is described at
     // https://www.kernel.org/doc/html/latest/filesystems/proc.html#miscellaneous-kernel-statistics-in-proc-stat
-    QFile stat("/proc/stat");
+    QFile stat(QStringLiteral("/proc/stat"));
     stat.open(QIODevice::ReadOnly);
-    QByteArray line;
     for (QByteArray line = stat.readLine(); !line.isNull(); line = stat.readLine()) {
         auto values = line.simplified().split(' ');
         if (!line.startsWith("cpu")) {
@@ -209,7 +208,7 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
     // TODO How to map CCD temperatures to cores?
 
     auto setSingleSensor = [this, chipName] (const sensors_feature * const feature) {
-        for (auto &cpu : m_cpusBySystemIds) {
+        for (auto &cpu : qAsConst(m_cpusBySystemIds)) {
             cpu->makeTemperatureSensor(chipName, feature);
         }
     };

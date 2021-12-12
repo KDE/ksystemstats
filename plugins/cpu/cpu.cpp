@@ -107,10 +107,10 @@ void AllCpusObject::initialize()
 {
     BaseCpuObject::initialize();
 
-    m_usage->setPrefix(QStringLiteral());
-    m_system->setPrefix(QStringLiteral());
-    m_user->setPrefix(QStringLiteral());
-    m_wait->setPrefix(QStringLiteral());
+    m_usage->setPrefix(QString());
+    m_system->setPrefix(QString());
+    m_user->setPrefix(QString());
+    m_wait->setPrefix(QString());
 
     m_cpuCount->setName(i18nc("@title", "Number of CPUs"));
     m_cpuCount->setShortName(i18nc("@title, Short fort 'Number of CPUs'", "CPUs"));

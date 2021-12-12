@@ -39,11 +39,11 @@ void LinuxCpuObject::initialize(double initialFrequency)
     CpuObject::initialize();
     m_frequency->setValue(initialFrequency);
     bool ok;
-    const double max = readCpuFreq(id(), "cpuinfo_max_freq", ok);
+    const double max = readCpuFreq(id(), QStringLiteral("cpuinfo_max_freq"), ok);
     if (ok) {
         m_frequency->setMax(max);
     }
-    const double min = readCpuFreq(id(), "cpuinfo_min_freq", ok);
+    const double min = readCpuFreq(id(), QStringLiteral("cpuinfo_min_freq"), ok);
     if (ok) {
         m_frequency->setMin(min);
     }
@@ -75,9 +75,9 @@ void LinuxCpuObject::update(unsigned long long system, unsigned long long user, 
     // Second try to get current frequency
     bool ok = false;
     // First try cpuinfo_cur_freq, it is the frequency the hardware runs at (https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html)
-    int frequency = readCpuFreq(id(), "cpuinfo_cur_freq", ok);
+    int frequency = readCpuFreq(id(), QStringLiteral("cpuinfo_cur_freq"), ok);
     if (!ok) {
-        frequency = readCpuFreq(id(), "scaling_cur_freq", ok);
+        frequency = readCpuFreq(id(), QStringLiteral("scaling_cur_freq"), ok);
     }
     if (ok) {
         m_frequency->setValue(frequency);

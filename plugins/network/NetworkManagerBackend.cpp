@@ -199,7 +199,7 @@ void NetworkManagerBackend::start()
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::deviceRemoved, this, &NetworkManagerBackend::onDeviceRemoved);
 
     const auto devices = NetworkManager::networkInterfaces();
-    for (auto device : devices) {
+    for (const auto &device : devices) {
         onDeviceAdded(device->uni());
     }
 }

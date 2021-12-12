@@ -28,7 +28,7 @@ int ppTableGetCurrent(const QByteArray &table)
     const auto lines = table.split('\n');
 
     int current = 0;
-    for (auto line : lines) {
+    for (const auto &line : lines) {
         if (!line.contains('*')) {
             continue;
         }
@@ -72,10 +72,10 @@ void LinuxAmdGpu::initialize()
 
 void LinuxAmdGpu::update()
 {
-    for (auto sensor : m_sysFsSensors) {
+    for (auto sensor : qAsConst(m_sysFsSensors)) {
         sensor->update();
     }
-    for (auto sensor : m_sensorsSensors) {
+    for (auto sensor : qAsConst(m_sensorsSensors)) {
         sensor->update();
     }
     m_temperatureProperty->update();

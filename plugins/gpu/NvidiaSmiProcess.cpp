@@ -11,7 +11,7 @@
 
 NvidiaSmiProcess::NvidiaSmiProcess()
 {
-    m_smiPath = QStandardPaths::findExecutable("nvidia-smi");
+    m_smiPath = QStandardPaths::findExecutable(QStringLiteral("nvidia-smi"));
 }
 
 bool NvidiaSmiProcess::isSupported() const
