@@ -23,6 +23,8 @@ protected:
     KSysGuard::SensorProperty *m_ipv6Sensor = nullptr;
     KSysGuard::SensorProperty *m_downloadSensor = nullptr;
     KSysGuard::SensorProperty *m_uploadSensor = nullptr;
+    KSysGuard::SensorProperty *m_downloadBitsSensor = nullptr;
+    KSysGuard::SensorProperty *m_uploadBitsSensor = nullptr;
     KSysGuard::SensorProperty *m_totalDownloadSensor = nullptr;
     KSysGuard::SensorProperty *m_totalUploadSensor = nullptr;
 };

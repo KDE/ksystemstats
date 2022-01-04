@@ -31,7 +31,7 @@ RtNetlinkDevice::RtNetlinkDevice(const QString &id)
     // of plasma-systemmonitor
     m_networkSensor->setValue(id);
 
-    std::array<KSysGuard::SensorProperty*, 4> statisticSensors {m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
+    std::array<KSysGuard::SensorProperty*, 6> statisticSensors {m_downloadSensor, m_downloadBitsSensor, m_totalDownloadSensor, m_uploadSensor, m_uploadBitsSensor, m_totalUploadSensor};
     auto resetStatistics = [this, statisticSensors]() {
         if (std::none_of(statisticSensors.begin(), statisticSensors.end(), [](auto property) {return property->isSubscribed();})) {
             m_totalDownloadSensor->setValue(0);
@@ -63,6 +63,7 @@ void RtNetlinkDevice::update(rtnl_link *link, nl_cache *address_cache, qint64 el
     const qulonglong previousDownloadedBytes = m_totalDownloadSensor->value().toULongLong();
     if (previousDownloadedBytes != 0) {
         m_downloadSensor->setValue((downloadedBytes - previousDownloadedBytes) * 1000 / elapsedTime);
+        m_downloadBitsSensor->setValue((downloadedBytes - previousDownloadedBytes) * 1000 / elapsedTime * 8);
     }
     m_totalDownloadSensor->setValue(downloadedBytes);
 
@@ -70,6 +71,7 @@ void RtNetlinkDevice::update(rtnl_link *link, nl_cache *address_cache, qint64 el
     const qulonglong previousUploadedBytes = m_totalUploadSensor->value().toULongLong();
     if (previousUploadedBytes != 0) {
         m_uploadSensor->setValue((uploadedBytes - previousUploadedBytes) * 1000 / elapsedTime);
+        m_uploadBitsSensor->setValue((uploadedBytes - previousUploadedBytes) * 1000 / elapsedTime * 8);
     }
     m_totalUploadSensor->setValue(uploadedBytes);
 

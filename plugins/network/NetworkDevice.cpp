@@ -40,6 +40,16 @@ NetworkDevice::NetworkDevice(const QString &id, const QString &name)
     m_uploadSensor->setUnit(KSysGuard::UnitByteRate);
     m_uploadSensor->setPrefix(name);
 
+    m_downloadBitsSensor = new KSysGuard::SensorProperty(QStringLiteral("downloadBits"), i18nc("@title", "Download Rate"), this);
+    m_downloadBitsSensor->setShortName(i18nc("@title Short for Download Rate", "Download"));
+    m_downloadBitsSensor->setUnit(KSysGuard::UnitBitRate);
+    m_downloadBitsSensor->setPrefix(name);
+
+    m_uploadBitsSensor = new KSysGuard::SensorProperty(QStringLiteral("uploadBits"), i18nc("@title", "Upload Rate"), this);
+    m_uploadBitsSensor->setShortName(i18nc("@title Short for Upload Rate", "Upload"));
+    m_uploadBitsSensor->setUnit(KSysGuard::UnitBitRate);
+    m_uploadBitsSensor->setPrefix(name);
+
     m_totalDownloadSensor = new KSysGuard::SensorProperty(QStringLiteral("totalDownload"), i18nc("@title", "Total Downloaded"), this);
     m_totalDownloadSensor->setShortName(i18nc("@title Short for Total Downloaded", "Downloaded"));
     m_totalDownloadSensor->setUnit(KSysGuard::UnitByte);

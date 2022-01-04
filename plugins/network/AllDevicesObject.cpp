@@ -25,6 +25,16 @@ AllDevicesObject::AllDevicesObject(KSysGuard::SensorContainer *parent)
     m_uploadSensor->setUnit(KSysGuard::UnitByteRate);
     m_uploadSensor->setMatchSensors(QRegularExpression{QStringLiteral("^(?!all).*$")}, QStringLiteral("upload"));
 
+    m_downloadBitsSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("downloadBits"), i18nc("@title", "Download Rate"));
+    m_downloadBitsSensor->setShortName(i18nc("@title Short for Download Rate", "Download"));
+    m_downloadBitsSensor->setUnit(KSysGuard::UnitBitRate);
+    m_downloadBitsSensor->setMatchSensors(QRegularExpression{"^(?!all).*$"}, QStringLiteral("downloadBits"));
+
+    m_uploadBitsSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("uploadBits"), i18nc("@title", "Upload Rate"));
+    m_uploadBitsSensor->setShortName(i18nc("@title Short for Upload Rate", "Upload"));
+    m_uploadBitsSensor->setUnit(KSysGuard::UnitBitRate);
+    m_uploadBitsSensor->setMatchSensors(QRegularExpression{"^(?!all).*$"}, QStringLiteral("uploadBits"));
+
     m_totalDownloadSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("totalDownload"), i18nc("@title", "Total Downloaded"));
     m_totalDownloadSensor->setShortName(i18nc("@title Short for Total Downloaded", "Downloaded"));
     m_totalDownloadSensor->setUnit(KSysGuard::UnitByte);

@@ -31,6 +31,8 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         m_ipv6Sensor->setPrefix(name());
         m_downloadSensor->setPrefix(name());
         m_uploadSensor->setPrefix(name());
+        m_downloadBitsSensor->setPrefix(name());
+        m_uploadBitsSensor->setPrefix(name());
         m_totalDownloadSensor->setPrefix(name());
         m_totalUploadSensor->setPrefix(name());
     });
@@ -69,6 +71,7 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         auto previousDownload = m_totalDownloadSensor->value().toULongLong();
         if (previousDownload > 0) {
             m_downloadSensor->setValue((newDownload - previousDownload) * (1000 / UpdateRate));
+            m_downloadBitsSensor->setValue((newDownload - previousDownload) * (1000 / UpdateRate) * 8);
         }
         m_totalDownloadSensor->setValue(newDownload);
 
@@ -76,11 +79,12 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         auto previousUpload = m_totalUploadSensor->value().toULongLong();
         if (previousUpload > 0) {
             m_uploadSensor->setValue((newUpload - previousUpload) * (1000 / UpdateRate));
+            m_uploadBitsSensor->setValue((newUpload - previousUpload) * (1000 / UpdateRate) * 8);
         }
         m_totalUploadSensor->setValue(newUpload);
     });
 
-    std::vector<KSysGuard::SensorProperty*> statisticSensors{m_downloadSensor, m_totalDownloadSensor, m_uploadSensor, m_totalUploadSensor};
+    std::vector<KSysGuard::SensorProperty*> statisticSensors{m_downloadSensor, m_downloadBitsSensor, m_totalDownloadSensor, m_uploadSensor, m_uploadBitsSensor, m_totalUploadSensor};
     for (auto property : statisticSensors) {
         connect(property, &KSysGuard::SensorProperty::subscribedChanged, this, [this, statisticSensors](bool subscribed) {
             if (subscribed && !m_statisticsTimer->isActive()) {

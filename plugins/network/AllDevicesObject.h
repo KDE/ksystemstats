@@ -28,6 +28,8 @@ public:
 private:
     KSysGuard::AggregateSensor *m_downloadSensor = nullptr;
     KSysGuard::AggregateSensor *m_uploadSensor = nullptr;
+    KSysGuard::AggregateSensor *m_downloadBitsSensor = nullptr;
+    KSysGuard::AggregateSensor *m_uploadBitsSensor = nullptr;
     KSysGuard::AggregateSensor *m_totalDownloadSensor = nullptr;
     KSysGuard::AggregateSensor *m_totalUploadSensor = nullptr;
 };
