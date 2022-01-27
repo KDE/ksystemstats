@@ -11,9 +11,9 @@
 
 LoadAverages::LoadAverages(KSysGuard::SensorContainer *parent)
     : KSysGuard::SensorObject(QStringLiteral("loadaverages"), i18nc("@title", "Load Averages"), parent)
-    , average1Minute{new KSysGuard::SensorProperty(QStringLiteral("loadaverage1"), i18nc("@title", "Load average (1 minute)"), this)}
-    , average5Minutes{new KSysGuard::SensorProperty(QStringLiteral("loadaverage5"), i18nc("@title", "Load average (5 minutes)"), this)}
-    , average15Minutes{new KSysGuard::SensorProperty(QStringLiteral("loadaverage15"), i18nc("@title", "Load average (15 minute)"), this)}
+    , average1Minute{new KSysGuard::SensorProperty(QStringLiteral("loadaverage1"), i18nc("@title", "Load average (1 minute)"), 0, this)}
+    , average5Minutes{new KSysGuard::SensorProperty(QStringLiteral("loadaverage5"), i18nc("@title", "Load average (5 minutes)"), 0, this)}
+    , average15Minutes{new KSysGuard::SensorProperty(QStringLiteral("loadaverage15"), i18nc("@title", "Load average (15 minute)"), 0, this)}
 {
     average1Minute->setShortName(i18nc("@title,  Short for 'Load average (1 minute)", "Load average (1m)"));
     average5Minutes->setShortName(i18nc("@title,  Short for 'Load average (5 minutes)", "Load average (5m)"));

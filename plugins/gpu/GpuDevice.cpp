@@ -58,10 +58,10 @@ void GpuDevice::update()
 void GpuDevice::makeSensors()
 {
     m_nameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), this);
-    m_usageProperty = new KSysGuard::SensorProperty(QStringLiteral("usage"), this);
+    m_usageProperty = new KSysGuard::SensorProperty(QStringLiteral("usage"), QStringLiteral("usage"), 0, this);
     m_totalVramProperty = new KSysGuard::SensorProperty(QStringLiteral("totalVram"), this);
     m_usedVramProperty = new KSysGuard::SensorProperty(QStringLiteral("usedVram"), this);
-    m_coreFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("coreFrequency"), this);
-    m_memoryFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("memoryFrequency"), this);
-    m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    m_coreFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("coreFrequency"), QStringLiteral("coreFrequency"), 0, this);
+    m_memoryFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("memoryFrequency"), QStringLiteral("memoryFrequency"), 0, this);
+    m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), QStringLiteral("temperature"), 0, this);
 }

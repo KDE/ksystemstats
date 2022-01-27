@@ -88,7 +88,7 @@ void LinuxAmdGpu::makeSensors()
     m_nameProperty = new KSysGuard::SensorProperty(QStringLiteral("name"), this);
     m_totalVramProperty = new KSysGuard::SensorProperty(QStringLiteral("totalVram"),  this);
 
-    auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("usage"), devicePath % QStringLiteral("/gpu_busy_percent"), this);
+    auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("usage"), devicePath % QStringLiteral("/gpu_busy_percent"), 0, this);
     m_usageProperty = sensor;
     m_sysFsSensors << sensor;
 
@@ -96,14 +96,14 @@ void LinuxAmdGpu::makeSensors()
     m_usedVramProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new KSysGuard::SysFsSensor(QStringLiteral("coreFrequency"), devicePath % QStringLiteral("/pp_dpm_sclk"), this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("coreFrequency"), devicePath % QStringLiteral("/pp_dpm_sclk"), 0, this);
     sensor->setConvertFunction([](const QByteArray &input) {
         return ppTableGetCurrent(input);
     });
     m_coreFrequencyProperty = sensor;
     m_sysFsSensors << sensor;
 
-    sensor = new KSysGuard::SysFsSensor(QStringLiteral("memoryFrequency"), devicePath % QStringLiteral("/pp_dpm_mclk"), this);
+    sensor = new KSysGuard::SysFsSensor(QStringLiteral("memoryFrequency"), devicePath % QStringLiteral("/pp_dpm_mclk"), 0, this);
     sensor->setConvertFunction([](const QByteArray &input) {
         return ppTableGetCurrent(input);
     });
