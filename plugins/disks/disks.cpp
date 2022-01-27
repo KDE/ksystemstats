@@ -47,8 +47,8 @@ private:
     KSysGuard::SensorProperty *m_free = nullptr;
     KSysGuard::SensorProperty *m_readRate = nullptr;
     KSysGuard::SensorProperty *m_writeRate = nullptr;
-    quint64 m_bytesRead;
-    quint64 m_bytesWritten;
+    quint64 m_bytesRead = 0;
+    quint64 m_bytesWritten = 0;
 };
 
 QString VolumeObject::idHelper(const Solid::Device &device)
