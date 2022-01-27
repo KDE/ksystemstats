@@ -87,12 +87,13 @@ Battery::Battery(const Solid::Device &device, const QString &name, KSysGuard::Se
     connect(battery, &Solid::Battery::chargePercentChanged, chargePercent, &KSysGuard::SensorProperty::setValue);
 
     // Solid reports negative of charging and positive for discharging
-    auto chargeRate = new KSysGuard::SensorProperty("chargeRate", i18nc("@title", "Charging Rate"), -battery->energyRate(), this);
+    auto chargeRate = new KSysGuard::SensorProperty("chargeRate", i18nc("@title", "Charging Rate"), 0, this);
     chargeRate->setShortName(i18nc("@title", "Charging  Rate"));
     chargeRate->setPrefix(name);
     chargeRate->setDescription(i18n("Power that the battery is being charged with (positive) or discharged (negative)"));
     chargeRate->setUnit(KSysGuard::UnitWatt);
     chargeRate->setVariantType(QVariant::Double);
+    chargeRate->setValue(-battery->energyRate());
     connect(battery, &Solid::Battery::energyRateChanged, chargeRate, [chargeRate] (double rate) {
         chargeRate->setValue(-rate);
     });

@@ -15,10 +15,10 @@ BaseCpuObject::BaseCpuObject(const QString &id, const QString &name, KSysGuard::
 
 void BaseCpuObject::makeSensors()
 {
-    m_usage = new KSysGuard::SensorProperty(QStringLiteral("usage"), this);
-    m_system = new KSysGuard::SensorProperty(QStringLiteral("system"), this);
-    m_user = new KSysGuard::SensorProperty(QStringLiteral("user"), this);
-    m_wait = new KSysGuard::SensorProperty(QStringLiteral("wait"), this);
+    m_usage = new KSysGuard::SensorProperty(QStringLiteral("usage"), QStringLiteral("usage"), 0, this);
+    m_system = new KSysGuard::SensorProperty(QStringLiteral("system"), QStringLiteral("system"), 0, this);
+    m_user = new KSysGuard::SensorProperty(QStringLiteral("user"), QStringLiteral("user"), 0, this);
+    m_wait = new KSysGuard::SensorProperty(QStringLiteral("wait"), QStringLiteral("wait"), 0, this);
     auto n = new KSysGuard::SensorProperty(QStringLiteral("name"), i18nc("@title", "Name"), name(), this);
     n->setVariantType(QVariant::String);
 }
@@ -67,8 +67,8 @@ void CpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
 
-    m_frequency = new KSysGuard::SensorProperty(QStringLiteral("frequency"), this);
-    m_temperature = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    m_frequency = new KSysGuard::SensorProperty(QStringLiteral("frequency"), QStringLiteral("frequency"), 0, this);
+    m_temperature = new KSysGuard::SensorProperty(QStringLiteral("temperature"), QStringLiteral("temperature"), 0, this);
 }
 
 void CpuObject::initialize()

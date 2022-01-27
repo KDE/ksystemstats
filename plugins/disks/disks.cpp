@@ -89,13 +89,13 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
     m_free->setVariantType(QVariant::ULongLong);
     m_free->setMax(volume->size());
 
-    m_readRate = new KSysGuard::SensorProperty("read", i18nc("@title", "Read Rate"), this);
+    m_readRate = new KSysGuard::SensorProperty("read", i18nc("@title", "Read Rate"), 0, this);
     m_readRate->setPrefix(name());
     m_readRate->setShortName(i18nc("@title Short for 'Read Rate'", "Read"));
     m_readRate->setUnit(KSysGuard::UnitByteRate);
     m_readRate->setVariantType(QVariant::Double);
 
-    m_writeRate = new KSysGuard::SensorProperty("write", i18nc("@title", "Write Rate"), this);
+    m_writeRate = new KSysGuard::SensorProperty("write", i18nc("@title", "Write Rate"), 0, this);
     m_writeRate->setPrefix(name());
     m_writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
     m_writeRate->setUnit(KSysGuard::UnitByteRate);
@@ -252,13 +252,13 @@ void DisksPlugin::addAggregateSensors()
     used->setMax(total->value().toULongLong());
     used->setMatchSensors(QRegularExpression("^(?!all).*$"), "used");
 
-    auto readRate = new KSysGuard::AggregateSensor(allDisks, "read", i18nc("@title", "Read Rate"));
+    auto readRate = new KSysGuard::AggregateSensor(allDisks, "read", i18nc("@title", "Read Rate"), 0);
     readRate->setShortName(i18nc("@title Short for 'Read Rate'", "Read"));
     readRate->setUnit(KSysGuard::UnitByteRate);
     readRate->setVariantType(QVariant::Double);
     readRate->setMatchSensors(QRegularExpression("^(?!all).*$"), "read");
 
-    auto writeRate = new KSysGuard::AggregateSensor(allDisks, "write", i18nc("@title", "Write Rate"));
+    auto writeRate = new KSysGuard::AggregateSensor(allDisks, "write", i18nc("@title", "Write Rate"), 0);
     writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
     writeRate->setUnit(KSysGuard::UnitByteRate);
     writeRate->setVariantType(QVariant::Double);

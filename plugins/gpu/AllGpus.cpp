@@ -13,7 +13,7 @@
 AllGpus::AllGpus(KSysGuard::SensorContainer *parent)
     : SensorObject(QStringLiteral("all"), i18nc("@title", "All GPUs"), parent)
 {
-    m_usageSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("usage"), i18nc("@title", "All GPUs Usage"));
+    m_usageSensor = new KSysGuard::AggregateSensor(this, QStringLiteral("usage"), i18nc("@title", "All GPUs Usage"), 0);
     m_usageSensor->setShortName(i18nc("@title Short for 'All GPUs Usage'", "Usage"));
     m_usageSensor->setMatchSensors(QRegularExpression{QStringLiteral("^(?!all).*$")}, QStringLiteral("usage"));
     m_usageSensor->setAggregateFunction([this](const QVariant &first, const QVariant &second) {
