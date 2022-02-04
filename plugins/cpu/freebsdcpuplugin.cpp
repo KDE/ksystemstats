@@ -72,8 +72,8 @@ void FreeBsdCpuObject::makeSensors()
 {
     BaseCpuObject::makeSensors();
 
-    m_frequency = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), m_sysctlPrefix + QByteArrayLiteral(".freq"), 0, this);
-    m_temperature = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), m_sysctlPrefix + QByteArrayLiteral(".temperature"), 0, this);
+    m_frequency = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), m_sysctlPrefix + QByteArrayLiteral(".freq"), this);
+    m_temperature = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), m_sysctlPrefix + QByteArrayLiteral(".temperature"), this);
 }
 
 void FreeBsdCpuObject::initialize()
