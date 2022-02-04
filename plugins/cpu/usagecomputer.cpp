@@ -6,20 +6,29 @@
 
 #include "usagecomputer.h"
 
+#include <algorithm>
+
 void UsageComputer::setTicks(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle)
 {
+    // according to the documentation some counters can go backwards in some circumstances
+    auto systemDiff = std::max(system - m_systemTicks, 0ull);
+    auto userDiff = std::max(user - m_userTicks, 0ull);
+    auto waitDiff = std::max(wait - m_waitTicks, 0ull);
+
     unsigned long long totalTicks = system + user + wait + idle;
-    unsigned long long totalDiff = totalTicks - m_totalTicks;
+    auto totalDiff = std::max(totalTicks - m_totalTicks, 0ull);
 
     auto percentage =  [totalDiff] (unsigned long long tickDiff) {
-        // according to the documentation some counters can go backwards in some circumstances
-        return tickDiff > 0 ? 100.0 *  tickDiff / totalDiff : 0;
+        if (tickDiff > 0 && totalDiff > 0) {
+            return 100.0 * tickDiff / totalDiff;
+        }
+        return 0.0;
     };
 
-    systemUsage = percentage(system - m_systemTicks);
-    userUsage = percentage(user - m_userTicks);
-    waitUsage = percentage(wait - m_waitTicks);
-    totalUsage = percentage((system + user + wait) - (m_systemTicks + m_userTicks + m_waitTicks));
+    systemUsage = percentage(systemDiff);
+    userUsage = percentage(userDiff);
+    waitUsage = percentage(waitDiff);
+    totalUsage = percentage(systemDiff + userDiff + waitDiff);
 
     m_totalTicks = totalTicks;
     m_systemTicks = system;
