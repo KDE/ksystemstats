@@ -146,8 +146,11 @@ void NvidiaSmiProcess::readStatisticsData()
         if (line.startsWith(QLatin1Char('#'))) {
             continue;
         }
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         const QVector<QStringRef> parts = line.splitRef(QLatin1Char(' '), Qt::SkipEmptyParts);
+#else
+        const QVector<QStringView> parts = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
 
         // format at time of writing is
         // # gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk  fb  bar1

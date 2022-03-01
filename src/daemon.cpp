@@ -91,23 +91,16 @@ void Daemon::setQuitOnLastClientDisconnect(bool quit)
 
 void Daemon::loadProviders()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("ksystemstats"));
+    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("ksystemstats"));
     if (plugins.isEmpty()) {
         qWarning() << "No plugins found";
     }
-
     for (const KPluginMetaData &metaData : plugins) {
-        KPluginLoader pluginLoader(metaData.fileName());
-        KSysGuard::SensorPlugin *provider = nullptr;
-        if (KPluginFactory *factory = pluginLoader.factory()) {
-            provider = factory->create<KSysGuard::SensorPlugin>(this);
-            if (provider) {
-                registerProvider(provider);
-            }
-        }
-        if (!provider) {
+        auto provider = KPluginFactory::instantiatePlugin<KSysGuard::SensorPlugin>(metaData);
+        if (!provider.plugin) {
             qWarning() << "Could not load plugin:" << metaData.pluginId() << "with file name" << metaData.fileName();
         } else {
+            registerProvider(provider.plugin);
             qDebug() << "Loaded plugin" << metaData.pluginId() << "from file" << metaData.fileName();
         }
     }
