@@ -90,6 +90,7 @@ public:
     KSysGuard::SensorProperty *qtVersionProperty = nullptr;
     KSysGuard::SensorProperty *kfVersionProperty = nullptr;
     KSysGuard::SensorProperty *plasmaVersionProperty = nullptr;
+    KSysGuard::SensorProperty *windowSystemProperty = nullptr;
 };
 
 class LinuxPrivate : public OSInfoPrivate
@@ -126,6 +127,7 @@ OSInfoPrivate::OSInfoPrivate(OSInfoPlugin *qq)
     qtVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("qtVersion"), i18nc("@title", "Qt Version"), plasmaObject);
     kfVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("kfVersion"), i18nc("@title", "KDE Frameworks Version"), plasmaObject);
     plasmaVersionProperty = new KSysGuard::SensorProperty(QStringLiteral("plasmaVersion"), i18nc("@title", "KDE Plasma Version"), plasmaObject);
+    windowSystemProperty = new KSysGuard::SensorProperty(QStringLiteral("windowsystem"), i18nc("@title", "Window System"), plasmaObject);
 }
 
 OSInfoPlugin::~OSInfoPlugin() = default;
@@ -147,6 +149,7 @@ void OSInfoPrivate::init()
 
     qtVersionProperty->setValue(QString::fromLatin1(qVersion()));
     kfVersionProperty->setValue(KCoreAddons::versionString());
+    windowSystemProperty->setValue(qgetenv("XDG_SESSION_TYPE").compare("x11", Qt::CaseInsensitive) == 0 ? QStringLiteral("X11") : QStringLiteral("Wayland"));
 
     dbusCall<QVariant>(
         QDBusConnection::sessionBus(),
