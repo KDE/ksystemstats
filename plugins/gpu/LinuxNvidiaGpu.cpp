@@ -6,7 +6,6 @@
 
 #include "LinuxNvidiaGpu.h"
 
-#include "NvidiaSmiProcess.h"
 
 NvidiaSmiProcess *LinuxNvidiaGpu::s_smiProcess = nullptr;
 
