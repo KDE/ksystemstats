@@ -33,39 +33,43 @@ void LinuxBackend::start()
 
     auto enumerate = udev_enumerate_new(m_udev);
 
-    udev_enumerate_add_match_property(enumerate, "ID_PCI_CLASS_FROM_DATABASE", "Display controller");
-    udev_enumerate_add_match_subsystem(enumerate, "pci");
+    udev_enumerate_add_match_property(enumerate, "DEVTYPE", "drm_minor");
+    udev_enumerate_add_match_subsystem(enumerate, "drm");
     udev_enumerate_scan_devices(enumerate);
-
-    int gpuCounter = 0;
 
     auto devices = udev_enumerate_get_list_entry(enumerate);
     for (auto entry = devices; entry; entry = udev_list_entry_get_next(entry)) {
         auto path = udev_list_entry_get_name(entry);
-        auto device = udev_device_new_from_syspath(m_udev, path);
+        auto drmDevice = udev_device_new_from_syspath(m_udev, path);
+        auto pciDevice = udev_device_get_parent(drmDevice);
 
-        auto vendor = QByteArray(udev_device_get_sysattr_value(device, "vendor"));
-
-        auto gpuId = QStringLiteral("gpu%1").arg(gpuCounter);
-        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", gpuCounter + 1);
-
-        GpuDevice *gpu = nullptr;
-        if (vendor == amdVendor) {
-            gpu = new LinuxAmdGpu{gpuId, gpuName, device};
-        } else if (vendor == nvidiaVendor) {
-            gpu = new LinuxNvidiaGpu{gpuCounter, gpuId, gpuName};
-        } else {
-            qDebug() << "Found unsupported GPU:" << path;
-            udev_device_unref(device);
+        if (strstr(udev_device_get_sysname(drmDevice), "render") != NULL) {
+            udev_device_unref(drmDevice);
             continue;
         }
 
-        gpuCounter++;
+        auto vendor = QByteArray(udev_device_get_sysattr_value(pciDevice, "vendor"));
+        auto drmNumber = std::atoi(udev_device_get_sysnum(drmDevice));
+
+        auto gpuId = QStringLiteral("gpu%1").arg(drmNumber);
+        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", drmNumber + 1);
+
+        GpuDevice *gpu = nullptr;
+        if (vendor == amdVendor) {
+            gpu = new LinuxAmdGpu{gpuId, gpuName, pciDevice};
+        } else if (vendor == nvidiaVendor) {
+            gpu = new LinuxNvidiaGpu{drmNumber, gpuId, gpuName};
+        } else {
+            qDebug() << "Found unsupported GPU:" << path;
+            udev_device_unref(drmDevice);
+            continue;
+        }
+
         gpu->initialize();
         m_devices.append(gpu);
         Q_EMIT deviceAdded(gpu);
 
-        udev_device_unref(device);
+        udev_device_unref(drmDevice);
     }
 
     udev_enumerate_unref(enumerate);
