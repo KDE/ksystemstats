@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+ * SPDX-FileCopyrightText: 2021 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
  *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
@@ -22,7 +23,7 @@ class RtNetlinkDevice : public NetworkDevice
     Q_OBJECT
 public:
     RtNetlinkDevice(const QString &id);
-    void update(rtnl_link *link, nl_cache *address_cache, qint64 elapsedTime);
+    void update(rtnl_link *link, nl_cache *address_cache, nl_cache *route_cache, qint64 elapsedTime);
 Q_SIGNALS:
     void connected();
     void disconnected();

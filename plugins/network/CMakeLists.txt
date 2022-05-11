@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+# SPDX-FileCopyrightText: 2021 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
 
 set(KSYSGUARD_NETWORK_PLUGIN_SOURCES
     NetworkPlugin.cpp
@@ -22,7 +23,7 @@ if (KF5NetworkManagerQt_FOUND)
 endif()
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_sources(ksystemstats_plugin_network PRIVATE RtNetlinkBackend.cpp)
-    target_link_libraries(ksystemstats_plugin_network PRIVATE ${NL_LIBRARIES})
+    target_link_libraries(ksystemstats_plugin_network PRIVATE ${NL_LIBRARIES} Qt::Network)
     target_include_directories(ksystemstats_plugin_network PRIVATE ${NL_INCLUDE_DIRS})
 endif()
 

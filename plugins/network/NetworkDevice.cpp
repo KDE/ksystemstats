@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
+ * SPDX-FileCopyrightText: 2021 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
  * 
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
@@ -26,9 +27,41 @@ NetworkDevice::NetworkDevice(const QString &id, const QString &name)
     m_ipv4Sensor->setShortName(i18nc("@title Short of IPv4 Address", "IPv4"));
     m_ipv4Sensor->setPrefix(name);
 
+    m_ipv4GatewaySensor = new KSysGuard::SensorProperty(QStringLiteral("ipv4gateway"), i18nc("@title", "IPv4 Gateway"), this);
+    m_ipv4GatewaySensor->setShortName(i18nc("@title Short of IPv4 Gateway", "IPv4 Gateway"));
+    m_ipv4GatewaySensor->setPrefix(name);
+
+    m_ipv4SubnetMaskSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv4subnet"), i18nc("@title", "IPv4 Subnet Mask"), this);
+    m_ipv4SubnetMaskSensor->setShortName(i18nc("@title Short of IPv4 Subnet Mask", "IPv4 Subnet Mask"));
+    m_ipv4SubnetMaskSensor->setPrefix(name);
+
+    m_ipv4WithPrefixLengthSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv4withPrefixLength"), i18nc("@title", "IPv4 with Prefix Length"), this);
+    m_ipv4WithPrefixLengthSensor->setShortName(i18nc("@title Short of IPv4 Prefix Length", "IPv4"));
+    m_ipv4WithPrefixLengthSensor->setPrefix(name);
+
+    m_ipv4DNSSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv4dns"), i18nc("@title", "IPv4 DNS"), this);
+    m_ipv4DNSSensor->setShortName(i18nc("@title Short of IPv4 DNS", "IPv4 DNS"));
+    m_ipv4DNSSensor->setPrefix(name);
+
     m_ipv6Sensor = new KSysGuard::SensorProperty(QStringLiteral("ipv6address"), i18nc("@title", "IPv6 Address"), this);
     m_ipv6Sensor->setShortName(i18nc("@title Short of IPv6 Address", "IPv6"));
     m_ipv6Sensor->setPrefix(name);
+
+    m_ipv6GatewaySensor = new KSysGuard::SensorProperty(QStringLiteral("ipv6gateway"), i18nc("@title", "IPv6 Gateway"), this);
+    m_ipv6GatewaySensor->setShortName(i18nc("@title Short of IPv6 Gateway", "IPv6 Gateway"));
+    m_ipv6GatewaySensor->setPrefix(name);
+
+    m_ipv6SubnetMaskSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv6subnet"), i18nc("@title", "IPv6 Subnet Mask"), this);
+    m_ipv6SubnetMaskSensor->setShortName(i18nc("@title Short of IPv6 Subnet Mask", "IPv6 Subnet Mask"));
+    m_ipv6SubnetMaskSensor->setPrefix(name);
+
+    m_ipv6WithPrefixLengthSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv6withPrefixLength"), i18nc("@title", "IPv6 with Prefix Length"), this);
+    m_ipv6WithPrefixLengthSensor->setShortName(i18nc("@title Short of IPv6 Prefix Length", "IPv6"));
+    m_ipv6WithPrefixLengthSensor->setPrefix(name);
+
+    m_ipv6DNSSensor = new KSysGuard::SensorProperty(QStringLiteral("ipv6dns"), i18nc("@title", "IPv6 DNS"), this);
+    m_ipv6DNSSensor->setShortName(i18nc("@title Short of IPv6 DNS", "IPv6 DNS"));
+    m_ipv6DNSSensor->setPrefix(name);
 
     m_downloadSensor = new KSysGuard::SensorProperty(QStringLiteral("download"), i18nc("@title", "Download Rate"), 0, this);
     m_downloadSensor->setShortName(i18nc("@title Short for Download Rate", "Download"));

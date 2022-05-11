@@ -1,12 +1,16 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
+ * SPDX-FileCopyrightText: 2021 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
  *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 #include "NetworkManagerBackend.h"
 
+#include <numeric>
+
 #include <QTimer>
+#include <QString>
 #include <QDebug>
 
 #include <NetworkManagerQt/Manager>
@@ -28,7 +32,15 @@ NetworkManagerDevice::NetworkManagerDevice(const QString &id, QSharedPointer<Net
         m_networkSensor->setPrefix(name());
         m_signalSensor->setPrefix(name());
         m_ipv4Sensor->setPrefix(name());
+        m_ipv4GatewaySensor->setPrefix(name());
+        m_ipv4SubnetMaskSensor->setPrefix(name());
+        m_ipv4WithPrefixLengthSensor->setPrefix(name());
+        m_ipv4DNSSensor->setPrefix(name());
         m_ipv6Sensor->setPrefix(name());
+        m_ipv6GatewaySensor->setPrefix(name());
+        m_ipv6SubnetMaskSensor->setPrefix(name());
+        m_ipv6WithPrefixLengthSensor->setPrefix(name());
+        m_ipv6DNSSensor->setPrefix(name());
         m_downloadSensor->setPrefix(name());
         m_uploadSensor->setPrefix(name());
         m_downloadBitsSensor->setPrefix(name());
@@ -142,16 +154,47 @@ void NetworkManagerDevice::update()
     setName(m_device->activeConnection()->connection()->name());
     m_networkSensor->setValue(name());
 
+    auto dnsAccumulationFunction = [](QString &a, const QHostAddress& b) { return std::move(a).append(", ").append(b.toString()); };
     if (m_device->ipV4Config().isValid()) {
-        m_ipv4Sensor->setValue(m_device->ipV4Config().addresses().at(0).ip().toString());
+        auto ipv4 = m_device->ipV4Config().addresses().at(0).ip().toString();
+        m_ipv4Sensor->setValue(ipv4);
+        m_ipv4GatewaySensor->setValue(m_device->ipV4Config().gateway());
+        m_ipv4SubnetMaskSensor->setValue(m_device->ipV4Config().addresses().at(0).netmask().toString());
+        m_ipv4WithPrefixLengthSensor->setValue(static_cast<QString>(ipv4 + '/' + QString::number(m_device->ipV4Config().addresses().at(0).prefixLength())));
+        auto dnsList = m_device->ipV4Config().nameservers();
+        auto dnsListString = QString();
+        if(!dnsList.isEmpty()) {
+            dnsListString = std::accumulate(std::next(dnsList.begin()), dnsList.end(), dnsList.at(0).toString(),
+                                            dnsAccumulationFunction);
+        }
+        m_ipv4DNSSensor->setValue(dnsListString);
     } else {
         m_ipv4Sensor->setValue(QString{});
+        m_ipv4GatewaySensor->setValue(QString{});
+        m_ipv4SubnetMaskSensor->setValue(QString{});
+        m_ipv4WithPrefixLengthSensor->setValue(QString{});
+        m_ipv4DNSSensor->setValue(QString{});
     }
 
     if (m_device->ipV6Config().isValid()) {
-        m_ipv6Sensor->setValue(m_device->ipV6Config().addresses().at(0).ip().toString());
+        auto ipv6 = m_device->ipV6Config().addresses().at(0).ip().toString();
+        m_ipv6Sensor->setValue(ipv6);
+        m_ipv6GatewaySensor->setValue(m_device->ipV6Config().gateway());
+        m_ipv6SubnetMaskSensor->setValue(m_device->ipV6Config().addresses().at(0).netmask().toString());
+        m_ipv6WithPrefixLengthSensor->setValue(static_cast<QString>(ipv6 + '/' + QString::number(m_device->ipV6Config().addresses().at(0).prefixLength())));
+        auto dnsList = m_device->ipV6Config().nameservers();
+        auto dnsListString = QString();
+        if(!dnsList.isEmpty()) {
+            dnsListString = std::accumulate(std::next(dnsList.begin()), dnsList.end(), dnsList.at(0).toString(),
+                                            dnsAccumulationFunction);
+        }
+        m_ipv6DNSSensor->setValue(dnsListString);
     } else {
         m_ipv6Sensor->setValue(QString{});
+        m_ipv6GatewaySensor->setValue(QString{});
+        m_ipv6SubnetMaskSensor->setValue(QString{});
+        m_ipv6WithPrefixLengthSensor->setValue(QString{});
+        m_ipv6DNSSensor->setValue(QString{});
     }
 }
 
