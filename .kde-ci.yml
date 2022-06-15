@@ -10,3 +10,5 @@ Dependencies:
     'frameworks/solid': '@stable'
     'frameworks/kio': '@stable'
     'plasma/libksysguard': '@same'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
