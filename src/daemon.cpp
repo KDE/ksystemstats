@@ -24,7 +24,6 @@
 #include <systemstats/SensorProperty.h>
 
 #include <KDBusService>
-#include <KPluginLoader>
 #include <KPluginMetaData>
 #include <KPluginFactory>
 
