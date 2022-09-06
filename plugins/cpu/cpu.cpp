@@ -1,12 +1,18 @@
 /*
     SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+    SPDX-FileCopyrightText: 2022 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
 #include "cpu.h"
 
+#include <functional>
+#include <iterator>
+#include <numeric>
+
 #include <KLocalizedString>
+#include <systemstats/AggregateSensor.h>
 
 BaseCpuObject::BaseCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
     : SensorObject(id, name, parent)
@@ -101,6 +107,56 @@ void AllCpusObject::makeSensors()
 
     m_cpuCount = new KSysGuard::SensorProperty(QStringLiteral("cpuCount"), this);
     m_coreCount = new KSysGuard::SensorProperty(QStringLiteral("coreCount"), this);
+
+    auto maxAggregator = [](QVariant a, QVariant b) {return std::max(a.toDouble(), b.toDouble());};
+    auto minAggregator = [](QVariant a, QVariant b) {return std::min(a.toDouble(), b.toDouble());};
+    auto avgAggregator = [](KSysGuard::AggregateSensor::SensorIterator begin, const KSysGuard::AggregateSensor::SensorIterator end) {
+        int count = std::distance(begin, end);
+        double sum = std::transform_reduce(begin, end, 0.0, std::plus{}, qvariant_cast<double>);
+        return sum / count;
+    };
+
+    auto maxFrequency = new KSysGuard::AggregateSensor(this, "maximumFrequency", i18nc("@title", "Maximum CPU Frequency"));
+    maxFrequency->setShortName(i18nc("@title, Short for 'Maximum CPU Frequency'", "Max Frequency"));
+    maxFrequency->setDescription(i18nc("@info", "Current maximum frequency between all CPUs"));
+    maxFrequency->setUnit(KSysGuard::Unit::UnitMegaHertz);
+    maxFrequency->setMatchSensors(QRegularExpression("^(?!all).*$"), "frequency");
+    maxFrequency->setAggregateFunction(maxAggregator);
+    
+    auto minFrequency = new KSysGuard::AggregateSensor(this, "minimumFrequency", i18nc("@title", "Minimum CPU Frequency"));
+    minFrequency->setShortName(i18nc("@title, Short for 'Minimum CPU Frequency'", "Min Frequency"));
+    minFrequency->setDescription(i18nc("@info", "Current minimum frequency between all CPUs"));
+    minFrequency->setUnit(KSysGuard::Unit::UnitMegaHertz);
+    minFrequency->setMatchSensors(QRegularExpression("^(?!all).*$"), "frequency");
+    minFrequency->setAggregateFunction(minAggregator);
+
+    auto avgFrequency = new KSysGuard::AggregateSensor(this, "averageFrequency", i18nc("@title", "Average CPU Frequency"));
+    avgFrequency ->setShortName(i18nc("@title, Short for 'Average CPU Frequency'", "Average Frequency"));
+    avgFrequency ->setDescription(i18nc("@info", "Current average frequency between all CPUs"));
+    avgFrequency ->setUnit(KSysGuard::Unit::UnitMegaHertz);
+    avgFrequency ->setMatchSensors(QRegularExpression("^(?!all).*$"), "frequency");
+    avgFrequency ->setAggregateFunction(avgAggregator);
+    
+    auto maxTemp = new KSysGuard::AggregateSensor(this, "maximumTemperature", i18nc("@title", "Maximum CPU Temperature"));
+    maxTemp->setShortName(i18nc("@title, Short for 'Maximum CPU Temperature'", "Max Temperature"));
+    maxTemp->setVariantType(QVariant::Double);
+    maxTemp->setUnit(KSysGuard::Unit::UnitCelsius);
+    maxTemp->setMatchSensors(QRegularExpression("^(?!all).*$"), "temperature");
+    maxTemp->setAggregateFunction(maxAggregator);
+    
+    auto minTemp = new KSysGuard::AggregateSensor(this, "minimumTemperature", i18nc("@title", "Minimum CPU Temperature"));
+    minTemp->setShortName(i18nc("@title, Short for 'Minimum CPU Temperature'", "Min Temperature"));
+    minTemp->setVariantType(QVariant::Double);
+    minTemp->setUnit(KSysGuard::Unit::UnitCelsius);
+    minTemp->setMatchSensors(QRegularExpression("^(?!all).*$"), "temperature");
+    minTemp->setAggregateFunction(minAggregator);
+
+    auto avgTemp = new KSysGuard::AggregateSensor(this, "averageTemperature", i18nc("@title", "Average CPU Temperature"));
+    avgTemp->setShortName(i18nc("@title, Short for 'Average CPU Temperature'", "Average Temperature"));
+    avgTemp->setVariantType(QVariant::Double);
+    avgTemp->setUnit(KSysGuard::Unit::UnitCelsius);
+    avgTemp->setMatchSensors(QRegularExpression("^(?!all).*$"), "temperature");
+    avgTemp->setAggregateFunction(avgAggregator);
 }
 
 void AllCpusObject::initialize()
