@@ -21,6 +21,11 @@ target_link_libraries(ksystemstats_plugin_network PRIVATE Qt::Core Qt::Gui Qt::D
 if (KF6NetworkManagerQt_FOUND)
     target_link_libraries(ksystemstats_plugin_network PRIVATE KF6::NetworkManagerQt)
 endif()
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+    target_sources(ksystemstats_plugin_network PRIVATE SysctlBackend.cpp)
+endif()
+
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_sources(ksystemstats_plugin_network PRIVATE RtNetlinkBackend.cpp)
     target_link_libraries(ksystemstats_plugin_network PRIVATE ${NL_LIBRARIES} Qt::Network)

@@ -24,7 +24,9 @@
 #ifdef Q_OS_LINUX
 #include "RtNetlinkBackend.h"
 #endif
-
+#ifdef Q_OS_FREEBSD
+#include "SysctlBackend.h"
+#endif
 class NetworkPrivate
 {
 public:
@@ -52,6 +54,9 @@ NetworkPlugin::NetworkPlugin(QObject *parent, const QVariantList &args)
 #endif
 #ifdef Q_OS_LINUX
     backendFunctions.emplace_back([](NetworkPlugin *parent) -> NetworkBackend* {return new RtNetlinkBackend(parent);});
+#endif
+#ifdef Q_OS_FREEBSD
+    backendFunctions.emplace_back([](NetworkPlugin *parent) -> NetworkBackend* {return new SysctlBackend(parent);});
 #endif
     for (auto func : backendFunctions) {
         auto backend = func(this);
