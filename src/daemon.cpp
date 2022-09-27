@@ -10,9 +10,7 @@
 #include <algorithm>
 #include <chrono>
 
-#include <QDBusArgument>
 #include <QDBusConnection>
-#include <QDBusMessage>
 #include <QDBusMetaType>
 #include <QDBusServiceWatcher>
 

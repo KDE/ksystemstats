@@ -6,10 +6,10 @@
 #ifndef LINUXCPUPLUGIN_H
 #define LINUXCPUPLUGIN_H
 
-#include <QHash>
-
 #include "cpuplugin_p.h"
 
+#include <QMultiHash>
+#include <QVector>
 struct sensors_chip_name;
 class LinuxCpuObject;
 class LinuxAllCpusObject;

@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <QObject>
-
 #include "systemstats/SensorObject.h"
 
 class GpuDevice : public KSysGuard::SensorObject

@@ -9,9 +9,8 @@
 
 #include <numeric>
 
-#include <QTimer>
 #include <QString>
-#include <QDebug>
+#include <QTimer>
 
 #include <NetworkManagerQt/Manager>
 #include <NetworkManagerQt/WirelessDevice>

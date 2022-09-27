@@ -11,8 +11,6 @@
 #include <linux/pci.h>
 #include <sensors/sensors.h>
 
-#include <QDir>
-
 #include <systemstats/SysFsSensor.h>
 #include <systemstats/SensorsFeatureSensor.h>
 

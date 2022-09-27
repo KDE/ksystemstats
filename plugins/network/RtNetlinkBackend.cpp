@@ -10,8 +10,6 @@
 
 #include <systemstats/SysFsSensor.h>
 
-#include <QDir>
-#include <QFile>
 #include <QNetworkAddressEntry>
 #include <QHostAddress>
 #include <QString>

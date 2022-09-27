@@ -7,13 +7,9 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include <QDBusArgument>
 #include <QDBusConnection>
-#include <QDBusContext>
-#include <QDBusMessage>
 #include <QDBusMetaType>
 
-#include <QCommandLineOption>
 #include <QCommandLineParser>
 
 #include <iostream>

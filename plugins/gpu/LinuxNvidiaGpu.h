@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <QObject>
-
 #include "GpuDevice.h"
 #include "NvidiaSmiProcess.h"
 

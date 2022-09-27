@@ -8,7 +8,6 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QTimer>
 
 #include <algorithm>
 

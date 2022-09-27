@@ -13,13 +13,8 @@
 #include <systemstats/SensorPlugin.h>
 #include <systemstats/DBusInterface.h>
 
-#include <QDBusArgument>
 #include <QDBusConnection>
-#include <QDBusContext>
-#include <QDBusMessage>
 #include <QDBusMetaType>
-
-#include <QDebug>
 
 class TestPlugin : public KSysGuard::SensorPlugin
 {

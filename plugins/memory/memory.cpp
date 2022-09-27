@@ -18,8 +18,6 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include <QtGlobal>
-
 MemoryPlugin::MemoryPlugin(QObject *parent, const QVariantList &args)
     : SensorPlugin(parent, args)
 {

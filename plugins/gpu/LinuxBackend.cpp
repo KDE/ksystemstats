@@ -6,9 +6,8 @@
 
 #include "LinuxBackend.h"
 
-#include <QDebug>
-#include <QDir>
 #include <KLocalizedString>
+#include <QDebug>
 
 #include <libudev.h>
 

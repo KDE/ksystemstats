@@ -12,7 +12,6 @@
 #include <libgeom.h>
 #endif
 
-#include <QCoreApplication>
 #include <QUrl>
 
 #include <KIO/FileSystemFreeSpaceJob>
