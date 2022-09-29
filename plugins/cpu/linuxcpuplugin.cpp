@@ -22,8 +22,40 @@ struct CpuInfo
     int id = -1;
     int cpu = -1;
     int core = -1;
+    int siblings = -1;
     qreal frequency = 0.0;
 };
+
+// Determine sensor names for all the found processors. Because processors can
+// be offline, we need to account for processor IDs skipping and report the
+// proper names.
+static QHash<int, QString> makeCpuNames(const QVector<CpuInfo> &cpus, int cpuCount)
+{
+    QHash<int, QString> result;
+
+    if (cpuCount == 1) {
+        // Simple case: Only one CPU, just report CPU number + 1 as core number.
+        for (const auto &info : cpus) {
+            result.insert(info.id, i18nc("@title", "Core %1", info.id + 1));
+        }
+        return result;
+    }
+
+    int currentCpu = 0;
+    int previousCpuSiblings = 0;
+
+    for (const auto &info : cpus) {
+        if (info.cpu != currentCpu) {
+            previousCpuSiblings = previousCpuSiblings + info.siblings;
+            currentCpu = info.cpu;
+        }
+
+        int coreNumber = info.id - previousCpuSiblings;
+        result.insert(info.id, i18nc("@title", "CPU %1 Core %2", currentCpu + 1, coreNumber));
+    }
+
+    return result;
+}
 
 LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     : CpuPluginPrivate(q)
@@ -56,6 +88,8 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
                 info.core = value.toInt();
             } else if (field == "cpu MHz") {
                 info.frequency = value.toDouble();
+            } else if (field == "siblings") {
+                info.siblings = value.toInt();
             }
         }
 
@@ -67,20 +101,18 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     // one compared to the actual number of CPUs. Correct that here.
     cpuCount += 1;
 
+    auto names = makeCpuNames(cpus, cpuCount);
+
     QHash<int, int> numCores;
     for (const auto &entry : qAsConst(cpus)) {
-        const QString name = cpuCount > 1
-                             ? i18nc("@title", "CPU %1 Core %2", entry.cpu + 1, ++numCores[entry.cpu])
-                             : i18nc("@title", "Core %1", ++numCores[entry.cpu]);
-
-        auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), name, m_container);
-        m_cpus.push_back(cpu);
+        auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), names.value(entry.id), entry.frequency, m_container);
+        m_cpus.insert(entry.id, cpu);
         m_cpusBySystemIds.insert({entry.cpu, entry.core}, cpu);
     }
 
     addSensors();
-    for (int i = 0; i < m_cpus.size(); ++i) {
-        m_cpus.at(i)->initialize(cpus.at(i).frequency);
+    for (const auto cpu : std::as_const(m_cpus)) {
+        cpu->initialize();
     }
     m_allCpus = new LinuxAllCpusObject(m_container);
     m_allCpus->initialize();
@@ -93,7 +125,7 @@ void LinuxCpuPluginPrivate::update()
     m_loadAverages->update();
 
     auto isSubscribed = [] (const KSysGuard::SensorObject *o) {return o->isSubscribed();};
-    if (std::none_of(m_cpusBySystemIds.cbegin(), m_cpusBySystemIds.cend(), isSubscribed) && !m_allCpus->isSubscribed()) {
+    if (std::none_of(m_cpus.cbegin(), m_cpus.cend(), isSubscribed) && !m_allCpus->isSubscribed()) {
         return;
     }
 
@@ -120,7 +152,7 @@ void LinuxCpuPluginPrivate::update()
         if (line.startsWith("cpu ")) {
             m_allCpus->update(system + irq + softirq, user + nice , iowait + steal, idle);
         } else if (line.startsWith("cpu")) {
-            auto cpu = m_cpus[std::atoi(line.mid(strlen("cpu")))];
+            auto cpu = m_cpus.value(std::atoi(line.mid(strlen("cpu"))));
             cpu->update(system + irq + softirq, user + nice , iowait + steal, idle);
         }
     }
@@ -165,10 +197,10 @@ void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chip
         return;
     }
     for (auto feature = coreFeatures.cbegin(); feature != coreFeatures.cend(); ++feature) {
-        if (m_cpusBySystemIds.contains({physicalId, feature.key()})) {
+        if (m_cpusBySystemIds.contains({physicalId, int(feature.key())})) {
             // When the cpu has hyperthreading we display multiple cores for each physical core.
             // Naturally they share the same temperature sensor and have the same coreId.
-            auto cpu_range = m_cpusBySystemIds.equal_range({physicalId, feature.key()});
+            auto cpu_range = m_cpusBySystemIds.equal_range({physicalId, int(feature.key())});
             for (auto cpu_it = cpu_range.first; cpu_it != cpu_range.second; ++cpu_it) {
                 (*cpu_it)->makeTemperatureSensor(chipName, feature.value());
             }

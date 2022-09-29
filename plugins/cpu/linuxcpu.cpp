@@ -23,9 +23,9 @@ static double readCpuFreq(const QString &cpuId, const QString &attribute, bool &
     return 0;
 }
 
-LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, KSysGuard::SensorContainer *parent)
+LinuxCpuObject::LinuxCpuObject(const QString &id, const QString &name, double initialFrequency, KSysGuard::SensorContainer *parent)
     : CpuObject(id, name, parent)
-
+    , m_initialFrequency(initialFrequency)
 {
 }
 
@@ -34,10 +34,10 @@ void LinuxCpuObject::makeTemperatureSensor(const sensors_chip_name * const chipN
     m_temperature = KSysGuard::makeSensorsFeatureSensor(QStringLiteral("temperature"), chipName, feature, this);
 }
 
-void LinuxCpuObject::initialize(double initialFrequency)
+void LinuxCpuObject::initialize()
 {
     CpuObject::initialize();
-    m_frequency->setValue(initialFrequency);
+    m_frequency->setValue(m_initialFrequency);
     bool ok;
     const double max = readCpuFreq(id(), QStringLiteral("cpuinfo_max_freq"), ok);
     if (ok) {

@@ -25,8 +25,8 @@ private:
     void addSensorsAmd(const sensors_chip_name * const chipName);
 
     LinuxAllCpusObject *m_allCpus;
-    QVector<LinuxCpuObject *> m_cpus;
-    QMultiHash<QPair<unsigned int, unsigned int>, LinuxCpuObject * const> m_cpusBySystemIds;
+    QHash<int, LinuxCpuObject *> m_cpus;
+    QMultiHash<QPair<int, int>, LinuxCpuObject * const> m_cpusBySystemIds;
     LoadAverages *m_loadAverages;
 };
 
