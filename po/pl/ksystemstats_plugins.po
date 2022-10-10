@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:51+0000\n"
-"PO-Revision-Date: 2022-09-23 10:48+0200\n"
+"PO-Revision-Date: 2022-10-09 11:04+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -29,7 +29,7 @@ msgstr "Nazwa"
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr "Całkowite wykorzystanie"
+msgstr "Wykorzystanie łącznie"
 
 #: cpu/cpu.cpp:39
 #, kde-format
@@ -322,13 +322,13 @@ msgstr "Liczba zadań w uruchomionej kolejce uśredniona na piętnastu minutach.
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr "Razem przestrzeni"
+msgstr "Łącznie przestrzeni"
 
 #: disks/disks.cpp:73 disks/disks.cpp:235
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr "Razem"
+msgstr "Łącznie"
 
 #: disks/disks.cpp:77 disks/disks.cpp:247
 #, kde-format
@@ -435,13 +435,13 @@ msgstr "Wykorzystanie"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "Razem pamięci wszystkich kart graficznych"
+msgstr "Łącznie pamięci wszystkich kart graficznych"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr "Razem"
+msgstr "Łącznie"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
@@ -465,13 +465,13 @@ msgstr "Użycie"
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr "Razem pamięci grafiki"
+msgstr "Łącznie pamięci grafiki"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr "Razem"
+msgstr "Łącznie"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
@@ -536,13 +536,13 @@ msgstr "Pamięć wymiany"
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr "Razem pamięci fizycznej"
+msgstr "Łącznie pamięci fizycznej"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr "Razem"
+msgstr "Łącznie"
 
 #: memory/backend.cpp:44
 #, kde-format
@@ -643,13 +643,13 @@ msgstr "Procent pamięci buforowanej"
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr "Razem pamięci przestrzeni wymiany"
+msgstr "Łącznie pamięci przestrzeni wymiany"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr "Razem"
+msgstr "Łącznie"
 
 #: memory/backend.cpp:95
 #, kde-format
@@ -731,7 +731,7 @@ msgstr "Wysyłanie"
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "Razem pobranych"
+msgstr "Łącznie pobranych"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
@@ -743,7 +743,7 @@ msgstr "Pobrane"
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "Razem wysłanych"
+msgstr "Łącznie wysłanych"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
