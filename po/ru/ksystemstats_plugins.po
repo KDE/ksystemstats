@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:51+0000\n"
-"PO-Revision-Date: 2022-08-18 09:12+0300\n"
+"PO-Revision-Date: 2022-10-17 10:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -111,124 +111,94 @@ msgid "All"
 msgstr "Все"
 
 #: cpu/cpu.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr "Частота памяти"
+msgstr "Максимальная частота процессора"
 
 #: cpu/cpu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "Частота"
+msgstr "Макс. частота"
 
 #: cpu/cpu.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr "Текущая частота процессора"
+msgstr "Текущая максимальная частота для всех процессоров"
 
 #: cpu/cpu.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr "Частота памяти"
+msgstr "Минимальная частота процессора"
 
 #: cpu/cpu.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr "Частота"
+msgstr "Мин. частота"
 
 #: cpu/cpu.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr "Текущая частота процессора"
+msgstr "Текущая минимальная частота для всех процессоров"
 
 #: cpu/cpu.cpp:133
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr "Частота памяти"
+msgstr "Средняя частота процессора"
 
 #: cpu/cpu.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "Частота памяти"
+msgstr "Средняя частота"
 
 #: cpu/cpu.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr "Текущая частота процессора"
+msgstr "Текущая средняя частота для всех процессоров"
 
 #: cpu/cpu.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "Температура GPU %1"
+msgstr "Максимальная температура процессора"
 
 #: cpu/cpu.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "Температура"
+msgstr "Макс. температура"
 
 #: cpu/cpu.cpp:147
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "Температура GPU %1"
+msgstr "Минимальная температура процессора"
 
 #: cpu/cpu.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "Температура"
+msgstr "Мин. температура"
 
 #: cpu/cpu.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "Температура GPU %1"
+msgstr "Средняя температура процессора"
 
 #: cpu/cpu.cpp:155
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "Текущая температура"
+msgstr "Средняя температура"
 
 #: cpu/cpu.cpp:171
 #, kde-format
