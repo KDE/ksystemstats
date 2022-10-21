@@ -82,19 +82,20 @@ void SysctlNetDevice::update()
             if (sin == NULL)
                 return;
 
-            getnameinfo(ifap->ifa_addr, sin->sin_len, addr_buf, sizeof(addr_buf), NULL, 0, NI_NUMERICHOST);
+            if(getnameinfo(ifap->ifa_addr, sin->sin_len, addr_buf, sizeof(addr_buf), NULL, 0, NI_NUMERICHOST)==0) {
 
-            if (sin->sin_family == AF_INET) {
-                ipv4_addrs << QString::fromStdString(addr_buf);
-            }
-            if (sin->sin_family == AF_INET6) {
-                ipv6_addrs << QString::fromStdString(addr_buf);
-            }
+	        if (sin->sin_family == AF_INET) {
+                    ipv4_addrs << QString::fromLatin1(addr_buf);
+		}
+                if (sin->sin_family == AF_INET6) {
+	            ipv6_addrs << QString::fromLatin1(addr_buf);
+                }
+	    }
 
-            m_ipv4Sensor->setValue(ipv4_addrs.join("\n"));
-            m_ipv6Sensor->setValue(ipv6_addrs.join("\n"));
         }
     }
+    m_ipv4Sensor->setValue(ipv4_addrs.join("\n"));
+    m_ipv6Sensor->setValue(ipv6_addrs.join("\n"));
     freeifaddrs(ifap);
 }
 
@@ -137,7 +138,7 @@ void SysctlBackend::start()
         }
 
         if ((ifmd.ifmd_data.ifi_type == IFT_ETHER) || (ifmd.ifmd_data.ifi_type == IFT_IEEE80211)) {
-            auto device = new SysctlNetDevice(QString::fromStdString(ifmd.ifmd_name), QString::fromStdString(ifmd.ifmd_name), i);
+            auto device = new SysctlNetDevice(QString::fromLatin1(ifmd.ifmd_name), QString::fromLatin1(ifmd.ifmd_name), i);
 
             m_devices.insert(QByteArray(ifmd.ifmd_name), device);
             Q_EMIT deviceAdded(device);
