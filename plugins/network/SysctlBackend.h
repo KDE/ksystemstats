@@ -8,6 +8,7 @@
 
 #include "NetworkBackend.h"
 #include "NetworkDevice.h"
+#include <array>
 #include <QElapsedTimer>
 #include <QTimer>
 
@@ -17,9 +18,9 @@ class SysctlNetDevice : public NetworkDevice
     Q_OBJECT
 
 public:
-    SysctlNetDevice(const QString &id, const QString &name);
+    SysctlNetDevice(const QString &id, const QString &name,int ifnumber);
     ~SysctlNetDevice() override;
-    int m_sysctl_name[6];
+    std::array<int,6> m_sysctlName;
     void update();
     bool isConnected() const;
     std::unique_ptr<QTimer> m_statisticsTimer;
@@ -38,5 +39,4 @@ public:
 
 private:
     QHash<QByteArray, SysctlNetDevice *> m_devices;
-    QElapsedTimer m_updateTimer;
 };
