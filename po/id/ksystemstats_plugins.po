@@ -7,123 +7,103 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:51+0000\n"
-"PO-Revision-Date: 2022-08-26 23:40+0700\n"
+"PO-Revision-Date: 2022-10-23 18:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Short of Network Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title"
 msgid "Name"
 msgstr "Nama"
 
 #: cpu/cpu.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr "Total Digunakan"
+msgstr "Total Penggunaan"
 
 #: cpu/cpu.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
 msgstr "Penggunaan"
 
 #: cpu/cpu.cpp:45
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr "Sistem"
+msgstr "Penggunaan Sistem"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "Sistem"
 
 #: cpu/cpu.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr "Penggunaan"
+msgstr "Penggunaan Pengguna"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
-msgstr ""
+msgstr "Pengguna"
 
 #: cpu/cpu.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr "Penggunaan"
+msgstr "Penggunaan Tunggu"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr ""
+msgstr "Tunggu"
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr ""
+msgstr "Frekuensi Saat Ini"
 
 #: cpu/cpu.cpp:86
 #, kde-format
 msgctxt "@title, Short for 'Current Frequency'"
 msgid "Frequency"
-msgstr ""
+msgstr "Frekuensi"
 
 #: cpu/cpu.cpp:87
 #, kde-format
 msgctxt "@info"
 msgid "Current frequency of the CPU"
-msgstr ""
+msgstr "Frekuensi CPU saat ini"
 
 #: cpu/cpu.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr "Temperatur"
+msgstr "Suhu Saat Ini"
 
 #: cpu/cpu.cpp:93
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for Current Temperatur"
 msgid "Temperature"
-msgstr "Temperatur"
+msgstr "Suhu"
 
 #: cpu/cpu.cpp:100
-#, fuzzy, kde-format
-#| msgctxt "@title All Disks"
-#| msgid "All"
+#, kde-format
 msgctxt "@title"
 msgid "All"
 msgstr "Semua"
@@ -132,134 +112,118 @@ msgstr "Semua"
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr ""
+msgstr "Maksimum Frekuensi CPU"
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr ""
+msgstr "Frekuensi Maksimum"
 
 #: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr ""
+msgstr "Frekuensi maksimum saat ini antara semua CPU"
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr ""
+msgstr "Minimum Frekuensi CPU"
 
 #: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr ""
+msgstr "Frekuensi Minimum"
 
 #: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr ""
+msgstr "Frekuensi minimum saat ini antara semua CPU"
 
 #: cpu/cpu.cpp:133
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr ""
+msgstr "Frekuensi CPU Rata-rata"
 
 #: cpu/cpu.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Percentage of free memory."
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "Persentase memori yang bebas."
+msgstr "Frekuensi Rata-rata"
 
 #: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr ""
+msgstr "Frekuensi rata-rata saat ini antara semua CPU"
 
 #: cpu/cpu.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "Temperatur GPU %1"
+msgstr "Suhu Maksimum CPU"
 
 #: cpu/cpu.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "Temperatur"
+msgstr "Suhu Maksimum"
 
 #: cpu/cpu.cpp:147
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "Temperatur GPU %1"
+msgstr "Suhu minimum CPU"
 
 #: cpu/cpu.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "Temperatur"
+msgstr "Suhu Minimum"
 
 #: cpu/cpu.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "Temperatur GPU %1"
+msgstr "Suhu CPU Rata-rata"
 
 #: cpu/cpu.cpp:155
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "Temperatur"
+msgstr "Suhu Rata-rata"
 
 #: cpu/cpu.cpp:171
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
-msgstr ""
+msgstr "Jumlah CPU"
 
 #: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr ""
+msgstr "CPU"
 
 #: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
-msgstr ""
+msgstr "Jumlah CPU fisik yang terpasang di sistem"
 
 #: cpu/cpu.cpp:175
 #, kde-format
 msgctxt "@title"
 msgid "Number of Cores"
-msgstr ""
+msgstr "Jumlah Core"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title Number of Cores"
-#| msgid "Cores"
+#, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
 msgstr "Core"
@@ -268,232 +232,203 @@ msgstr "Core"
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr ""
+msgstr "Jumlah core CPU di semua CPU fisik"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr ""
+msgstr "CPU"
 
 #: cpu/freebsdcpuplugin.cpp:151
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1"
+#, kde-format
 msgctxt "@title"
 msgid "CPU %1"
-msgstr "GPU %1"
+msgstr "CPU %1"
 
 #: cpu/linuxcpuplugin.cpp:73
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
-msgstr ""
+msgstr "CPU %1 Core %2"
 
 #: cpu/linuxcpuplugin.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@title Number of Cores"
-#| msgid "Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr "Core"
+msgstr "Core %1"
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr ""
+msgstr "Rata-rata Muat"
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr ""
+msgstr "Rata-rata muat (1 menit)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr ""
+msgstr "Rata-rata muat (5 menit)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr ""
+msgstr "Rata-rata muat (15 menit)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr ""
+msgstr "Rata-rata muat (1 m)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr ""
+msgstr "Rata-rata muat (5 m)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr ""
+msgstr "Rata-rata muat (15 m)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
 msgstr ""
+"Sejumlah tugas di dalam antrean yang berjalan dirata-rata lebih dari 1 menit"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
 msgstr ""
+"Sejumlah tugas di dalam antrean yang berjalan dirata-rata lebih dari 5 menit"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
 msgstr ""
+"Sejumlah tugas di dalam antrean yang berjalan dirata-rata lebih dari 15 menit"
 
 #: disks/disks.cpp:71 disks/disks.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Total Uploaded"
+#, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr "Total Terunggah"
+msgstr "Total Ruang"
 
 #: disks/disks.cpp:73 disks/disks.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr "Total Digunakan"
+msgstr "Total"
 
 #: disks/disks.cpp:77 disks/disks.cpp:247
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr ""
+msgstr "Ruang Digunakan"
 
 #: disks/disks.cpp:79 disks/disks.cpp:248
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: disks/disks.cpp:84 disks/disks.cpp:240
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr ""
+msgstr "Ruang Bebas"
 
 #: disks/disks.cpp:86 disks/disks.cpp:241
-#, fuzzy, kde-format
-#| msgctxt "@title Free Memory Percentage"
-#| msgid "Free"
+#, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
 msgstr "Bebas"
 
 #: disks/disks.cpp:91 disks/disks.cpp:254
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Upload Rate"
+#, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr "Laju Unggah"
+msgstr "Laju Baca"
 
 #: disks/disks.cpp:93 disks/disks.cpp:255
-#, fuzzy, kde-format
-#| msgctxt "@title Disk Read Accesses"
-#| msgid "Read"
+#, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
 msgstr "Baca"
 
 #: disks/disks.cpp:97 disks/disks.cpp:260
-#, fuzzy, kde-format
-#| msgctxt "@title Disk Write Accesses"
-#| msgid "Write"
+#, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr "Tulis"
+msgstr "Laju Tulis"
 
 #: disks/disks.cpp:99 disks/disks.cpp:261
-#, fuzzy, kde-format
-#| msgctxt "@title Disk Write Accesses"
-#| msgid "Write"
+#, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
 msgstr "Tulis"
 
 #: disks/disks.cpp:103 disks/disks.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Percentage of used memory."
+#, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr "Persentase memori yang terpakai."
+msgstr "Persentase Digunakan"
 
 #: disks/disks.cpp:107 disks/disks.cpp:266
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Percentage of free memory."
+#, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr "Persentase memori yang bebas."
+msgstr "Persentase Bebas"
 
 #: disks/disks.cpp:140
 #, kde-format
 msgid "Disks"
-msgstr ""
+msgstr "Disk"
 
 #: disks/disks.cpp:232
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr ""
+msgstr "Semua Disk"
 
 #: disks/disks.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "@title Free Memory Percentage"
-#| msgid "Free"
+#, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
 msgstr "Bebas"
 
 #: disks/disks.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr ""
+msgstr "Semua GPU"
 
 #: gpu/AllGpus.cpp:16
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr "Penggunaan"
+msgstr "Semua Penggunaan GPU"
 
 #: gpu/AllGpus.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
 msgstr "Penggunaan"
@@ -502,34 +437,28 @@ msgstr "Penggunaan"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr ""
+msgstr "Semua Total Memori CPU"
 
 #: gpu/AllGpus.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr "Total Digunakan"
+msgstr "Total"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr ""
+msgstr "Semua Memori Digunakan CPU"
 
 #: gpu/AllGpus.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: gpu/GpuDevice.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@title Total CPU Usage"
-#| msgid "Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Usage"
 msgstr "Penggunaan"
@@ -538,64 +467,52 @@ msgstr "Penggunaan"
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr ""
+msgstr "Total Memori Video"
 
 #: gpu/GpuDevice.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr "Total Digunakan"
+msgstr "Total"
 
 #: gpu/GpuDevice.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Memory Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr "Penggunaan Memori GPU %1"
+msgstr "Memori Video Digunakan"
 
 #: gpu/GpuDevice.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr ""
+msgstr "Frekuensi"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr ""
+msgstr "Frekuensi Memori"
 
 #: gpu/GpuDevice.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Temperature"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr "Temperatur"
+msgstr "Suhu"
 
 #: gpu/GpuPlugin.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1"
+#, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr "GPU %1"
+msgstr "GPU"
 
 #: gpu/LinuxBackend.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1"
+#, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
 msgstr "GPU %1"
@@ -603,94 +520,76 @@ msgstr "GPU %1"
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
 msgid "Hardware Sensors"
-msgstr ""
+msgstr "Sensor Hardware"
 
 #: memory/backend.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Shared Memory Usage"
-#| msgid "Shared Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Physical Memory"
-msgstr "Memori Bersama"
+msgstr "Memori Fisik"
 
 #: memory/backend.cpp:18
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Shared Memory Usage"
-#| msgid "Shared Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr "Memori Bersama"
+msgstr "Memori Swap"
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr ""
+msgstr "Total Memori Fisik"
 
 #: memory/backend.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr "Total Digunakan"
+msgstr "Total"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr ""
+msgstr "Memori Fisik Digunakan"
 
 #: memory/backend.cpp:45
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: memory/backend.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Used Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr "Persentase Memori Terpakai"
+msgstr "Persentase Memori Fisik Digunakan"
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr ""
+msgstr "Memori Fisik Bebas"
 
 #: memory/backend.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "@title Free Memory Percentage"
-#| msgid "Free"
+#, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
 msgstr "Bebas"
 
 #: memory/backend.cpp:58
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Free Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr "Persentase Memori Bebas"
+msgstr "Persentase Memori Fisik Bebas"
 
 #: memory/backend.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Application Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr "Persentase Memori Aplikasi"
+msgstr "Memori Aplikasi"
 
 #: memory/backend.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@title Application Memory Percentage"
-#| msgid "Application"
+#, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
 msgstr "Aplikasi"
@@ -702,17 +601,13 @@ msgid "Application Memory Percentage"
 msgstr "Persentase Memori Aplikasi"
 
 #: memory/backend.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Shared Memory Usage"
-#| msgid "Shared Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr "Memori Bersama"
+msgstr "Memori Cache"
 
 #: memory/backend.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@title Cache Memory Percentage"
-#| msgid "Cache"
+#, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
 msgstr "Cache"
@@ -724,17 +619,13 @@ msgid "Cache Memory Percentage"
 msgstr "Persentase Memori Cache"
 
 #: memory/backend.cpp:80
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Buffer Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Buffer Memory"
-msgstr "Persentase Memori Boper"
+msgstr "Memori Boper"
 
 #: memory/backend.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title Buffer Memory Percentage"
-#| msgid "Buffer"
+#, kde-format
 msgctxt "@title, Short for 'Buffer Memory'"
 msgid "Buffer"
 msgstr "Boper"
@@ -742,7 +633,7 @@ msgstr "Boper"
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr ""
+msgstr "Jumlah memori yang digunakan untuk men-cache blok disk"
 
 #: memory/backend.cpp:86
 #, kde-format
@@ -751,73 +642,55 @@ msgid "Buffer Memory Percentage"
 msgstr "Persentase Memori Boper"
 
 #: memory/backend.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Total Uploaded"
+#, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr "Total Terunggah"
+msgstr "Total Memori Swap"
 
 #: memory/backend.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "@title Total Memory Usage"
-#| msgid "Total Used"
+#, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr "Total Digunakan"
+msgstr "Total"
 
 #: memory/backend.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Shared Memory Usage"
-#| msgid "Shared Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr "Memori Bersama"
+msgstr "Memori Swap Digunakan"
 
 #: memory/backend.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@title Used Memory Percentage"
-#| msgid "Used"
+#, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr "Terpakai"
+msgstr "Digunakan"
 
 #: memory/backend.cpp:100
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Used Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr "Persentase Memori Terpakai"
+msgstr "Persentase Memori Swap Digunakan"
 
 #: memory/backend.cpp:104
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Shared Memory Usage"
-#| msgid "Shared Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr "Memori Bersama"
+msgstr "Memori Swap Bebas"
 
 #: memory/backend.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title Free Memory Percentage"
-#| msgid "Free"
+#, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
 msgstr "Bebas"
 
 #: memory/backend.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Free Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr "Persentase Memori Bebas"
+msgstr "Persentase Memori Swap Bebas"
 
 #: memory/memory.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Memory Usage"
-#| msgid "Memory"
+#, kde-format
 msgctxt "@title"
 msgid "Memory"
 msgstr "Memori"
@@ -860,25 +733,25 @@ msgstr "Unggah"
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "Total Terunduh"
+msgstr "Total Diunduh"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr "Terunduh"
+msgstr "Diunduh"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "Total Terunggah"
+msgstr "Total Diunggah"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr "Terunggah"
+msgstr "Diunggah"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
@@ -920,55 +793,49 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "Gerbang IPv4"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "Gerbang IPv4"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "Subnet Mask IPv4"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "Subnet Mask IPv4"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr ""
+msgstr "IPv4 dengan Panjang Prefix"
 
 #: network/NetworkDevice.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
 msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
@@ -986,55 +853,49 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "Gerbang IPv6"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "Gerbang IPv6"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "Subnet Mask IPv6"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "Subnet Mask IPv6"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr ""
+msgstr "IPv6 dengan Panjang Prefix"
 
 #: network/NetworkDevice.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
 msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkDevice.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkPlugin.cpp:43
 #, kde-format
@@ -1130,7 +991,7 @@ msgstr "URL Sistem Operasi"
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr ""
+msgstr "Uptime"
 
 #: osinfo/osinfo.cpp:125
 #, kde-format
@@ -1157,12 +1018,10 @@ msgid "KDE Plasma Version"
 msgstr "Versi KDE Plasma"
 
 #: osinfo/osinfo.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr "Sistem"
+msgstr "Sistem Jendela"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
@@ -1174,83 +1033,79 @@ msgstr "Tak diketahui"
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr ""
+msgstr "Kapasitas Desain"
 
 #: power/power.cpp:47
 #, kde-format
 msgid "Amount of energy that the Battery was designed to hold"
-msgstr ""
+msgstr "Jumlah energi yang dirancang untuk ditahan oleh Baterai"
 
 #: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr ""
+msgstr "Kapasitas Saat Ini"
 
 #: power/power.cpp:56
 #, kde-format
 msgid "Amount of energy that the battery can currently hold"
-msgstr ""
+msgstr "Jumlah energi yang dapat ditampung baterai saat ini"
 
 #: power/power.cpp:62 power/power.cpp:63
 #, kde-format
 msgctxt "@title"
 msgid "Health"
-msgstr ""
+msgstr "Kesehatan"
 
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
-msgstr ""
+msgstr "Persentase kapasitas desain yang dapat ditampung baterai"
 
 #: power/power.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Charge"
-msgstr ""
+msgstr "Pengisian"
 
 #: power/power.cpp:74
 #, kde-format
 msgid "Amount of energy that the battery is currently holding"
-msgstr ""
+msgstr "Jumlah energi baterai saat ini yang ditampung"
 
 #: power/power.cpp:80 power/power.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Cache Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr "Persentase Memori Cache"
+msgstr "Persentase Pengisian"
 
 #: power/power.cpp:83
 #, kde-format
 msgid ""
 "Percentage of the current capacity that the battery is currently holding"
-msgstr ""
+msgstr "Persentase kapasitas baterai saat ini yang ditampung"
 
 #: power/power.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr ""
+msgstr "Laju Pengisian"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr ""
+msgstr "Laju  Pengisian"
 
 #: power/power.cpp:93
 #, kde-format
 msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
-msgstr ""
+msgstr "Daya si baterai ketika sedang diisi (positif) atau dikuras (negatif)"
 
 #: power/power.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@title GPU Power Usage"
-#| msgid "Power"
+#, kde-format
 msgctxt "@title"
 msgid "Power"
 msgstr "Daya"
