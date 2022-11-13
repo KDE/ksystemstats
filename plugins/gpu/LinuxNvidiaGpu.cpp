@@ -1,15 +1,14 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
- * 
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
 #include "LinuxNvidiaGpu.h"
 
-
 NvidiaSmiProcess *LinuxNvidiaGpu::s_smiProcess = nullptr;
 
-LinuxNvidiaGpu::LinuxNvidiaGpu(int index, const QString& id, const QString& name)
+LinuxNvidiaGpu::LinuxNvidiaGpu(int index, const QString &id, const QString &name)
     : GpuDevice(id, name)
     , m_index(index)
 {
@@ -33,7 +32,13 @@ void LinuxNvidiaGpu::initialize()
 {
     GpuDevice::initialize();
 
-    for (auto sensor : {m_usageProperty, m_totalVramProperty, m_usedVramProperty, m_temperatureProperty, m_coreFrequencyProperty, m_memoryFrequencyProperty}) {
+    for (auto sensor : {m_usageProperty,
+                        m_totalVramProperty,
+                        m_usedVramProperty,
+                        m_temperatureProperty,
+                        m_coreFrequencyProperty,
+                        m_memoryFrequencyProperty,
+                        m_powerProperty}) {
         connect(sensor, &KSysGuard::SensorProperty::subscribedChanged, sensor, [sensor]() {
             if (sensor->isSubscribed()) {
                 LinuxNvidiaGpu::s_smiProcess->ref();
@@ -54,13 +59,15 @@ void LinuxNvidiaGpu::initialize()
         m_coreFrequencyProperty->setMax(data.maxCoreFrequency);
         m_memoryFrequencyProperty->setMax(data.maxMemoryFrequency);
         m_temperatureProperty->setMax(data.maxTemperature);
+        m_powerProperty->setMax(data.maxPower);
     }
 
     m_usedVramProperty->setUnit(KSysGuard::UnitMegaByte);
     m_totalVramProperty->setUnit(KSysGuard::UnitMegaByte);
+    m_powerProperty->setUnit(KSysGuard::UnitWatt);
 }
 
-void LinuxNvidiaGpu::onDataReceived(const NvidiaSmiProcess::GpuData& data)
+void LinuxNvidiaGpu::onDataReceived(const NvidiaSmiProcess::GpuData &data)
 {
     if (data.index != m_index) {
         return;
@@ -71,4 +78,5 @@ void LinuxNvidiaGpu::onDataReceived(const NvidiaSmiProcess::GpuData& data)
     m_coreFrequencyProperty->setValue(data.coreFrequency);
     m_memoryFrequencyProperty->setValue(data.memoryFrequency);
     m_temperatureProperty->setValue(data.temperature);
+    m_powerProperty->setValue(data.power);
 }

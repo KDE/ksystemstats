@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
- * 
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -13,7 +13,7 @@ class GpuDevice : public KSysGuard::SensorObject
     Q_OBJECT
 
 public:
-    GpuDevice(const QString& id, const QString& name);
+    GpuDevice(const QString &id, const QString &name);
     ~GpuDevice() override = default;
 
     virtual void initialize();
@@ -29,4 +29,5 @@ protected:
     KSysGuard::SensorProperty *m_temperatureProperty = nullptr;
     KSysGuard::SensorProperty *m_coreFrequencyProperty = nullptr;
     KSysGuard::SensorProperty *m_memoryFrequencyProperty = nullptr;
+    KSysGuard::SensorProperty *m_powerProperty = nullptr;
 };

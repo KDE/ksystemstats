@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2020 Arjen Hiemstra <ahiemstra@heimr.nl>
- * 
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -8,7 +8,7 @@
 
 #include <KLocalizedString>
 
-GpuDevice::GpuDevice(const QString& id, const QString& name)
+GpuDevice::GpuDevice(const QString &id, const QString &name)
     : KSysGuard::SensorObject(id, name)
 {
 }
@@ -49,6 +49,10 @@ void GpuDevice::initialize()
     m_temperatureProperty->setName(i18nc("@title", "Temperature"));
     m_temperatureProperty->setPrefix(name());
     m_temperatureProperty->setUnit(KSysGuard::UnitCelsius);
+
+    m_powerProperty->setName(i18nc("@title", "Power"));
+    m_powerProperty->setPrefix(name());
+    m_powerProperty->setUnit(KSysGuard::UnitWatt);
 }
 
 void GpuDevice::update()
@@ -64,4 +68,5 @@ void GpuDevice::makeSensors()
     m_coreFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("coreFrequency"), QStringLiteral("coreFrequency"), 0, this);
     m_memoryFrequencyProperty = new KSysGuard::SensorProperty(QStringLiteral("memoryFrequency"), QStringLiteral("memoryFrequency"), 0, this);
     m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), QStringLiteral("temperature"), 0, this);
+    m_powerProperty = new KSysGuard::SensorProperty(QStringLiteral("power"), QStringLiteral("power"), 0, this);
 }

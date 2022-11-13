@@ -44,6 +44,7 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
 
     bool readMemory = false;
     bool readMaxClocks = false;
+    bool readMaxPwr = false;
 
     while (queryProcess.waitForReadyRead()) {
         if (!queryProcess.canReadLine()) {
@@ -79,6 +80,10 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
             readMaxClocks = true;
         }
 
+        if (line.startsWith("    Power Readings")) {
+            readMaxPwr = true;
+        }
+
         if (line.startsWith("        Total") && readMemory) {
             data->totalMemory += std::atoi(line.mid(line.indexOf(':') + 1));
         }
@@ -93,6 +98,10 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
 
         if (line.startsWith("        Memory") && readMaxClocks) {
             data->maxMemoryFrequency = std::atoi(line.mid(line.indexOf(':') + 1));
+        }
+
+        if (line.startsWith("        Power Limit") && readMaxPwr) {
+            data->maxPower = std::atoi(line.mid(line.indexOf(':') + 1));
         }
     }
 
@@ -115,8 +124,10 @@ void NvidiaSmiProcess::ref()
     m_process->setProgram(m_smiPath);
     m_process->setArguments({
         QStringLiteral("dmon"), // Monitor
-        QStringLiteral("-d"), QStringLiteral("2"), // 2 seconds delay, to match daemon update rate
-        QStringLiteral("-s"), QStringLiteral("pucm") // Include all relevant statistics
+        QStringLiteral("-d"),
+        QStringLiteral("2"), // 2 seconds delay, to match daemon update rate
+        QStringLiteral("-s"),
+        QStringLiteral("pucm") // Include all relevant statistics
     });
     connect(m_process.get(), &QProcess::readyReadStandardOutput, this, &NvidiaSmiProcess::readStatisticsData);
     m_process->start();

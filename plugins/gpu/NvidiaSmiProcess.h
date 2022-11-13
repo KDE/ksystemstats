@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <memory>
 #include <QObject>
 #include <QProcess>
+#include <memory>
 
 class NvidiaSmiProcess : public QObject
 {
@@ -31,6 +31,7 @@ public:
         uint maxCoreFrequency = 0;
         uint maxMemoryFrequency = 0;
         uint maxTemperature = 0;
+        uint maxPower = 0;
     };
 
     NvidiaSmiProcess();
