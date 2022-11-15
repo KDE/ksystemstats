@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-09-10 10:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -502,6 +502,12 @@ msgstr "تردد الذاكرة"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "درجة الحرارة"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "الطاقة"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1101,9 +1107,3 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "الطاقة التي تشحن بها البطارية (موجب) أو تفرغ (سالب)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "الطاقة"

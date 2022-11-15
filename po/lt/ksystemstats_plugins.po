@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2021-08-31 19:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -530,6 +530,12 @@ msgstr ""
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatūra"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Maitinimas"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1146,12 +1152,6 @@ msgid ""
 msgstr ""
 "Energija, kuria yra įkraunamas (teigiama) ar iškraunamas (neigiama) "
 "akumuliatorius"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Maitinimas"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

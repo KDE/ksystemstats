@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-09-28 18:37+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -501,6 +501,12 @@ msgstr "Tần số bộ nhớ"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Nhiệt độ"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Điện lượng"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1100,12 +1106,6 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "Điện lượng mà cục pin đang được sạc (số dương) hoặc xả (số âm)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Điện lượng"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

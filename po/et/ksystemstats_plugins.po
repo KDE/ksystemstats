@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2020-10-25 22:30+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -555,6 +555,12 @@ msgstr "Sagedus"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatuur"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Energia"
 
 #: gpu/GpuPlugin.cpp:31
 #, fuzzy, kde-format
@@ -1218,12 +1224,6 @@ msgid ""
 msgstr ""
 "Võimsus, millega akut parajasti laetakse (positiivse väärtuse korral) või "
 "mille võrra aku tühjeneb (negatiivse väärtuse korral)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Energia"
 
 #, fuzzy
 #~| msgctxt "@title, Short for Current Temperatur"

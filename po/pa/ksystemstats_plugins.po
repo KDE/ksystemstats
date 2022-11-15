@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2020-12-19 12:18-0800\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -533,6 +533,12 @@ msgstr "ਮੈਮੋਰੀ ਫਰੀਕਿਊਂਸੀ"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "ਤਾਪਮਾਨ"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "ਪਾਵਰ"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1146,12 +1152,6 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr ""
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "ਪਾਵਰ"
 
 #, fuzzy
 #~| msgctxt "@title, Short for Current Temperatur"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-07-13 12:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -531,6 +531,12 @@ msgstr "메모리 주파수"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "온도"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "전원"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1130,12 +1136,6 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "배터리가 충전 중인 전력(양수) 또는 방전 중인 전력(음수)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "전원"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

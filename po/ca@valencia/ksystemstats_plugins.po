@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-09-07 14:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -505,6 +505,12 @@ msgstr "Freqüència de la memòria"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatura"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Energia"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1110,9 +1116,3 @@ msgid ""
 msgstr ""
 "Energia amb la qual la bateria està sent carregada (positiva) o descarregada "
 "(negativa)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Energia"

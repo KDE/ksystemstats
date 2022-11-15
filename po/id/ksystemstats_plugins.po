@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-10-23 18:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -504,6 +504,12 @@ msgstr "Frekuensi Memori"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Suhu"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Daya"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1103,12 +1109,6 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "Daya si baterai ketika sedang diisi (positif) atau dikuras (negatif)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Daya"
 
 #, fuzzy
 #~| msgctxt "@title GPU Temperature"

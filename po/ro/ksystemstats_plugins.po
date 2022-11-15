@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-02-15 13:31+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -529,6 +529,12 @@ msgstr "Frecvența memoriei"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatură"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Putere"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1145,12 +1151,6 @@ msgid ""
 "(negative)"
 msgstr ""
 "Puterea cu care e încărcat (pozitiv) sau descărcat (negativ) acumulatorul"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Putere"
 
 #, fuzzy
 #~| msgctxt "@title, Short for Current Temperatur"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-09-07 09:33+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -497,6 +497,12 @@ msgstr "Frequência da Memória"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatura"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Potência"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1098,9 +1104,3 @@ msgid ""
 msgstr ""
 "A potência com que a bateria está a ser carregada (positiva) ou descarregada "
 "(negativa)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Potência"

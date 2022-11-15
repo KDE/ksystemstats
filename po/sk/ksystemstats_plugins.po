@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-01-31 17:01+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -530,6 +530,12 @@ msgstr "Frekvencia pamäte"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Teplota"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Napájanie"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1146,12 +1152,6 @@ msgid ""
 msgstr ""
 "Napájanie, ktorým je batéria nabíjaná (kladná hodnota) alebo "
 "vybíjaná(záporná hodnota)"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Napájanie"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"
