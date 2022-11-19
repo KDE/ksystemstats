@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:51+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-10-30 09:55+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -504,6 +504,12 @@ msgstr "Minnefrekvens"
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatur"
+
+#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Straum"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
@@ -1105,9 +1111,3 @@ msgid ""
 msgstr ""
 "Straumstyrken som batteriet vert lada (positivt tal) eller utlada (negativt "
 "tal) med"
-
-#: power/power.cpp:106
-#, kde-format
-msgctxt "@title"
-msgid "Power"
-msgstr "Straum"
