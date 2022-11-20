@@ -114,6 +114,11 @@ void LinuxAmdGpu::makeSensors()
     if (!m_temperatureProperty) {
         m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
     }
+
+    // It would normally find this in lmsensors plugin or in another function, but just set it in case anything tries to explode
+    if (!m_powerProperty) {
+        m_powerProperty = new KSysGuard::SensorProperty(QStringLiteral("power"), this);
+    }
 }
 
 void LinuxAmdGpu::discoverSensors()
