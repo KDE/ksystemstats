@@ -307,19 +307,19 @@ msgstr "Càrrega mitjana (15 m)"
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr "Nombre de treballs a la cua d'execució de mitjana en 1 minut"
+msgstr "Nombre de treballs en la cua d'execució de mitjana en 1 minut"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr "Nombre de treballs a la cua d'execució de mitjana en 5 minuts"
+msgstr "Nombre de treballs en la cua d'execució de mitjana en 5 minuts"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr "Nombre de treballs a la cua d'execució de mitjana en 15 minuts"
+msgstr "Nombre de treballs en la cua d'execució de mitjana en 15 minuts"
 
 #: disks/disks.cpp:71 disks/disks.cpp:234
 #, kde-format
