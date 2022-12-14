@@ -26,6 +26,7 @@ public:
     };
 
     struct GpuQueryResult {
+        QString pciPath;
         QString name;
         uint totalMemory = 0;
         uint maxCoreFrequency = 0;

@@ -6,11 +6,13 @@
 
 #include "LinuxNvidiaGpu.h"
 
+#include <libudev.h>
+
 NvidiaSmiProcess *LinuxNvidiaGpu::s_smiProcess = nullptr;
 
-LinuxNvidiaGpu::LinuxNvidiaGpu(int index, const QString &id, const QString &name)
+LinuxNvidiaGpu::LinuxNvidiaGpu(const QString &id, const QString &name, udev_device *device)
     : GpuDevice(id, name)
-    , m_index(index)
+    , m_device(device)
 {
     if (!s_smiProcess) {
         s_smiProcess = new NvidiaSmiProcess();
@@ -48,18 +50,22 @@ void LinuxNvidiaGpu::initialize()
         });
     }
 
-    auto queryResult = s_smiProcess->query();
-    if (m_index >= int(queryResult.size())) {
-        qWarning() << "Could not retrieve information for NVidia GPU" << m_index;
+    const auto queryResult = s_smiProcess->query();
+    const auto sysName = QString::fromLocal8Bit(udev_device_get_sysname(m_device));
+    auto it = std::find_if(queryResult.cbegin(), queryResult.cend(), [&sysName] (const NvidiaSmiProcess::GpuQueryResult &result) {
+        return result.pciPath == sysName;
+    });
+    if (it == queryResult.cend()) {
+        qWarning() << "Could not retrieve information for NVidia GPU" << sysName;
     } else {
-        auto data = queryResult.at(m_index);
-        m_nameProperty->setValue(data.name);
-        m_totalVramProperty->setValue(data.totalMemory);
-        m_usedVramProperty->setMax(data.totalMemory);
-        m_coreFrequencyProperty->setMax(data.maxCoreFrequency);
-        m_memoryFrequencyProperty->setMax(data.maxMemoryFrequency);
-        m_temperatureProperty->setMax(data.maxTemperature);
-        m_powerProperty->setMax(data.maxPower);
+        m_index = it - queryResult.cbegin();
+        m_nameProperty->setValue(it->name);
+        m_totalVramProperty->setValue(it->totalMemory);
+        m_usedVramProperty->setMax(it->totalMemory);
+        m_coreFrequencyProperty->setMax(it->maxCoreFrequency);
+        m_memoryFrequencyProperty->setMax(it->maxMemoryFrequency);
+        m_temperatureProperty->setMax(it->maxTemperature);
+        m_powerProperty->setMax(it->maxPower);
     }
 
     m_usedVramProperty->setUnit(KSysGuard::UnitMegaByte);

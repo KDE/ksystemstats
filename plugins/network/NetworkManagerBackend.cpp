@@ -153,7 +153,7 @@ void NetworkManagerDevice::update()
     setName(m_device->activeConnection()->connection()->name());
     m_networkSensor->setValue(name());
 
-    auto dnsAccumulationFunction = [](QString &a, const QHostAddress& b) { return std::move(a).append(", ").append(b.toString()); };
+    auto dnsAccumulationFunction = [](QString &&a, const QHostAddress& b) { return std::move(a).append(", ").append(b.toString()); };
     if (m_device->ipV4Config().isValid()) {
         auto ipv4 = m_device->ipV4Config().addresses().at(0).ip().toString();
         m_ipv4Sensor->setValue(ipv4);

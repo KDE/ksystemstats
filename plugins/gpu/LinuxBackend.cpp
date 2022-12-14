@@ -57,7 +57,7 @@ void LinuxBackend::start()
         if (vendor == amdVendor) {
             gpu = new LinuxAmdGpu{gpuId, gpuName, pciDevice};
         } else if (vendor == nvidiaVendor) {
-            gpu = new LinuxNvidiaGpu{drmNumber, gpuId, gpuName};
+            gpu = new LinuxNvidiaGpu{gpuId, gpuName, pciDevice};
         } else {
             qDebug() << "Found unsupported GPU:" << path;
             udev_device_unref(drmDevice);
