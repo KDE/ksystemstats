@@ -158,9 +158,9 @@ void NvidiaSmiProcess::readStatisticsData()
             continue;
         }
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        const QVector<QStringRef> parts = line.splitRef(QLatin1Char(' '), Qt::SkipEmptyParts);
+        const QVector<QStringRef> parts = QStringRef(&line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
 #else
-        const QVector<QStringView> parts = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+        const QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
 #endif
 
         // format at time of writing is
