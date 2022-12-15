@@ -107,7 +107,7 @@ int main()
     int group_fd = -1;
     std::map<std::uint64_t, uint64_t> idToEvent;
     auto events = discoverEngines(eventSourceDir + std::string("/events"));
-    std::array<int, 4> enginesPerClass{};
+    std::array<unsigned, 4> enginesPerClass{};
     for (const auto engine : events) {
         ++enginesPerClass[engine >> I915_PMU_CLASS_SHIFT];
     }
@@ -139,7 +139,7 @@ int main()
     };
     const size_t neededSize = sizeof(read_format) + sizeof(read_format::value) * idToEvent.size();
     read_format *data = static_cast<read_format*>(operator new(neededSize));
-    std::array<int,  4> engineCounters;
+    std::array<std::uint64_t,  4> engineCounters;
     while (true) {
         if (read(group_fd, data, neededSize) < 0) {
             std::cerr << "Error reading events" << std::endl;
@@ -165,6 +165,7 @@ int main()
             }
             }
         }
+
         std::cout << "|Render|" << engineCounters[I915_ENGINE_CLASS_RENDER] / enginesPerClass[I915_ENGINE_CLASS_RENDER];
         std::cout << "|Copy|" << engineCounters[I915_ENGINE_CLASS_COPY] / enginesPerClass[I915_ENGINE_CLASS_COPY];
         std::cout << "|Video|" << engineCounters[I915_ENGINE_CLASS_VIDEO] / enginesPerClass[I915_ENGINE_CLASS_VIDEO];

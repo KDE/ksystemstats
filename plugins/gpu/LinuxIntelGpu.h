@@ -25,7 +25,7 @@ private:
     KSysGuard::SensorProperty *m_enhanceUsage;
     void readPerfData();
     QProcess *m_helperProcess;
-    quint64 lastTimeStamp;
-    quint64 lastFrequencyCount;
+    quint64 lastTimeStamp = 0;
+    quint64 lastFrequencyCount = 0;
     std::map<KSysGuard::SensorProperty*, quint64> m_lastUsages;
 };

@@ -79,7 +79,6 @@ void LinuxIntelGpu::readPerfData()
         const quint64 timediff = timestamp - lastTimeStamp;
         const double timeDiffSeconds = timediff / 1e9;
         lastTimeStamp = timestamp;
-        qDebug() << parts;
         for (int i = 1; i < parts.size(); i += 2) {
             if (parts[i] == QLatin1String("Frequency")) {
                 const quint64 frequencyCount = parts[i + 1].toULong();
