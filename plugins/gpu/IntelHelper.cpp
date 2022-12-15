@@ -10,8 +10,10 @@
 #include <cstring>
 #include <cstdlib>
 #include <fstream>
+#include <filesystem>
 #include <map>
 #include <iostream>
+#include <vector>
 
 #include <drm/i915_drm.h>
 #include <linux/perf_event.h>
@@ -22,22 +24,6 @@
 #include <unistd.h>
 
 constexpr auto eventSourceDir = "/sys/bus/event_source/devices/i915";
-
-int i915Type()
-{
-    const std::string path = eventSourceDir + std::string("/type");
-    std::ifstream typeFile(path);
-    if (!typeFile.is_open()) {
-        std::cerr << "Could not open " << path;
-        std::exit(1);
-    }
-    int type = -1;
-    if(!(typeFile >> type)) {
-        std::cerr << "Error reading type";
-        std::exit(1);
-    }
-    return type;
-}
 
 int perf_open(int type, int config, int group_fd)
 {
@@ -52,29 +38,80 @@ int perf_open(int type, int config, int group_fd)
     return syscall(SYS_perf_event_open, &pe, -1, 0, group_fd, PERF_FLAG_FD_CLOEXEC);
 }
 
-template <int n>
-struct read_format {
-    std::uint64_t count;
-    std::uint64_t time_enabled;
-    struct value {
-        std::uint64_t value;
-        std::uint64_t id;
-    };
-    std::array<value, n> values;
-};
+int i915Type()
+{
+    const std::string path = eventSourceDir + std::string("/type");
+    std::ifstream typeFile(path);
+    if (!typeFile.is_open()) {
+        std::cerr << "Could not open " << path << '\n';
+        std::exit(1);
+    }
+    int type = -1;
+    if(!(typeFile >> type)) {
+        std::cerr << "Error reading type" << '\n';
+        std::exit(1);
+    }
+    return type;
+}
+
+
+std::vector<std::uint64_t> discoverEngines(const std::filesystem::path &eventDir)
+{
+    std::error_code error;
+    std::vector<std::uint64_t> engines;
+    for (const auto &entry : std::filesystem::directory_iterator(eventDir, std::filesystem::directory_options::skip_permission_denied))
+    {
+        if (entry.is_regular_file() && entry.path().string().ends_with("-busy")) {
+            std::ifstream configFile(entry.path());
+            if (!configFile.is_open()) {
+                std::cerr << "Could not open " << entry.path() << '\n';
+                continue;
+            }
+            std::string contents;
+            if (!std::getline(configFile, contents)) {
+                std::cerr << "Could not read " << entry.path() << '\n';
+                continue;
+            }
+            if (!contents.starts_with("config=")) {
+                std::cerr << entry.path() << ": Expected 'config=' got " << contents << '\n';
+            }
+            const std::uint64_t config = std::strtol(&contents.at(strlen("config=")), nullptr, 0);
+            if (errno != 0) {
+                std::cerr << entry.path() << ": Failed parsing" << contents << '\n';
+                continue;
+            }
+            // Reverse of I915_PMU_ENGINE_BUSY macro
+            if ((config & I915_PMU_SAMPLE_MASK) != I915_SAMPLE_BUSY) {
+                std::cerr << entry.path() << ": Config is not a busy sample" << config << '\n';
+                continue;
+            }
+            const int type = config >> I915_PMU_CLASS_SHIFT;
+            if (type != I915_ENGINE_CLASS_RENDER && type != I915_ENGINE_CLASS_COPY && type != I915_ENGINE_CLASS_VIDEO && type != I915_ENGINE_CLASS_VIDEO_ENHANCE) {
+                std::cerr << entry.path() << ": " << type << " is not an engine class \n";
+                continue;
+            }
+            engines.push_back(config);
+        }
+    }
+    return engines;
+}
+
+
+#include <ranges>
+#include <algorithm>
+
 
 int main()
 {
     const int type = i915Type();
     int group_fd = -1;
-    // TODO Should we also add sema and wait usages?
-    constexpr std::array events = {I915_PMU_INTERRUPTS,
-                                   I915_PMU_ACTUAL_FREQUENCY,
-                                   I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_RENDER, 0),
-                                   I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_COPY, 0),
-                                   I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_VIDEO, 0),
-                                   I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_VIDEO_ENHANCE, 0)};
-    std::map<std::uint64_t, int> idToEvent;
+    std::map<std::uint64_t, uint64_t> idToEvent;
+    auto events = discoverEngines(eventSourceDir + std::string("/events"));
+    std::array<int, 4> enginesPerClass{};
+    for (const auto engine : events) {
+        ++enginesPerClass[engine >> I915_PMU_CLASS_SHIFT];
+    }
+    events.insert(events.end(), {I915_PMU_ACTUAL_FREQUENCY, I915_PMU_INTERRUPTS});
     for (const auto event : events) {
         const int fd = perf_open(type, event, group_fd);
         if (group_fd == -1) {
@@ -92,40 +129,47 @@ int main()
         return -1;
     }
 
-    read_format<events.size()> data;
+    struct read_format {
+        std::uint64_t count;
+        std::uint64_t time_enabled;
+        struct value {
+            std::uint64_t value;
+            std::uint64_t id;
+        } values[];
+    };
+    const size_t neededSize = sizeof(read_format) + sizeof(read_format::value) * idToEvent.size();
+    read_format *data = static_cast<read_format*>(operator new(neededSize));
+    std::array<int,  4> engineCounters;
     while (true) {
-        if (read(group_fd, &data, sizeof(data)) < 0) {
+        if (read(group_fd, data, neededSize) < 0) {
             std::cerr << "Error reading events" << std::endl;
             return errno;
         }
-        std::cout << data.time_enabled;
-        for (auto value = data.values.cbegin(); value != data.values.cbegin() + data.count; ++value) {
-            if (!idToEvent.count(value->id)) {
-                std::cerr << "Unknown event id" << value->id << "\n";
+        engineCounters = {};
+        std::cout << data->time_enabled;
+        for (std::uint64_t i = 0; i < data->count; ++i) {
+            const auto event = idToEvent.find(data->values[i].id);
+            if (event == idToEvent.end()) {
+                std::cerr << "Unknown event id" << data->values[i].id << "\n";
                 continue;
             }
-            switch (idToEvent[value->id]) {
+            switch (event->second) {
             case I915_PMU_INTERRUPTS:
-                std::cout << "|Interrupts";
+                std::cout << "|Interrupts|" << data->values[i].value;
                 break;
             case I915_PMU_ACTUAL_FREQUENCY:
-                std::cout << "|Frequency";
+                std::cout << "|Frequency|" <<  data->values[i].value;
                 break;
-            case I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_RENDER, 0):
-                std::cout << "|Render";
-                break;
-            case I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_COPY, 0):
-                std::cout << "|Copy";
-                break;
-            case I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_VIDEO, 0):
-                std::cout << "|Video";
-                break;
-            case I915_PMU_ENGINE_BUSY(I915_ENGINE_CLASS_VIDEO_ENHANCE, 0):
-                std::cout << "|Enhance";
-                break;
+            default: {
+                engineCounters[event->second >> I915_PMU_CLASS_SHIFT] += data->values[i].value;
             }
-            std::cout << "|" << value->value;
+            }
         }
+        std::cout << "|Render|" << engineCounters[I915_ENGINE_CLASS_RENDER] / enginesPerClass[I915_ENGINE_CLASS_RENDER];
+        std::cout << "|Copy|" << engineCounters[I915_ENGINE_CLASS_COPY] / enginesPerClass[I915_ENGINE_CLASS_COPY];
+        std::cout << "|Video|" << engineCounters[I915_ENGINE_CLASS_VIDEO] / enginesPerClass[I915_ENGINE_CLASS_VIDEO];
+        std::cout << "|Enhance|" << engineCounters[I915_ENGINE_CLASS_VIDEO_ENHANCE] / enginesPerClass[I915_ENGINE_CLASS_VIDEO_ENHANCE];
+
         std::cout << std::endl;
         sleep(1);
     }
