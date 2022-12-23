@@ -23,6 +23,7 @@ include(ECMInstallIcons)
 include(FeatureSummary)
 include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS CoreAddons DBusAddons Solid KIO)
@@ -36,8 +37,11 @@ set_package_properties(KF5NetworkManagerQt PROPERTIES
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055500)
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.101
+)
+
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
