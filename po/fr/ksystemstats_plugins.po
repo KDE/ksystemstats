@@ -1,18 +1,19 @@
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:47+0000\n"
-"PO-Revision-Date: 2022-09-08 21:15+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-06 16:17+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -282,19 +283,19 @@ msgstr "Moyenne de charge (15 minutes)"
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr "Moyenne de charge (1 mn)"
+msgstr "Moyenne de charge (1 minute)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr "Moyenne de charge (5 mn)"
+msgstr "Moyenne de charge (5 minutes)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr "Moyenne de charge (15 mn)"
+msgstr "Moyenne de charge (15 minutes)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
