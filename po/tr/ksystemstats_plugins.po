@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:47+0000\n"
+"POT-Creation-Date: 2023-01-12 00:56+0000\n"
 "PO-Revision-Date: 2022-09-07 17:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -245,17 +245,17 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "%1. CPU"
 
-#: cpu/linuxcpuplugin.cpp:73
-#, kde-format
-msgctxt "@title"
-msgid "CPU %1 Core %2"
-msgstr "%1. CPU, %2. Çekirdek"
-
-#: cpu/linuxcpuplugin.cpp:74
+#: cpu/linuxcpuplugin.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
 msgstr "%1. Çekirdek"
+
+#: cpu/linuxcpuplugin.cpp:54
+#, kde-format
+msgctxt "@title"
+msgid "CPU %1 Core %2"
+msgstr "%1. CPU, %2. Çekirdek"
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
