@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 set(SOURCES
-    client.cpp
+    client.cpp client.h
     daemon.cpp
 )
 
