@@ -4,14 +4,14 @@
 # SPDX-FileCopyrightText: 2021 Alessio Bonfiglio <alessio.bonfiglio@mail.polimi.it>
 
 set(KSYSGUARD_NETWORK_PLUGIN_SOURCES
-    NetworkPlugin.cpp NetworkPlugin.h
-    NetworkDevice.cpp NetworkDevice.h
-    NetworkBackend.cpp NetworkBackend.h
-    AllDevicesObject.cpp AllDevicesObject.h
+    NetworkPlugin.cpp
+    NetworkDevice.cpp
+    NetworkBackend.cpp
+    AllDevicesObject.cpp
 )
 
 if (KF5NetworkManagerQt_FOUND)
-    set(KSYSGUARD_NETWORK_PLUGIN_SOURCES ${KSYSGUARD_NETWORK_PLUGIN_SOURCES} NetworkManagerBackend.cpp NetworkManagerBackend.h)
+    set(KSYSGUARD_NETWORK_PLUGIN_SOURCES ${KSYSGUARD_NETWORK_PLUGIN_SOURCES} NetworkManagerBackend.cpp)
     add_definitions(-DNETWORKMANAGER_FOUND)
 endif()
 
@@ -22,7 +22,7 @@ if (KF5NetworkManagerQt_FOUND)
     target_link_libraries(ksystemstats_plugin_network PRIVATE KF5::NetworkManagerQt)
 endif()
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    target_sources(ksystemstats_plugin_network PRIVATE RtNetlinkBackend.cpp RtNetlinkBackend.h)
+    target_sources(ksystemstats_plugin_network PRIVATE RtNetlinkBackend.cpp)
     target_link_libraries(ksystemstats_plugin_network PRIVATE ${NL_LIBRARIES} Qt::Network)
     target_include_directories(ksystemstats_plugin_network PRIVATE ${NL_INCLUDE_DIRS})
 endif()

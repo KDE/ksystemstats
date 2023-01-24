@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
 set(KSYSGUARD_OSINFO_PLUGIN_SOURCES
-    osinfo.cpp osinfo.h
+    osinfo.cpp
 )
 
 add_library(ksystemstats_plugin_osinfo MODULE ${KSYSGUARD_OSINFO_PLUGIN_SOURCES})

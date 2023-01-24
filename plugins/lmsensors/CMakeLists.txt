@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # SPDX-FileCopyrightText: 2021 David Redondo <kde@david-redondo.de>
 
-add_library(ksystemstats_plugin_lmsensors MODULE lmsensors.cpp lmsensors.h)
+add_library(ksystemstats_plugin_lmsensors MODULE lmsensors.cpp)
 
 target_link_libraries(ksystemstats_plugin_lmsensors PRIVATE Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
 
