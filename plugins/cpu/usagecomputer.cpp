@@ -18,8 +18,8 @@ void UsageComputer::setTicks(long long system, long long user, long long wait, l
     long long totalTicks = system + user + wait + idle;
     auto totalDiff = std::max(totalTicks - m_totalTicks, 0ll);
 
-    auto percentage =  [totalDiff] (unsigned long long tickDiff) {
-        if (tickDiff > 0 && totalDiff > 0) {
+    auto percentage =  [totalDiff] (long long tickDiff) {
+        if (tickDiff > 0 && totalDiff > 0 && tickDiff < totalDiff) {
             return 100.0 * tickDiff / totalDiff;
         }
         return 0.0;
