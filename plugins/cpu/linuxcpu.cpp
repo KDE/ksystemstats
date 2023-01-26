@@ -58,7 +58,7 @@ void LinuxCpuObject::makeSensors()
     }
 }
 
-void LinuxCpuObject::update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle)
+void LinuxCpuObject::update(long long system, long long user, long long wait, long long idle)
 {
     if (!isSubscribed()) {
         return;
@@ -89,7 +89,7 @@ void LinuxCpuObject::update(unsigned long long system, unsigned long long user, 
     m_temperature->update();
 }
 
-void LinuxAllCpusObject::update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle) {
+void LinuxAllCpusObject::update(long long system, long long user, long long wait, long long idle) {
     m_usageComputer.setTicks(system, user, wait, idle);
 
     m_system->setValue(m_usageComputer.systemUsage);

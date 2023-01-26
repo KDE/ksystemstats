@@ -139,14 +139,14 @@ void LinuxCpuPluginPrivate::update()
             continue;
         }
 
-        unsigned long long user = values[1].toULongLong();
-        unsigned long long nice = values[2].toULongLong();
-        unsigned long long system = values[3].toULongLong();
-        unsigned long long idle = values[4].toULongLong();
-        unsigned long long iowait = values[5].toULongLong();
-        unsigned long long irq = values[6].toULongLong();
-        unsigned long long softirq = values[7].toULongLong();
-        unsigned long long steal = values[8].toULongLong();
+        long long user = values[1].toLongLong();
+        long long nice = values[2].toLongLong();
+        long long system = values[3].toLongLong();
+        long long idle = values[4].toLongLong();
+        long long iowait = values[5].toLongLong();
+        long long irq = values[6].toLongLong();
+        long long softirq = values[7].toLongLong();
+        long long steal = values[8].toLongLong();
 
         // Total values just start with "cpu", single cpus are numbered cpu0, cpu1, ...
         if (line.startsWith("cpu ")) {

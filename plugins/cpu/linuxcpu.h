@@ -20,7 +20,7 @@ class LinuxCpuObject : public CpuObject
 public:
     LinuxCpuObject(const QString &id, const QString &name, double initialFrequency, KSysGuard::SensorContainer *parent);
 
-    void update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle);
+    void update(long long system, long long user, long long wait, long long idle);
     void initialize() override;
     void makeTemperatureSensor(const sensors_chip_name * constchipName, const sensors_feature * const feature);
 private:
@@ -33,7 +33,7 @@ private:
 class LinuxAllCpusObject : public AllCpusObject {
 public:
     using AllCpusObject::AllCpusObject;
-    void update(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle);
+    void update(long long system, long long user, long long wait, long long idle);
 private:
     UsageComputer m_usageComputer;
 };

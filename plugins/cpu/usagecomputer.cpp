@@ -8,15 +8,15 @@
 
 #include <algorithm>
 
-void UsageComputer::setTicks(unsigned long long system, unsigned long long user, unsigned long long wait, unsigned long long idle)
+void UsageComputer::setTicks(long long system, long long user, long long wait, long long idle)
 {
     // according to the documentation some counters can go backwards in some circumstances
-    auto systemDiff = std::max(system - m_systemTicks, 0ull);
-    auto userDiff = std::max(user - m_userTicks, 0ull);
-    auto waitDiff = std::max(wait - m_waitTicks, 0ull);
+    auto systemDiff = std::max(system - m_systemTicks, 0ll);
+    auto userDiff = std::max(user - m_userTicks, 0ll);
+    auto waitDiff = std::max(wait - m_waitTicks, 0ll);
 
-    unsigned long long totalTicks = system + user + wait + idle;
-    auto totalDiff = std::max(totalTicks - m_totalTicks, 0ull);
+    long long totalTicks = system + user + wait + idle;
+    auto totalDiff = std::max(totalTicks - m_totalTicks, 0ll);
 
     auto percentage =  [totalDiff] (unsigned long long tickDiff) {
         if (tickDiff > 0 && totalDiff > 0) {
