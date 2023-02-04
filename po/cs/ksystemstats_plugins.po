@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2022-05-19 11:21+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-02-02 14:32+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 # Tohle vypadá na název vlastnosti. Jméno bycvh nechal pro lidi a zvířata.
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
@@ -113,13 +113,13 @@ msgstr "Vše"
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr ""
+msgstr "Maximální frekvence CPU"
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr ""
+msgstr "Maximální frekvence"
 
 #: cpu/cpu.cpp:121
 #, kde-format
@@ -137,7 +137,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr ""
+msgstr "Minimální frekvence"
 
 #: cpu/cpu.cpp:128
 #, kde-format
@@ -149,13 +149,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr ""
+msgstr "Průměrná frekvence CPU"
 
 #: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr ""
+msgstr "Průměrná frekvence"
 
 #: cpu/cpu.cpp:135
 #, kde-format
@@ -167,37 +167,37 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr ""
+msgstr "Maximální teplota CPU"
 
 #: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr ""
+msgstr "Maximální teplota"
 
 #: cpu/cpu.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr ""
+msgstr "Minimální teplota CPU"
 
 #: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr ""
+msgstr "Minimální teplota"
 
 #: cpu/cpu.cpp:154
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr ""
+msgstr "Průměrná teplota CPU"
 
 #: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr ""
+msgstr "Průměrná teplota"
 
 #: cpu/cpu.cpp:171
 #, kde-format
