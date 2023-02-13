@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2022-09-07 17:47+0300\n"
+"PO-Revision-Date: 2023-02-12 01:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -303,19 +303,19 @@ msgstr "Yükleme ortalaması (15 dak)"
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr "1 dakika üzerinden ortalanmş, çalışma kuyruğundaki iş sayısı"
+msgstr "1 dakika üzerinden ortalanmış, çalışma kuyruğundaki iş sayısı"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr "5 dakika üzerinden ortalanmş, çalışma kuyruğundaki iş sayısı"
+msgstr "5 dakika üzerinden ortalanmış, çalışma kuyruğundaki iş sayısı"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr "15 dakika üzerinden ortalanmş, çalışma kuyruğundaki iş sayısı"
+msgstr "15 dakika üzerinden ortalanmış, çalışma kuyruğundaki iş sayısı"
 
 #: disks/disks.cpp:71 disks/disks.cpp:234
 #, kde-format
@@ -357,7 +357,7 @@ msgstr "Boş"
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr "Okuma Oranı"
+msgstr "Okuma Hızı"
 
 #: disks/disks.cpp:93 disks/disks.cpp:255
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "Okuma"
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr "Yazma Oranı"
+msgstr "Yazma Hızı"
 
 #: disks/disks.cpp:99 disks/disks.cpp:261
 #, kde-format
@@ -709,21 +709,21 @@ msgstr "Tüm Ağ Aygıtları"
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "İndirme Oranı"
+msgstr "İndirme Hızı"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr "İndir"
+msgstr "İndirme"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "Karşıya Yükleme Oranı"
+msgstr "Karşıya Yükleme Hızı"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
@@ -1036,7 +1036,7 @@ msgstr "Bilinmiyor"
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr "Tasarım Kapasitesi"
+msgstr "Fabrika Kapasitesi"
 
 #: power/power.cpp:47
 #, kde-format
@@ -1092,13 +1092,13 @@ msgstr "Pilin şu anda tuttuğu geçerli kapasitenin yüzdesi"
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr "Şarj Oranı"
+msgstr "Şarj Hızı"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr "Şarj Oranı"
+msgstr "Şarj Hızı"
 
 #: power/power.cpp:93
 #, kde-format
