@@ -57,7 +57,7 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
             // to write to.
             data = m_queryResult.emplace(m_queryResult.end());
             // nvidia-smi has to much zeros compared to linux, remove line break
-            data->pciPath = line.mid(strlen("GPU 0000")).chopped(1);
+            data->pciPath = line.mid(strlen("GPU 0000")).chopped(1).toLower();
             gpuCounter++;
         }
 
