@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 
 add_library(ksystemstats_plugin_gpu MODULE GpuPlugin.cpp GpuBackend.cpp GpuDevice.cpp AllGpus.cpp)
-target_link_libraries(ksystemstats_plugin_gpu Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats UDev::UDev)
+target_link_libraries(ksystemstats_plugin_gpu Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats UDev::UDev)
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
    target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaSmiProcess.cpp)

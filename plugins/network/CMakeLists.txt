@@ -10,16 +10,16 @@ set(KSYSGUARD_NETWORK_PLUGIN_SOURCES
     AllDevicesObject.cpp
 )
 
-if (KF5NetworkManagerQt_FOUND)
+if (KF6NetworkManagerQt_FOUND)
     set(KSYSGUARD_NETWORK_PLUGIN_SOURCES ${KSYSGUARD_NETWORK_PLUGIN_SOURCES} NetworkManagerBackend.cpp)
     add_definitions(-DNETWORKMANAGER_FOUND)
 endif()
 
 add_library(ksystemstats_plugin_network MODULE ${KSYSGUARD_NETWORK_PLUGIN_SOURCES})
-target_link_libraries(ksystemstats_plugin_network PRIVATE Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
+target_link_libraries(ksystemstats_plugin_network PRIVATE Qt::Core Qt::Gui Qt::DBus KF6::CoreAddons KF6::I18n KSysGuard::SystemStats)
 
-if (KF5NetworkManagerQt_FOUND)
-    target_link_libraries(ksystemstats_plugin_network PRIVATE KF5::NetworkManagerQt)
+if (KF6NetworkManagerQt_FOUND)
+    target_link_libraries(ksystemstats_plugin_network PRIVATE KF6::NetworkManagerQt)
 endif()
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_sources(ksystemstats_plugin_network PRIVATE RtNetlinkBackend.cpp)

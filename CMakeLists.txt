@@ -7,10 +7,10 @@ project(ksystemstats)
 set(PROJECT_VERSION "5.27.80")
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.102.0")
+set(KF6_MIN_VERSION "5.102.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH}  ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(CheckIncludeFiles)
@@ -26,11 +26,11 @@ include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS CoreAddons DBusAddons Solid KIO)
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons DBusAddons Solid KIO)
 find_package(KSysGuard REQUIRED)
 
-find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
-set_package_properties(KF5NetworkManagerQt PROPERTIES
+find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
+set_package_properties(KF6NetworkManagerQt PROPERTIES
     TYPE RECOMMENDED
     PURPOSE "Provides an improved backend for Network statistics"
 )

@@ -12,7 +12,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
         target_link_libraries(ksystemstats_plugin_memory kvm)
     endif()
 
-    target_link_libraries(ksystemstats_plugin_memory Qt::Core KF5::CoreAddons KF5::I18n KSysGuard::SystemStats)
+    target_link_libraries(ksystemstats_plugin_memory Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats)
 
     install(TARGETS ksystemstats_plugin_memory DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
 endif()
