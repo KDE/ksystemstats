@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2023-01-31 14:25+0100\n"
+"PO-Revision-Date: 2023-03-22 23:52+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -556,13 +556,13 @@ msgstr "Gesamt"
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr "Verwendeter physischer Arbeitsspeicher"
+msgstr "Belegter physischer Arbeitsspeicher"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr "Verwendet"
+msgstr "Belegt"
 
 # Prozentsatz? (mehrfach)
 # Oder „...in Prozent“
@@ -715,7 +715,7 @@ msgstr "Alle Netzwerkgeräte"
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "Downloadrate"
+msgstr "Download-Rate"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
@@ -729,7 +729,7 @@ msgstr "Download"
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "Uploadrate"
+msgstr "Upload-Rate"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
