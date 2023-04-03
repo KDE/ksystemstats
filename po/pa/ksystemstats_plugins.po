@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
 #
-# A S Alam <aalam.yellow@gmail.com>, 2020.
+# A S Alam <aalam.yellow@gmail.com>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2020-12-19 12:18-0800\n"
-"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-04-01 21:12-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -109,20 +109,16 @@ msgid "All"
 msgstr "ਸਭ"
 
 #: cpu/cpu.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr "ਮੈਮੋਰੀ ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ CPU ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:121
 #, fuzzy, kde-format
@@ -133,20 +129,16 @@ msgid "Current maximum frequency between all CPUs"
 msgstr "CPU ਦੀ ਮੌਜੂਦਾ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr "ਮੈਮੋਰੀ ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਘੱਟੋ-ਘੱਟ CPU ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr "ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਘੱਟੋ-ਘੱਟ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:128
 #, fuzzy, kde-format
@@ -157,20 +149,16 @@ msgid "Current minimum frequency between all CPUs"
 msgstr "CPU ਦੀ ਮੌਜੂਦਾ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:133
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr "ਮੈਮੋਰੀ ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਔਸਤ CPU ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "ਮੈਮੋਰੀ ਫਰੀਕਿਊਂਸੀ"
+msgstr "ਔਸਤ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:135
 #, fuzzy, kde-format
@@ -181,52 +169,40 @@ msgid "Current average frequency between all CPUs"
 msgstr "CPU ਦੀ ਮੌਜੂਦਾ ਫਰੀਕਿਊਂਸੀ"
 
 #: cpu/cpu.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "ਤਾਪਮਾਨ"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ CPU ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "ਤਾਪਮਾਨ"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:147
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "ਤਾਪਮਾਨ"
+msgstr "ਘੱਟੋ-ਘੱਟ CPU ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "ਤਾਪਮਾਨ"
+msgstr "ਘੱਟੋ-ਘੱਟ ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "ਮੌਜੂਦਾ ਤਾਪਮਾਨ"
+msgstr "ਔਸਤ CPU ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:155
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "ਮੌਜੂਦਾ ਤਾਪਮਾਨ"
+msgstr "ਔਸਤ ਤਾਪਮਾਨ"
 
 #: cpu/cpu.cpp:171
 #, kde-format
@@ -276,12 +252,10 @@ msgid "CPU %1"
 msgstr "CPU %1"
 
 #: cpu/linuxcpuplugin.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title, Short fort 'Number of Cores'"
-#| msgid "Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr "ਕੋਰਾਂ"
+msgstr "ਕੋਰ %1"
 
 #: cpu/linuxcpuplugin.cpp:54
 #, kde-format
@@ -293,43 +267,43 @@ msgstr "CPU %1 ਕੋਰ %2"
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ"
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (1 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (5 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (15 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (1 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (5 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr ""
+msgstr "ਲੋਡ ਔਸਤ (15 ਮਿੰਟ)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
@@ -555,7 +529,7 @@ msgstr "GPU %1"
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
 msgid "Hardware Sensors"
-msgstr ""
+msgstr "ਹਾਰਡਵੇਅਰ ਸੈਂਸਰ"
 
 #: memory/backend.cpp:17
 #, kde-format
@@ -668,7 +642,7 @@ msgstr "ਬਫ਼ਰ"
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr ""
+msgstr "ਕੈਸ਼ ਕੀਤੇ ਡਿਸਕ ਬਲਾਕਾਂ ਰਾਹੀਂ ਵਰਤੀ ਗਈ ਮੈਮੋਰੀ ਦੀ ਮਾਤਰਾ"
 
 #: memory/backend.cpp:86
 #, kde-format
@@ -828,13 +802,13 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 ਗੇਟਵੇ"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 ਗੇਟਵੇ"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
@@ -855,28 +829,22 @@ msgid "IPv4 with Prefix Length"
 msgstr ""
 
 #: network/NetworkDevice.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
 msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
@@ -894,13 +862,13 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 ਗੇਟਵੇ"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 ਗੇਟਵੇ"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
@@ -921,28 +889,22 @@ msgid "IPv6 with Prefix Length"
 msgstr ""
 
 #: network/NetworkDevice.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
 msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkDevice.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkPlugin.cpp:43
 #, kde-format
@@ -1038,7 +1000,7 @@ msgstr "ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ URL"
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr ""
+msgstr "ਅੱਪ-ਟਾਈਪ"
 
 #: osinfo/osinfo.cpp:125
 #, kde-format
@@ -1065,12 +1027,10 @@ msgid "KDE Plasma Version"
 msgstr "KDE ਪਲਾਜ਼ਮਾ ਵਰਜ਼ਨ"
 
 #: osinfo/osinfo.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr "ਸਿਸਟਮ"
+msgstr "ਵਿੰਡੋ ਸਿਸਟਮ"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
