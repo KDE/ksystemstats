@@ -43,7 +43,7 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2
 )
 
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
