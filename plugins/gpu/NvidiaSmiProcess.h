@@ -49,8 +49,22 @@ public:
 private:
     void readStatisticsData();
 
+    struct dmonIndices {
+        int gpu = -1;
+        int gtemp = -1;
+        int power = -1;
+        int sm = -1;
+        int enc = -1;
+        int dec = -1;
+        int fb = -1;
+        int bar1 = -1;
+        int mclk = -1;
+        int pclk = -1;
+    };
+
     QString m_smiPath;
     std::vector<GpuQueryResult> m_queryResult;
     std::unique_ptr<QProcess> m_process = nullptr;
     int m_references = 0;
+    dmonIndices m_dmonIndices;
 };

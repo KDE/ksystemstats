@@ -9,6 +9,8 @@
 
 #include <QStandardPaths>
 
+using namespace Qt::StringLiterals;
+
 NvidiaSmiProcess::NvidiaSmiProcess()
 {
     m_smiPath = QStandardPaths::findExecutable(QStringLiteral("nvidia-smi"));
@@ -155,16 +157,28 @@ void NvidiaSmiProcess::unref()
 void NvidiaSmiProcess::readStatisticsData()
 {
     while (m_process->canReadLine()) {
-        const QString line = m_process->readLine();
+        QString line = m_process->readLine();
+        QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+
+        // discover index of fields in the header format is something like
+        //# gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk    fb  bar1
+        // # Idx     W     C     C     %     %     %     %   MHz   MHz    MB    MB
+        // 0     25     29      -     1      1      0      0   4006   1506    891     22
         if (line.startsWith(QLatin1Char('#'))) {
-            continue;
-        }
-
-        const QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
-
-        // format at time of writing is
-        // # gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk  fb  bar1
-        if (parts.count() != 12) {
+            if (m_dmonIndices.gpu == -1) {
+                // Remove First part because of leading '# ';
+                parts.removeFirst();
+                m_dmonIndices.gpu = parts.indexOf("gpu"_L1);
+                m_dmonIndices.power = parts.indexOf("pwr"_L1);
+                m_dmonIndices.gtemp = parts.indexOf("gtemp"_L1);
+                m_dmonIndices.sm = parts.indexOf("sm"_L1);
+                m_dmonIndices.enc = parts.indexOf("enc"_L1);
+                m_dmonIndices.dec = parts.indexOf("dec"_L1);
+                m_dmonIndices.fb = parts.indexOf("fb"_L1);
+                m_dmonIndices.bar1 = parts.indexOf("bar1"_L1);
+                m_dmonIndices.mclk = parts.indexOf("mclk"_L1);
+                m_dmonIndices.pclk = parts.indexOf("pclk"_L1);
+            }
             continue;
         }
 
@@ -174,19 +188,23 @@ void NvidiaSmiProcess::readStatisticsData()
             continue;
         }
 
+        auto readDataIfFound =  [&parts, this] (int index) {
+            return index > 0 ? parts[index].toUInt() : 0;
+        };
+
         GpuData data;
-        data.index = index;
-        data.power = parts[1].toUInt();
-        data.temperature = parts[2].toUInt();
+        data.index = readDataIfFound(m_dmonIndices.gpu);
+        data.power = readDataIfFound(m_dmonIndices.power);
+        data.temperature = readDataIfFound(m_dmonIndices.gtemp);
 
         // GPU usage equals "SM" usage + "ENC" usage + "DEC" usage
-        data.usage = parts[4].toUInt() + parts[6].toUInt() + parts[7].toUInt();
+        data.usage = readDataIfFound(m_dmonIndices.sm) + readDataIfFound(m_dmonIndices.enc) + readDataIfFound(m_dmonIndices.dec);
 
         // Total memory used equals "FB" usage + "BAR1" usage
-        data.memoryUsed = parts[10].toUInt() + parts[11].toUInt();
+        data.memoryUsed = readDataIfFound(m_dmonIndices.fb) + readDataIfFound(m_dmonIndices.bar1);
 
-        data.memoryFrequency = parts[8].toUInt();
-        data.coreFrequency = parts[9].toUInt();
+        data.memoryFrequency = readDataIfFound(m_dmonIndices.mclk);
+        data.coreFrequency = readDataIfFound(m_dmonIndices.pclk);
 
         Q_EMIT dataReceived(data);
     }
