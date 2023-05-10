@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2023-05-03 21:06+0200\n"
+"PO-Revision-Date: 2023-05-09 23:58+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -22,31 +22,31 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: cpu/cpu.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr ""
+msgstr "Usu total"
 
 #: cpu/cpu.cpp:39
 #, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "Usu"
 
 #: cpu/cpu.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr ""
+msgstr "Usu del sistema"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -64,43 +64,43 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr ""
+msgstr "Usu n'espera"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr ""
+msgstr "Espera"
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr ""
+msgstr "Frecuencia actual"
 
 #: cpu/cpu.cpp:86
 #, kde-format
 msgctxt "@title, Short for 'Current Frequency'"
 msgid "Frequency"
-msgstr ""
+msgstr "Frecuencia"
 
 #: cpu/cpu.cpp:87
 #, kde-format
 msgctxt "@info"
 msgid "Current frequency of the CPU"
-msgstr ""
+msgstr "La frecuencia actual de la CPU"
 
 #: cpu/cpu.cpp:92
 #, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr ""
+msgstr "Temperatura actual"
 
 #: cpu/cpu.cpp:93
 #, kde-format
 msgctxt "@title, Short for Current Temperatur"
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -208,7 +208,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr ""
+msgstr "CPUs"
 
 #: cpu/cpu.cpp:173
 #, kde-format
@@ -226,7 +226,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
-msgstr ""
+msgstr "Nucleos"
 
 #: cpu/cpu.cpp:177
 #, kde-format
@@ -237,7 +237,7 @@ msgstr ""
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr ""
+msgstr "CPUs"
 
 #: cpu/freebsdcpuplugin.cpp:151
 #, kde-format
@@ -398,7 +398,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr ""
+msgstr "Tolos discos"
 
 #: disks/disks.cpp:267
 #, kde-format
@@ -500,7 +500,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: gpu/GpuDevice.cpp:53 power/power.cpp:106
 #, kde-format
@@ -512,7 +512,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: gpu/LinuxBackend.cpp:54
 #, kde-format
@@ -772,13 +772,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Signal Strength"
-msgstr ""
+msgstr "Intensidá de la señal"
 
 #: network/NetworkDevice.cpp:20
 #, kde-format
 msgctxt "@title Short of Signal Strength"
 msgid "Signal"
-msgstr ""
+msgstr "Señal"
 
 #: network/NetworkDevice.cpp:26
 #, kde-format
@@ -790,7 +790,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Short of IPv4 Address"
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:30
 #, kde-format
@@ -886,7 +886,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
 #, kde-format
@@ -916,7 +916,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #: osinfo/osinfo.cpp:109
 #, kde-format
@@ -940,7 +940,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #: osinfo/osinfo.cpp:114
 #, kde-format
@@ -976,7 +976,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
-msgstr ""
+msgstr "SO"
 
 #: osinfo/osinfo.cpp:120
 #, kde-format
@@ -1000,31 +1000,31 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma"
-msgstr ""
+msgstr "KDE Plasma"
 
 #: osinfo/osinfo.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
-msgstr ""
+msgstr "Versión de Qt"
 
 #: osinfo/osinfo.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr ""
+msgstr "Versión de KDE Frameworks"
 
 #: osinfo/osinfo.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
-msgstr ""
+msgstr "Versión de KDE Plasma"
 
 #: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr ""
+msgstr "Sistema de ventanes"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
