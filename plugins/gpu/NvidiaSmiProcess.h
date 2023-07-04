@@ -46,9 +46,9 @@ public:
 
     Q_SIGNAL void dataReceived(const GpuData &data);
 
-private:
-    void readStatisticsData();
+    void readStatisticsData(const QString &line);
 
+private:
     struct dmonIndices {
         int gpu = -1;
         int gtemp = -1;

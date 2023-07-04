@@ -8,4 +8,8 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
    target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaSmiProcess.cpp)
 endif()
 
+if (BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
+
 install(TARGETS ksystemstats_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

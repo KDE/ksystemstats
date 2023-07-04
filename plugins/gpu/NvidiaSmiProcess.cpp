@@ -133,7 +133,12 @@ void NvidiaSmiProcess::ref()
         QStringLiteral("-s"),
         QStringLiteral("pucm") // Include all relevant statistics
     });
-    connect(m_process.get(), &QProcess::readyReadStandardOutput, this, &NvidiaSmiProcess::readStatisticsData);
+    connect(m_process.get(), &QProcess::readyReadStandardOutput, this, [this] {
+        while (m_process->canReadLine()) {
+            const QString line = m_process->readLine();
+            readStatisticsData(line);
+        }
+    });
     m_process->start();
 }
 
@@ -154,40 +159,37 @@ void NvidiaSmiProcess::unref()
     m_process.reset();
 }
 
-void NvidiaSmiProcess::readStatisticsData()
+void NvidiaSmiProcess::readStatisticsData(const QString &line)
 {
-    while (m_process->canReadLine()) {
-        QString line = m_process->readLine();
-        QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+    QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
 
-        // discover index of fields in the header format is something like
-        //# gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk    fb  bar1
-        // # Idx     W     C     C     %     %     %     %   MHz   MHz    MB    MB
-        // 0     25     29      -     1      1      0      0   4006   1506    891     22
-        if (line.startsWith(QLatin1Char('#'))) {
-            if (m_dmonIndices.gpu == -1) {
-                // Remove First part because of leading '# ';
-                parts.removeFirst();
-                m_dmonIndices.gpu = parts.indexOf("gpu"_L1);
-                m_dmonIndices.power = parts.indexOf("pwr"_L1);
-                m_dmonIndices.gtemp = parts.indexOf("gtemp"_L1);
-                m_dmonIndices.sm = parts.indexOf("sm"_L1);
-                m_dmonIndices.enc = parts.indexOf("enc"_L1);
-                m_dmonIndices.dec = parts.indexOf("dec"_L1);
-                m_dmonIndices.fb = parts.indexOf("fb"_L1);
-                m_dmonIndices.bar1 = parts.indexOf("bar1"_L1);
-                m_dmonIndices.mclk = parts.indexOf("mclk"_L1);
-                m_dmonIndices.pclk = parts.indexOf("pclk"_L1);
-            }
-            continue;
+    // discover index of fields in the header format is something like
+    //# gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk    fb  bar1
+    // # Idx     W     C     C     %     %     %     %   MHz   MHz    MB    MB
+    // 0     25     29      -     1      1      0      0   4006   1506    891     22
+    if (line.startsWith(QLatin1Char('#'))) {
+        if (m_dmonIndices.gpu == -1) {
+            // Remove First part because of leading '# ';
+            parts.removeFirst();
+            m_dmonIndices.gpu = parts.indexOf("gpu"_L1);
+            m_dmonIndices.power = parts.indexOf("pwr"_L1);
+            m_dmonIndices.gtemp = parts.indexOf("gtemp"_L1);
+            m_dmonIndices.sm = parts.indexOf("sm"_L1);
+            m_dmonIndices.enc = parts.indexOf("enc"_L1);
+            m_dmonIndices.dec = parts.indexOf("dec"_L1);
+            m_dmonIndices.fb = parts.indexOf("fb"_L1);
+            m_dmonIndices.bar1 = parts.indexOf("bar1"_L1);
+            m_dmonIndices.mclk = parts.indexOf("mclk"_L1);
+            m_dmonIndices.pclk = parts.indexOf("pclk"_L1);
         }
+        return;
+    }
 
         bool ok;
         int index = parts[0].toInt(&ok);
         if (!ok) {
-            continue;
+            return;
         }
-
         auto readDataIfFound =  [&parts, this] (int index) {
             return index > 0 ? parts[index].toUInt() : 0;
         };
@@ -207,5 +209,4 @@ void NvidiaSmiProcess::readStatisticsData()
         data.coreFrequency = readDataIfFound(m_dmonIndices.pclk);
 
         Q_EMIT dataReceived(data);
-    }
 }
