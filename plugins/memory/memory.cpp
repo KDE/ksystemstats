@@ -39,3 +39,5 @@ void MemoryPlugin::update()
 
 K_PLUGIN_CLASS_WITH_JSON(MemoryPlugin, "metadata.json")
 #include "memory.moc"
+
+#include "moc_memory.cpp"

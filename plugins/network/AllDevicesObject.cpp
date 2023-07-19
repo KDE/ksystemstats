@@ -45,3 +45,5 @@ AllDevicesObject::AllDevicesObject(KSysGuard::SensorContainer *parent)
     m_totalUploadSensor->setUnit(KSysGuard::UnitByte);
     m_totalUploadSensor->setMatchSensors(QRegularExpression{QStringLiteral("^(?!all).*$")}, QStringLiteral("totalUpload"));
 }
+
+#include "moc_AllDevicesObject.cpp"

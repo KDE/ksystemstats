@@ -42,3 +42,5 @@ void CpuPlugin::update()
 K_PLUGIN_CLASS_WITH_JSON(CpuPlugin, "metadata.json")
 
 #include "cpuplugin.moc"
+
+#include "moc_cpuplugin.cpp"

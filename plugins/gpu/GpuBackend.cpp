@@ -5,3 +5,5 @@
  */
 
 #include "GpuBackend.h"
+
+#include "moc_GpuBackend.cpp"

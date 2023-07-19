@@ -93,3 +93,5 @@ NetworkPlugin::~NetworkPlugin() = default;
 K_PLUGIN_CLASS_WITH_JSON(NetworkPlugin, "metadata.json")
 
 #include "NetworkPlugin.moc"
+
+#include "moc_NetworkPlugin.cpp"

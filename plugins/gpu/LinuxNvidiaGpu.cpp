@@ -86,3 +86,5 @@ void LinuxNvidiaGpu::onDataReceived(const NvidiaSmiProcess::GpuData &data)
     m_temperatureProperty->setValue(data.temperature);
     m_powerProperty->setValue(data.power);
 }
+
+#include "moc_LinuxNvidiaGpu.cpp"

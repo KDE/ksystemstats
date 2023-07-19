@@ -235,3 +235,5 @@ void OSInfoPlugin::update()
 K_PLUGIN_CLASS_WITH_JSON(OSInfoPlugin, "metadata.json")
 
 #include "osinfo.moc"
+
+#include "moc_osinfo.cpp"

@@ -227,3 +227,5 @@ void RtNetlinkBackend::update()
     nl_cache_free(address_cache);
     nl_cache_free(route_cache);
 }
+
+#include "moc_RtNetlinkBackend.cpp"

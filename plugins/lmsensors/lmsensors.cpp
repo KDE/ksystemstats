@@ -68,3 +68,5 @@ void LmSensorsPlugin::update()
 
 K_PLUGIN_CLASS_WITH_JSON(LmSensorsPlugin, "metadata.json")
 #include "lmsensors.moc"
+
+#include "moc_lmsensors.cpp"

@@ -349,3 +349,5 @@ void DisksPlugin::update()
 
 K_PLUGIN_CLASS_WITH_JSON(DisksPlugin, "metadata.json")
 #include "disks.moc"
+
+#include "moc_disks.cpp"

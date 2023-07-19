@@ -103,3 +103,5 @@ void Client::sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors)
     msg.setArguments({QVariant::fromValue(sensors)});
     QDBusConnection::sessionBus().send(msg);
 }
+
+#include "moc_client.cpp"

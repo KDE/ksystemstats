@@ -152,3 +152,5 @@ void LinuxAmdGpu::discoverSensors()
         }
     }
 }
+
+#include "moc_LinuxAmdGpu.cpp"

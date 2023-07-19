@@ -67,3 +67,5 @@ void GpuPlugin::update()
 K_PLUGIN_CLASS_WITH_JSON(GpuPlugin, "metadata.json")
 
 #include "GpuPlugin.moc"
+
+#include "moc_GpuPlugin.cpp"

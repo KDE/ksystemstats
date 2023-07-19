@@ -303,3 +303,5 @@ void NetworkManagerBackend::onDeviceRemoved(const QString& uni)
     delete device;
 }
 
+
+#include "moc_NetworkManagerBackend.cpp"

@@ -93,3 +93,5 @@ NetworkDevice::NetworkDevice(const QString &id, const QString &name)
     m_totalUploadSensor->setUnit(KSysGuard::UnitByte);
     m_totalDownloadSensor->setPrefix(name);
 }
+
+#include "moc_NetworkDevice.cpp"

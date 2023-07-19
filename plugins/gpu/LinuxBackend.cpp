@@ -91,3 +91,5 @@ int LinuxBackend::deviceCount()
 {
     return m_devices.count();
 }
+
+#include "moc_LinuxBackend.cpp"

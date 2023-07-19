@@ -34,3 +34,5 @@ AllGpus::AllGpus(KSysGuard::SensorContainer *parent)
     m_usedVramSensor->setUnit(KSysGuard::UnitByte);
     m_usedVramSensor->setMax(m_totalVramSensor);
 }
+
+#include "moc_AllGpus.cpp"

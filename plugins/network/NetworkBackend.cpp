@@ -5,3 +5,5 @@
  */
 
 #include "NetworkBackend.h"
+
+#include "moc_NetworkBackend.cpp"

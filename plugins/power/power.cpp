@@ -127,3 +127,5 @@ PowerPlugin::PowerPlugin(QObject *parent, const QVariantList &args)
 }
 
 #include "power.moc"
+
+#include "moc_power.cpp"

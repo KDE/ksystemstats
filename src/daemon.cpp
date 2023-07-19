@@ -237,3 +237,5 @@ void Daemon::sendFrame()
         client->sendFrame();
     }
 }
+
+#include "moc_daemon.cpp"

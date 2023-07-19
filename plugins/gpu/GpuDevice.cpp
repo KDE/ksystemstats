@@ -70,3 +70,5 @@ void GpuDevice::makeSensors()
     m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), QStringLiteral("temperature"), 0, this);
     m_powerProperty = new KSysGuard::SensorProperty(QStringLiteral("power"), QStringLiteral("power"), 0, this);
 }
+
+#include "moc_GpuDevice.cpp"

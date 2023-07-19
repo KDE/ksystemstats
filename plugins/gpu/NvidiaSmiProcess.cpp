@@ -210,3 +210,5 @@ void NvidiaSmiProcess::readStatisticsData(const QString &line)
 
         Q_EMIT dataReceived(data);
 }
+
+#include "moc_NvidiaSmiProcess.cpp"
