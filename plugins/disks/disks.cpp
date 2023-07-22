@@ -112,8 +112,10 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
 void VolumeObject::update()
 {
     auto job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(mountPoint));
-    connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this] (KJob *job, KIO::filesize_t size, KIO::filesize_t available) {
+    connect(job, &KJob::result, this, [this, job]() {
         if (!job->error()) {
+            KIO::filesize_t size = job->size();
+            KIO::filesize_t available = job->availableSize();
             m_total->setValue(size);
             m_free->setValue(available);
             m_free->setMax(size);
