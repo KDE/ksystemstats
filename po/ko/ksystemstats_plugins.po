@@ -589,19 +589,19 @@ msgstr "남은 물리적 메모리 백분율"
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr "프로그램 메모리"
+msgstr "앱 메모리"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr "프로그램"
+msgstr "앱"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr "프로그램 메모리 백분율"
+msgstr "앱 메모리 백분율"
 
 #: memory/backend.cpp:71
 #, kde-format
