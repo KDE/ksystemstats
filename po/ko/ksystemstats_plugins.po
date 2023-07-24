@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:56+0000\n"
+"POT-Creation-Date: 2023-07-24 09:33+0000\n"
 "PO-Revision-Date: 2023-03-01 01:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -317,96 +317,96 @@ msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
 msgstr "작업 대기열에 있는 작업 개수의 15분간 평균"
 
-#: disks/disks.cpp:71 disks/disks.cpp:234
+#: disks/disks.cpp:71 disks/disks.cpp:236
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
 msgstr "총 공간"
 
-#: disks/disks.cpp:73 disks/disks.cpp:235
+#: disks/disks.cpp:73 disks/disks.cpp:237
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
 msgstr "합계"
 
-#: disks/disks.cpp:77 disks/disks.cpp:247
+#: disks/disks.cpp:77 disks/disks.cpp:249
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
 msgstr "사용한 공간"
 
-#: disks/disks.cpp:79 disks/disks.cpp:248
+#: disks/disks.cpp:79 disks/disks.cpp:250
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
 msgstr "사용함"
 
-#: disks/disks.cpp:84 disks/disks.cpp:240
+#: disks/disks.cpp:84 disks/disks.cpp:242
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
 msgstr "남은 공간"
 
-#: disks/disks.cpp:86 disks/disks.cpp:241
+#: disks/disks.cpp:86 disks/disks.cpp:243
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
 msgstr "남음"
 
-#: disks/disks.cpp:91 disks/disks.cpp:254
+#: disks/disks.cpp:91 disks/disks.cpp:256
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
 msgstr "읽기 전송률"
 
-#: disks/disks.cpp:93 disks/disks.cpp:255
+#: disks/disks.cpp:93 disks/disks.cpp:257
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
 msgstr "읽기"
 
-#: disks/disks.cpp:97 disks/disks.cpp:260
+#: disks/disks.cpp:97 disks/disks.cpp:262
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
 msgstr "쓰기 전송률"
 
-#: disks/disks.cpp:99 disks/disks.cpp:261
+#: disks/disks.cpp:99 disks/disks.cpp:263
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
 msgstr "쓰기"
 
-#: disks/disks.cpp:103 disks/disks.cpp:270
+#: disks/disks.cpp:103 disks/disks.cpp:272
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
 msgstr "사용량 백분율"
 
-#: disks/disks.cpp:107 disks/disks.cpp:266
+#: disks/disks.cpp:107 disks/disks.cpp:268
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
 msgstr "남은 공간 백분율"
 
-#: disks/disks.cpp:140
+#: disks/disks.cpp:142
 #, kde-format
 msgid "Disks"
 msgstr "디스크"
 
-#: disks/disks.cpp:232
+#: disks/disks.cpp:234
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
 msgstr "모든 디스크"
 
-#: disks/disks.cpp:267
+#: disks/disks.cpp:269
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
 msgstr "남음"
 
-#: disks/disks.cpp:271
+#: disks/disks.cpp:273
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
@@ -589,19 +589,19 @@ msgstr "남은 물리적 메모리 백분율"
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr "프로그램 메모리"
+msgstr "앱 메모리"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr "프로그램"
+msgstr "앱"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr "프로그램 메모리 백분율"
+msgstr "앱 메모리 백분율"
 
 #: memory/backend.cpp:71
 #, kde-format
