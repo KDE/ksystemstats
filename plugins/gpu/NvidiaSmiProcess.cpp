@@ -196,7 +196,7 @@ void NvidiaSmiProcess::readStatisticsData()
         }
 
         auto readDataIfFound =  [&parts, this] (int index) {
-            return index > 0 ? parts[index].toUInt() : 0;
+            return index >= 0 ? parts[index].toUInt() : 0;
         };
 
         GpuData data;
