@@ -185,30 +185,25 @@ void NvidiaSmiProcess::readStatisticsData(const QString &line)
         return;
     }
 
-        bool ok;
-        int index = parts[0].toInt(&ok);
-        if (!ok) {
-            return;
-        }
-        auto readDataIfFound =  [&parts, this] (int index) {
-            return index >= 0 ? parts[index].toUInt() : 0;
-        };
+    auto readDataIfFound = [&parts] (int index) {
+        return index >= 0 ? parts[index].toUInt() : 0;
+    };
 
-        GpuData data;
-        data.index = readDataIfFound(m_dmonIndices.gpu);
-        data.power = readDataIfFound(m_dmonIndices.power);
-        data.temperature = readDataIfFound(m_dmonIndices.gtemp);
+    GpuData data;
+    data.index = readDataIfFound(m_dmonIndices.gpu);
+    data.power = readDataIfFound(m_dmonIndices.power);
+    data.temperature = readDataIfFound(m_dmonIndices.gtemp);
 
-        // GPU usage equals "SM" usage + "ENC" usage + "DEC" usage
-        data.usage = readDataIfFound(m_dmonIndices.sm) + readDataIfFound(m_dmonIndices.enc) + readDataIfFound(m_dmonIndices.dec);
+    // GPU usage equals "SM" usage + "ENC" usage + "DEC" usage
+    data.usage = readDataIfFound(m_dmonIndices.sm) + readDataIfFound(m_dmonIndices.enc) + readDataIfFound(m_dmonIndices.dec);
 
-        // Total memory used equals "FB" usage + "BAR1" usage
-        data.memoryUsed = readDataIfFound(m_dmonIndices.fb) + readDataIfFound(m_dmonIndices.bar1);
+    // Total memory used equals "FB" usage + "BAR1" usage
+    data.memoryUsed = readDataIfFound(m_dmonIndices.fb) + readDataIfFound(m_dmonIndices.bar1);
 
-        data.memoryFrequency = readDataIfFound(m_dmonIndices.mclk);
-        data.coreFrequency = readDataIfFound(m_dmonIndices.pclk);
+    data.memoryFrequency = readDataIfFound(m_dmonIndices.mclk);
+    data.coreFrequency = readDataIfFound(m_dmonIndices.pclk);
 
-        Q_EMIT dataReceived(data);
+    Q_EMIT dataReceived(data);
 }
 
 #include "moc_NvidiaSmiProcess.cpp"
