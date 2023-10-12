@@ -707,52 +707,52 @@ msgstr "Tous les périphériques de réseau"
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "Taux de téléchargement"
+msgstr "Taux de réception"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr "Téléchargement"
+msgstr "Réception"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "Taux de transfert"
+msgstr "Taux d'envoi"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
 #, kde-format
 msgctxt "@title Short for Upload Rate"
 msgid "Upload"
-msgstr "Transfert"
+msgstr "Envoi"
 
 #: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "Total téléchargé"
+msgstr "Total reçu"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr "Téléchargé"
+msgstr "Reçu"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "Total transféré"
+msgstr "Total envoyé"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr "Transféré"
+msgstr "Envoyé"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
