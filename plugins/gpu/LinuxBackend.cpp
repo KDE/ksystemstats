@@ -82,7 +82,7 @@ void LinuxBackend::stop()
 
 void LinuxBackend::update()
 {
-    for (auto device : qAsConst(m_devices)) {
+    for (auto device : std::as_const(m_devices)) {
         device->update();
     }
 }

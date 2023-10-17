@@ -70,10 +70,10 @@ void LinuxAmdGpu::initialize()
 
 void LinuxAmdGpu::update()
 {
-    for (auto sensor : qAsConst(m_sysFsSensors)) {
+    for (auto sensor : std::as_const(m_sysFsSensors)) {
         sensor->update();
     }
-    for (auto sensor : qAsConst(m_sensorsSensors)) {
+    for (auto sensor : std::as_const(m_sensorsSensors)) {
         sensor->update();
     }
     m_temperatureProperty->update();

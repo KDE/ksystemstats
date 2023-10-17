@@ -61,7 +61,7 @@ QString LmSensorsPlugin::providerName() const
 
 void LmSensorsPlugin::update()
 {
-    for (auto sensor : qAsConst(m_sensors)) {
+    for (auto sensor : std::as_const(m_sensors)) {
         sensor->update();
     }
 }

@@ -104,7 +104,7 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     auto names = makeCpuNames(cpus, cpuCount);
 
     QHash<int, int> numCores;
-    for (const auto &entry : qAsConst(cpus)) {
+    for (const auto &entry : std::as_const(cpus)) {
         auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), names.value(entry.id), entry.frequency, m_container);
         m_cpus.insert(entry.id, cpu);
         m_cpusBySystemIds.insert({entry.cpu, entry.core}, cpu);
@@ -240,7 +240,7 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
     // TODO How to map CCD temperatures to cores?
 
     auto setSingleSensor = [this, chipName] (const sensors_feature * const feature) {
-        for (auto &cpu : qAsConst(m_cpusBySystemIds)) {
+        for (auto &cpu : std::as_const(m_cpusBySystemIds)) {
             cpu->makeTemperatureSensor(chipName, feature);
         }
     };

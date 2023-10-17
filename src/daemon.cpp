@@ -131,7 +131,7 @@ void Daemon::registerProvider(KSysGuard::SensorPlugin *provider) {
 KSysGuard::SensorInfoMap Daemon::allSensors() const
 {
     KSysGuard::SensorInfoMap infoMap;
-    for (auto c : qAsConst(m_containers)) {
+    for (auto c : std::as_const(m_containers)) {
         auto containerInfo = KSysGuard::SensorInfo{};
         containerInfo.name = c->name();
         infoMap.insert(c->id(), containerInfo);
@@ -229,11 +229,11 @@ void Daemon::onServiceDisconnected(const QString &service)
 
 void Daemon::sendFrame()
 {
-    for (auto provider : qAsConst(m_providers)) {
+    for (auto provider : std::as_const(m_providers)) {
         provider->update();
     }
 
-    for (auto client: qAsConst(m_clients)) {
+    for (auto client: std::as_const(m_clients)) {
         client->sendFrame();
     }
 }

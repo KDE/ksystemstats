@@ -30,7 +30,7 @@ Client::Client(Daemon *parent, const QString &serviceName)
 
 Client::~Client()
 {
-    for (auto sensor : qAsConst(m_subscribedSensors)) {
+    for (auto sensor : std::as_const(m_subscribedSensors)) {
         sensor->unsubscribe();
     }
 }

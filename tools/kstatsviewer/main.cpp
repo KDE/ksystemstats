@@ -114,7 +114,7 @@ void SensorWatcher::subscribe(const QStringList &sensorNames)
         }
 
         QSet<QString> nonexistentSensors;
-        for (const auto& sensorName : qAsConst(m_unreportedSensors)) {
+        for (const auto& sensorName : std::as_const(m_unreportedSensors)) {
             if (!existingSensors.contains(sensorName)) {
                 // This sensor (named on the command-line, and with no data so far) does not exist
                 std::cout << "No sensor named '" << qPrintable(sensorName) << "'\n";
