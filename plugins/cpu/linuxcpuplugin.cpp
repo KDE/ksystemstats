@@ -29,7 +29,7 @@ struct CpuInfo
 // Determine sensor names for all the found processors. Because processors can
 // be offline, we need to account for processor IDs skipping and report the
 // proper names.
-static QHash<int, QString> makeCpuNames(const QVector<CpuInfo> &cpus, int cpuCount)
+static QHash<int, QString> makeCpuNames(const QList<CpuInfo> &cpus, int cpuCount)
 {
     QHash<int, QString> result;
 
@@ -67,7 +67,7 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     cpuinfo.open(QIODevice::ReadOnly);
 
     int cpuCount = 0;
-    QVector<CpuInfo> cpus;
+    QList<CpuInfo> cpus;
 
     for (QByteArray line = cpuinfo.readLine(); !line.isEmpty(); line = cpuinfo.readLine()) {
         CpuInfo info;

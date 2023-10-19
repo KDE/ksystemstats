@@ -161,7 +161,7 @@ void NvidiaSmiProcess::unref()
 
 void NvidiaSmiProcess::readStatisticsData(const QString &line)
 {
-    QVector<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+    QList<QStringView> parts = QStringView(line).trimmed().split(QLatin1Char(' '), Qt::SkipEmptyParts);
 
     // discover index of fields in the header format is something like
     //# gpu   pwr gtemp mtemp    sm   mem   enc   dec  mclk  pclk    fb  bar1

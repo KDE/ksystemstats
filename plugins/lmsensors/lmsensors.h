@@ -22,6 +22,6 @@ public:
     QString providerName() const override;
     void update() override;
 private:
-    QVector<KSysGuard::SensorsFeatureSensor *> m_sensors;
+    QList<KSysGuard::SensorsFeatureSensor *> m_sensors;
 };
 #endif

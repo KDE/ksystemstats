@@ -33,7 +33,7 @@ public:
 
     NetworkBackend *backend = nullptr;
 
-    QVector<NetworkDevice *> devices;
+    QList<NetworkDevice *> devices;
 };
 
 NetworkPlugin::NetworkPlugin(QObject *parent, const QVariantList &args)

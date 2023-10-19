@@ -33,6 +33,6 @@ private:
     void discoverSensors();
 
     udev_device *m_device;
-    QVector<KSysGuard::SysFsSensor*> m_sysFsSensors;
-    QVector<KSysGuard::SensorProperty*> m_sensorsSensors;
+    QList<KSysGuard::SysFsSensor *> m_sysFsSensors;
+    QList<KSysGuard::SensorProperty *> m_sensorsSensors;
 };

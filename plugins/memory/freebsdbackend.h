@@ -9,7 +9,7 @@
 
 #include "backend.h"
 
-#include <QVector>
+#include <QList>
 
 #include <kvm.h> // can't forward declare typedefed kvm_t
 
@@ -28,7 +28,7 @@ private:
 
     unsigned int m_pageSize;
     kvm_t *m_kd;
-    QVector<KSysGuard::SensorProperty*> m_sysctlSensors;
+    QList<KSysGuard::SensorProperty *> m_sysctlSensors;
 };
 
 #endif

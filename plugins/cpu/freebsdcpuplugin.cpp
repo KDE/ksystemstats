@@ -47,7 +47,7 @@ inline void updateCpu(cpu_t *cpu, long *cp_time)
  * Assumes that the CPU objects are ordered in the vector in the same order
  * that their data show up in the sysctl return value.
  */
-inline void read_cp_times(QVector<FreeBsdCpuObject*> &cpus)
+inline void read_cp_times(QList<FreeBsdCpuObject *> &cpus)
 {
     unsigned int numCores = cpus.count();
     std::vector<long> cp_times(numCores * CPUSTATES);

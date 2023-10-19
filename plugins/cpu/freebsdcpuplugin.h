@@ -43,7 +43,7 @@ public:
     void update() override;
 private:
     FreeBsdAllCpusObject *m_allCpus;
-    QVector<FreeBsdCpuObject*> m_cpus;
+    QList<FreeBsdCpuObject *> m_cpus;
     LoadAverages *m_loadAverages;
 };
 

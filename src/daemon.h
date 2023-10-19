@@ -66,7 +66,7 @@ protected:
 
 private:
     void onServiceDisconnected(const QString &service);
-    QVector<KSysGuard::SensorPlugin *> m_providers;
+    QList<KSysGuard::SensorPlugin *> m_providers;
     QHash<QString /*subscriber DBus base name*/, Client*> m_clients;
     QHash<QString /*id*/, KSysGuard::SensorContainer *> m_containers;
     QDBusServiceWatcher *m_serviceWatcher;

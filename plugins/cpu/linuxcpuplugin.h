@@ -8,8 +8,8 @@
 
 #include "cpuplugin_p.h"
 
+#include <QList>
 #include <QMultiHash>
-#include <QVector>
 struct sensors_chip_name;
 class LinuxCpuObject;
 class LinuxAllCpusObject;

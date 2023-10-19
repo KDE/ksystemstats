@@ -88,7 +88,7 @@ void Daemon::setQuitOnLastClientDisconnect(bool quit)
 
 void Daemon::loadProviders()
 {
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("ksystemstats"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("ksystemstats"));
     if (plugins.isEmpty()) {
         qWarning() << "No plugins found";
     }

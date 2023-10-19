@@ -26,5 +26,5 @@ public:
 
 private:
     udev *m_udev = nullptr;
-    QVector<GpuDevice*> m_devices;
+    QList<GpuDevice *> m_devices;
 };
