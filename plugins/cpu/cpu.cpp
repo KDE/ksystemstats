@@ -112,7 +112,7 @@ void AllCpusObject::makeSensors()
     auto minAggregator = [](QVariant a, QVariant b) {return std::min(a.toDouble(), b.toDouble());};
     auto avgAggregator = [](KSysGuard::AggregateSensor::SensorIterator begin, const KSysGuard::AggregateSensor::SensorIterator end) {
         int count = std::distance(begin, end);
-        double sum = std::transform_reduce(begin, end, 0.0, std::plus{}, qvariant_cast<double>);
+    double sum = std::transform_reduce(begin, end, 0.0, std::plus{}, [](auto val) { return qvariant_cast<double>(val); });
         return sum / count;
     };
 
