@@ -1010,7 +1010,7 @@ msgstr "Version de Qt"
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr "Version de l'environnement de développement de KDE"
+msgstr "Version de KDE Frameworks"
 
 #: osinfo/osinfo.cpp:128
 #, kde-format
