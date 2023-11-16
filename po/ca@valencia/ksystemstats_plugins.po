@@ -957,7 +957,7 @@ msgstr "Sistema"
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr "Nom de l'ordinador"
+msgstr "Nom de l'amfitrió"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
