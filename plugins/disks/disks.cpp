@@ -53,14 +53,21 @@ private:
 QString VolumeObject::idHelper(const Solid::Device &device)
 {
     auto volume = device.as<Solid::StorageVolume>();
-    return volume->uuid().isEmpty() ? volume->label() : volume->uuid();
+    auto block = device.as<Solid::Block>();
+    if (!volume->uuid().isEmpty()) {
+        return volume->uuid();
+    } else if (!volume->label().isEmpty()) {
+        return volume->label();
+    } else {
+        return QUrl(block->device()).fileName();
+    }
 }
 
 
 VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContainer* parent)
     : SensorObject(idHelper(device), device.displayName(),  parent)
     , udi(device.udi())
-    , mountPoint(device.as<Solid::StorageAccess>()->filePath())
+    , mountPoint(device.is<Solid::StorageAccess>() ? device.as<Solid::StorageAccess>()->filePath() : QString())
 {
     auto volume = device.as<Solid::StorageVolume>();
 
@@ -74,19 +81,21 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
     m_total->setUnit(KSysGuard::UnitByte);
     m_total->setVariantType(QVariant::ULongLong);
 
-    m_used = new KSysGuard::SensorProperty("used", i18nc("@title", "Used Space"), this);
-    m_used->setPrefix(name());
-    m_used->setShortName(i18nc("@title Short for 'Used Space'", "Used"));
-    m_used->setUnit(KSysGuard::UnitByte);
-    m_used->setVariantType(QVariant::ULongLong);
-    m_used->setMax(volume->size());
+    if (volume->usage() != Solid::StorageVolume::PartitionTable) {
+        m_used = new KSysGuard::SensorProperty("used", i18nc("@title", "Used Space"), this);
+        m_used->setPrefix(name());
+        m_used->setShortName(i18nc("@title Short for 'Used Space'", "Used"));
+        m_used->setUnit(KSysGuard::UnitByte);
+        m_used->setVariantType(QVariant::ULongLong);
+        m_used->setMax(volume->size());
 
-    m_free = new KSysGuard::SensorProperty("free", i18nc("@title", "Free Space"), this);
-    m_free->setPrefix(name());
-    m_free->setShortName(i18nc("@title Short for 'Free Space'", "Free"));
-    m_free->setUnit(KSysGuard::UnitByte);
-    m_free->setVariantType(QVariant::ULongLong);
-    m_free->setMax(volume->size());
+        m_free = new KSysGuard::SensorProperty("free", i18nc("@title", "Free Space"), this);
+        m_free->setPrefix(name());
+        m_free->setShortName(i18nc("@title Short for 'Free Space'", "Free"));
+        m_free->setUnit(KSysGuard::UnitByte);
+        m_free->setVariantType(QVariant::ULongLong);
+        m_free->setMax(volume->size());
+    }
 
     m_readRate = new KSysGuard::SensorProperty("read", i18nc("@title", "Read Rate"), 0, this);
     m_readRate->setPrefix(name());
@@ -100,17 +109,23 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
     m_writeRate->setUnit(KSysGuard::UnitByteRate);
     m_writeRate->setVariantType(QVariant::Double);
 
-    auto usedPercent = new KSysGuard::PercentageSensor(this, "usedPercent", i18nc("@title", "Percentage Used"));
-    usedPercent->setPrefix(name());
-    usedPercent->setBaseSensor(m_used);
+    if (volume->usage() != Solid::StorageVolume::PartitionTable) {
+        auto usedPercent = new KSysGuard::PercentageSensor(this, "usedPercent", i18nc("@title", "Percentage Used"));
+        usedPercent->setPrefix(name());
+        usedPercent->setBaseSensor(m_used);
 
-    auto freePercent = new KSysGuard::PercentageSensor(this, "freePercent", i18nc("@title", "Percentage Free"));
-    freePercent->setPrefix(name());
-    freePercent->setBaseSensor(m_free);
+        auto freePercent = new KSysGuard::PercentageSensor(this, "freePercent", i18nc("@title", "Percentage Free"));
+        freePercent->setPrefix(name());
+        freePercent->setBaseSensor(m_free);
+    }
 }
 
 void VolumeObject::update()
 {
+    if (mountPoint.isEmpty()) {
+        // skip non-mounted partitions
+        return;
+    }
     auto job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(mountPoint));
     connect(job, &KJob::result, this, [this, job]() {
         if (!job->error()) {
@@ -140,9 +155,9 @@ DisksPlugin::DisksPlugin(QObject *parent, const QVariantList &args)
     : SensorPlugin(parent, args)
 {
     auto container = new KSysGuard::SensorContainer("disk", i18n("Disks"), this);
-    auto storageAccesses = Solid::Device::listFromType(Solid::DeviceInterface::StorageAccess);
-    for (const auto &storageAccess : storageAccesses) {
-       addDevice(storageAccess);
+    auto storageVolumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
+    for (const auto &storageVolume : storageVolumes) {
+       addDevice(storageVolume);
     }
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, [this] (const QString &udi) {
             addDevice(Solid::Device(udi));
@@ -176,8 +191,7 @@ void DisksPlugin::addDevice(const Solid::Device& device)
 {
     auto container = containers()[0];
     const auto volume = device.as<Solid::StorageVolume>();
-    auto access = device.as<Solid::StorageAccess>();
-    if (!access || !volume || volume->isIgnored()) {
+    if (!volume || (volume->isIgnored() && volume->usage() != Solid::StorageVolume::PartitionTable)) {
         return;
     }
     Solid::Device drive = device;
@@ -193,7 +207,15 @@ void DisksPlugin::addDevice(const Solid::Device& device)
         }
         drive = drive.parent();
     }
-
+    if (volume->usage() == Solid::StorageVolume::PartitionTable) {
+        auto block = device.as<Solid::Block>();
+        m_volumesByDevice.insert(block->device(), new VolumeObject(device, container));
+        return;
+    }
+    auto access = device.as<Solid::StorageAccess>();
+    if (!access) {
+        return;
+    }
     if (access->filePath() != QString()) {
         createAccessibleVolumeObject(device);
     }
