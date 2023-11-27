@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 09:33+0000\n"
+"POT-Creation-Date: 2023-11-27 01:38+0000\n"
 "PO-Revision-Date: 2022-09-26 20:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
+#: cpu/cpu.cpp:28 disks/disks.cpp:74 disks/disks.cpp:75 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
@@ -317,96 +317,96 @@ msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
 msgstr "Antal jobb i körkön i genomsnitt under 15 minuter"
 
-#: disks/disks.cpp:71 disks/disks.cpp:236
+#: disks/disks.cpp:78 disks/disks.cpp:258
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
 msgstr "Totalt utrymme "
 
-#: disks/disks.cpp:73 disks/disks.cpp:237
+#: disks/disks.cpp:80 disks/disks.cpp:259
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
 msgstr "Totalt"
 
-#: disks/disks.cpp:77 disks/disks.cpp:249
+#: disks/disks.cpp:85 disks/disks.cpp:271
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
 msgstr "Använt utrymme"
 
-#: disks/disks.cpp:79 disks/disks.cpp:250
+#: disks/disks.cpp:87 disks/disks.cpp:272
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
 msgstr "Använt"
 
-#: disks/disks.cpp:84 disks/disks.cpp:242
+#: disks/disks.cpp:92 disks/disks.cpp:264
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
 msgstr "Ledigt utrymme"
 
-#: disks/disks.cpp:86 disks/disks.cpp:243
+#: disks/disks.cpp:94 disks/disks.cpp:265
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
 msgstr "Ledigt"
 
-#: disks/disks.cpp:91 disks/disks.cpp:256
+#: disks/disks.cpp:100 disks/disks.cpp:278
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
 msgstr "Läsfrekvens"
 
-#: disks/disks.cpp:93 disks/disks.cpp:257
+#: disks/disks.cpp:102 disks/disks.cpp:279
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
 msgstr "Läs"
 
-#: disks/disks.cpp:97 disks/disks.cpp:262
+#: disks/disks.cpp:106 disks/disks.cpp:284
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
 msgstr "Skrivfrekvens"
 
-#: disks/disks.cpp:99 disks/disks.cpp:263
+#: disks/disks.cpp:108 disks/disks.cpp:285
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
 msgstr "Skriv"
 
-#: disks/disks.cpp:103 disks/disks.cpp:272
+#: disks/disks.cpp:113 disks/disks.cpp:294
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
 msgstr "Procent använt"
 
-#: disks/disks.cpp:107 disks/disks.cpp:268
+#: disks/disks.cpp:117 disks/disks.cpp:290
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
 msgstr "Procent ledigt"
 
-#: disks/disks.cpp:142
+#: disks/disks.cpp:157
 #, kde-format
 msgid "Disks"
 msgstr "Diskar"
 
-#: disks/disks.cpp:234
+#: disks/disks.cpp:256
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
 msgstr "Alla diskar"
 
-#: disks/disks.cpp:269
+#: disks/disks.cpp:291
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
 msgstr "Ledigt"
 
-#: disks/disks.cpp:273
+#: disks/disks.cpp:295
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
