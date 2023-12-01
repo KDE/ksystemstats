@@ -16,6 +16,7 @@
 
 #include <QTimer>
 
+#include <systemstats/DBusInterface.h>
 #include <systemstats/SensorPlugin.h>
 #include <systemstats/SensorObject.h>
 #include <systemstats/SensorContainer.h>
@@ -32,6 +33,8 @@
 #include "ksystemstats1adaptor.h"
 
 #include "client.h"
+
+using namespace Qt::StringLiterals;
 
 constexpr auto UpdateRate = std::chrono::milliseconds{500};
 
@@ -66,19 +69,20 @@ Daemon::~Daemon()
 #endif
 }
 
-void Daemon::init(ReplaceIfRunning replaceIfRunning)
+bool Daemon::init(ReplaceIfRunning replaceIfRunning)
 {
 #ifdef Q_OS_LINUX
     sensors_init(nullptr);
 #endif
     loadProviders();
-    KDBusService::StartupOptions options = KDBusService::Unique;
-    if (replaceIfRunning == ReplaceIfRunning::Replace) {
-        options |= KDBusService::Replace;
+
+    QDBusConnection::sessionBus().registerObject(KSysGuard::SystemStats::ObjectPath, this, QDBusConnection::ExportAdaptors);
+
+    if (!registerDBusService(KSysGuard::SystemStats::ServiceName, replaceIfRunning)) {
+        return false;
     }
-    QDBusConnection::sessionBus().registerObject("/", this, QDBusConnection::ExportAdaptors);
-    auto service = new KDBusService(options , this);
-    service->setExitValue(1);
+
+    return true;
 }
 
 void Daemon::setQuitOnLastClientDisconnect(bool quit)
@@ -221,10 +225,38 @@ KSysGuard::SensorProperty *Daemon::findSensor(const QString &path) const
 
 void Daemon::onServiceDisconnected(const QString &service)
 {
+    if (service == KSysGuard::SystemStats::ServiceName) {
+        return;
+    }
+
     delete m_clients.take(service);
     if (m_clients.isEmpty() && m_quitOnLastClientDisconnect) {
         QCoreApplication::quit();
     };
+}
+
+bool Daemon::registerDBusService(const QString& serviceName, ReplaceIfRunning replace)
+{
+    auto interface = QDBusConnection::sessionBus().interface();
+
+    if (interface->isServiceRegistered(serviceName) && replace != ReplaceIfRunning::Replace) {
+        qWarning() << "ksystemstats is already running";
+        return false;
+    }
+
+    connect(interface, &QDBusConnectionInterface::serviceUnregistered, this, [](const QString &service) {
+        if (service == KSysGuard::SystemStats::ServiceName) {
+            QCoreApplication::instance()->quit();
+        }
+    });
+
+    auto result = interface->registerService(KSysGuard::SystemStats::ServiceName, QDBusConnectionInterface::ReplaceExistingService, QDBusConnectionInterface::AllowReplacement);
+    if (result != QDBusConnectionInterface::ServiceRegistered) {
+        qWarning() << "Could not register name" << KSysGuard::SystemStats::ServiceName;
+        return false;
+    }
+
+    return true;
 }
 
 void Daemon::sendFrame()

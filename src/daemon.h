@@ -35,7 +35,7 @@ public:
 
     Daemon();
     ~Daemon();
-    void init(ReplaceIfRunning replaceIfRunning);
+    bool init(ReplaceIfRunning replaceIfRunning);
     KSysGuard::SensorProperty *findSensor(const QString &path) const;
 
     void setQuitOnLastClientDisconnect(bool quit);
@@ -66,6 +66,8 @@ protected:
 
 private:
     void onServiceDisconnected(const QString &service);
+    bool registerDBusService(const QString &serviceName, ReplaceIfRunning replace);
+
     QList<KSysGuard::SensorPlugin *> m_providers;
     QHash<QString /*subscriber DBus base name*/, Client*> m_clients;
     QHash<QString /*id*/, KSysGuard::SensorContainer *> m_containers;

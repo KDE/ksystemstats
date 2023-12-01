@@ -23,7 +23,10 @@ int main(int argc, char **argv)
     parser.process(app);
 
     Daemon d;
-    d.init(parser.isSet(QStringLiteral("replace")) ? Daemon::ReplaceIfRunning::Replace : Daemon::ReplaceIfRunning::DoNotReplace);
+    if (!d.init(parser.isSet(QStringLiteral("replace")) ? Daemon::ReplaceIfRunning::Replace : Daemon::ReplaceIfRunning::DoNotReplace)) {
+        return 1;
+    }
+
     d.setQuitOnLastClientDisconnect(!parser.isSet(QStringLiteral("remain")));
-    app.exec();
+    return app.exec();
 }
