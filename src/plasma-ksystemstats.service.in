@@ -7,5 +7,5 @@ PartOf=graphical-session.target
 
 [Service]
 ExecStart=@KDE_INSTALL_FULL_BINDIR@/ksystemstats
-BusName=org.kde.ksystemstats
+BusName=org.kde.ksystemstats1
 Slice=background.slice

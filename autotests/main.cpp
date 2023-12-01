@@ -88,7 +88,7 @@ void KStatsTest::loadProviders()
 
 void KStatsTest::initTestCase()
 {
-    QDBusConnection::sessionBus().registerObject("/", this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(KSysGuard::SystemStats::ObjectPath, this, QDBusConnection::ExportAdaptors);
     loadProviders();
 }
 
@@ -140,7 +140,7 @@ void KStatsTest::changes()
 void KStatsTest::dbusApi()
 {
     KSysGuard::SystemStats::DBusInterface iface(QDBusConnection::sessionBus().baseService(),
-        "/",
+        KSysGuard::SystemStats::ObjectPath,
         QDBusConnection::sessionBus(),
         this);
     // list all objects
