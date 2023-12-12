@@ -1,19 +1,19 @@
 # translation of ksysguard_plugins_global.po to Slovak
-# Roman Paholík <wizzardsk@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2020, 2023 Roman Paholík <wizzardsk@gmail.com>
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-12 00:56+0000\n"
-"PO-Revision-Date: 2022-01-31 17:01+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-11 19:05+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:67 disks/disks.cpp:68 gpu/GpuDevice.cpp:20
@@ -193,7 +193,7 @@ msgstr "GPU %1 Teplota"
 #| msgid "Temperature"
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "Teplota"
+msgstr "Najvyššia teplota: %1 <br>"
 
 #: cpu/cpu.cpp:147
 #, fuzzy, kde-format
@@ -209,15 +209,13 @@ msgstr "GPU %1 Teplota"
 #| msgid "Temperature"
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "Teplota"
+msgstr "Najnižšia teplota: %1 <br>"
 
 #: cpu/cpu.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "GPU %1 Teplota"
+msgstr "Priemerná teplota CPU"
 
 #: cpu/cpu.cpp:155
 #, fuzzy, kde-format
@@ -853,9 +851,7 @@ msgid "IPv4 with Prefix Length"
 msgstr ""
 
 #: network/NetworkDevice.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
 msgstr "IPv4"
@@ -919,9 +915,7 @@ msgid "IPv6 with Prefix Length"
 msgstr ""
 
 #: network/NetworkDevice.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
 msgstr "IPv6"
