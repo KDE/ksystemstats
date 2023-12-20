@@ -26,7 +26,7 @@ include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
-find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons DBusAddons Solid KIO)
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO)
 find_package(KSysGuard ${PROJECT_VERSION} REQUIRED)
 
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})

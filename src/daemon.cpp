@@ -22,7 +22,6 @@
 #include <systemstats/SensorContainer.h>
 #include <systemstats/SensorProperty.h>
 
-#include <KDBusService>
 #include <KPluginMetaData>
 #include <KPluginFactory>
 
