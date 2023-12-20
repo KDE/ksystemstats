@@ -29,7 +29,7 @@
 #include <sensors/sensors.h>
 #endif
 
-#include "ksystemstatsadaptor.h"
+#include "ksystemstats1adaptor.h"
 
 #include "client.h"
 
@@ -45,7 +45,7 @@ Daemon::Daemon()
     qDBusRegisterMetaType<KSysGuard::SensorInfoMap>();
     qDBusRegisterMetaType<QStringList>();
 
-    new KsystemstatsAdaptor(this);
+    new Ksystemstats1Adaptor(this);
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &Daemon::onServiceDisconnected);
