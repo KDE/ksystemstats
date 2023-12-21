@@ -10,6 +10,10 @@
 
 NvidiaSmiProcess *LinuxNvidiaGpu::s_smiProcess = nullptr;
 
+constexpr quint64 mbToBytes(quint64 mb) {
+    return mb * 1024 * 1024;
+}
+
 LinuxNvidiaGpu::LinuxNvidiaGpu(const QString &id, const QString &name, udev_device *device)
     : GpuDevice(id, name)
     , m_device(device)
@@ -60,16 +64,14 @@ void LinuxNvidiaGpu::initialize()
     } else {
         m_index = it - queryResult.cbegin();
         m_nameProperty->setValue(it->name);
-        m_totalVramProperty->setValue(it->totalMemory);
-        m_usedVramProperty->setMax(it->totalMemory);
+        m_totalVramProperty->setValue(mbToBytes(it->totalMemory));
+        m_usedVramProperty->setMax(mbToBytes(it->totalMemory));
         m_coreFrequencyProperty->setMax(it->maxCoreFrequency);
         m_memoryFrequencyProperty->setMax(it->maxMemoryFrequency);
         m_temperatureProperty->setMax(it->maxTemperature);
         m_powerProperty->setMax(it->maxPower);
     }
 
-    m_usedVramProperty->setUnit(KSysGuard::UnitMegaByte);
-    m_totalVramProperty->setUnit(KSysGuard::UnitMegaByte);
     m_powerProperty->setUnit(KSysGuard::UnitWatt);
 }
 
@@ -80,7 +82,7 @@ void LinuxNvidiaGpu::onDataReceived(const NvidiaSmiProcess::GpuData &data)
     }
 
     m_usageProperty->setValue(data.usage);
-    m_usedVramProperty->setValue(data.memoryUsed);
+    m_usedVramProperty->setValue(mbToBytes(data.memoryUsed));
     m_coreFrequencyProperty->setValue(data.coreFrequency);
     m_memoryFrequencyProperty->setValue(data.memoryFrequency);
     m_temperatureProperty->setValue(data.temperature);
