@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-27 01:38+0000\n"
-"PO-Revision-Date: 2024-01-05 21:22+0100\n"
+"PO-Revision-Date: 2024-01-21 21:46+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -112,993 +112,997 @@ msgstr "Mind"
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr "Maximális CPU frekvencia"
+msgstr "Maximális CPU-frekvencia"
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "Max frekvencia"
+msgstr "Max. frekvencia"
 
 #: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr ""
+msgstr "A jelenlegi maximális frekvencia az összes CPU között"
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr ""
+msgstr "Minimális CPU-frekvencia"
 
 #: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr ""
+msgstr "Min. frekvencia"
 
 #: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr ""
+msgstr "A jelenlegi minimális frekvencia az összes CPU között"
 
 #: cpu/cpu.cpp:133
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr ""
+msgstr "Átlagos CPU-frekvencia"
 
 #: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr ""
+msgstr "Átlagos frekvencia"
 
 #: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr ""
+msgstr "A jelenlegi átlagos frekvencia az összes CPU között"
 
 #: cpu/cpu.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr ""
+msgstr "Maximális CPU-hőmérséklet"
 
 #: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr ""
+msgstr "Max. hőmérséklet"
 
 #: cpu/cpu.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr ""
+msgstr "Minimális CPU-hőmérséklet"
 
 #: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr ""
+msgstr "Min. hőmérséklet"
 
 #: cpu/cpu.cpp:154
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr ""
+msgstr "Átlagus CPU-hőmérséklet"
 
 #: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr ""
+msgstr "Átlagos hőmérséklet"
 
 #: cpu/cpu.cpp:171
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
-msgstr ""
+msgstr "CPU-k száma"
 
 #: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr ""
+msgstr "CPU-k"
 
 #: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
-msgstr ""
+msgstr "A rendszer fizikai processzorainak száma"
 
 #: cpu/cpu.cpp:175
 #, kde-format
 msgctxt "@title"
 msgid "Number of Cores"
-msgstr ""
+msgstr "Magszám"
 
 #: cpu/cpu.cpp:176
 #, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
-msgstr ""
+msgstr "Magok"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr ""
+msgstr "A processzormagok száma az összes fizikai processzorban"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr ""
+msgstr "CPU-k"
 
 #: cpu/freebsdcpuplugin.cpp:151
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"
-msgstr ""
+msgstr "%1. CPU"
 
 #: cpu/linuxcpuplugin.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr ""
+msgstr "%1. mag"
 
 #: cpu/linuxcpuplugin.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
-msgstr ""
+msgstr "%1. CPU %2. mag"
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr ""
+msgstr "Átlagos terhelések"
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr ""
+msgstr "Átlagos terhelés (1 perc)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr ""
+msgstr "Átlagos terhelés (5 perc)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr ""
+msgstr "Átlagos terhelés (15 perc)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr ""
+msgstr "Átlagos terhelés (1 p)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr ""
+msgstr "Átlagos terhelés (5 p)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr ""
+msgstr "Átlagos terhelés (15 p)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr ""
+msgstr "A futási sorban lévő feladatok száma 1 perc alatt átlagolva"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr ""
+msgstr "A futási sorban lévő feladatok száma 5 perc alatt átlagolva"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr ""
+msgstr "A futási sorban lévő feladatok száma 15 perc alatt átlagolva"
 
 #: disks/disks.cpp:78 disks/disks.cpp:258
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr ""
+msgstr "Összes hely"
 
 #: disks/disks.cpp:80 disks/disks.cpp:259
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr ""
+msgstr "Összes"
 
 #: disks/disks.cpp:85 disks/disks.cpp:271
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr ""
+msgstr "Foglalt hely"
 
 #: disks/disks.cpp:87 disks/disks.cpp:272
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: disks/disks.cpp:92 disks/disks.cpp:264
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr ""
+msgstr "Szabad hely"
 
 #: disks/disks.cpp:94 disks/disks.cpp:265
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr ""
+msgstr "Szabad"
 
 #: disks/disks.cpp:100 disks/disks.cpp:278
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr ""
+msgstr "Olvasási sebesség"
 
 #: disks/disks.cpp:102 disks/disks.cpp:279
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
-msgstr ""
+msgstr "Olvasás"
 
 #: disks/disks.cpp:106 disks/disks.cpp:284
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr ""
+msgstr "Írási sebesség"
 
 #: disks/disks.cpp:108 disks/disks.cpp:285
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
-msgstr ""
+msgstr "Írás"
 
 #: disks/disks.cpp:113 disks/disks.cpp:294
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr ""
+msgstr "Felhasznált százalék"
 
 #: disks/disks.cpp:117 disks/disks.cpp:290
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr ""
+msgstr "Szabad százalék"
 
 #: disks/disks.cpp:157
 #, kde-format
 msgid "Disks"
-msgstr ""
+msgstr "Lemezek"
 
 #: disks/disks.cpp:256
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr ""
+msgstr "Összes lemez"
 
 #: disks/disks.cpp:291
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
-msgstr ""
+msgstr "Szabad"
 
 #: disks/disks.cpp:295
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr ""
+msgstr "Összes GPU"
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr ""
+msgstr "Összes GPU-használat"
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "Használat"
 
 #: gpu/AllGpus.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr ""
+msgstr "Összes GPU teljes memóriája"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Teljes"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr ""
+msgstr "Összes GPU foglalt memóriája"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
-msgstr ""
+msgstr "Használat"
 
 #: gpu/GpuDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr ""
+msgstr "Teljes videómemória"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr ""
+msgstr "Teljes"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr ""
+msgstr "Foglalt videómemória"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr ""
+msgstr "Frekvencia"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr ""
+msgstr "Memóriafrekvencia"
 
 #: gpu/GpuDevice.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr ""
+msgstr "Hőmérséklet"
 
 #: gpu/GpuDevice.cpp:53 power/power.cpp:106
 #, kde-format
 msgctxt "@title"
 msgid "Power"
-msgstr ""
+msgstr "Teljesítmény"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: gpu/LinuxBackend.cpp:54
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
-msgstr ""
+msgstr "%1. GPU"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
 msgid "Hardware Sensors"
-msgstr ""
+msgstr "Hardveres érzékelők"
 
 #: memory/backend.cpp:17
 #, kde-format
 msgctxt "@title"
 msgid "Physical Memory"
-msgstr ""
+msgstr "Fizikai memória"
 
 #: memory/backend.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr ""
+msgstr "Lapozási memória"
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr ""
+msgstr "Teljes fizikai memória"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Teljes"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr ""
+msgstr "Foglalt fizikai memória"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr ""
+msgstr "Foglalt fizikai memória százalékos aránya"
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr ""
+msgstr "Szabad fizikai memória"
 
 #: memory/backend.cpp:54
 #, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
-msgstr ""
+msgstr "Szabad"
 
 #: memory/backend.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr ""
+msgstr "Szabad fizikai memória százalékos aránya"
 
 #: memory/backend.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr ""
+msgstr "Alkalmazásmemória"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr ""
+msgstr "Alkalmazás"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr ""
+msgstr "Alkalmazásmemória százalékos aránya"
 
 #: memory/backend.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr ""
+msgstr "Gyorsítótár-memória"
 
 #: memory/backend.cpp:72
 #, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
-msgstr ""
+msgstr "Gyorsítótár"
 
 #: memory/backend.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory Percentage"
-msgstr ""
+msgstr "Gyorsítótár-memória százalékos aránya"
 
 #: memory/backend.cpp:80
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory"
-msgstr ""
+msgstr "Puffermemória"
 
 #: memory/backend.cpp:81
 #, kde-format
 msgctxt "@title, Short for 'Buffer Memory'"
 msgid "Buffer"
-msgstr ""
+msgstr "Puffer"
 
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr ""
+msgstr "A lemezblokkok gyorsítótárazására használt memória mennyisége"
 
 #: memory/backend.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory Percentage"
-msgstr ""
+msgstr "Puffermemória százalékos aránya"
 
 #: memory/backend.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr ""
+msgstr "Teljes lapozási memória"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Teljes"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr ""
+msgstr "Foglalt lapozási memória"
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Foglalt"
 
 #: memory/backend.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr ""
+msgstr "Foglalt lapozási memória százalékos aránya"
 
 #: memory/backend.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr ""
+msgstr "Szabad lapozási memória"
 
 #: memory/backend.cpp:105
 #, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
-msgstr ""
+msgstr "Szabad"
 
 #: memory/backend.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr ""
+msgstr "Szabad lapozási memória százalékos aránya"
 
 #: memory/memory.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Memory"
-msgstr ""
+msgstr "Memória"
 
 #: network/AllDevicesObject.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All Network Devices"
-msgstr ""
+msgstr "Összes hálózati eszköz"
 
 #: network/AllDevicesObject.cpp:18 network/AllDevicesObject.cpp:28
 #: network/NetworkDevice.cpp:66 network/NetworkDevice.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr ""
+msgstr "Letöltési sebesség"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr ""
+msgstr "Letöltés"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr ""
+msgstr "Feltöltési sebesség"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
 #, kde-format
 msgctxt "@title Short for Upload Rate"
 msgid "Upload"
-msgstr ""
+msgstr "Feltöltés"
 
 #: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr ""
+msgstr "Összesen letöltött"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr ""
+msgstr "Letöltve"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr ""
+msgstr "Összesel feltöltött"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr ""
+msgstr "Feltöltve"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Network Name"
-msgstr ""
+msgstr "Hálózatnév"
 
 #: network/NetworkDevice.cpp:16
 #, kde-format
 msgctxt "@title Short of Network Name"
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: network/NetworkDevice.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Signal Strength"
-msgstr ""
+msgstr "Jelerősség"
 
 #: network/NetworkDevice.cpp:20
 #, kde-format
 msgctxt "@title Short of Signal Strength"
 msgid "Signal"
-msgstr ""
+msgstr "Jel"
 
 #: network/NetworkDevice.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Address"
-msgstr ""
+msgstr "IPv4 cím"
 
 #: network/NetworkDevice.cpp:27
 #, kde-format
 msgctxt "@title Short of IPv4 Address"
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 átjáró"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 átjáró"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 alhálózati maszk"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 alhálózati maszk"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr ""
+msgstr "IPv4 előtaghosszal"
 
 #: network/NetworkDevice.cpp:39
 #, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr ""
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:43
 #, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr ""
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Address"
-msgstr ""
+msgstr "IPv6 cím"
 
 #: network/NetworkDevice.cpp:47
 #, kde-format
 msgctxt "@title Short of IPv6 Address"
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:50
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 átjáró"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 átjáró"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 alhálózati maszk"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 alhálózati maszk"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr ""
+msgstr "IPv6 előtaghosszal"
 
 #: network/NetworkDevice.cpp:59
 #, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr ""
+msgstr "IPv6 DNS"
 
 #: network/NetworkDevice.cpp:63
 #, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr ""
+msgstr "IPv6 DNS"
 
 #: network/NetworkPlugin.cpp:43
 #, kde-format
 msgctxt "@title"
 msgid "Network Devices"
-msgstr ""
+msgstr "Hálózati eszközök"
 
 #: osinfo/osinfo.cpp:106
 #, kde-format
 msgctxt "@title"
 msgid "Operating System"
-msgstr ""
+msgstr "Operációs rendszer"
 
 #: osinfo/osinfo.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #: osinfo/osinfo.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name"
-msgstr ""
+msgstr "Kernelnév"
 
 #: osinfo/osinfo.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Version"
-msgstr ""
+msgstr "Kernelverzió"
 
 #: osinfo/osinfo.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name and Version"
-msgstr ""
+msgstr "Kernelnév és verzió"
 
 #: osinfo/osinfo.cpp:112
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #: osinfo/osinfo.cpp:114
 #, kde-format
 msgctxt "@title"
 msgid "System"
-msgstr ""
+msgstr "Rendszer"
 
 #: osinfo/osinfo.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr ""
+msgstr "Gépnév"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name"
-msgstr ""
+msgstr "Operációs rendszer neve"
 
 #: osinfo/osinfo.cpp:117
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Version"
-msgstr ""
+msgstr "Operációs rendszer verziója"
 
 #: osinfo/osinfo.cpp:118
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name and Version"
-msgstr ""
+msgstr "Operációs rendszer neve és verziója"
 
 #: osinfo/osinfo.cpp:119
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
-msgstr ""
+msgstr "OS"
 
 #: osinfo/osinfo.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Logo"
-msgstr ""
+msgstr "Operációs rendszer logója"
 
 #: osinfo/osinfo.cpp:121
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
-msgstr ""
+msgstr "Operációs rendszer honlapja"
 
 #: osinfo/osinfo.cpp:122
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr ""
+msgstr "Működési idő"
 
 #: osinfo/osinfo.cpp:125
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma"
-msgstr ""
+msgstr "KDE Plasma"
 
 #: osinfo/osinfo.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
-msgstr ""
+msgstr "Qt verzió"
 
 #: osinfo/osinfo.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr ""
+msgstr "KDE Frameworks verzió"
 
 #: osinfo/osinfo.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
-msgstr ""
+msgstr "KDE Plasma verzió"
 
 #: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr ""
+msgstr "Ablakkezelő rendszer"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
 msgctxt "@info"
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #: power/power.cpp:44 power/power.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr ""
+msgstr "Tervezett kapacitás"
 
 #: power/power.cpp:47
 #, kde-format
 msgid "Amount of energy that the Battery was designed to hold"
-msgstr ""
+msgstr "Az az energiamennyiség, amelynek tárolására az akkumulátort tervezték"
 
 #: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr ""
+msgstr "Jelenlegi kapacitás"
 
 #: power/power.cpp:56
 #, kde-format
 msgid "Amount of energy that the battery can currently hold"
 msgstr ""
+"Az az energiamennyiség, amelynek tárolására az akkumulátor jelenleg képes"
 
 #: power/power.cpp:62 power/power.cpp:63
 #, kde-format
 msgctxt "@title"
 msgid "Health"
-msgstr ""
+msgstr "Állapot"
 
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
 msgstr ""
+"A tervezett kapacitás százalékos aránya, amelyet az akkumulátor tárolni képes"
 
 #: power/power.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Charge"
-msgstr ""
+msgstr "Töltöttség"
 
 #: power/power.cpp:74
 #, kde-format
 msgid "Amount of energy that the battery is currently holding"
-msgstr ""
+msgstr "Az az energiamennyiség, amelyet az akkumulátor jelenleg tárol"
 
 #: power/power.cpp:80 power/power.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr ""
+msgstr "Töltöttségi százalék"
 
 #: power/power.cpp:83
 #, kde-format
 msgid ""
 "Percentage of the current capacity that the battery is currently holding"
 msgstr ""
+"A jelenlegi kapacitás százalékos aránya, amelyet az akkumulátor jelenleg "
+"tárol"
 
 #: power/power.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr ""
+msgstr "Töltési sebesség"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr ""
+msgstr "Töltési sebesség"
 
 #: power/power.cpp:93
 #, kde-format
@@ -1106,3 +1110,4 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr ""
+"Teljesítmény, amivel az akkumulátor töltődik (pozitív), vagy merül (negatív)"
