@@ -6,6 +6,7 @@ cmake_minimum_required(VERSION 3.16)
 project(ksystemstats)
 set(PROJECT_VERSION "5.92.90")
 
+set(PROJECT_DEP_VERSION "6.0.80")
 set(QT_MIN_VERSION "6.6.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
@@ -27,7 +28,7 @@ include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO)
-find_package(KSysGuard ${PROJECT_VERSION} REQUIRED)
+find_package(KSysGuard ${PROJECT_DEP_VERSION} REQUIRED)
 
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
 set_package_properties(KF6NetworkManagerQt PROPERTIES
