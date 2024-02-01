@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-27 01:38+0000\n"
-"PO-Revision-Date: 2021-08-31 19:37+0300\n"
+"PO-Revision-Date: 2024-01-31 20:57+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:74 disks/disks.cpp:75 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -30,7 +30,7 @@ msgstr "Pavadinimas"
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr ""
+msgstr "Bendras naudojimas"
 
 #: cpu/cpu.cpp:39
 #, kde-format
@@ -42,7 +42,7 @@ msgstr "Naudojimas"
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr ""
+msgstr "Sistemos naudojimas"
 
 #: cpu/cpu.cpp:46
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "Sistema"
 #, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr ""
+msgstr "Naudotojo naudojimas"
 
 #: cpu/cpu.cpp:53
 #, kde-format
@@ -66,13 +66,13 @@ msgstr "Naudotojas"
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr ""
+msgstr "Laukimo naudojimas"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr ""
+msgstr "Laukimas"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -114,117 +114,91 @@ msgstr "Visi"
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr ""
+msgstr "Didžiausias procesoriaus dažnis"
 
 #: cpu/cpu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "Dažnis"
+msgstr "Didžiausias dažnis"
 
 #: cpu/cpu.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr "Dabartinis procesoriaus dažnis"
+msgstr "Dabartinis didžiausias dažnis tarp visų procesorių"
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr ""
+msgstr "Mažiausias procesoriaus dažnis"
 
 #: cpu/cpu.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr "Dažnis"
+msgstr "Mažiausias dažnis"
 
 #: cpu/cpu.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr "Dabartinis procesoriaus dažnis"
+msgstr "Dabartinis mažiausias dažnis tarp visų procesorių"
 
 #: cpu/cpu.cpp:133
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr "Dabartinis dažnis"
+msgstr "Vidutinis procesorių dažnis"
 
 #: cpu/cpu.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "Dabartinis dažnis"
+msgstr "Vidutinis dažnis"
 
 #: cpu/cpu.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr "Dabartinis procesoriaus dažnis"
+msgstr "Dabartinis vidutinis dažnis tarp visų procesorių"
 
 #: cpu/cpu.cpp:140
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "Temperatūra"
+msgstr "Didžiausia procesorių temperatūra"
 
 #: cpu/cpu.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "Temperatūra"
+msgstr "Didžiausia temperatūra"
 
 #: cpu/cpu.cpp:147
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "Temperatūra"
+msgstr "Mažiausia procesorių temperatūra"
 
 #: cpu/cpu.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for Current Temperatur"
-#| msgid "Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "Temperatūra"
+msgstr "Mažiausia temperatūra"
 
 #: cpu/cpu.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "Dabartinė temperatūra"
+msgstr "Vidutinė procesorių temperatūra"
 
 #: cpu/cpu.cpp:155
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "Dabartinė temperatūra"
+msgstr "Vidutinė temperatūra"
 
 #: cpu/cpu.cpp:171
 #, kde-format
@@ -332,55 +306,55 @@ msgstr "Apkrovos vidurkis (15 min.)"
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr ""
+msgstr "Užduočių paleidimo eilėje skaičiaus 1 minutės vidurkis"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr ""
+msgstr "Užduočių paleidimo eilėje skaičiaus 5 minučių vidurkis"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr ""
+msgstr "Užduočių paleidimo eilėje skaičiaus 15 minučių vidurkis"
 
 #: disks/disks.cpp:78 disks/disks.cpp:258
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr ""
+msgstr "Bendra vieta"
 
 #: disks/disks.cpp:80 disks/disks.cpp:259
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: disks/disks.cpp:85 disks/disks.cpp:271
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr ""
+msgstr "Naudojama vietos"
 
 #: disks/disks.cpp:87 disks/disks.cpp:272
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: disks/disks.cpp:92 disks/disks.cpp:264
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr ""
+msgstr "Laisva vieta"
 
 #: disks/disks.cpp:94 disks/disks.cpp:265
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr ""
+msgstr "Laisva"
 
 #: disks/disks.cpp:100 disks/disks.cpp:278
 #, kde-format
@@ -410,13 +384,13 @@ msgstr "Rašymas"
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr ""
+msgstr "Naudojama procentinė dalis"
 
 #: disks/disks.cpp:117 disks/disks.cpp:290
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr ""
+msgstr "Laisva procentinė dalis"
 
 #: disks/disks.cpp:157
 #, kde-format
@@ -433,97 +407,97 @@ msgstr "Visi diskai"
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
-msgstr ""
+msgstr "Laisva"
 
 #: disks/disks.cpp:295
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr ""
+msgstr "Visi grafikos procesoriai"
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr ""
+msgstr "Visų grafikos procesorių naudojimas"
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "Naudojimas"
 
 #: gpu/AllGpus.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr ""
+msgstr "Visų grafikos procesorių bendra atmintis"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr ""
+msgstr "Visų grafikos procesorių naudojama atmintis"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
-msgstr ""
+msgstr "Naudojimas"
 
 #: gpu/GpuDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr ""
+msgstr "Bendra vaizdo atmintis"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr ""
+msgstr "Naudojama vaizdo atmintis"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr ""
+msgstr "Dažnis"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr ""
+msgstr "Atminties dažnis"
 
 #: gpu/GpuDevice.cpp:49
 #, kde-format
@@ -541,13 +515,13 @@ msgstr "Maitinimas"
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr ""
+msgstr "Grafikos procesorius"
 
 #: gpu/LinuxBackend.cpp:54
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
-msgstr ""
+msgstr "Grafikos procesorius %1"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
@@ -564,73 +538,73 @@ msgstr "Fizinė atmintis"
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr ""
+msgstr "Sukeitimų atmintis"
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr ""
+msgstr "Bendra fizinė atmintis"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr ""
+msgstr "Naudojama fizinė atmintis"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr ""
+msgstr "Naudojamos fizinės atminties procentinė dalis"
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr ""
+msgstr "Laisva fizinė atmintis"
 
 #: memory/backend.cpp:54
 #, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
-msgstr ""
+msgstr "Laisva"
 
 #: memory/backend.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr ""
+msgstr "Laisvos fizinės atminties procentinė dalis"
 
 #: memory/backend.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr ""
+msgstr "Programų atmintis"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr ""
+msgstr "Programų"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr ""
+msgstr "Programų atminties procentinė dalis"
 
 #: memory/backend.cpp:71
 #, kde-format
@@ -665,61 +639,61 @@ msgstr "Buferis"
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr ""
+msgstr "Atminties, naudojamos disko blokų podėliavimui, kiekis"
 
 #: memory/backend.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory Percentage"
-msgstr ""
+msgstr "Buferio atminties procentinė dalis"
 
 #: memory/backend.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr ""
+msgstr "Bendra sukeitimų atmintis"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr ""
+msgstr "Naudojama sukeitimų atmintis"
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr ""
+msgstr "Naudojama"
 
 #: memory/backend.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr ""
+msgstr "Naudojamos sukeitimų atminties procentinė dalis"
 
 #: memory/backend.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr ""
+msgstr "Laisva sukeitimų atmintis"
 
 #: memory/backend.cpp:105
 #, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
-msgstr ""
+msgstr "Laisva"
 
 #: memory/backend.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr ""
+msgstr "Laisvos sukeitimų atminties procentinė dalis"
 
 #: memory/memory.cpp:24
 #, kde-format
@@ -825,55 +799,49 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 tinklų sietuvas"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 tinklų sietuvas"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 potinklio kaukė"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 potinklio kaukė"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr ""
+msgstr "IPv4 su priešdėlio ilgiu"
 
 #: network/NetworkDevice.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
 msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr "IPv4"
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
@@ -891,55 +859,49 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 tinklų sietuvas"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 tinklų sietuvas"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 potinklio kaukė"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 potinklio kaukė"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr ""
+msgstr "IPv6 su priešdėlio ilgiu"
 
 #: network/NetworkDevice.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
 msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkDevice.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr "IPv6"
+msgstr "IPv6 DNS"
 
 #: network/NetworkPlugin.cpp:43
 #, kde-format
@@ -993,7 +955,7 @@ msgstr "Sistema"
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr ""
+msgstr "Mazgo pavadinimas"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
@@ -1062,12 +1024,10 @@ msgid "KDE Plasma Version"
 msgstr "KDE Plasma versija"
 
 #: osinfo/osinfo.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr "Sistema"
+msgstr "Langų sistema"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
