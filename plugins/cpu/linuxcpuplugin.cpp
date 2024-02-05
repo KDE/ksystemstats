@@ -227,13 +227,14 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
         // are the wrong way around, so we have to compare labels.
         // https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b02c6857389da66b09e447103bdb247ccd182456
         char * label = sensors_get_label(chipName, feature);
-        if (qstrcmp(label, "Tctl") == 0) {
+        if (qstrcmp(label, "Tctl") == 0 || qstrcmp(label, "temp1") == 0) {
             tctl = feature;
-        }
-        else if (qstrcmp(label, "Tdie") == 0) {
+        } else if (qstrcmp(label, "Tdie") == 0 || qstrcmp(label, "temp2") == 0) {
             tdie = feature;
-        } else {
+        } else if (qstrncmp(label, "Tccd", 4) == 0) {
             tccd[name.mid(4).toUInt()] = feature;
+        } else {
+            qWarning() << "Unrecognised temmperature sensor: " << label;
         }
         free(label);
     }
