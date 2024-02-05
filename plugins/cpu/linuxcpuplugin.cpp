@@ -177,8 +177,8 @@ void LinuxCpuPluginPrivate::addSensors()
 void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chipName)
 {
     int featureNumber = 0;
-    QHash<unsigned int,  sensors_feature const *> coreFeatures;
-    int physicalId = -1;
+    QHash<std::pair<unsigned int, unsigned int>,  sensors_feature const *> coreFeatures;
+    int physicalId = 0;
     while (sensors_feature const * feature = sensors_get_features(chipName, &featureNumber)) {
         if (feature->type != SENSORS_FEATURE_TEMP) {
             continue;
@@ -187,20 +187,18 @@ void LinuxCpuPluginPrivate::addSensorsIntel(const sensors_chip_name * const chip
         unsigned int coreId;
         // First try to see if it's a core temperature because we should have more of those
         if (std::sscanf(sensorLabel, "Core %d", &coreId) != 0) {
-            coreFeatures.insert(coreId, feature);
+            coreFeatures.insert(std::make_pair(physicalId, coreId), feature);
         } else {
             std::sscanf(sensorLabel, "Package id %d", &physicalId);
         }
         free(sensorLabel);
     }
-    if (physicalId == -1) {
-        return;
-    }
+
     for (auto feature = coreFeatures.cbegin(); feature != coreFeatures.cend(); ++feature) {
-        if (m_cpusBySystemIds.contains({physicalId, int(feature.key())})) {
+        if (m_cpusBySystemIds.contains(feature.key())) {
             // When the cpu has hyperthreading we display multiple cores for each physical core.
             // Naturally they share the same temperature sensor and have the same coreId.
-            auto cpu_range = m_cpusBySystemIds.equal_range({physicalId, int(feature.key())});
+            auto cpu_range = m_cpusBySystemIds.equal_range(feature.key());
             for (auto cpu_it = cpu_range.first; cpu_it != cpu_range.second; ++cpu_it) {
                 (*cpu_it)->makeTemperatureSensor(chipName, feature.value());
             }
