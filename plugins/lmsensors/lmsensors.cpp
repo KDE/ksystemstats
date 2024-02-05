@@ -31,6 +31,12 @@ LmSensorsPlugin::LmSensorsPlugin(QObject *parent, const QVariantList &args)
         QByteArray name;
         name.resize(requiredBytes);
         sensors_snprintf_chip_name(name.data(), name.size(), chipName);
+
+        // In some cases, sensor names may end with `\x00`. trimmed() unfortunately does not get rid of that
+        // for us so convert them to spaces so trimmed will remove them.
+        name.replace('\x00', ' ');
+        name = name.trimmed();
+
         const QString nameString = QString::fromUtf8(name);
         KSysGuard::SensorObject *sensorObject = container->object(nameString);
         if (!sensorObject) {
