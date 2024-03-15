@@ -29,9 +29,12 @@
 #include <systemstats/SensorContainer.h>
 #include <systemstats/SensorObject.h>
 
-class VolumeObject : public KSysGuard::SensorObject {
+class VolumeObject : public KSysGuard::SensorObject
+{
+    Q_OBJECT
 public:
     VolumeObject(const Solid::Device &device, KSysGuard::SensorContainer *parent);
+    bool isRootDevice() const;
     void update();
     void setBytes(quint64 read, quint64 written, qint64 elapsedTime);
 
@@ -48,6 +51,7 @@ private:
     KSysGuard::SensorProperty *m_writeRate = nullptr;
     quint64 m_bytesRead = 0;
     quint64 m_bytesWritten = 0;
+    bool m_rootDevice = false;
 };
 
 QString VolumeObject::idHelper(const Solid::Device &device)
@@ -62,7 +66,6 @@ QString VolumeObject::idHelper(const Solid::Device &device)
         return QUrl(block->device()).fileName();
     }
 }
-
 
 VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContainer* parent)
     : SensorObject(idHelper(device), device.displayName(),  parent)
@@ -81,6 +84,18 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
     m_total->setUnit(KSysGuard::UnitByte);
     m_total->setVariantType(QVariant::ULongLong);
 
+    m_readRate = new KSysGuard::SensorProperty("read", i18nc("@title", "Read Rate"), 0, this);
+    m_readRate->setPrefix(name());
+    m_readRate->setShortName(i18nc("@title Short for 'Read Rate'", "Read"));
+    m_readRate->setUnit(KSysGuard::UnitByteRate);
+    m_readRate->setVariantType(QVariant::Double);
+
+    m_writeRate = new KSysGuard::SensorProperty("write", i18nc("@title", "Write Rate"), 0, this);
+    m_writeRate->setPrefix(name());
+    m_writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
+    m_writeRate->setUnit(KSysGuard::UnitByteRate);
+    m_writeRate->setVariantType(QVariant::Double);
+
     if (volume->usage() != Solid::StorageVolume::PartitionTable) {
         m_used = new KSysGuard::SensorProperty("used", i18nc("@title", "Used Space"), this);
         m_used->setPrefix(name());
@@ -95,21 +110,7 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
         m_free->setUnit(KSysGuard::UnitByte);
         m_free->setVariantType(QVariant::ULongLong);
         m_free->setMax(volume->size());
-    }
 
-    m_readRate = new KSysGuard::SensorProperty("read", i18nc("@title", "Read Rate"), 0, this);
-    m_readRate->setPrefix(name());
-    m_readRate->setShortName(i18nc("@title Short for 'Read Rate'", "Read"));
-    m_readRate->setUnit(KSysGuard::UnitByteRate);
-    m_readRate->setVariantType(QVariant::Double);
-
-    m_writeRate = new KSysGuard::SensorProperty("write", i18nc("@title", "Write Rate"), 0, this);
-    m_writeRate->setPrefix(name());
-    m_writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
-    m_writeRate->setUnit(KSysGuard::UnitByteRate);
-    m_writeRate->setVariantType(QVariant::Double);
-
-    if (volume->usage() != Solid::StorageVolume::PartitionTable) {
         auto usedPercent = new KSysGuard::PercentageSensor(this, "usedPercent", i18nc("@title", "Percentage Used"));
         usedPercent->setPrefix(name());
         usedPercent->setBaseSensor(m_used);
@@ -117,7 +118,14 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
         auto freePercent = new KSysGuard::PercentageSensor(this, "freePercent", i18nc("@title", "Percentage Free"));
         freePercent->setPrefix(name());
         freePercent->setBaseSensor(m_free);
+    } else {
+        m_rootDevice = true;
     }
+}
+
+bool VolumeObject::isRootDevice() const
+{
+    return m_rootDevice;
 }
 
 void VolumeObject::update()
@@ -255,37 +263,55 @@ void DisksPlugin::addAggregateSensors()
     auto container = containers()[0];
     auto allDisks = new KSysGuard::SensorObject("all", i18nc("@title", "All Disks"), container);
 
+    auto filterFunction = [](const KSysGuard::SensorProperty *sensor) {
+        if (sensor->parentObject()->id() == u"all"_qs) {
+            return false;
+        }
+
+        auto volumeObject = qobject_cast<VolumeObject *>(sensor->parentObject());
+        if (volumeObject && volumeObject->isRootDevice()) {
+            return false;
+        }
+
+        return true;
+    };
+
     auto total = new KSysGuard::AggregateSensor(allDisks, "total", i18nc("@title", "Total Space"));
     total->setShortName(i18nc("@title Short for 'Total Space'", "Total"));
     total->setUnit(KSysGuard::UnitByte);
     total->setVariantType(QVariant::ULongLong);
-    total->setMatchSensors(QRegularExpression("^(?!all).*$"), "total");
+    total->setMatchSensors(QRegularExpression("^.*$"), "total");
+    total->setFilterFunction(filterFunction);
 
     auto free = new KSysGuard::AggregateSensor(allDisks, "free", i18nc("@title", "Free Space"));
     free->setShortName(i18nc("@title Short for 'Free Space'", "Free"));
     free->setUnit(KSysGuard::UnitByte);
     free->setVariantType(QVariant::ULongLong);
     free->setMax(total->value().toULongLong());
-    free->setMatchSensors(QRegularExpression("^(?!all).*$"), "free");
+    free->setMatchSensors(QRegularExpression("^.*$"), "free");
+    free->setFilterFunction(filterFunction);
 
     auto used = new KSysGuard::AggregateSensor(allDisks, "used", i18nc("@title", "Used Space"));
     used->setShortName(i18nc("@title Short for 'Used Space'", "Used"));
     used->setUnit(KSysGuard::UnitByte);
     used->setVariantType(QVariant::ULongLong);
     used->setMax(total->value().toULongLong());
-    used->setMatchSensors(QRegularExpression("^(?!all).*$"), "used");
+    used->setMatchSensors(QRegularExpression("^.*$"), "used");
+    used->setFilterFunction(filterFunction);
 
     auto readRate = new KSysGuard::AggregateSensor(allDisks, "read", i18nc("@title", "Read Rate"), 0);
     readRate->setShortName(i18nc("@title Short for 'Read Rate'", "Read"));
     readRate->setUnit(KSysGuard::UnitByteRate);
     readRate->setVariantType(QVariant::Double);
     readRate->setMatchSensors(QRegularExpression("^(?!all).*$"), "read");
+    readRate->setFilterFunction(filterFunction);
 
     auto writeRate = new KSysGuard::AggregateSensor(allDisks, "write", i18nc("@title", "Write Rate"), 0);
     writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
     writeRate->setUnit(KSysGuard::UnitByteRate);
     writeRate->setVariantType(QVariant::Double);
     writeRate->setMatchSensors(QRegularExpression("^(?!all).*$"), "write");
+    writeRate->setFilterFunction(filterFunction);
 
     auto freePercent = new KSysGuard::PercentageSensor(allDisks, "freePercent", i18nc("@title", "Percentage Free"));
     freePercent->setShortName(i18nc("@title, Short for `Percentage Free", "Free"));
