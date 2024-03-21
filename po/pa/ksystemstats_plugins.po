@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:38+0000\n"
+"POT-Creation-Date: 2024-03-21 00:39+0000\n"
 "PO-Revision-Date: 2023-04-01 21:12-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: cpu/cpu.cpp:28 disks/disks.cpp:74 disks/disks.cpp:75 gpu/GpuDevice.cpp:20
+#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
@@ -323,96 +323,96 @@ msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
 msgstr ""
 
-#: disks/disks.cpp:78 disks/disks.cpp:258
+#: disks/disks.cpp:81 disks/disks.cpp:279
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
 msgstr "ਕੁੱਲ ਥਾਂ"
 
-#: disks/disks.cpp:80 disks/disks.cpp:259
+#: disks/disks.cpp:83 disks/disks.cpp:280
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
 msgstr "ਕੁੱਲ"
 
-#: disks/disks.cpp:85 disks/disks.cpp:271
-#, kde-format
-msgctxt "@title"
-msgid "Used Space"
-msgstr "ਵਰਤੀ ਗਈ ਥਾਂ"
-
-#: disks/disks.cpp:87 disks/disks.cpp:272
-#, kde-format
-msgctxt "@title Short for 'Used Space'"
-msgid "Used"
-msgstr "ਵਰਤੀ"
-
-#: disks/disks.cpp:92 disks/disks.cpp:264
-#, kde-format
-msgctxt "@title"
-msgid "Free Space"
-msgstr "ਖਾਲੀ ਥਾਂ"
-
-#: disks/disks.cpp:94 disks/disks.cpp:265
-#, kde-format
-msgctxt "@title Short for 'Free Space'"
-msgid "Free"
-msgstr "ਖਾਲੀ"
-
-#: disks/disks.cpp:100 disks/disks.cpp:278
+#: disks/disks.cpp:87 disks/disks.cpp:302
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
 msgstr "ਪੜ੍ਹਨ ਦੀ ਦਰ"
 
-#: disks/disks.cpp:102 disks/disks.cpp:279
+#: disks/disks.cpp:89 disks/disks.cpp:303
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
 msgstr "ਪੜ੍ਹਨ"
 
-#: disks/disks.cpp:106 disks/disks.cpp:284
+#: disks/disks.cpp:93 disks/disks.cpp:309
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
 msgstr "ਲਿਖਣ ਦੀ ਦਰ"
 
-#: disks/disks.cpp:108 disks/disks.cpp:285
+#: disks/disks.cpp:95 disks/disks.cpp:310
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
 msgstr "ਲਿਖਣ"
 
-#: disks/disks.cpp:113 disks/disks.cpp:294
+#: disks/disks.cpp:100 disks/disks.cpp:294
+#, kde-format
+msgctxt "@title"
+msgid "Used Space"
+msgstr "ਵਰਤੀ ਗਈ ਥਾਂ"
+
+#: disks/disks.cpp:102 disks/disks.cpp:295
+#, kde-format
+msgctxt "@title Short for 'Used Space'"
+msgid "Used"
+msgstr "ਵਰਤੀ"
+
+#: disks/disks.cpp:107 disks/disks.cpp:286
+#, kde-format
+msgctxt "@title"
+msgid "Free Space"
+msgstr "ਖਾਲੀ ਥਾਂ"
+
+#: disks/disks.cpp:109 disks/disks.cpp:287
+#, kde-format
+msgctxt "@title Short for 'Free Space'"
+msgid "Free"
+msgstr "ਖਾਲੀ"
+
+#: disks/disks.cpp:114 disks/disks.cpp:320
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
 msgstr "ਵਰਤਣ ਦੀ ਫੀਸਦੀ"
 
-#: disks/disks.cpp:117 disks/disks.cpp:290
+#: disks/disks.cpp:118 disks/disks.cpp:316
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
 msgstr "ਖਾਲੀ ਫੀਸਦੀ"
 
-#: disks/disks.cpp:157
+#: disks/disks.cpp:165
 #, kde-format
 msgid "Disks"
 msgstr "ਡਿਸਕਾਂ"
 
-#: disks/disks.cpp:256
+#: disks/disks.cpp:264
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
 msgstr "ਸਾਰੀਆਂ ਡਿਸਕਾਂ"
 
-#: disks/disks.cpp:291
+#: disks/disks.cpp:317
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
 msgstr "ਖਾਲੀ"
 
-#: disks/disks.cpp:295
+#: disks/disks.cpp:321
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
