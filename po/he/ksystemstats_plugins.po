@@ -1,790 +1,791 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the ksystemstats package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-21 00:39+0000\n"
-"PO-Revision-Date: 2024-04-22 15:58\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-04-22 07:43+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/ksystemstats/ksystemstats_plugins.pot\n"
-"X-Crowdin-File-ID: 42983\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Name"
-msgstr "名称"
+msgstr "שם"
 
 #: cpu/cpu.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr "总使用率"
+msgstr "ניצולת כוללת"
 
 #: cpu/cpu.cpp:39
 #, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
-msgstr "使用率"
+msgstr "ניצולת"
 
 #: cpu/cpu.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr "系统使用率"
+msgstr "ניצולת מערכת"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
-msgstr "系统"
+msgstr "מערכת"
 
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr "用户使用率"
+msgstr "ניצולת משתמש"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
-msgstr "用户"
+msgstr "משתמש"
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr "等待使用率"
+msgstr "ניצולת המתנה"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr "等待使用率"
+msgstr "המתנה"
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr "当前频率"
+msgstr "תדירות נוכחית"
 
 #: cpu/cpu.cpp:86
 #, kde-format
 msgctxt "@title, Short for 'Current Frequency'"
 msgid "Frequency"
-msgstr "频率"
+msgstr "תדירות"
 
 #: cpu/cpu.cpp:87
 #, kde-format
 msgctxt "@info"
 msgid "Current frequency of the CPU"
-msgstr "CPU 当前频率"
+msgstr "תדירות המעבד הנוכחית"
 
 #: cpu/cpu.cpp:92
 #, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr "当前温度"
+msgstr "טמפטורה נוכחית"
 
 #: cpu/cpu.cpp:93
 #, kde-format
 msgctxt "@title, Short for Current Temperatur"
 msgid "Temperature"
-msgstr "温度"
+msgstr "טמפרטורה"
 
 #: cpu/cpu.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "All"
-msgstr "全部"
+msgstr "הכול"
 
 #: cpu/cpu.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr "最高 CPU 频率"
+msgstr "תדירות המעבד המרבית"
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "最高频率"
+msgstr "תדירות מרבית"
 
 #: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr "所有 CPU 中的最高频率"
+msgstr "תדירות מרבית נוכחית בין כל המעבדים"
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr "最低 CPU 频率"
+msgstr "תדירות מעבד מזערית"
 
 #: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr "最低频率"
+msgstr "תדירות מזערית"
 
 #: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr "所有 CPU 中的最低频率"
+msgstr "הטמפרטורה המזערית הנוכחית על פני כל המעבדים"
 
 #: cpu/cpu.cpp:133
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr "平均 CPU 频率"
+msgstr "תדירות מעבד ממוצעת"
 
 #: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "平均频率"
+msgstr "תדירות ממוצעת"
 
 #: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr "所有 CPU 的平均频率"
+msgstr "הטמפרטורה הממוצעת הנוכחית על פני כל המעבדים"
 
 #: cpu/cpu.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "最高 CPU 温度"
+msgstr "טמפרטורת המעבד המרבית"
 
 #: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "最高温度"
+msgstr "טמפרטורה מרבית"
 
 #: cpu/cpu.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "最低 CPU 温度"
+msgstr "טמפרטורת מעבד מזערית"
 
 #: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "最低温度"
+msgstr "טמפרטורה מזערית"
 
 #: cpu/cpu.cpp:154
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "平均 CPU 温度"
+msgstr "טמפרטורת מעבד ממוצעת"
 
 #: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "平均温度"
+msgstr "טמפרטורה ממוצעת"
 
 #: cpu/cpu.cpp:171
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
-msgstr "CPU 数量"
+msgstr "מספר המעבדים"
 
 #: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr "CPU 数量"
+msgstr "מעבדים"
 
 #: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
-msgstr "系统中安装的物理 CPU 数量"
+msgstr "מספר המעבדים הפיזיים המותקנים במערכת"
 
 #: cpu/cpu.cpp:175
 #, kde-format
 msgctxt "@title"
 msgid "Number of Cores"
-msgstr "核心数量"
+msgstr "מספר הלבבות"
 
 #: cpu/cpu.cpp:176
 #, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
-msgstr "核心"
+msgstr "לבבות"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr "所有物理 CPU 的核心数量总和"
+msgstr "מספר לבבות המעבדים על פני כל המעבדים הפיזיים"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr "CPU"
+msgstr "מעבדים"
 
 #: cpu/freebsdcpuplugin.cpp:151
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"
-msgstr "CPU %1"
+msgstr "מעבד %1"
 
 #: cpu/linuxcpuplugin.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr "核心 %1"
+msgstr "לב %1"
 
 #: cpu/linuxcpuplugin.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
-msgstr "CPU %1 核心 %2"
+msgstr "מעבד %1 לב %2"
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr "平均负载"
+msgstr "ממוצעי עומס"
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr "平均负载 (1 分钟)"
+msgstr "ממוצע עומס (דקה)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr "平均负载 (5 分钟)"
+msgstr "ממוצע עומס (5 דקות)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr "平均负载 (15 分钟)"
+msgstr "ממוצע עומס (15 דקות)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr "平均负载 (1 分钟)"
+msgstr "ממוצע עומס (דק׳)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr "平均负载 (5 分钟)"
+msgstr "ממוצע עומס (5 דק׳)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr "平均负载 (15 分钟)"
+msgstr "ממוצע עומס (15 דק׳)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr "运行队列中平均超过 1 分钟的任务数"
+msgstr "ממוצע מספר המשימות בתור הריצה על פני דקה"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr "运行队列中平均超过 5 分钟的任务数"
+msgstr "ממוצע מספר המשימות בתור הריצה על פני 5 דקות"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr "运行队列中平均超过 15 分钟的任务数"
+msgstr "ממוצע מספר המשימות בתור הריצה על פני 15 דקות"
 
 #: disks/disks.cpp:81 disks/disks.cpp:279
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr "总空间"
+msgstr "סך כל הנפח"
 
 #: disks/disks.cpp:83 disks/disks.cpp:280
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr "总计"
+msgstr "סך הכול"
 
 #: disks/disks.cpp:87 disks/disks.cpp:302
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr "读取速率"
+msgstr "קצב קריאה"
 
 #: disks/disks.cpp:89 disks/disks.cpp:303
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
-msgstr "读取"
+msgstr "קריאה"
 
 #: disks/disks.cpp:93 disks/disks.cpp:309
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr "写入速率"
+msgstr "קצב כתיבה"
 
 #: disks/disks.cpp:95 disks/disks.cpp:310
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
-msgstr "写入"
+msgstr "כתיבה"
 
 #: disks/disks.cpp:100 disks/disks.cpp:294
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr "已用空间"
+msgstr "מקום מנוצל"
 
 #: disks/disks.cpp:102 disks/disks.cpp:295
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: disks/disks.cpp:107 disks/disks.cpp:286
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr "剩余空间"
+msgstr "מקום פנוי: "
 
 #: disks/disks.cpp:109 disks/disks.cpp:287
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr "空闲"
+msgstr "פנויים"
 
 #: disks/disks.cpp:114 disks/disks.cpp:320
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr "已用百分比"
+msgstr "אחוז בשימוש"
 
 #: disks/disks.cpp:118 disks/disks.cpp:316
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr "剩余百分比"
+msgstr "אחוז פנוי"
 
 #: disks/disks.cpp:165
 #, kde-format
 msgid "Disks"
-msgstr "磁盘"
+msgstr "כוננים"
 
 #: disks/disks.cpp:264
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr "所有磁盘"
+msgstr "כל הכוננים"
 
 #: disks/disks.cpp:317
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
-msgstr "空闲"
+msgstr "פנויים"
 
 #: disks/disks.cpp:321
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr "所有 GPU"
+msgstr "כל המעבדים הגרפיים"
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr "所有 GPU 使用率"
+msgstr "ניצולת כל המעבדים הגרפיים"
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
-msgstr "使用率"
+msgstr "ניצולת"
 
 #: gpu/AllGpus.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "所有 GPU 总内存"
+msgstr "סך הזיכרון של כל המעבדים הגרפיים"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr "总计"
+msgstr "סך הכול"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr "所有 GPU 已用内存"
+msgstr "הזיכרון המנוצל של כל המעבדים הגרפיים"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
-msgstr "使用率"
+msgstr "ניצולת"
 
 #: gpu/GpuDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr "总显存"
+msgstr "זיכרון וידאו כולל"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr "总计"
+msgstr "סך הכול"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr "已用显存"
+msgstr "זיכרון וידאו בשימוש"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr "频率"
+msgstr "תדירות"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr "内存频率"
+msgstr "תדירות זיכרון"
 
 #: gpu/GpuDevice.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr "温度"
+msgstr "טמפרטורה"
 
 #: gpu/GpuDevice.cpp:53 power/power.cpp:106
 #, kde-format
 msgctxt "@title"
 msgid "Power"
-msgstr "电源"
+msgstr "צריכת חשמל"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr "GPU"
+msgstr "מעבד גרפי"
 
 #: gpu/LinuxBackend.cpp:54
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
-msgstr "GPU %1"
+msgstr "מעבד גרפי %1"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
 msgid "Hardware Sensors"
-msgstr "硬件传感器"
+msgstr "חיישני חומרה"
 
 #: memory/backend.cpp:17
 #, kde-format
 msgctxt "@title"
 msgid "Physical Memory"
-msgstr "物理内存"
+msgstr "זיכרון פיזי"
 
 #: memory/backend.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr "交换内存"
+msgstr "זיכרון החלפה"
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr "总物理内存"
+msgstr "זיכרון פיזי כולל"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr "总计"
+msgstr "סך הכול"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr "已用物理内存"
+msgstr "זיכרון פיזי בשימוש"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr "已用物理内存百分比"
+msgstr "אחוז זיכרון פיזי בשימוש"
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr "空闲物理内存"
+msgstr "זיכרון פיזי פנוי"
 
 #: memory/backend.cpp:54
 #, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
-msgstr "空闲"
+msgstr "פנוי"
 
 #: memory/backend.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr "空闲物理内存百分比"
+msgstr "אחוז זיכרון פיזי פנוי"
 
 #: memory/backend.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr "应用程序内存"
+msgstr "זיכרון יישום"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr "应用程序"
+msgstr "יישום"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr "应用程序内存百分比"
+msgstr "אחוז זיכרון יישום"
 
 #: memory/backend.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr "缓存内存"
+msgstr "זיכרון מטמון"
 
 #: memory/backend.cpp:72
 #, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
-msgstr "缓存"
+msgstr "מטמון"
 
 #: memory/backend.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory Percentage"
-msgstr "缓存内存百分比"
+msgstr "אחוז זיכרון מטמון"
 
 #: memory/backend.cpp:80
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory"
-msgstr "缓冲区内存"
+msgstr "זיכרון חוצץ"
 
 #: memory/backend.cpp:81
 #, kde-format
 msgctxt "@title, Short for 'Buffer Memory'"
 msgid "Buffer"
-msgstr "缓冲区"
+msgstr "חוצץ"
 
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr "磁盘缓存数据块使用的内存总量"
+msgstr "כמות הזיכרון בשימוש למטמון של מקטעי כונן"
 
 #: memory/backend.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory Percentage"
-msgstr "缓冲区内存百分比"
+msgstr "אחוז זיכרון חוצץ"
 
 #: memory/backend.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr "总交换内存"
+msgstr "זיכרון החלפה כולל"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr "总计"
+msgstr "סך הכול"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr "已用交换内存"
+msgstr "זיכרון החלפה בשימוש"
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr "已用"
+msgstr "בשימוש"
 
 #: memory/backend.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr "已用交换内存百分比"
+msgstr "אחוז זיכרון החלפה בשימוש"
 
 #: memory/backend.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr "空闲交换内存"
+msgstr "זיכרון החלפה פנוי"
 
 #: memory/backend.cpp:105
 #, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
-msgstr "空闲"
+msgstr "פנוי"
 
 #: memory/backend.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr "空闲交换内存百分比"
+msgstr "אחוז זיכרון החלפה פנוי"
 
 #: memory/memory.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Memory"
-msgstr "内存"
+msgstr "זיכרון"
 
 #: network/AllDevicesObject.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All Network Devices"
-msgstr "所有网络设备"
+msgstr "כל התקני הרשת"
 
 #: network/AllDevicesObject.cpp:18 network/AllDevicesObject.cpp:28
 #: network/NetworkDevice.cpp:66 network/NetworkDevice.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "下载速率"
+msgstr "קצב הורדה"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr "下载"
+msgstr "הורדה"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "上传速率"
+msgstr "קצב העלאה"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
 #, kde-format
 msgctxt "@title Short for Upload Rate"
 msgid "Upload"
-msgstr "上传"
+msgstr "העלאה"
 
 #: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "总下载量"
+msgstr "סך כל מה שהורד"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr "已下载"
+msgstr "הורד"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "总上传量"
+msgstr "סך כל מה שהועלה"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr "已上传"
+msgstr "הועלה"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Network Name"
-msgstr "网络名称"
+msgstr "שם רשת"
 
 #: network/NetworkDevice.cpp:16
 #, kde-format
 msgctxt "@title Short of Network Name"
 msgid "Name"
-msgstr "名称"
+msgstr "שם"
 
 #: network/NetworkDevice.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Signal Strength"
-msgstr "信号强度"
+msgstr "עוצמת אות"
 
 #: network/NetworkDevice.cpp:20
 #, kde-format
 msgctxt "@title Short of Signal Strength"
 msgid "Signal"
-msgstr "信号"
+msgstr "אות"
 
 #: network/NetworkDevice.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Address"
-msgstr "IPv4 地址"
+msgstr "כתובת IPv4"
 
 #: network/NetworkDevice.cpp:27
 #, kde-format
@@ -796,31 +797,31 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr "IPv4 网关"
+msgstr "שער גישה IPv4"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr "IPv4 网关"
+msgstr "שער גישה IPv4"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr "IPv4 子网掩码"
+msgstr "מסכת רשת IPv4"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr "IPv4 子网掩码"
+msgstr "מסכת רשת IPv4"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr "IPv4 前缀长度"
+msgstr "IPv4 עם אורך קידומת"
 
 #: network/NetworkDevice.cpp:39
 #, kde-format
@@ -832,19 +833,19 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr "IPv4 DNS"
+msgstr "DNS ב־IPv4"
 
 #: network/NetworkDevice.cpp:43
 #, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr "IPv4 DNS"
+msgstr "DNS ב־IPv4"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Address"
-msgstr "IPv6 地址"
+msgstr "כתובת IPv6"
 
 #: network/NetworkDevice.cpp:47
 #, kde-format
@@ -856,31 +857,31 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr "IPv6 网关"
+msgstr "שער גישה IPv6"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr "IPv6 网关"
+msgstr "שער גישה IPv6"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr "IPv4 子网掩码"
+msgstr "מסכת רשת IPv6"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr "IPv4 子网掩码"
+msgstr "מסכת רשת IPv6"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr "IPv6前缀长度"
+msgstr "IPv6 עם אורך קידומת"
 
 #: network/NetworkDevice.cpp:59
 #, kde-format
@@ -892,217 +893,217 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr "IPv6 DNS"
+msgstr "DNS ב־IPv6"
 
 #: network/NetworkDevice.cpp:63
 #, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr "IPv6 DNS"
+msgstr "DNS ב־IPv6"
 
 #: network/NetworkPlugin.cpp:43
 #, kde-format
 msgctxt "@title"
 msgid "Network Devices"
-msgstr "网络设备"
+msgstr "התקני רשת"
 
 #: osinfo/osinfo.cpp:106
 #, kde-format
 msgctxt "@title"
 msgid "Operating System"
-msgstr "操作系统"
+msgstr "מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
-msgstr "内核"
+msgstr "ליבה"
 
 #: osinfo/osinfo.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name"
-msgstr "内核名称"
+msgstr "שם ליבה"
 
 #: osinfo/osinfo.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Version"
-msgstr "内核版本"
+msgstr "גרסת ליבה"
 
 #: osinfo/osinfo.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name and Version"
-msgstr "内核名称和版本"
+msgstr "שם וגרסת ליבה"
 
 #: osinfo/osinfo.cpp:112
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
-msgstr "内核"
+msgstr "ליבה"
 
 #: osinfo/osinfo.cpp:114
 #, kde-format
 msgctxt "@title"
 msgid "System"
-msgstr "系统"
+msgstr "מערכת"
 
 #: osinfo/osinfo.cpp:115
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr "主机名"
+msgstr "שם מארח"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name"
-msgstr "操作系统名称"
+msgstr "שם מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:117
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Version"
-msgstr "操作系统版本"
+msgstr "גרסת מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:118
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name and Version"
-msgstr "操作系统名称和版本"
+msgstr "שם וגרסת מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:119
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
-msgstr "操作系统"
+msgstr "מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Logo"
-msgstr "操作系统标志"
+msgstr "לוגו מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:121
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
-msgstr "操作系统 URL"
+msgstr "כתובת מערכת הפעלה"
 
 #: osinfo/osinfo.cpp:122
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr "开机时间"
+msgstr "זמן פעילות"
 
 #: osinfo/osinfo.cpp:125
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma"
-msgstr "KDE Plasma"
+msgstr "פלזמה מבית KDE‏ "
 
 #: osinfo/osinfo.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
-msgstr "Qt 版本"
+msgstr "גרסת Qt"
 
 #: osinfo/osinfo.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr "KDE 程序框架版本"
+msgstr "גרסת תשתיות KDE"
 
 #: osinfo/osinfo.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
-msgstr "KDE Plasma 版本"
+msgstr "גרסת KDE פלזמה"
 
 #: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr "窗口系统"
+msgstr "מערכת חלונות"
 
 #: osinfo/osinfo.cpp:163
 #, kde-format
 msgctxt "@info"
 msgid "Unknown"
-msgstr "未知"
+msgstr "לא ידוע"
 
 #: power/power.cpp:44 power/power.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr "设计容量"
+msgstr "קיבולת בתכנון"
 
 #: power/power.cpp:47
 #, kde-format
 msgid "Amount of energy that the Battery was designed to hold"
-msgstr "电池的设计容量"
+msgstr "כמות העוצמה שהסוללה תוכננה לאגור"
 
 #: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr "当前容量"
+msgstr "קיבולת נוכחית"
 
 #: power/power.cpp:56
 #, kde-format
 msgid "Amount of energy that the battery can currently hold"
-msgstr "电池当前的实际容量"
+msgstr "כמות העוצמה שהסוללה יכולה לאגור כעת"
 
 #: power/power.cpp:62 power/power.cpp:63
 #, kde-format
 msgctxt "@title"
 msgid "Health"
-msgstr "健康程度"
+msgstr "בריאות"
 
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
-msgstr "电池的当前容量相对其设计容量的百分比"
+msgstr "אחוז מהקיבולת המתוכננת שהסוללה יכולה לאגור"
 
 #: power/power.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Charge"
-msgstr "电量"
+msgstr "טעינה"
 
 #: power/power.cpp:74
 #, kde-format
 msgid "Amount of energy that the battery is currently holding"
-msgstr "电池当前所含电量"
+msgstr "כמות העוצמה שהסוללה אוגרת כרגע"
 
 #: power/power.cpp:80 power/power.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr "电量百分比"
+msgstr "אחוז טעינה"
 
 #: power/power.cpp:83
 #, kde-format
 msgid ""
 "Percentage of the current capacity that the battery is currently holding"
-msgstr "电池的所含电量相对其当前容量的百分比"
+msgstr "אחוז הקיבולת הנוכחי שהסוללה אוגרת כרגע"
 
 #: power/power.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr "充放电速率"
+msgstr "קצב טעינה"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr "充放电速率"
+msgstr "קצב טעינה"
 
 #: power/power.cpp:93
 #, kde-format
 msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
-msgstr "电池正在充电 (正值) 或者放电 (负值) 的电量"
+msgstr "עוצמת הטעינה (חיובית) או הפריקה (שלילית) של הסוללה"
