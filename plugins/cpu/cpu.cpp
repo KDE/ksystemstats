@@ -36,28 +36,28 @@ void BaseCpuObject::initialize()
 
     m_usage->setPrefix(name());
     m_usage->setName(i18nc("@title", "Total Usage"));
-    m_usage->setShortName(i18nc("@title, Short for 'Total Usage'", "Usage"));
+    m_usage->setShortName(id() == u"all" ? i18nc("@title, Short for 'Total Usage'", "Usage") : name().toUtf8().constData());
     m_usage->setUnit(KSysGuard::UnitPercent);
     m_usage->setVariantType(QVariant::Double);
     m_usage->setMax(100);
 
     m_system->setPrefix(name());
     m_system->setName(i18nc("@title", "System Usage"));
-    m_system->setShortName(i18nc("@title, Short for 'System Usage'", "System"));
+    m_system->setShortName(id() == u"all" ? i18nc("@title, Short for 'System Usage'", "System") : i18nc("@title, Short for '%1 System Usage'", "%1 System", name()));
     m_system->setUnit(KSysGuard::UnitPercent);
     m_system->setVariantType(QVariant::Double);
     m_system->setMax(100);
 
     m_user->setPrefix(name());
     m_user->setName(i18nc("@title", "User Usage"));
-    m_user->setShortName(i18nc("@title, Short for 'User Usage'", "User"));
+    m_user->setShortName(id() == u"all" ? i18nc("@title, Short for 'User Usage'", "User") : i18nc("@title, Short for '%1 User Usage'", "%1 User", name()));
     m_user->setUnit(KSysGuard::UnitPercent);
     m_user->setVariantType(QVariant::Double);
     m_user->setMax(100);
 
     m_wait->setPrefix(name());
     m_wait->setName(i18nc("@title", "Wait Usage"));
-    m_wait->setShortName(i18nc("@title, Short for 'Wait Load'", "Wait"));
+    m_wait->setShortName(id() == u"all" ? i18nc("@title, Short for 'Wait Load'", "Wait") : i18nc("@title, Short for '%1 Wait Load'", "%1 Wait", name()));
     m_wait->setUnit(KSysGuard::UnitPercent);
     m_wait->setVariantType(QVariant::Double);
     m_wait->setMax(100);
@@ -83,14 +83,14 @@ void CpuObject::initialize()
 
     m_frequency->setPrefix(name());
     m_frequency->setName(i18nc("@title", "Current Frequency"));
-    m_frequency->setShortName(i18nc("@title, Short for 'Current Frequency'", "Frequency"));
+    m_frequency->setShortName(i18nc("@title, Short for 'Current Frequency'", name().toUtf8().constData()));
     m_frequency->setDescription(i18nc("@info", "Current frequency of the CPU"));
     m_frequency->setVariantType(QVariant::Double);
     m_frequency->setUnit(KSysGuard::Unit::UnitMegaHertz);
 
     m_temperature->setPrefix(name());
     m_temperature->setName(i18nc("@title", "Current Temperature"));
-    m_temperature->setShortName(i18nc("@title, Short for Current Temperatur", "Temperature"));
+    m_temperature->setShortName(i18nc("@title, Short for Current Temperatur", name().toUtf8().constData()));
     m_temperature->setVariantType(QVariant::Double);
     m_temperature->setUnit(KSysGuard::Unit::UnitCelsius);
 }
