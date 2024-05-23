@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2022-09-07 15:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -51,6 +51,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "Система"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "Система"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -61,6 +69,14 @@ msgstr "Використання користувачем"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "Користувач"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "Користувач"
 
 #: cpu/cpu.cpp:59
@@ -75,17 +91,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "Очікування"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "Очікування"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "Поточна частота"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "Частота"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -98,12 +116,6 @@ msgstr "Поточна частота процесора"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "Поточна температура"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "Температура"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1111,6 +1123,14 @@ msgid ""
 msgstr ""
 "Швидкість, із якою заряджається (додатна) або розряджається (від'ємна) "
 "акумулятор"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "Частота"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "Температура"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

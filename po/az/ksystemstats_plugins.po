@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2022-06-16 23:58+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -48,6 +48,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "Sistem"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "Sistem"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -58,6 +66,14 @@ msgstr "İstifadəçi İstifadəsi"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "İstifadəçi"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "İstifadəçi"
 
 #: cpu/cpu.cpp:59
@@ -72,17 +88,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "Gözləmək"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "Gözləmək"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "Hazırkı tezlik"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "Tezlik"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -95,12 +113,6 @@ msgstr "CPU-nun hazırkı tezliyi"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "Cari Temperatur"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "Temperatur"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1139,6 +1151,14 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "Batareyanın doldurulduğu (müsbət) və ya boşaldığı (mənfi) güc"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "Tezlik"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "Temperatur"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

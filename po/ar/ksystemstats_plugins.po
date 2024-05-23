@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2022-09-10 10:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -49,6 +49,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "النظام"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "النظام"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -59,6 +67,14 @@ msgstr "استخدام المستخدم"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "المستخدم"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "المستخدم"
 
 #: cpu/cpu.cpp:59
@@ -73,17 +89,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "الانتظار"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "الانتظار"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "التردد الحالي"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "التردّد"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -96,12 +114,6 @@ msgstr "التردد الحالي للمعالج"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "الحرارة الحالية"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "درجة الحرارة"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1107,3 +1119,11 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "الطاقة التي تشحن بها البطارية (موجب) أو تفرغ (سالب)"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "التردّد"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "درجة الحرارة"

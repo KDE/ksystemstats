@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,6 +48,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "系统"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "系统"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -58,6 +66,14 @@ msgstr "用户使用率"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "用户"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "用户"
 
 #: cpu/cpu.cpp:59
@@ -72,17 +88,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "等待使用率"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "等待使用率"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "当前频率"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "频率"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -95,12 +113,6 @@ msgstr "CPU 当前频率"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "当前温度"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "温度"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1106,3 +1118,11 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "电池正在充电 (正值) 或者放电 (负值) 的电量"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "频率"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "温度"

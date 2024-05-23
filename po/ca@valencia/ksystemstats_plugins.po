@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-07-31 13:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -52,6 +52,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "Sistema"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "Sistema"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -62,6 +70,14 @@ msgstr "Ús de l'usuari"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "Usuari"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "Usuari"
 
 #: cpu/cpu.cpp:59
@@ -76,17 +92,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "Espera"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "Espera"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "Freqüència actual"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "Freqüència"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -99,12 +117,6 @@ msgstr "Freqüència actual de la CPU"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "Temperatura actual"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "Temperatura"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1120,3 +1132,11 @@ msgid ""
 msgstr ""
 "Energia amb la qual la bateria està sent carregada (positiva) o descarregada "
 "(negativa)"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "Freqüència"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "Temperatura"

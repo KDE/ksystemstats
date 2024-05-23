@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2022-09-07 11:59+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -48,6 +48,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "Systeem"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "Systeem"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -58,6 +66,14 @@ msgstr "Gebruik van gebruiker"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "Gebruiker"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "Gebruiker"
 
 #: cpu/cpu.cpp:59
@@ -72,17 +88,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "Wachten"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "Wachten"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "Huidige frequentie"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "Frequentie"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -95,12 +113,6 @@ msgstr "Huidige frequentie van de CPU"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "Huidige temperatuur"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "Temperatuur"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1109,6 +1121,14 @@ msgid ""
 msgstr ""
 "Hoeveelheid energie waarmee de batterij wordt opgeladen (positief) of "
 "ontladen (negatief)"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "Frequentie"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "Temperatuur"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-03-01 01:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -48,6 +48,14 @@ msgctxt "@title, Short for 'System Usage'"
 msgid "System"
 msgstr "시스템"
 
+#: cpu/cpu.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'System Usage'"
+#| msgid "System"
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "시스템"
+
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
@@ -58,6 +66,14 @@ msgstr "사용자 사용량"
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
+msgstr "사용자"
+
+#: cpu/cpu.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'User Usage'"
+#| msgid "User"
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
 msgstr "사용자"
 
 #: cpu/cpu.cpp:59
@@ -72,17 +88,19 @@ msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
 msgstr "대기"
 
+#: cpu/cpu.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Wait Load'"
+#| msgid "Wait"
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "대기"
+
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
 msgstr "현재 주파수"
-
-#: cpu/cpu.cpp:86
-#, kde-format
-msgctxt "@title, Short for 'Current Frequency'"
-msgid "Frequency"
-msgstr "주파수"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -95,12 +113,6 @@ msgstr "현재 CPU 주파수"
 msgctxt "@title"
 msgid "Current Temperature"
 msgstr "현재 온도"
-
-#: cpu/cpu.cpp:93
-#, kde-format
-msgctxt "@title, Short for Current Temperatur"
-msgid "Temperature"
-msgstr "온도"
 
 #: cpu/cpu.cpp:100
 #, kde-format
@@ -1106,6 +1118,14 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "배터리가 충전 중인 전력(양수) 또는 방전 중인 전력(음수)"
+
+#~ msgctxt "@title, Short for 'Current Frequency'"
+#~ msgid "Frequency"
+#~ msgstr "주파수"
+
+#~ msgctxt "@title, Short for Current Temperatur"
+#~ msgid "Temperature"
+#~ msgstr "온도"
 
 #~ msgctxt "@title %1 is a number"
 #~ msgid "Voltage %1"
