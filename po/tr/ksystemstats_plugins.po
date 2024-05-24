@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-07-13 13:09+0300\n"
+"PO-Revision-Date: 2024-05-23 14:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -49,12 +49,10 @@ msgid "System"
 msgstr "Sistem"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "Sistem"
+msgstr "%1 Sistemi"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -69,12 +67,10 @@ msgid "User"
 msgstr "Kullanıcı"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "Kullanıcı"
+msgstr "%1 Kullanıcısı"
 
 #: cpu/cpu.cpp:59
 #, kde-format
@@ -89,12 +85,10 @@ msgid "Wait"
 msgstr "Bekleme"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "Bekleme"
+msgstr "%1 Bekleme"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -136,7 +130,7 @@ msgstr "En Büyük Frekans"
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr "Tüm CPU'lar arasındaki geçerli en büyük frekans"
+msgstr "Tüm CPU’lar arasındaki geçerli en büyük frekans"
 
 #: cpu/cpu.cpp:126
 #, kde-format
@@ -154,7 +148,7 @@ msgstr "En Küçük Frekans"
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr "Tüm CPU'lar arasındaki geçerli en küçük frekans"
+msgstr "Tüm CPU’lar arasındaki geçerli en küçük frekans"
 
 #: cpu/cpu.cpp:133
 #, kde-format
@@ -172,7 +166,7 @@ msgstr "Ortalama Frekans"
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr "Tüm CPU'lar arasındaki geçerli ortalama frekans"
+msgstr "Tüm CPU’lar arasındaki geçerli ortalama frekans"
 
 #: cpu/cpu.cpp:140
 #, kde-format
@@ -220,7 +214,7 @@ msgstr "CPU Sayısı"
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr "CPU'lar"
+msgstr "CPU’lar"
 
 #: cpu/cpu.cpp:173
 #, kde-format
@@ -244,12 +238,12 @@ msgstr "Çekirdekler"
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr "Fiziksel CPU'lardaki toplam çekirdek sayısı"
+msgstr "Fiziksel CPU’lardaki toplam çekirdek sayısı"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr "CPU'lar"
+msgstr "CPU’lar"
 
 #: cpu/freebsdcpuplugin.cpp:151
 #, kde-format
@@ -428,13 +422,13 @@ msgstr "Kullanılan"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr "Tüm GPU'lar"
+msgstr "Tüm GPU’lar"
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr "Kullanılan Tüm GPU'lar"
+msgstr "Kullanılan Tüm GPU’lar"
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
@@ -446,7 +440,7 @@ msgstr "Kullanım"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "Tüm GPU'ların Toplam Belleği"
+msgstr "Tüm GPU’ların Toplam Belleği"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
@@ -458,7 +452,7 @@ msgstr "Toplam"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr "Tüm GPU'ların Kullanılan Belelği"
+msgstr "Tüm GPU’ların Kullanılan Belelği"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
@@ -1000,7 +994,7 @@ msgstr "İşletim Sistemi Logosu"
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
-msgstr "İşletim Sistemi URL'si"
+msgstr "İşletim Sistemi URL’si"
 
 #: osinfo/osinfo.cpp:122
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-05-07 05:50+0100\n"
+"PO-Revision-Date: 2024-05-23 05:51+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -50,12 +50,10 @@ msgid "System"
 msgstr "Sistemo"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "Sistemo"
+msgstr "%1 Sistemo"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -70,32 +68,28 @@ msgid "User"
 msgstr "Uzanto"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "Uzanto"
+msgstr "%1 Uzanto"
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr "Atendi Uzadon"
+msgstr "Atenda Uzado"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr "Atendi"
+msgstr "Atendo"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "Atendi"
+msgstr "%1 Atendo"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -280,37 +274,37 @@ msgstr "Ŝargi Mezumojn"
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr "Ŝarĝo mezumo (1 minuto)"
+msgstr "Ŝarĝa mezumo (1 minuto)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr "Ŝarĝo mezumo (5 minutoj)"
+msgstr "Ŝarĝa mezumo (5 minutoj)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr "Ŝarĝo mezumo (15 minutoj)"
+msgstr "Ŝarĝa mezumo (15 minutoj)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr "Ŝarĝo mezumo (1 m)"
+msgstr "Ŝarĝa mezumo (1 m)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr "Ŝarĝo mezumo (5 m)"
+msgstr "Ŝarĝa mezumo (5 m)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr "Ŝarĝo mezumo (15 m)"
+msgstr "Ŝarĝa mezumo (15 m)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
@@ -1120,11 +1114,3 @@ msgid ""
 "(negative)"
 msgstr ""
 "Potenco per kiu la baterio estas ŝargita (pozitiva) aŭ malŝarĝita (negativa)"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "Frekvenco"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "Temperaturo"
