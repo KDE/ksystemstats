@@ -49,12 +49,10 @@ msgid "System"
 msgstr "系统"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "系统"
+msgstr "%1 系统"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -69,12 +67,10 @@ msgid "User"
 msgstr "用户"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "用户"
+msgstr "%1 用户"
 
 #: cpu/cpu.cpp:59
 #, kde-format
@@ -89,12 +85,10 @@ msgid "Wait"
 msgstr "等待使用率"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "等待使用率"
+msgstr "%1 等待"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -1118,11 +1112,3 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr "电池正在充电 (正值) 或者放电 (负值) 的电量"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "频率"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "温度"
