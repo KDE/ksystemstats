@@ -1125,11 +1125,3 @@ msgid ""
 msgstr ""
 "Energia amb la qual la bateria està sent carregada (positiva) o descarregada "
 "(negativa)"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "Freqüència"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "Temperatura"
