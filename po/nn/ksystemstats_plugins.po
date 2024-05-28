@@ -1123,11 +1123,3 @@ msgid ""
 msgstr ""
 "Straumstyrken som batteriet vert lada (positivt tal) eller utlada (negativt "
 "tal) med"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "Frekvens"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "Temperatur"
