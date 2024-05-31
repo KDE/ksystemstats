@@ -1114,11 +1114,3 @@ msgid ""
 msgstr ""
 "Състояние на захранването на батерията:  зареждане (положителна стойност) "
 "или разреждане (отрицателна стойност)"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "Честота"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "Температура"
