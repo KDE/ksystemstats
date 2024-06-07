@@ -25,6 +25,7 @@ include(FeatureSummary)
 include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
+include(ECMQtDeclareLoggingCategory)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO)
