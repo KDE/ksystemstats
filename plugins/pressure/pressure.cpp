@@ -64,7 +64,6 @@ PressureData parseDataFromFile(const QString fileSelector) {
     static const QByteArray fullDataLabel = QByteArrayLiteral("full");
 
     if (!open) {
-        qWarning() << "Error opening /proc/pressure/" << fileSelector;
         // You can choose how to handle the error case, such as throwing an exception
         // or returning a default-initialized Data structure.
         return PressureData{};
