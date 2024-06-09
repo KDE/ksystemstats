@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:40+0000\n"
-"PO-Revision-Date: 2024-05-23 12:01+0200\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"PO-Revision-Date: 2024-06-08 11:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
 "X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -1069,7 +1069,8 @@ msgstr "Capacitat actual"
 msgid "Amount of energy that the battery can currently hold"
 msgstr "Quantitat d'energia que la bateria pot contindre actualment"
 
-# En el context de les bateries,"health" es tradueix per «estat» (no per «salut» que és propi d'éssers vius).
+# En el context de les bateries,"health" es tradueix per «estat» (no per
+# «salut» que és propi d'éssers vius).
 #: power/power.cpp:62 power/power.cpp:63
 #, kde-format
 msgctxt "@title"
@@ -1127,276 +1128,322 @@ msgstr ""
 "Energia amb la qual la bateria està sent carregada (positiva) o descarregada "
 "(negativa)"
 
-#: pressure/pressure.cpp:140
+#: pressure/pressure.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Pressió"
 
-#: pressure/pressure.cpp:142
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#: pressure/pressure.cpp:141
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Freqüència de la memòria"
+msgstr "Pressió de la memòria"
 
-#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
+#: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "Alguna (mitjana 10 segons)"
 
-#: pressure/pressure.cpp:144
+#: pressure/pressure.cpp:143
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos de memòria disponibles, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
+#: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "Alguna (mitjana 1 minut)"
 
-#: pressure/pressure.cpp:147
+#: pressure/pressure.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos de memòria disponibles, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:149 pressure/pressure.cpp:177
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
+#: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "Alguna (mitjana 5 minuts)"
 
-#: pressure/pressure.cpp:150
+#: pressure/pressure.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles de memòria, mitjana durant 5 minuts"
 
-#: pressure/pressure.cpp:152 pressure/pressure.cpp:180
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr ""
+msgstr "Total de temps d'espera aproximat"
 
-#: pressure/pressure.cpp:153
+#: pressure/pressure.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"Total de temps que almenys una tasca està estancada esperant els recursos "
+"disponibles de memòria, mesurat en microsegons"
 
-#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
+#: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "Completa (mitjana 10 segons)"
 
-#: pressure/pressure.cpp:157
+#: pressure/pressure.cpp:156
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles de CPU, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
+#: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "Completa (mitjana 1 minut)"
 
-#: pressure/pressure.cpp:160
+#: pressure/pressure.cpp:159
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles de CPU, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:162 pressure/pressure.cpp:191
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
+#: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "Completa (mitjana 5 minuts)"
 
-#: pressure/pressure.cpp:163
+#: pressure/pressure.cpp:162
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles de la CPU, mitjana de 5 minuts"
 
-#: pressure/pressure.cpp:165 pressure/pressure.cpp:194
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
+#: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "Temps total d'estancament complet"
 
-#: pressure/pressure.cpp:166
+#: pressure/pressure.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Total de temps que almenys una tasca està estancada esperant els recursos "
+"disponibles de CPU, mesurat en microsegons"
 
-#: pressure/pressure.cpp:169
+#: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "Pressió de la CPU"
 
-#: pressure/pressure.cpp:172
+#: pressure/pressure.cpp:171
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles d'E/S, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:175
+#: pressure/pressure.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles d'E/S, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:178
+#: pressure/pressure.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que almenys una tasca està estancada esperant els "
+"recursos disponibles d'E/S, mitjana durant 5 minuts"
 
-#: pressure/pressure.cpp:181
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Total de temps que almenys una tasca està estancada esperant els recursos "
+"disponibles d'E/S, mesurat en microsegons"
 
-#: pressure/pressure.cpp:186
+#: pressure/pressure.cpp:185
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de memòria, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:189
+#: pressure/pressure.cpp:188
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de memòria, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:192
+#: pressure/pressure.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de memòria, mitjana durant 5 minuts"
 
-#: pressure/pressure.cpp:195
+#: pressure/pressure.cpp:194
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"Quantitat de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de memòria, mesurat en microsegons"
 
-#: pressure/pressure.cpp:199
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "Pressió de l'E/S"
 
-#: pressure/pressure.cpp:202
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de CPU, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:205
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de CPU, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:208
+#: pressure/pressure.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de CPU, mitjana durant 5 minuts"
 
-#: pressure/pressure.cpp:211
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Quantitat de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles de CPU, mesurat en microsegons"
 
-#: pressure/pressure.cpp:216
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles d'E/S, mitjana durant 10 segons"
 
-#: pressure/pressure.cpp:219
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles d'E/S, mitjana durant 1 minut"
 
-#: pressure/pressure.cpp:222
+#: pressure/pressure.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Percentatge de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles d'E/S, mitjana durant 5 minuts"
 
-#: pressure/pressure.cpp:225
+#: pressure/pressure.cpp:224
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Quantitat de temps que totes les tasques estan estancades esperant els "
+"recursos disponibles d'E/S, mesurat en microsegons"

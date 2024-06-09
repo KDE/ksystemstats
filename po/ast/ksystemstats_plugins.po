@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-11-04 22:59+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -1117,26 +1117,26 @@ msgid ""
 "(negative)"
 msgstr ""
 
-#: pressure/pressure.cpp:140
+#: pressure/pressure.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
 msgstr ""
 
-#: pressure/pressure.cpp:142
+#: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr ""
 
-#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
+#: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
 msgstr ""
 
-#: pressure/pressure.cpp:144
+#: pressure/pressure.cpp:143
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1144,14 +1144,14 @@ msgid ""
 "memory resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
+#: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
 msgstr ""
 
-#: pressure/pressure.cpp:147
+#: pressure/pressure.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1159,14 +1159,14 @@ msgid ""
 "memory resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:149 pressure/pressure.cpp:177
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
+#: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
 msgstr ""
 
-#: pressure/pressure.cpp:150
+#: pressure/pressure.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1174,14 +1174,14 @@ msgid ""
 "memory resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:152 pressure/pressure.cpp:180
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
 msgstr ""
 
-#: pressure/pressure.cpp:153
+#: pressure/pressure.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1189,14 +1189,14 @@ msgid ""
 "memory resources, measured in microseconds"
 msgstr ""
 
-#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
+#: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
 msgstr ""
 
-#: pressure/pressure.cpp:157
+#: pressure/pressure.cpp:156
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1204,14 +1204,14 @@ msgid ""
 "CPU resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
+#: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
 msgstr ""
 
-#: pressure/pressure.cpp:160
+#: pressure/pressure.cpp:159
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1219,14 +1219,14 @@ msgid ""
 "CPU resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:162 pressure/pressure.cpp:191
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
+#: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
 msgstr ""
 
-#: pressure/pressure.cpp:163
+#: pressure/pressure.cpp:162
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1234,14 +1234,14 @@ msgid ""
 "CPU resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:165 pressure/pressure.cpp:194
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
+#: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
 msgstr ""
 
-#: pressure/pressure.cpp:166
+#: pressure/pressure.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1249,13 +1249,13 @@ msgid ""
 "resources, measured in microseconds"
 msgstr ""
 
-#: pressure/pressure.cpp:169
+#: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
 msgstr ""
 
-#: pressure/pressure.cpp:172
+#: pressure/pressure.cpp:171
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1263,7 +1263,7 @@ msgid ""
 "IO resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:175
+#: pressure/pressure.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1271,7 +1271,7 @@ msgid ""
 "IO resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:178
+#: pressure/pressure.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1279,7 +1279,7 @@ msgid ""
 "IO resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:181
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1287,7 +1287,7 @@ msgid ""
 "resources, measured in microseconds"
 msgstr ""
 
-#: pressure/pressure.cpp:186
+#: pressure/pressure.cpp:185
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1295,7 +1295,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:189
+#: pressure/pressure.cpp:188
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1303,7 +1303,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:192
+#: pressure/pressure.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1311,7 +1311,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:195
+#: pressure/pressure.cpp:194
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1319,13 +1319,13 @@ msgid ""
 "resources, measured in microseconds"
 msgstr ""
 
-#: pressure/pressure.cpp:199
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
 msgstr ""
 
-#: pressure/pressure.cpp:202
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1333,7 +1333,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:205
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1341,7 +1341,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:208
+#: pressure/pressure.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1349,7 +1349,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:211
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1357,7 +1357,7 @@ msgid ""
 "resources, measured in microseconds"
 msgstr ""
 
-#: pressure/pressure.cpp:216
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1365,7 +1365,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr ""
 
-#: pressure/pressure.cpp:219
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1373,7 +1373,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:222
+#: pressure/pressure.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1381,7 +1381,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr ""
 
-#: pressure/pressure.cpp:225
+#: pressure/pressure.cpp:224
 #, kde-format
 msgctxt "@info"
 msgid ""
