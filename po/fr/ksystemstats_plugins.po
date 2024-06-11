@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-24 09:09+0200\n"
+"PO-Revision-Date: 2024-06-09 09:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1122,22 +1122,20 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Charge"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Fréquence de la mémoire"
+msgstr "Charge mémoire"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "Quelques (10 secondes en moyenne)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1146,13 +1144,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources mémoire, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:145 pressure/pressure.cpp:173
 #: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "Quelques (1 minute en moyenne)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1161,13 +1161,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources de mémoire, en moyenne sur une minute"
 
 #: pressure/pressure.cpp:148 pressure/pressure.cpp:176
 #: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "Quelques (5 minutes en moyenne)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1176,15 +1178,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources mémoire, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Total Sent Data"
+#, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr "Total des données envoyées"
+msgstr "Total de quelques durées de suspension"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1193,13 +1195,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"Durée de temps pendant laquelle au moins une tâche est suspendue en attente "
+"de disponibilité de ressources de mémoire, mesurée en microsecondes"
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "Tout (10 secondes en moyenne)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1208,13 +1212,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources processeur, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:158 pressure/pressure.cpp:187
 #: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "Tout (1 minute en moyenne)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1223,13 +1229,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources processeur, en moyenne sur une minute"
 
 #: pressure/pressure.cpp:161 pressure/pressure.cpp:190
 #: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "Tout (5 minutes en moyenne)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1238,13 +1246,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources processeur, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:164 pressure/pressure.cpp:193
 #: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "Total de toutes les durées de suspension"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1253,12 +1263,14 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Durée de temps pendant laquelle au moins une tâche est suspendue en attente "
+"de disponibilité de ressources processeur, mesurée en microsecondes"
 
 #: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "Charge CPU"
 
 #: pressure/pressure.cpp:171
 #, kde-format
@@ -1267,6 +1279,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources d'E / S, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:174
 #, kde-format
@@ -1275,6 +1289,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources d'E / S, en moyenne sur une minute"
 
 #: pressure/pressure.cpp:177
 #, kde-format
@@ -1283,6 +1299,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel au moins une tâche est suspendue en "
+"attente de disponibilité de ressources d'E / S, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1291,6 +1309,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Durée de temps pendant laquelle au moins une tâche est suspendue en attente "
+"de disponibilité de ressources d'E / S, mesurée en microsecondes"
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1299,6 +1319,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources mémoire, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:188
 #, kde-format
@@ -1307,6 +1329,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources de mémoire, en moyenne sur 1 minute"
 
 #: pressure/pressure.cpp:191
 #, kde-format
@@ -1315,6 +1339,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources mémoire, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:194
 #, kde-format
@@ -1323,12 +1349,14 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"Durée de temps pendant laquelle au moins une tâche est suspendue en attente "
+"de disponibilité de ressources de mémoire, mesurée en microsecondes"
 
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "Charge E / S"
 
 #: pressure/pressure.cpp:201
 #, kde-format
@@ -1337,6 +1365,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité du processeur, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:204
 #, kde-format
@@ -1345,6 +1375,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité du processeur, en moyenne sur une minute"
 
 #: pressure/pressure.cpp:207
 #, kde-format
@@ -1353,6 +1385,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité du processeur, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1361,6 +1395,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Durée pendant laquelle toutes les tâches sont suspendues en attendant la "
+"disponibilité du processeur, mesurée en microsecondes"
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1369,6 +1405,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources d'E / S, en moyenne sur 10 secondes"
 
 #: pressure/pressure.cpp:218
 #, kde-format
@@ -1377,6 +1415,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources d'E / S, en moyenne sur une minute"
 
 #: pressure/pressure.cpp:221
 #, kde-format
@@ -1385,6 +1425,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Pourcentage de temps pendant lequel toutes les tâches sont suspendues en "
+"attente de la disponibilité de ressources d'E / S, en moyenne sur 5 minutes"
 
 #: pressure/pressure.cpp:224
 #, kde-format
@@ -1393,6 +1435,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Durée pendant laquelle toutes les tâches sont suspendues en attendant la "
+"disponibilité de ressources d'E / S, mesurée en microsecondes"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"

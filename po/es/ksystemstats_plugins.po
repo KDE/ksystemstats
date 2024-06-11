@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-09 20:40+0200\n"
+"PO-Revision-Date: 2024-06-10 03:26+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1134,7 +1134,7 @@ msgstr "Presión de memoria"
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "Algunas (promedio de 10 segundos)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1151,7 +1151,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "Algunas (promedio de 1 minuto)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1168,7 +1168,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "Algunas (promedio de 5 minutos)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1185,7 +1185,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr ""
+msgstr "Tiempo total de detención de algunas"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1194,13 +1194,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que al menos una tarea se detiene a la espera "
+"de recursos de memoria disponibles, medida en microsegundos."
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "Completo (promedio de 10 segundos)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1217,7 +1219,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "Completo (promedio de 1 minuto)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1234,7 +1236,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "Completo (promedio de 5 minutos)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1251,7 +1253,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "Tiempo total de detención completo"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1260,6 +1262,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que al menos una tarea se detiene a la espera "
+"de recursos de CPU disponibles, medida en microsegundos."
 
 #: pressure/pressure.cpp:168
 #, kde-format
@@ -1304,6 +1308,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que al menos una tarea se detiene a la espera "
+"de recursos de E/S disponibles, medida en microsegundos."
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1342,6 +1348,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que todas las tareas se detienen a la espera "
+"de recursos de memoria disponibles, medida en microsegundos."
 
 #: pressure/pressure.cpp:198
 #, kde-format
@@ -1386,6 +1394,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que todas las tareas se detienen a la espera "
+"de recursos de CPU disponibles, medida en microsegundos."
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1424,6 +1434,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Cantidad de tiempo durante el que todas las tareas se detienen a la espera "
+"de recursos de E/S disponibles, medida en microsegundos."
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
