@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 11:29+0200\n"
+"PO-Revision-Date: 2024-06-11 09:24+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 # Tohle vypadá na název vlastnosti. Jméno bycvh nechal pro lidi a zvířata.
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
@@ -1119,15 +1119,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Tlak"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Frekvence paměti"
+msgstr ""
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
