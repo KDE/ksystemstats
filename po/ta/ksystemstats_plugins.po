@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-04-22 21:51+0530\n"
+"PO-Revision-Date: 2024-06-16 18:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -34,67 +34,67 @@ msgstr "மொத்த பயன்பாட்டு"
 #, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "பயன்பாட்டு"
 
 #: cpu/cpu.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr ""
+msgstr "இயங்குதள பயன்பாட்டு"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
-msgstr ""
+msgstr "இயங்குதளம்"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr ""
+msgstr "%1 இயங்குதளம்"
 
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr ""
+msgstr "பயனர் பயன்பாட்டு"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
-msgstr ""
+msgstr "பயனர்"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr ""
+msgstr "%1 பயனர்"
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr ""
+msgstr "காத்திருப்பு பயன்பாட்டு"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr ""
+msgstr "காத்திருப்பு"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr ""
+msgstr "%1 காத்திருப்பு"
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr ""
+msgstr "தற்போதைய அதிர்வெண்"
 
 #: cpu/cpu.cpp:87
 #, kde-format
@@ -106,13 +106,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr ""
+msgstr "தற்போதைய வெப்பநிலை"
 
 #: cpu/cpu.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "All"
-msgstr ""
+msgstr "அனைத்தும்"
 
 #: cpu/cpu.cpp:119
 #, kde-format
