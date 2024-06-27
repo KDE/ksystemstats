@@ -1,7 +1,7 @@
 # Translation for ksysguard_plugins_global.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2022, This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2022-10-01 19:01+0200\n"
+"PO-Revision-Date: 2024-06-26 20:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -52,12 +52,10 @@ msgid "System"
 msgstr "Sistema"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "Sistema"
+msgstr "%1 sistema"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -72,32 +70,28 @@ msgid "User"
 msgstr "Erabiltzailea"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "Erabiltzailea"
+msgstr "%1 erabiltzailea"
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr "Itxoiteko erabilera"
+msgstr "Itxaronaldiaren erabilera"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr "Itxoin"
+msgstr "Itxaronaldia"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "Itxoin"
+msgstr "%1 itxaronaldia"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -1127,22 +1121,20 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Presioa"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Memoriaren maiztasuna"
+msgstr "Memoriaren presioa"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "Partziala (10 segundu batez beste)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1151,13 +1143,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"Ataza bat gutxienez, memoria-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:145 pressure/pressure.cpp:173
 #: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "Partziala (5 minutu batez beste)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1166,13 +1160,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"Ataza bat gutxienez, memoria-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste minutu 1etik gora"
 
 #: pressure/pressure.cpp:148 pressure/pressure.cpp:176
 #: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "Partziala (5 minutu batez beste)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1181,15 +1177,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"Ataza bat gutxienez, memoria-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Total Sent Data"
+#, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr "Guztira bidalitako datuak"
+msgstr "Geldialdi partzialaren denbora guztira"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1198,13 +1194,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"Ataza bat gutxienez, memoria-baliabide erabilgarrien zain geldituta dagoen "
+"denbora, mikrosegundotan neurtua"
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "Betea (10 segundo batez beste)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1213,13 +1211,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"Ataza bat gutxienez, PUZ-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:158 pressure/pressure.cpp:187
 #: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "Betea (minutu 1 batez beste)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1228,13 +1228,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"Ataza bat gutxienez, PUZ-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste minutu 1etik gora"
 
 #: pressure/pressure.cpp:161 pressure/pressure.cpp:190
 #: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "Betea (5 minutu batez beste)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1243,13 +1245,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"Ataza bat gutxienez, PUZ-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:164 pressure/pressure.cpp:193
 #: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "Geldialdi betearen denbora guztira"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1258,12 +1262,14 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Ataza bat gutxienez, PUZ-baliabide erabilgarrien zain geldituta dagoen "
+"denbora, mikrosegundotan neurtua"
 
 #: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "PUZ presioa"
 
 #: pressure/pressure.cpp:171
 #, kde-format
@@ -1272,6 +1278,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"Ataza bat gutxienez, S/I-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:174
 #, kde-format
@@ -1280,6 +1288,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"Ataza bat gutxienez, S/I-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste minutu 1etik gora"
 
 #: pressure/pressure.cpp:177
 #, kde-format
@@ -1288,6 +1298,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"Ataza bat gutxienez, S/I-baliabide erabilgarrien zain geldituta dagoen "
+"denboraren ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1296,6 +1308,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Ataza bat gutxienez, S/I-baliabide erabilgarrien zain geldituta dagoen "
+"denbora, mikrosegundotan neurtua"
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1304,6 +1318,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Ataza guztiak, memoria-baliabide erabilgarrien zain geldituta dauden "
+"denboraren ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:188
 #, kde-format
@@ -1312,6 +1328,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Ataza guztiak, memoria-baliabide erabilgarrien zain geldituta dauden "
+"denboraren ehunekoa, batez beste segundo 1etik gora"
 
 #: pressure/pressure.cpp:191
 #, kde-format
@@ -1320,6 +1338,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Ataza guztiak, memoria-baliabide erabilgarrien zain geldituta dauden "
+"denboraren ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:194
 #, kde-format
@@ -1328,12 +1348,14 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"Ataza guztiak, memoria-baliabide erabilgarrien zain geldituta dauden "
+"denbora, mikrosegundotan neurtua"
 
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "S/I presioa"
 
 #: pressure/pressure.cpp:201
 #, kde-format
@@ -1342,6 +1364,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Ataza guztiak, PUZ-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:204
 #, kde-format
@@ -1350,6 +1374,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Ataza guztiak, PUZ-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste minutu 1etik gora"
 
 #: pressure/pressure.cpp:207
 #, kde-format
@@ -1358,6 +1384,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Ataza guztiak, PUZ-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1366,6 +1394,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Ataza guztiak, PUZ-baliabide erabilgarrien zain geldituta dauden denbora, "
+"mikrosegundotan neurtua"
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1374,6 +1404,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Ataza guztiak, S/I-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste 10 segundotik gora"
 
 #: pressure/pressure.cpp:218
 #, kde-format
@@ -1382,6 +1414,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Ataza guztiak, S/I-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste minutu 1etik gora"
 
 #: pressure/pressure.cpp:221
 #, kde-format
@@ -1390,6 +1424,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Ataza guztiak, S/I-baliabide erabilgarrien zain geldituta dauden denboraren "
+"ehunekoa, batez beste 5 minututik gora"
 
 #: pressure/pressure.cpp:224
 #, kde-format
@@ -1398,6 +1434,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Ataza guztiak, PUZ-baliabide erabilgarrien zain geldituta dauden denbora, "
+"mikrosegundotan neurtua"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
