@@ -8,13 +8,21 @@
 #include <QCommandLineParser>
 #include <QCoreApplication>
 
+#include <KAboutData>
+#include <KCrash>
+
 #include "daemon.h"
+#include "version.h"
 
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
     app.setQuitLockEnabled(false) ;
-    app.setOrganizationDomain(QStringLiteral("kde.org"));
+
+    KAboutData about(QStringLiteral("ksystemstats"), QString(), QStringLiteral(KSYSTEMSTATS_VERSION_STRING));
+    KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
 
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("replace"), QStringLiteral("Replace the running instance")));

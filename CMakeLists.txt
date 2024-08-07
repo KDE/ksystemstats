@@ -3,8 +3,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(ksystemstats)
 set(PROJECT_VERSION "6.1.80")
+project(ksystemstats VERSION ${PROJECT_VERSION})
 
 set(PROJECT_DEP_VERSION "6.0.90")
 set(QT_MIN_VERSION "6.7.0")
@@ -26,9 +26,10 @@ include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
 include(ECMQtDeclareLoggingCategory)
+include(ECMSetupVersion)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
-find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO)
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO Crash)
 find_package(KSysGuard ${PROJECT_DEP_VERSION} REQUIRED)
 
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
@@ -39,6 +40,10 @@ set_package_properties(KF6NetworkManagerQt PROPERTIES
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX KSYSTEMSTATS
+                  VERSION_HEADER ${CMAKE_BINARY_DIR}/version.h
+                  )
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.101

@@ -11,7 +11,7 @@ find_file(SYSTEMSTATS_DBUS_INTERFACE NAMES dbus-1/interfaces/org.kde.ksystemstat
 qt_add_dbus_adaptor(SOURCES ${SYSTEMSTATS_DBUS_INTERFACE} daemon.h Daemon)
 
 add_library(ksystemstats_core STATIC ${SOURCES})
-target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF6::CoreAddons KSysGuard::SystemStats)
+target_link_libraries(ksystemstats_core PUBLIC Qt::Core Qt::DBus KF6::CoreAddons KF6::Crash KSysGuard::SystemStats)
 
 add_executable(ksystemstats main.cpp)
 target_link_libraries(ksystemstats ksystemstats_core)
