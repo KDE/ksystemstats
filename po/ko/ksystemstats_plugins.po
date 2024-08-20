@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-03-01 01:51+0100\n"
+"PO-Revision-Date: 2024-08-20 00:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -49,12 +49,10 @@ msgid "System"
 msgstr "시스템"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "시스템"
+msgstr "%1 시스템"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -69,12 +67,10 @@ msgid "User"
 msgstr "사용자"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "사용자"
+msgstr "%1 사용자"
 
 #: cpu/cpu.cpp:59
 #, kde-format
@@ -89,12 +85,10 @@ msgid "Wait"
 msgstr "대기"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "대기"
+msgstr "%1 대기"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -1123,22 +1117,20 @@ msgstr "배터리가 충전 중인 전력(양수) 또는 방전 중인 전력(�
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "압박"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "메모리 주파수"
+msgstr "메모리 압박"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "약간(10초 평균)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1147,13 +1139,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 메모리 자원을 기다린 시간의 10초간 평균 백분율"
+"입니다."
 
 #: pressure/pressure.cpp:145 pressure/pressure.cpp:173
 #: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "약간(1분 평균)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1162,13 +1156,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 메모리 자원을 기다린 시간의 1분간 평균 백분율"
+"입니다."
 
 #: pressure/pressure.cpp:148 pressure/pressure.cpp:176
 #: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "약간(5분 평균)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1177,13 +1173,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 메모리 자원을 기다린 시간의 5분간 평균 백분율"
+"입니다."
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr ""
+msgstr "총 약간 지연된 시간"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1192,13 +1190,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"마이크로초 단위로 측정한 하나 이상의 작업이 사용 가능한 메모리 자원을 기다린 "
+"시간"
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "전체(10초 평균)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1207,13 +1207,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 CPU 자원을 기다린 시간의 10초간 평균 백분율입"
+"니다."
 
 #: pressure/pressure.cpp:158 pressure/pressure.cpp:187
 #: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "전체(1분 평균)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1222,13 +1224,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 CPU 자원을 기다린 시간의 1분간 평균 백분율입니"
+"다."
 
 #: pressure/pressure.cpp:161 pressure/pressure.cpp:190
 #: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "전체(5분 평균)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1237,13 +1241,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 CPU 자원을 기다린 시간의 5분간 평균 백분율입니"
+"다."
 
 #: pressure/pressure.cpp:164 pressure/pressure.cpp:193
 #: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "총 전체 지연된 시간"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1252,12 +1258,14 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"마이크로초 단위로 측정한 하나 이상의 작업이 사용 가능한 CPU 자원을 기다린 시"
+"간"
 
 #: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "CPU 압박"
 
 #: pressure/pressure.cpp:171
 #, kde-format
@@ -1266,6 +1274,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 IO 자원을 기다린 시간의 10초간 평균 백분율입니"
+"다."
 
 #: pressure/pressure.cpp:174
 #, kde-format
@@ -1274,6 +1284,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 IO 자원을 기다린 시간의 1분간 평균 백분율입니"
+"다."
 
 #: pressure/pressure.cpp:177
 #, kde-format
@@ -1282,6 +1294,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"하나 이상의 작업이 사용 가능한 IO 자원을 기다린 시간의 5분간 평균 백분율입니"
+"다."
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1290,6 +1304,7 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"마이크로초 단위로 측정한 하나 이상의 작업이 사용 가능한 IO 자원을 기다린 시간"
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1298,6 +1313,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"모든 작업이 사용 가능한 메모리 자원을 기다린 시간의 10초간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:188
 #, kde-format
@@ -1306,6 +1322,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 메모리 자원을 기다린 시간의 1분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:191
 #, kde-format
@@ -1314,6 +1331,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 메모리 자원을 기다린 시간의 5분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:194
 #, kde-format
@@ -1322,12 +1340,13 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"마이크로초 단위로 측정한 모든 작업이 사용 가능한 메모리 자원을 기다린 시간"
 
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "IO 압박"
 
 #: pressure/pressure.cpp:201
 #, kde-format
@@ -1336,6 +1355,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"모든 작업이 사용 가능한 CPU 자원을 기다린 시간의 10초간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:204
 #, kde-format
@@ -1344,6 +1364,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 CPU 자원을 기다린 시간의 1분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:207
 #, kde-format
@@ -1352,6 +1373,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 CPU 자원을 기다린 시간의 5분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1360,6 +1382,7 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"마이크로초 단위로 측정한 모든 작업이 사용 가능한 CPU 자원을 기다린 시간"
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1368,6 +1391,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"모든 작업이 사용 가능한 IO 자원을 기다린 시간의 10초간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:218
 #, kde-format
@@ -1376,6 +1400,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 IO 자원을 기다린 시간의 1분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:221
 #, kde-format
@@ -1384,6 +1409,7 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"모든 작업이 사용 가능한 IO 자원을 기다린 시간의 5분간 평균 백분율입니다."
 
 #: pressure/pressure.cpp:224
 #, kde-format
@@ -1391,7 +1417,7 @@ msgctxt "@info"
 msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
-msgstr ""
+msgstr "마이크로초 단위로 측정한 모든 작업이 사용 가능한 IO 자원을 기다린 시간"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
