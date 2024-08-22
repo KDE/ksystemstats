@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-09 09:33+0200\n"
+"PO-Revision-Date: 2024-08-09 14:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1270,7 +1270,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr "Charge CPU"
+msgstr "Charge du processeur"
 
 #: pressure/pressure.cpp:171
 #, kde-format
