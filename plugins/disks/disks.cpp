@@ -199,11 +199,19 @@ void DisksPlugin::addDevice(const Solid::Device& device)
 {
     auto container = containers()[0];
     const auto volume = device.as<Solid::StorageVolume>();
-    if (!volume || (volume->isIgnored() && volume->usage() != Solid::StorageVolume::PartitionTable)) {
+    if (!volume) {
         return;
     }
+
+    // don't ignore raw disks, e.g. no file system but just partition table or encrypted disk or part of a raid
+    const bool rawDisk = volume->usage() == Solid::StorageVolume::PartitionTable || volume->usage() == Solid::StorageVolume::Encrypted
+        || volume->usage() == Solid::StorageVolume::Raid;
+    if (volume->isIgnored() && !rawDisk) {
+        return;
+    }
+
+    // Only exclude volumes if we know that they are for sure not on a hard disk
     Solid::Device drive = device;
-    // Only exlude volumes if we know that they are for sure not on a hard disk
     while (drive.isValid()) {
         if (drive.is<Solid::StorageDrive>()) {
             auto type = drive.as<Solid::StorageDrive>()->driveType();
@@ -215,7 +223,7 @@ void DisksPlugin::addDevice(const Solid::Device& device)
         }
         drive = drive.parent();
     }
-    if (volume->usage() == Solid::StorageVolume::PartitionTable) {
+    if (rawDisk) {
         auto block = device.as<Solid::Block>();
         m_volumesByDevice.insert(block->device(), new VolumeObject(device, container));
         return;
