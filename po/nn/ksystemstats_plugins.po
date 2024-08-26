@@ -53,8 +53,6 @@ msgstr "System"
 
 #: cpu/cpu.cpp:46
 #, fuzzy, kde-format
-#| msgctxt "@title, Short for 'System Usage'"
-#| msgid "System"
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
 msgstr "System"
@@ -73,8 +71,6 @@ msgstr "Brukar"
 
 #: cpu/cpu.cpp:53
 #, fuzzy, kde-format
-#| msgctxt "@title, Short for 'User Usage'"
-#| msgid "User"
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
 msgstr "Brukar"
@@ -93,8 +89,6 @@ msgstr "Venting"
 
 #: cpu/cpu.cpp:60
 #, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Wait Load'"
-#| msgid "Wait"
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
 msgstr "Venting"
@@ -1132,8 +1126,6 @@ msgstr ""
 
 #: pressure/pressure.cpp:141
 #, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr "Minnefrekvens"
