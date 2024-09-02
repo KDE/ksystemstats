@@ -94,8 +94,18 @@ Battery::Battery(const Solid::Device &device, const QString &name, KSysGuard::Se
     chargeRate->setUnit(KSysGuard::UnitWatt);
     chargeRate->setVariantType(QVariant::Double);
     chargeRate->setValue(-battery->energyRate());
-    connect(battery, &Solid::Battery::energyRateChanged, chargeRate, [chargeRate] (double rate) {
-        chargeRate->setValue(-rate);
+    connect(battery, &Solid::Battery::energyRateChanged, chargeRate, [battery, chargeRate] (double rate) {
+        // According to the documentation, energyRate should be positive if discharging
+        // and negative if charging. However, on some systems this turns out to be
+        // incorrect and we get positive both when charging and discharging. So ensure
+        // we have the right sign here by checking state.
+        if (battery->chargeState() == Solid::Battery::Charging) {
+            chargeRate->setValue(std::abs(rate));
+        } else if (battery->chargeState() == Solid::Battery::Discharging) {
+            chargeRate->setValue(-std::abs(rate));
+        } else {
+            chargeRate->setValue(rate);
+        }
     });
 
 }
