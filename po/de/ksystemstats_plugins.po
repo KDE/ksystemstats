@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2023-03-22 23:52+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -517,7 +517,7 @@ msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatur"
 
-#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#: gpu/GpuDevice.cpp:53 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"

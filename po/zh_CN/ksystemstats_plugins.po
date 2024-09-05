@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -508,7 +508,7 @@ msgctxt "@title"
 msgid "Temperature"
 msgstr "温度"
 
-#: gpu/GpuDevice.cpp:53 power/power.cpp:106
+#: gpu/GpuDevice.cpp:53 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"
