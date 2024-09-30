@@ -80,7 +80,9 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
             const int delim = line.indexOf(":");
             const QByteArray field = line.left(delim).trimmed();
             const QByteArray value = line.mid(delim + 1).trimmed();
-            if (field == "processor") {
+            if (field == "Serial") {
+                break;
+            } else if (field == "processor") {
                 info.id = value.toInt();
             } else if (field == "physical id") {
                 info.cpu = value.toInt();
@@ -93,8 +95,13 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
             }
         }
 
-        cpus.push_back(info);
-        cpuCount = std::max(cpuCount, info.cpu);
+        // If we don't have a valid ID, consider the entire CPU info to be invalid.
+        // This mainly happens when there is additional non-core related data in
+        // /proc/cpuinfo.
+        if (info.cpu != -1) {
+            cpus.push_back(info);
+            cpuCount = std::max(cpuCount, info.cpu);
+        }
     }
 
     // cpuCount is based on the indices of the cpus, which means it is off by
