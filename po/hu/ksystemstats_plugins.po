@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-05-23 11:34+0200\n"
+"PO-Revision-Date: 2024-09-29 20:57+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -1122,22 +1122,20 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Igény"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Memóriafrekvencia"
+msgstr "Memóriaigény"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "Alacsony (10 másodperces átlag)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1146,13 +1144,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló memóriaforrásokra, 10 másodperces átlagban"
 
 #: pressure/pressure.cpp:145 pressure/pressure.cpp:173
 #: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "Alacsony (1 perces átlag)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1161,13 +1161,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló memóriaforrásokra, 1 perces átlagban"
 
 #: pressure/pressure.cpp:148 pressure/pressure.cpp:176
 #: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "Alacsony (5 perces átlag)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1176,13 +1178,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló memóriaforrásokra, 5 perces átlagban"
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr ""
+msgstr "Összes várakozási idő"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1191,13 +1195,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg legalább egy feladat megrekedt, várva a rendelkezésre álló "
+"memóriaforrásokra, ezredmásodpercben mérve"
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "Teljes (10 másodperces átlag)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1206,13 +1212,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló CPU forrásokra, 10 másodperces átlagban"
 
 #: pressure/pressure.cpp:158 pressure/pressure.cpp:187
 #: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "Teljes (1 perces átlag)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1221,13 +1229,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló CPU forrásokra, 1 perces átlagban"
 
 #: pressure/pressure.cpp:161 pressure/pressure.cpp:190
 #: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "Teljes (5 perces átlag)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1236,13 +1246,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló CPU forrásokra, 5 perces átlagban"
 
 #: pressure/pressure.cpp:164 pressure/pressure.cpp:193
 #: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "Összes várakozási idő"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1251,12 +1263,14 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg legalább egy feladat megrekedt, várva a rendelkezésre álló "
+"CPU forrásokra, ezredmásodpercben mérve"
 
 #: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "CPU-igény"
 
 #: pressure/pressure.cpp:171
 #, kde-format
@@ -1265,6 +1279,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló IO forrásokra, 10 másodperces átlagban"
 
 #: pressure/pressure.cpp:174
 #, kde-format
@@ -1273,6 +1289,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló IO forrásokra, 1 perces átlagban"
 
 #: pressure/pressure.cpp:177
 #, kde-format
@@ -1281,6 +1299,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor legalább egy feladat megakad, várva a "
+"rendelkezésre álló IO forrásokra, 5 perces átlagban"
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1289,6 +1309,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg legalább egy feladat megrekedt, várva a rendelkezésre álló "
+"IO forrásokra, ezredmásodpercben mérve"
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1297,6 +1319,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat  memóriára várakozott 10 "
+"másodperces átlagban"
 
 #: pressure/pressure.cpp:188
 #, kde-format
@@ -1305,6 +1329,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat  memóriára várakozott 1 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:191
 #, kde-format
@@ -1313,6 +1339,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat  memóriára várakozott 5 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:194
 #, kde-format
@@ -1321,12 +1349,14 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg az összes feladat memóriára várakozva elakad, "
+"ezredmásodpercben mérve"
 
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "IO-igény"
 
 #: pressure/pressure.cpp:201
 #, kde-format
@@ -1335,6 +1365,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat CPU-ra várakozott, 10 "
+"másodperces átlagban"
 
 #: pressure/pressure.cpp:204
 #, kde-format
@@ -1343,6 +1375,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat CPU-ra várakozott, 1 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:207
 #, kde-format
@@ -1351,6 +1385,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat CPU-ra várakozott, 5 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1359,6 +1395,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg az összes feladat memóriára CPU-ra elakad, ezredmásodpercben "
+"mérve"
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1367,6 +1405,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat IO-ra várakozott, 10 "
+"másodperces átlagban"
 
 #: pressure/pressure.cpp:218
 #, kde-format
@@ -1375,6 +1415,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat IO-ra várakozott, 1 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:221
 #, kde-format
@@ -1383,6 +1425,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"Az idő százalékos aránya, amikor az összes feladat IO-ra várakozott, 5 "
+"perces átlagban"
 
 #: pressure/pressure.cpp:224
 #, kde-format
@@ -1391,6 +1435,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"Az az idő, amíg az összes feladat memóriára IO-ra elakad, ezredmásodpercben "
+"mérve"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
