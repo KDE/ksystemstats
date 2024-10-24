@@ -25,7 +25,7 @@ struct PressureDatapoint {
     double avg10;
     double avg60;
     double avg300;
-    long unsigned int total;
+    qulonglong total;
 };
 
 
@@ -104,7 +104,7 @@ PressureData parseDataFromFile(const QString fileSelector) {
             } else if (name == avg300DataLabel) {
                 data.avg300 = value.toDouble();
             } else if (name == totalDataLabel) {
-                data.total = value.toDouble();
+                data.total = value.toULongLong();
             }
         }
 
@@ -257,7 +257,7 @@ PressurePlugin::PressurePlugin(QObject *parent, const QVariantList &args)
     auto setup_totalfield = [](KSysGuard::SensorProperty *sensorProperty)
     {
         // TODO: specify unit sensorProperty->setUnit(KSysGuard::UnitPercent);
-        sensorProperty->setVariantType(QVariant::Double);//long unsigned int
+        sensorProperty->setVariantType(QVariant::ULongLong);
     };
 
     setup_totalfield(memorySomeTotalProperty);
@@ -279,33 +279,33 @@ void PressurePlugin::update()
     memorySome10SecProperty->setValue(data.some.avg10);
     memorySome60SecProperty->setValue(data.some.avg60);
     memorySome300SecProperty->setValue(data.some.avg300);
-    memorySomeTotalProperty->setValue(QVariant::fromValue(data.some.total));
+    memorySomeTotalProperty->setValue(data.some.total);
     memoryFull10SecProperty->setValue(data.full.avg10);
     memoryFull60SecProperty->setValue(data.full.avg60);
     memoryFull300SecProperty->setValue(data.full.avg300);
-    memoryFullTotalProperty->setValue(QVariant::fromValue(data.full.total));
+    memoryFullTotalProperty->setValue(data.full.total);
 
     data = parseDataFromFile(QStringLiteral("cpu"));
     
     cpuSome10SecProperty->setValue(data.some.avg10);
     cpuSome60SecProperty->setValue(data.some.avg60);
     cpuSome300SecProperty->setValue(data.some.avg300);
-    cpuSomeTotalProperty->setValue(QVariant::fromValue(data.some.total));
+    cpuSomeTotalProperty->setValue(data.some.total);
     cpuFull10SecProperty->setValue(data.full.avg10);
     cpuFull60SecProperty->setValue(data.full.avg60);
     cpuFull300SecProperty->setValue(data.full.avg300);
-    cpuFullTotalProperty->setValue(QVariant::fromValue(data.full.total));
+    cpuFullTotalProperty->setValue(data.full.total);
 
     data = parseDataFromFile(QStringLiteral("io"));
 
     ioSome10SecProperty->setValue(data.some.avg10);
     ioSome60SecProperty->setValue(data.some.avg60);
     ioSome300SecProperty->setValue(data.some.avg300);
-    ioSomeTotalProperty->setValue(QVariant::fromValue(data.some.total));
+    ioSomeTotalProperty->setValue(data.some.total);
     ioFull10SecProperty->setValue(data.full.avg10);
     ioFull60SecProperty->setValue(data.full.avg60);
     ioFull300SecProperty->setValue(data.full.avg300);
-    ioFullTotalProperty->setValue(QVariant::fromValue(data.full.total));
+    ioFullTotalProperty->setValue(data.full.total);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(PressurePlugin, "metadata.json")
