@@ -45,6 +45,12 @@ static QHash<int, QString> makeCpuNames(const QList<CpuInfo> &cpus, int cpuCount
     int previousCpuSiblings = 0;
 
     for (const auto &info : cpus) {
+        if (info.cpu == -1 || info.core == -1) {
+            // No core info, just list the cores by 1-indexed ID.
+            result.insert(info.id, i18nc("@title", "Core %1", info.id + 1));
+            continue;
+        }
+
         if (info.cpu != currentCpu) {
             previousCpuSiblings = previousCpuSiblings + info.siblings;
             currentCpu = info.cpu;
