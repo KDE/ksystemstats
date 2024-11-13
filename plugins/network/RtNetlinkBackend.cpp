@@ -25,6 +25,8 @@
 #include <linux/if_link.h>
 #include <linux/rtnetlink.h>
 
+#include "debug.h"
+
 static const QString devicesFolder = QStringLiteral("/sys/class/net");
 
 RtNetlinkDevice::RtNetlinkDevice(const QString &id)
@@ -190,17 +192,17 @@ void RtNetlinkBackend::update()
     nl_cache *link_cache, *address_cache, *route_cache;
     int error = rtnl_link_alloc_cache(m_socket.get(), AF_UNSPEC, &link_cache);
     if (error != 0) {
-        qWarning() << nl_geterror(error);
+        qCWarning(KSYSTEMSTATS_NETWORK) << nl_geterror(error);
         return;
     }
     error = rtnl_addr_alloc_cache(m_socket.get(), &address_cache);
     if (error != 0) {
-        qWarning() << nl_geterror(error);
+        qCWarning(KSYSTEMSTATS_NETWORK) << nl_geterror(error);
         return;
     }
     error = rtnl_route_alloc_cache(m_socket.get(), AF_UNSPEC, 0, &route_cache);
     if (error != 0) {
-        qWarning() << nl_geterror(error);
+        qCWarning(KSYSTEMSTATS_NETWORK) << nl_geterror(error);
         return;
     }
 

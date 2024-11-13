@@ -13,9 +13,10 @@
 
 #include <systemstats/SensorContainer.h>
 
-#include "NetworkDevice.h"
-#include "NetworkBackend.h"
 #include "AllDevicesObject.h"
+#include "NetworkBackend.h"
+#include "NetworkDevice.h"
+#include "debug.h"
 
 #ifdef NETWORKMANAGER_FOUND
 #include "NetworkManagerBackend.h"
@@ -61,7 +62,7 @@ NetworkPlugin::NetworkPlugin(QObject *parent, const QVariantList &args)
         delete backend;
     }
     if (!d->backend) {
-        qWarning() << "Unable to start backend, network information not available.";
+        qCWarning(KSYSTEMSTATS_NETWORK) << "Unable to start backend, network information not available.";
         return;
     }
 

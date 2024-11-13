@@ -15,6 +15,8 @@
 #include <sys/sysctl.h>
 #include <unistd.h>
 
+#include "debug.h"
+
 template <typename T>
 bool readSysctl(const char *name, T *buffer, size_t size = sizeof(T))
 {
@@ -31,7 +33,7 @@ FreeBsdMemoryBackend::FreeBsdMemoryBackend(KSysGuard::SensorContainer* container
     // indicates that we do not want to directly access kernel memory.
     m_kd = kvm_openfiles(nullptr, "/dev/null", nullptr, O_RDONLY, errorBuffer);
     if (!m_kd) {
-        qWarning() << errorBuffer;
+        qCWarning(KSYSTEMSTATS_MEMORY) << errorBuffer;
     }
 }
 

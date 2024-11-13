@@ -11,4 +11,11 @@ endif()
 
 target_link_libraries(ksystemstats_plugin_cpu Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats)
 
+ecm_qt_declare_logging_category(ksystemstats_plugin_cpu HEADER debug.h
+    IDENTIFIER KSYSTEMSTATS_CPU
+    CATEGORY_NAME org.kde.ksystemstats.cpu
+    DESCRIPTION "KSystemStats CPU Plugin"
+    EXPORT KSYSTEMSTATS
+)
+
 install(TARGETS ksystemstats_plugin_cpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

@@ -12,4 +12,11 @@ if (BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
+ecm_qt_declare_logging_category(ksystemstats_plugin_gpu HEADER debug.h
+    IDENTIFIER KSYSTEMSTATS_GPU
+    CATEGORY_NAME org.kde.ksystemstats.gpu
+    DESCRIPTION "KSystemStats GPU Plugin"
+    EXPORT KSYSTEMSTATS
+)
+
 install(TARGETS ksystemstats_plugin_gpu DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

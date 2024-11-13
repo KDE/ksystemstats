@@ -8,6 +8,8 @@
 
 #include <libudev.h>
 
+#include "debug.h"
+
 NvidiaSmiProcess *LinuxNvidiaGpu::s_smiProcess = nullptr;
 
 constexpr quint64 mbToBytes(quint64 mb) {
@@ -60,7 +62,7 @@ void LinuxNvidiaGpu::initialize()
         return result.pciPath == sysName;
     });
     if (it == queryResult.cend()) {
-        qWarning() << "Could not retrieve information for NVidia GPU" << sysName;
+        qCWarning(KSYSTEMSTATS_GPU) << "Could not retrieve information for NVidia GPU" << sysName;
     } else {
         m_index = it - queryResult.cbegin();
         m_nameProperty->setValue(it->name);

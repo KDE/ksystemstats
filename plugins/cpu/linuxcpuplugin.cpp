@@ -14,6 +14,7 @@
 
 #include <sensors/sensors.h>
 
+#include "debug.h"
 #include "linuxcpu.h"
 #include "loadaverages.h"
 
@@ -171,7 +172,7 @@ void LinuxCpuPluginPrivate::update()
             if (cpu) {
                 cpu->update(system + irq + softirq, user + nice , iowait + steal, idle);
             } else {
-                qWarning() << "Unknown CPU" << line;
+                qCWarning(KSYSTEMSTATS_CPU) << "Unknown CPU" << line;
             }
         }
     }
@@ -251,7 +252,7 @@ void LinuxCpuPluginPrivate::addSensorsAmd(const sensors_chip_name * const chipNa
         } else if (qstrncmp(label, "Tccd", 4) == 0) {
             tccd[name.mid(4).toUInt()] = feature;
         } else {
-            qWarning() << "Unrecognised temmperature sensor: " << label;
+            qCWarning(KSYSTEMSTATS_CPU) << "Unrecognised temmperature sensor: " << label;
         }
         free(label);
     }

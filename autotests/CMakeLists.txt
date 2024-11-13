@@ -6,6 +6,7 @@ include(ECMAddTests)
 
 set(SOURCES
     main.cpp
+    ../src/debug.cpp
 )
 
 ecm_add_test(

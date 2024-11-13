@@ -32,6 +32,7 @@
 #include "ksystemstats1adaptor.h"
 
 #include "client.h"
+#include "debug.h"
 
 using namespace Qt::StringLiterals;
 
@@ -93,15 +94,15 @@ void Daemon::loadProviders()
 {
     const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("ksystemstats"));
     if (plugins.isEmpty()) {
-        qWarning() << "No plugins found";
+        qCWarning(KSYSTEMSTATS_DAEMON) << "No plugins found";
     }
     for (const KPluginMetaData &metaData : plugins) {
         auto provider = KPluginFactory::instantiatePlugin<KSysGuard::SensorPlugin>(metaData);
         if (!provider.plugin) {
-            qWarning() << "Could not load plugin:" << metaData.pluginId() << "with file name" << metaData.fileName();
+            qCWarning(KSYSTEMSTATS_DAEMON) << "Could not load plugin:" << metaData.pluginId() << "with file name" << metaData.fileName();
         } else {
             registerProvider(provider.plugin);
-            qDebug() << "Loaded plugin" << metaData.pluginId() << "from file" << metaData.fileName();
+            qCDebug(KSYSTEMSTATS_DAEMON) << "Loaded plugin" << metaData.pluginId() << "from file" << metaData.fileName();
         }
     }
 }
@@ -111,7 +112,7 @@ void Daemon::registerProvider(KSysGuard::SensorPlugin *provider) {
         return provider2->providerName() == provider->providerName();
     });
     if (alreadyHasProvider) {
-        qWarning() << "Provider" << provider->providerName() << "is already registered";
+        qCWarning(KSYSTEMSTATS_DAEMON) << "Provider" << provider->providerName() << "is already registered";
         return;
     }
     m_providers.append(provider);
@@ -239,7 +240,7 @@ bool Daemon::registerDBusService(const QString& serviceName, ReplaceIfRunning re
     auto interface = QDBusConnection::sessionBus().interface();
 
     if (interface->isServiceRegistered(serviceName) && replace != ReplaceIfRunning::Replace) {
-        qWarning() << "ksystemstats is already running";
+        qCWarning(KSYSTEMSTATS_DAEMON) << "ksystemstats is already running";
         return false;
     }
 
@@ -251,7 +252,7 @@ bool Daemon::registerDBusService(const QString& serviceName, ReplaceIfRunning re
 
     auto result = interface->registerService(KSysGuard::SystemStats::ServiceName, QDBusConnectionInterface::ReplaceExistingService, QDBusConnectionInterface::AllowReplacement);
     if (result != QDBusConnectionInterface::ServiceRegistered) {
-        qWarning() << "Could not register name" << KSysGuard::SystemStats::ServiceName;
+        qCWarning(KSYSTEMSTATS_DAEMON) << "Could not register name" << KSysGuard::SystemStats::ServiceName;
         return false;
     }
 

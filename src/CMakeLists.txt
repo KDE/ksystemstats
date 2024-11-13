@@ -29,3 +29,10 @@ ecm_install_configured_files(
    INPUT plasma-ksystemstats.service.in
    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
+
+ecm_qt_declare_logging_category(ksystemstats HEADER debug.h
+    IDENTIFIER KSYSTEMSTATS_DAEMON
+    CATEGORY_NAME org.kde.ksystemstats.daemon
+    DESCRIPTION "KSystemStats Daemon"
+    EXPORT KSYSTEMSTATS
+)

@@ -25,6 +25,8 @@
 #endif
 #include <time.h>
 
+#include "debug.h"
+
 // Uppercase the first letter of each word.
 QString upperCaseFirst(const QString &input)
 {
@@ -159,7 +161,7 @@ void OSInfoPrivate::init()
         { QStringLiteral("org.qtproject.Qt.QCoreApplication"), QStringLiteral("applicationVersion") },
         [this](const QDBusPendingReply<QVariant> &reply) {
             if (reply.isError()) {
-                qWarning() << "Could not determine Plasma version, got: " << reply.error().message();
+                qCWarning(KSYSTEMSTATS_OSINFO) << "Could not determine Plasma version, got: " << reply.error().message();
                 plasmaVersionProperty->setValue(i18nc("@info", "Unknown"));
             } else {
                 plasmaVersionProperty->setValue(reply.value());
@@ -196,7 +198,7 @@ void LinuxPrivate::init()
         { QStringLiteral("org.freedesktop.hostname1") },
         [this](const QDBusPendingReply<QVariantMap> &reply) {
             if (reply.isError()) {
-                qWarning() << "Could not contact hostnamed, got: " << reply.error().message();
+                qCWarning(KSYSTEMSTATS_OSINFO) << "Could not contact hostnamed, got: " << reply.error().message();
             } else {
                 auto properties = reply.value();
                 auto kernelName = properties.value(QStringLiteral("KernelName"), kernelNameProperty->value()).toString();

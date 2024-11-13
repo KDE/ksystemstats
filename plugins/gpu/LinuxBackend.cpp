@@ -13,6 +13,7 @@
 
 #include "LinuxAmdGpu.h"
 #include "LinuxNvidiaGpu.h"
+#include "debug.h"
 
 // Vendor ID strings, as used in sysfs
 static const char *amdVendor = "0x1002";
@@ -59,7 +60,7 @@ void LinuxBackend::start()
         } else if (vendor == nvidiaVendor) {
             gpu = new LinuxNvidiaGpu{gpuId, gpuName, pciDevice};
         } else {
-            qDebug() << "Found unsupported GPU:" << path;
+            qCDebug(KSYSTEMSTATS_GPU) << "Found unsupported GPU:" << path;
             udev_device_unref(drmDevice);
             continue;
         }

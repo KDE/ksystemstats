@@ -27,4 +27,11 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_include_directories(ksystemstats_plugin_network PRIVATE ${NL_INCLUDE_DIRS})
 endif()
 
+ecm_qt_declare_logging_category(ksystemstats_plugin_network HEADER debug.h
+    IDENTIFIER KSYSTEMSTATS_NETWORK
+    CATEGORY_NAME org.kde.ksystemstats.network
+    DESCRIPTION "KSystemStats Network Plugin"
+    EXPORT KSYSTEMSTATS
+)
+
 install(TARGETS ksystemstats_plugin_network DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})

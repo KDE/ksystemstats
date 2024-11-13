@@ -14,5 +14,12 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
 
     target_link_libraries(ksystemstats_plugin_memory Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats)
 
+    ecm_qt_declare_logging_category(ksystemstats_plugin_memory HEADER debug.h
+    IDENTIFIER KSYSTEMSTATS_MEMORY
+    CATEGORY_NAME org.kde.ksystemstats.memory
+    DESCRIPTION "KSystemStats Memory Plugin"
+    EXPORT KSYSTEMSTATS
+)
+
     install(TARGETS ksystemstats_plugin_memory DESTINATION ${KSYSTEMSTATS_PLUGIN_INSTALL_DIR})
 endif()
