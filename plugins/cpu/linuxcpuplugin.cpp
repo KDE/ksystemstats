@@ -98,9 +98,9 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
         // If we don't have a valid ID, consider the entire CPU info to be invalid.
         // This mainly happens when there is additional non-core related data in
         // /proc/cpuinfo.
-        if (info.cpu != -1) {
+        if (info.id != -1) {
             cpus.push_back(info);
-            cpuCount = std::max(cpuCount, info.cpu);
+            cpuCount = std::max(cpuCount, info.id);
         }
     }
 
@@ -114,7 +114,9 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
     for (const auto &entry : std::as_const(cpus)) {
         auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), names.value(entry.id), entry.frequency, m_container);
         m_cpus.insert(entry.id, cpu);
-        m_cpusBySystemIds.insert({entry.cpu, entry.core}, cpu);
+        if (entry.cpu != -1 && entry.core != -1) {
+            m_cpusBySystemIds.insert({entry.cpu, entry.core}, cpu);
+        }
     }
 
     addSensors();
@@ -160,7 +162,11 @@ void LinuxCpuPluginPrivate::update()
             m_allCpus->update(system + irq + softirq, user + nice , iowait + steal, idle);
         } else if (line.startsWith("cpu")) {
             auto cpu = m_cpus.value(std::atoi(line.mid(strlen("cpu"))));
-            cpu->update(system + irq + softirq, user + nice , iowait + steal, idle);
+            if (cpu) {
+                cpu->update(system + irq + softirq, user + nice , iowait + steal, idle);
+            } else {
+                qWarning() << "Unknown CPU" << line;
+            }
         }
     }
 }
