@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 07:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -252,13 +252,13 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "CPE %1"
 
-#: cpu/linuxcpuplugin.cpp:39
+#: cpu/linuxcpuplugin.cpp:39 cpu/linuxcpuplugin.cpp:50
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
 msgstr "Jedro %1"
 
-#: cpu/linuxcpuplugin.cpp:54
+#: cpu/linuxcpuplugin.cpp:60
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"

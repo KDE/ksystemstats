@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:41+0000\n"
 "PO-Revision-Date: 2020-10-25 22:30+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -285,7 +285,7 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "CPU %1"
 
-#: cpu/linuxcpuplugin.cpp:39
+#: cpu/linuxcpuplugin.cpp:39 cpu/linuxcpuplugin.cpp:50
 #, fuzzy, kde-format
 #| msgctxt "@title, Short fort 'Number of Cores'"
 #| msgid "Cores"
@@ -293,7 +293,7 @@ msgctxt "@title"
 msgid "Core %1"
 msgstr "Tuumad"
 
-#: cpu/linuxcpuplugin.cpp:54
+#: cpu/linuxcpuplugin.cpp:60
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"

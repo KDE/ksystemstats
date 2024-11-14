@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:41+0000\n"
 "PO-Revision-Date: 2024-10-26 20:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -259,13 +259,13 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "CPU %1"
 
-#: cpu/linuxcpuplugin.cpp:39
+#: cpu/linuxcpuplugin.cpp:39 cpu/linuxcpuplugin.cpp:50
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
 msgstr "Nucli %1"
 
-#: cpu/linuxcpuplugin.cpp:54
+#: cpu/linuxcpuplugin.cpp:60
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
