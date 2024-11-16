@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:41+0000\n"
+"POT-Creation-Date: 2024-11-16 00:42+0000\n"
 "PO-Revision-Date: 2022-09-07 09:33+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -253,13 +253,13 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "CPU %1"
 
-#: cpu/linuxcpuplugin.cpp:39 cpu/linuxcpuplugin.cpp:50
+#: cpu/linuxcpuplugin.cpp:40 cpu/linuxcpuplugin.cpp:51
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
 msgstr "Núcleo %1"
 
-#: cpu/linuxcpuplugin.cpp:60
+#: cpu/linuxcpuplugin.cpp:61
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
@@ -522,7 +522,7 @@ msgctxt "@title"
 msgid "GPU"
 msgstr "GPU"
 
-#: gpu/LinuxBackend.cpp:54
+#: gpu/LinuxBackend.cpp:55
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
@@ -908,133 +908,133 @@ msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
 msgstr "DNS do IPv6"
 
-#: network/NetworkPlugin.cpp:43
+#: network/NetworkPlugin.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Network Devices"
 msgstr "Dispositivos de Rede"
 
-#: osinfo/osinfo.cpp:106
+#: osinfo/osinfo.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Operating System"
 msgstr "Sistema Operativo"
 
-#: osinfo/osinfo.cpp:108
+#: osinfo/osinfo.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
 msgstr "'Kernel'"
 
-#: osinfo/osinfo.cpp:109
+#: osinfo/osinfo.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name"
 msgstr "Nome do 'Kernel'"
 
-#: osinfo/osinfo.cpp:110
+#: osinfo/osinfo.cpp:112
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Version"
 msgstr "Versão do 'Kernel'"
 
-#: osinfo/osinfo.cpp:111
+#: osinfo/osinfo.cpp:113
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name and Version"
 msgstr "Nome e Versão do 'Kernel'"
 
-#: osinfo/osinfo.cpp:112
+#: osinfo/osinfo.cpp:114
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
 msgstr "'Kernel'"
 
-#: osinfo/osinfo.cpp:114
+#: osinfo/osinfo.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "System"
 msgstr "Sistema"
 
-#: osinfo/osinfo.cpp:115
+#: osinfo/osinfo.cpp:117
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
 msgstr "Nome da Máquina"
 
-#: osinfo/osinfo.cpp:116
+#: osinfo/osinfo.cpp:118
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name"
 msgstr "Nome do Sistema Operativo"
 
-#: osinfo/osinfo.cpp:117
+#: osinfo/osinfo.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Version"
 msgstr "Versão do Sistema Operativo"
 
-#: osinfo/osinfo.cpp:118
+#: osinfo/osinfo.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name and Version"
 msgstr "Nome e Versão do Sistema Operativo"
 
-#: osinfo/osinfo.cpp:119
+#: osinfo/osinfo.cpp:121
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
 msgstr "SO"
 
-#: osinfo/osinfo.cpp:120
+#: osinfo/osinfo.cpp:122
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Logo"
 msgstr "Logótipo do Sistema Operativo"
 
-#: osinfo/osinfo.cpp:121
+#: osinfo/osinfo.cpp:123
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
 msgstr "URL do Sistema Operativo"
 
-#: osinfo/osinfo.cpp:122
+#: osinfo/osinfo.cpp:124
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
 msgstr "Tempo de Actividade"
 
-#: osinfo/osinfo.cpp:125
+#: osinfo/osinfo.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma"
 msgstr "Plasma do KDE"
 
-#: osinfo/osinfo.cpp:126
+#: osinfo/osinfo.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
 msgstr "Versão do Qt"
 
-#: osinfo/osinfo.cpp:127
+#: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
 msgstr "Versão das Plataformas do KDE"
 
-#: osinfo/osinfo.cpp:128
+#: osinfo/osinfo.cpp:130
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
 msgstr "Versão do Plasma do KDE"
 
-#: osinfo/osinfo.cpp:129
+#: osinfo/osinfo.cpp:131
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
 msgstr "Sistema de Janelas"
 
-#: osinfo/osinfo.cpp:163
+#: osinfo/osinfo.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Unknown"
