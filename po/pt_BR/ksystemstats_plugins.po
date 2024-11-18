@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-16 00:42+0000\n"
-"PO-Revision-Date: 2024-08-02 01:04-0300\n"
+"PO-Revision-Date: 2024-11-16 00:26-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -1120,15 +1120,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Pressão"
 
 #: pressure/pressure.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Frequência da memória"
+msgstr "Pressão de memória"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
@@ -1177,12 +1175,10 @@ msgstr ""
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Total Sent Data"
+#, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr "Total de dados enviados"
+msgstr "Total de algum tempo de parada"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1256,7 +1252,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "Pressão na CPU"
 
 #: pressure/pressure.cpp:171
 #, kde-format
