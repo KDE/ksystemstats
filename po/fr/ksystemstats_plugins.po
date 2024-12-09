@@ -510,7 +510,7 @@ msgstr "Température"
 #, kde-format
 msgctxt "@title"
 msgid "Power"
-msgstr "Anergie"
+msgstr "Énergie"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
