@@ -21,193 +21,193 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: cpu/cpu.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr ""
+msgstr "कुलप्रयोगः"
 
 #: cpu/cpu.cpp:39
 #, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "प्रयोगः"
 
 #: cpu/cpu.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr ""
+msgstr "प्रणाली उपयोग"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
-msgstr ""
+msgstr "व्यवस्था"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr ""
+msgstr "%1 प्रणाली"
 
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr ""
+msgstr "उपयोक्तृप्रयोगः"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
-msgstr ""
+msgstr "उपयोक्ता"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr ""
+msgstr "%1 उपयोक्ता"
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr ""
+msgstr "प्रतीक्षा प्रयोगः"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr ""
+msgstr "प्रतीक्षतु"
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr ""
+msgstr "%1 प्रतीक्ष्यताम्"
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr ""
+msgstr "वर्तमान आवृत्ति"
 
 #: cpu/cpu.cpp:87
 #, kde-format
 msgctxt "@info"
 msgid "Current frequency of the CPU"
-msgstr ""
+msgstr "CPU इत्यस्य वर्तमान आवृत्तिः"
 
 #: cpu/cpu.cpp:92
 #, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr ""
+msgstr "वर्तमान तापमान"
 
 #: cpu/cpu.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "All"
-msgstr ""
+msgstr "सर्वे"
 
 #: cpu/cpu.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr ""
+msgstr "अधिकतम CPU आवृत्ति"
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr ""
+msgstr "अधिकतम आवृत्ति"
 
 #: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr ""
+msgstr "सर्वेषां CPU मध्ये वर्तमान अधिकतम आवृत्तिः"
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr ""
+msgstr "न्यूनतम CPU आवृत्ति"
 
 #: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr ""
+msgstr "न्यूनतम आवृत्ति"
 
 #: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr ""
+msgstr "सर्वेषां CPU मध्ये वर्तमानं न्यूनतमा आवृत्तिः"
 
 #: cpu/cpu.cpp:133
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr ""
+msgstr "औसत CPU आवृत्ति"
 
 #: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr ""
+msgstr "औसत आवृत्ति"
 
 #: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr ""
+msgstr "सर्वेषां CPU मध्ये वर्तमान औसत आवृत्तिः"
 
 #: cpu/cpu.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr ""
+msgstr "अधिकतम CPU तापमान"
 
 #: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr ""
+msgstr "अधिकतम तापमान"
 
 #: cpu/cpu.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr ""
+msgstr "न्यूनतम CPU तापमान"
 
 #: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr ""
+msgstr "न्यूनतम तापमान"
 
 #: cpu/cpu.cpp:154
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr ""
+msgstr "औसत CPU तापमान"
 
 #: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr ""
+msgstr "औसत तापमान"
 
 #: cpu/cpu.cpp:171
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
-msgstr ""
+msgstr "CPUs इत्यस्य संख्या"
 
 #: cpu/cpu.cpp:172
 #, kde-format
@@ -219,25 +219,25 @@ msgstr "CPUs इति"
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
-msgstr ""
+msgstr "प्रणाल्यां संस्थापितानां भौतिक-सीपीयू-सङ्ख्या"
 
 #: cpu/cpu.cpp:175
 #, kde-format
 msgctxt "@title"
 msgid "Number of Cores"
-msgstr ""
+msgstr "कोरस्य संख्या"
 
 #: cpu/cpu.cpp:176
 #, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
-msgstr ""
+msgstr "कोर"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr ""
+msgstr "सर्वेषु भौतिक-CPUS मध्ये CPU कोरस्य संख्या"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
@@ -248,151 +248,151 @@ msgstr "CPUs इति"
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"
-msgstr ""
+msgstr "CPU %1"
 
 #: cpu/linuxcpuplugin.cpp:40 cpu/linuxcpuplugin.cpp:51
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr ""
+msgstr "कोर %1"
 
 #: cpu/linuxcpuplugin.cpp:61
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
-msgstr ""
+msgstr "CPU %1 कोर %2"
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr ""
+msgstr "भार औसत"
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr ""
+msgstr "भार औसत (१ मिनिट्) २."
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr ""
+msgstr "भार औसत (५ मिनिट्) २."
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr ""
+msgstr "भार औसत (१५ मिनिट्) २."
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr ""
+msgstr "भार औसत (१मी) २."
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr ""
+msgstr "भार औसत (५मी) २."
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr ""
+msgstr "भार औसत (१५मी) २."
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr ""
+msgstr "धावनपङ्क्तौ कार्याणां संख्या १ निमेषाभ्यधिकं सरासरी अभवत्"
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr ""
+msgstr "रन कङ्क्तौ कार्याणां संख्या ५ निमेषेभ्यः अधिकं औसतम् आसीत्"
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr ""
+msgstr "रन कङ्क्तौ कार्याणां संख्या १५ निमेषेभ्यः अधिका आसीत्"
 
 #: disks/disks.cpp:81 disks/disks.cpp:279
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr ""
+msgstr "कुल अन्तरिक्ष"
 
 #: disks/disks.cpp:83 disks/disks.cpp:280
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: disks/disks.cpp:87 disks/disks.cpp:302
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr ""
+msgstr "पठन्तु दरम्"
 
 #: disks/disks.cpp:89 disks/disks.cpp:303
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
-msgstr ""
+msgstr "पठतु"
 
 #: disks/disks.cpp:93 disks/disks.cpp:309
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr ""
+msgstr "लिखे दर"
 
 #: disks/disks.cpp:95 disks/disks.cpp:310
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
-msgstr ""
+msgstr "लिखतु"
 
 #: disks/disks.cpp:100 disks/disks.cpp:294
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr ""
+msgstr "प्रयुक्तः अन्तरिक्षः"
 
 #: disks/disks.cpp:102 disks/disks.cpp:295
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: disks/disks.cpp:107 disks/disks.cpp:286
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr ""
+msgstr "मुक्त स्थान"
 
 #: disks/disks.cpp:109 disks/disks.cpp:287
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr ""
+msgstr "निःशुल्कः"
 
 #: disks/disks.cpp:114 disks/disks.cpp:320
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr ""
+msgstr "प्रयुक्तः प्रतिशतः"
 
 #: disks/disks.cpp:118 disks/disks.cpp:316
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr ""
+msgstr "प्रतिशतं निःशुल्कम्"
 
 #: disks/disks.cpp:165
 #, kde-format
@@ -403,127 +403,127 @@ msgstr "डिस्काः"
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr ""
+msgstr "सर्वाणि डिस्काः"
 
 #: disks/disks.cpp:317
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
-msgstr ""
+msgstr "निःशुल्कः"
 
 #: disks/disks.cpp:321
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr ""
+msgstr "सर्वे GPUs"
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr ""
+msgstr "सर्वे GPUs उपयोगः"
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
-msgstr ""
+msgstr "प्रयोगः"
 
 #: gpu/AllGpus.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr ""
+msgstr "सर्वे GPUs कुलस्मृतिः"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr ""
+msgstr "सर्वे GPUs Memory इत्यस्य उपयोगं कुर्वन्ति स्म"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
-msgstr ""
+msgstr "प्रयोगः"
 
 #: gpu/GpuDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr ""
+msgstr "कुल विडियो स्मृति"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr ""
+msgstr "विडियो स्मृति प्रयुक्त"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr ""
+msgstr "आवृत्ती"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr ""
+msgstr "स्मृति आवृत्ति"
 
 #: gpu/GpuDevice.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr ""
+msgstr "तापमान"
 
 #: gpu/GpuDevice.cpp:53 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"
-msgstr ""
+msgstr "शक्ति"
 
 #: gpu/GpuPlugin.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: gpu/LinuxBackend.cpp:55
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
-msgstr ""
+msgstr "GPU %1"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
@@ -534,109 +534,109 @@ msgstr "हार्डवेयर संवेदक"
 #, kde-format
 msgctxt "@title"
 msgid "Physical Memory"
-msgstr ""
+msgstr "भौतिक स्मृति"
 
 #: memory/backend.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr ""
+msgstr "स्मृति अदला-बदली"
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr ""
+msgstr "कुल भौतिक स्मृति"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr ""
+msgstr "प्रयुक्त भौतिक स्मृति"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr ""
+msgstr "प्रयुक्त भौतिक स्मृति प्रतिशत"
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr ""
+msgstr "निःशुल्क भौतिक स्मृति"
 
 #: memory/backend.cpp:54
 #, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
-msgstr ""
+msgstr "निःशुल्कः"
 
 #: memory/backend.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr ""
+msgstr "निःशुल्क भौतिक स्मृति प्रतिशत"
 
 #: memory/backend.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr ""
+msgstr "अनुप्रयोग स्मृति"
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr ""
+msgstr "अनुप्रयोगः"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr ""
+msgstr "अनुप्रयोग स्मृति प्रतिशत"
 
 #: memory/backend.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr ""
+msgstr "Cache Memory इति"
 
 #: memory/backend.cpp:72
 #, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
-msgstr ""
+msgstr "संग्रहणम्"
 
 #: memory/backend.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory Percentage"
-msgstr ""
+msgstr "संग्रह स्मृति प्रतिशत"
 
 #: memory/backend.cpp:80
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory"
-msgstr ""
+msgstr "बफर स्मृति"
 
 #: memory/backend.cpp:81
 #, kde-format
 msgctxt "@title, Short for 'Buffer Memory'"
 msgid "Buffer"
-msgstr ""
+msgstr "बफर"
 
 #: memory/backend.cpp:82
 #, kde-format
@@ -647,401 +647,401 @@ msgstr "डिस्कखण्डानां संग्रहणार्�
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory Percentage"
-msgstr ""
+msgstr "बफर स्मृति प्रतिशत"
 
 #: memory/backend.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr ""
+msgstr "कुल स्वैप स्मृति"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr ""
+msgstr "प्रयुक्ता स्वैप मेमोरी"
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr ""
+msgstr "प्रयुक्त"
 
 #: memory/backend.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr ""
+msgstr "प्रयुक्तः Swap Memory Percentage इति"
 
 #: memory/backend.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr ""
+msgstr "निःशुल्क स्वैप स्मृति"
 
 #: memory/backend.cpp:105
 #, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
-msgstr ""
+msgstr "निःशुल्कः"
 
 #: memory/backend.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr ""
+msgstr "निःशुल्क स्वैप स्मृति प्रतिशत"
 
 #: memory/memory.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Memory"
-msgstr ""
+msgstr "स्मृति"
 
 #: network/AllDevicesObject.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All Network Devices"
-msgstr ""
+msgstr "सर्वे संजालयन्त्राणि"
 
 #: network/AllDevicesObject.cpp:18 network/AllDevicesObject.cpp:28
 #: network/NetworkDevice.cpp:66 network/NetworkDevice.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr ""
+msgstr "डाउनलोड् दरम्"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr ""
+msgstr "अवाहरन"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr ""
+msgstr "अपलोड दर"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
 #, kde-format
 msgctxt "@title Short for Upload Rate"
 msgid "Upload"
-msgstr ""
+msgstr "अपलोड करें"
 
 #: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr ""
+msgstr "कुल डाउनलोड् कृतम्"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr ""
+msgstr "डाउनलोड् कृतम्"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr ""
+msgstr "कुल अपलोड किया गया"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr ""
+msgstr "अपलोड् कृतम्"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Network Name"
-msgstr ""
+msgstr "संजालनाम"
 
 #: network/NetworkDevice.cpp:16
 #, kde-format
 msgctxt "@title Short of Network Name"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: network/NetworkDevice.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Signal Strength"
-msgstr ""
+msgstr "संकेतबलम्"
 
 #: network/NetworkDevice.cpp:20
 #, kde-format
 msgctxt "@title Short of Signal Strength"
 msgid "Signal"
-msgstr ""
+msgstr "संकेतः"
 
 #: network/NetworkDevice.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Address"
-msgstr ""
+msgstr "IPv4 पता"
 
 #: network/NetworkDevice.cpp:27
 #, kde-format
 msgctxt "@title Short of IPv4 Address"
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 गेटवे"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 गेटवे"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 उपजाल मास्क"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 उपजाल मास्क"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr ""
+msgstr "उपसर्गदीर्घता सह IPv4"
 
 #: network/NetworkDevice.cpp:39
 #, kde-format
 msgctxt "@title Short of IPv4 Prefix Length"
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr ""
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:43
 #, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr ""
+msgstr "IPv4 DNS"
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Address"
-msgstr ""
+msgstr "IPv6 पता"
 
 #: network/NetworkDevice.cpp:47
 #, kde-format
 msgctxt "@title Short of IPv6 Address"
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:50
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 गेटवे"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 गेटवे"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 उपजाल मास्क"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 उपजाल मास्क"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr ""
+msgstr "उपसर्गदीर्घतायाः सह IPv6"
 
 #: network/NetworkDevice.cpp:59
 #, kde-format
 msgctxt "@title Short of IPv6 Prefix Length"
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr ""
+msgstr "IPv6 DNS"
 
 #: network/NetworkDevice.cpp:63
 #, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr ""
+msgstr "IPv6 DNS"
 
 #: network/NetworkPlugin.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Network Devices"
-msgstr ""
+msgstr "संजालयन्त्राणि"
 
 #: osinfo/osinfo.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Operating System"
-msgstr ""
+msgstr "संचालन प्रणाली"
 
 #: osinfo/osinfo.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
-msgstr ""
+msgstr "कर्नेल"
 
 #: osinfo/osinfo.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name"
-msgstr ""
+msgstr "कर्नल नाम"
 
 #: osinfo/osinfo.cpp:112
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Version"
-msgstr ""
+msgstr "कर्नेल् संस्करणम्"
 
 #: osinfo/osinfo.cpp:113
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name and Version"
-msgstr ""
+msgstr "कर्नेल् नाम संस्करणं च"
 
 #: osinfo/osinfo.cpp:114
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
-msgstr ""
+msgstr "कर्नेल"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "System"
-msgstr ""
+msgstr "व्यवस्था"
 
 #: osinfo/osinfo.cpp:117
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr ""
+msgstr "होस्टनाम"
 
 #: osinfo/osinfo.cpp:118
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम नाम"
 
 #: osinfo/osinfo.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Version"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम संस्करण"
 
 #: osinfo/osinfo.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name and Version"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम् नाम संस्करणं च"
 
 #: osinfo/osinfo.cpp:121
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
-msgstr ""
+msgstr "त्वम्‌"
 
 #: osinfo/osinfo.cpp:122
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Logo"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम लोगो"
 
 #: osinfo/osinfo.cpp:123
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम URL"
 
 #: osinfo/osinfo.cpp:124
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr ""
+msgstr "अपटाइम"
 
 #: osinfo/osinfo.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma"
-msgstr ""
+msgstr "केडीई प्लाज्मा"
 
 #: osinfo/osinfo.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
-msgstr ""
+msgstr "Qt संस्करणम्"
 
 #: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr ""
+msgstr "KDE Frameworks संस्करणम्"
 
 #: osinfo/osinfo.cpp:130
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
-msgstr ""
+msgstr "KDE प्लाज्मा संस्करणम्"
 
 #: osinfo/osinfo.cpp:131
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr ""
+msgstr "खिडकी प्रणाली"
 
 #: osinfo/osinfo.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: power/power.cpp:44 power/power.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr ""
+msgstr "डिजाइन क्षमता"
 
 #: power/power.cpp:47
 #, kde-format
@@ -1052,7 +1052,7 @@ msgstr "ऊर्जायाः परिमाणं यत् बैटरी
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr ""
+msgstr "वर्तमान क्षमता"
 
 #: power/power.cpp:56
 #, kde-format
@@ -1063,7 +1063,7 @@ msgstr "ऊर्जायाः परिमाणं यत् बैटरी
 #, kde-format
 msgctxt "@title"
 msgid "Health"
-msgstr ""
+msgstr "आरोग्यम्‌"
 
 #: power/power.cpp:65
 #, kde-format
@@ -1074,7 +1074,7 @@ msgstr "बैटरी यत् धारयितुं शक्नोति
 #, kde-format
 msgctxt "@title"
 msgid "Charge"
-msgstr ""
+msgstr "दायित्वम्‌"
 
 #: power/power.cpp:74
 #, kde-format
@@ -1085,7 +1085,7 @@ msgstr "ऊर्जायाः परिमाणं यत् बैटरी
 #, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr ""
+msgstr "शुल्क प्रतिशत"
 
 #: power/power.cpp:83
 #, kde-format
@@ -1097,13 +1097,13 @@ msgstr "वर्तमानक्षमतायाः प्रतिशत�
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr ""
+msgstr "चार्जिंग दर"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr ""
+msgstr "चार्जिंग दर"
 
 #: power/power.cpp:93
 #, kde-format
@@ -1116,20 +1116,20 @@ msgstr "बैटरी यत् चार्जं क्रियते (स�
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "प्रबलता"
 
 #: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr ""
+msgstr "स्मृति दबाव"
 
 #: pressure/pressure.cpp:142 pressure/pressure.cpp:170
 #: pressure/pressure.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr ""
+msgstr "केचन (१० सेकेण्ड् औसत) २."
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1138,13 +1138,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणं न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, सरासरी "
+"१० सेकेण्ड् यावत्"
 
 #: pressure/pressure.cpp:145 pressure/pressure.cpp:173
 #: pressure/pressure.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr ""
+msgstr "केचन (१ निमेषस्य औसतम्) २."
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1153,13 +1155,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणं न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, औसतेन १ "
+"निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:148 pressure/pressure.cpp:176
 #: pressure/pressure.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr ""
+msgstr "केचन (५ मिनिट् औसतम्) २."
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1168,13 +1172,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणं न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, औसतेन ५ "
+"निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:151 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr ""
+msgstr "कुल कुछ स्थगित समय"
 
 #: pressure/pressure.cpp:152
 #, kde-format
@@ -1183,13 +1189,15 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणं न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयः, सूक्ष्मसेकेण्ड्-"
+"मात्रायां मापितः"
 
 #: pressure/pressure.cpp:155 pressure/pressure.cpp:184
 #: pressure/pressure.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr ""
+msgstr "पूर्ण (१० सेकण्ड् औसत) २."
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1198,13 +1206,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"१० सेकेण्ड् अधिकं औसतम्"
 
 #: pressure/pressure.cpp:158 pressure/pressure.cpp:187
 #: pressure/pressure.cpp:217
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr ""
+msgstr "पूर्ण (१ मिनिट् औसत) २."
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1213,13 +1223,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"औसतेन 1 निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:161 pressure/pressure.cpp:190
 #: pressure/pressure.cpp:220
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr ""
+msgstr "पूर्णम् (५ मिनिट् औसतम्) २."
 
 #: pressure/pressure.cpp:162
 #, kde-format
@@ -1228,13 +1240,15 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"औसतेन ५ निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:164 pressure/pressure.cpp:193
 #: pressure/pressure.cpp:223
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr ""
+msgstr "कुल पूर्ण स्टाल समय"
 
 #: pressure/pressure.cpp:165
 #, kde-format
@@ -1243,12 +1257,14 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयः, "
+"माइक्रोसेकेण्ड् मध्ये मापितः"
 
 #: pressure/pressure.cpp:168
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr ""
+msgstr "CPU दबाव"
 
 #: pressure/pressure.cpp:171
 #, kde-format
@@ -1257,6 +1273,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"10 सेकण्ड् अधिकं औसतम्"
 
 #: pressure/pressure.cpp:174
 #, kde-format
@@ -1265,6 +1283,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"औसतेन 1 निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:177
 #, kde-format
@@ -1273,6 +1293,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयस्य प्रतिशतं, "
+"औसतेन ५ निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1281,6 +1303,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया न्यूनातिन्यूनम् एकं कार्यं स्थगितम् इति समयः, "
+"माइक्रोसेकेण्ड्-मात्रायां मापितः"
 
 #: pressure/pressure.cpp:185
 #, kde-format
@@ -1289,6 +1313,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणाः सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य प्रतिशतं, "
+"१० सेकेण्ड् अधिकस्य औसतम्"
 
 #: pressure/pressure.cpp:188
 #, kde-format
@@ -1297,6 +1323,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणाः सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य प्रतिशतं, "
+"औसतेन १ निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:191
 #, kde-format
@@ -1305,6 +1333,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणाः सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य प्रतिशतं, ५ "
+"निमेषेभ्यः अधिकं औसतम्"
 
 #: pressure/pressure.cpp:194
 #, kde-format
@@ -1313,12 +1343,14 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
+"उपलब्धस्मृतिसम्पदां प्रतीक्षमाणाः सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयः, सूक्ष्मसेकेण्ड्-"
+"मात्रायां मापितः"
 
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr ""
+msgstr "I दबावः"
 
 #: pressure/pressure.cpp:201
 #, kde-format
@@ -1327,6 +1359,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, 10 सेकण्ड् अधिकं औसतम्"
 
 #: pressure/pressure.cpp:204
 #, kde-format
@@ -1335,6 +1369,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, औसतेन 1 निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:207
 #, kde-format
@@ -1343,6 +1379,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, औसतेन ५ निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1351,6 +1389,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
+"उपलब्धानां CPU संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयः, "
+"माइक्रोसेकेण्ड् मध्ये मापितः"
 
 #: pressure/pressure.cpp:215
 #, kde-format
@@ -1359,6 +1399,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, 10 सेकण्ड् अधिकं औसतम्"
 
 #: pressure/pressure.cpp:218
 #, kde-format
@@ -1367,6 +1409,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, औसतेन 1 निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:221
 #, kde-format
@@ -1375,6 +1419,8 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयस्य "
+"प्रतिशतं, औसतेन ५ निमेषेभ्यः अधिकम्"
 
 #: pressure/pressure.cpp:224
 #, kde-format
@@ -1383,3 +1429,5 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+"उपलब्धानां IO संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयः, "
+"माइक्रोसेकेण्ड् मध्ये मापितः"
