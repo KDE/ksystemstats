@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the ksystemstats package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-16 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 12:26+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -273,37 +275,37 @@ msgstr "भार औसत"
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr "भार औसत (१ मिनिट्) २."
+msgstr "भार औसत (१ मिनिट्)"
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr "भार औसत (५ मिनिट्) २."
+msgstr "भार औसत (५ मिनिट्)"
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr "भार औसत (१५ मिनिट्) २."
+msgstr "भार औसत (१५ मिनिट्)"
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr "भार औसत (१मी) २."
+msgstr "भार औसत (१मी)"
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr "भार औसत (५मी) २."
+msgstr "भार औसत (५मी)"
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr "भार औसत (१५मी) २."
+msgstr "भार औसत (१५मी)"
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
@@ -1130,7 +1132,7 @@ msgstr "स्मृति दबाव"
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr "केचन (१० सेकेण्ड् औसत) २."
+msgstr "केचन (१० सेकेण्ड् औसत)"
 
 #: pressure/pressure.cpp:143
 #, kde-format
@@ -1147,7 +1149,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr "केचन (१ निमेषस्य औसतम्) २."
+msgstr "केचन (१ निमेषस्य औसतम्)"
 
 #: pressure/pressure.cpp:146
 #, kde-format
@@ -1164,7 +1166,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr "केचन (५ मिनिट् औसतम्) २."
+msgstr "केचन (५ मिनिट् औसतम्)"
 
 #: pressure/pressure.cpp:149
 #, kde-format
@@ -1198,7 +1200,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr "पूर्ण (१० सेकण्ड् औसत) २."
+msgstr "पूर्ण (१० सेकण्ड् औसत)"
 
 #: pressure/pressure.cpp:156
 #, kde-format
@@ -1215,7 +1217,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr "पूर्ण (१ मिनिट् औसत) २."
+msgstr "पूर्ण (१ मिनिट् औसत)"
 
 #: pressure/pressure.cpp:159
 #, kde-format
@@ -1232,7 +1234,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr "पूर्णम् (५ मिनिट् औसतम्) २."
+msgstr "पूर्णम् (५ मिनिट् औसतम्)"
 
 #: pressure/pressure.cpp:162
 #, kde-format
