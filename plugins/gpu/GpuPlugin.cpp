@@ -13,6 +13,7 @@
 
 #include "GpuDevice.h"
 #include "LinuxBackend.h"
+#include "FreeBSDBackend.h"
 #include "AllGpus.h"
 
 class GpuPlugin::Private
@@ -32,6 +33,10 @@ GpuPlugin::GpuPlugin(QObject *parent, const QVariantList &args)
 
 #ifdef Q_OS_LINUX
     d->backend = std::make_unique<LinuxBackend>();
+#endif
+
+#ifdef Q_OS_FREEBSD
+    d->backend = std::make_unique<FreeBSDBackend>();
 #endif
 
     if (d->backend) {

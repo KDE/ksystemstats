@@ -69,6 +69,14 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     )
 endif()
 
+if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+    find_package(Devinfo)
+    set_package_properties(Devinfo PROPERTIES
+            TYPE REQUIRED
+            PURPOSE "Used for finding hardware devices. Part of the base system."
+        )
+endif()
+
 find_package(UDev)
 set_package_properties(
     UDev PROPERTIES

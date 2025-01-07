@@ -6,26 +6,15 @@
 
 #pragma once
 
-#include "GpuDevice.h"
-#include "NvidiaSmiProcess.h"
+#include "NvidiaGpu.h"
 
 struct udev_device;
 
-class LinuxNvidiaGpu : public GpuDevice
+class LinuxNvidiaGpu : public NvidiaGpu
 {
     Q_OBJECT
 
 public:
-    LinuxNvidiaGpu(const QString& id, const QString &name, udev_device *device);
-    ~LinuxNvidiaGpu() override;
 
-    void initialize() override;
-
-private:
-    void onDataReceived(const NvidiaSmiProcess::GpuData &data);
-
-    int m_index = -1;
-    udev_device *m_device;
-
-    static NvidiaSmiProcess *s_smiProcess;
+    LinuxNvidiaGpu(const QString& id, const QString& name, udev_device* device);
 };

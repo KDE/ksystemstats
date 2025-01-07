@@ -16,7 +16,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     add_subdirectory(pressure)
 endif ()
 
-if(UDev_FOUND)
+if(UDev_FOUND OR Devinfo_FOUND)
     add_subdirectory(gpu)
 endif()
 

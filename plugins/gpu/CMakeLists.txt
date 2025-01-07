@@ -4,8 +4,16 @@
 add_library(ksystemstats_plugin_gpu MODULE GpuPlugin.cpp GpuBackend.cpp GpuDevice.cpp AllGpus.cpp)
 target_link_libraries(ksystemstats_plugin_gpu Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats UDev::UDev)
 
+if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+    target_link_libraries(ksystemstats_plugin_gpu ${DEVINFO_LIBRARIES})
+endif()
+
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-   target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaSmiProcess.cpp)
+    target_sources(ksystemstats_plugin_gpu PRIVATE LinuxAmdGpu.cpp LinuxNvidiaGpu.cpp LinuxBackend.cpp NvidiaGpu.cpp NvidiaSmiProcess.cpp)
+endif()
+
+if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+    target_sources(ksystemstats_plugin_gpu PRIVATE FreeBSDBackend.cpp FreeBSDNvidiaGpu.cpp NvidiaGpu.cpp NvidiaSmiProcess.cpp)
 endif()
 
 if (BUILD_TESTING)
