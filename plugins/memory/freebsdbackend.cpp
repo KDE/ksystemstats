@@ -70,7 +70,7 @@ void FreeBsdMemoryBackend::makeSensors()
 
 unsigned long long FreeBsdMemoryBackend::pagesToBytes(uint32_t pages)
 {
-    return m_pageSize * pages;
+    return m_pageSize * static_cast<unsigned long long>(pages);
 }
 
 void FreeBsdMemoryBackend::update()
