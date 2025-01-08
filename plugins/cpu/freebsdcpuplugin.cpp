@@ -32,6 +32,10 @@ bool readSysctl(const char *name, T *buffer, size_t size = sizeof(T)) {
     return sysctlbyname(name, buffer, &size, nullptr, 0) != -1;
 }
 
+double deciKelvinToCelsius(const int deci_kelvin) {
+    return static_cast<double>(deci_kelvin) / 10.0 - 273.15;
+}
+
 /** Calls update() with sysctl cp_time data
  *
  * For a CPU object, or an AllCpus object, calls update() with the relevant data.
@@ -73,7 +77,11 @@ void FreeBsdCpuObject::makeSensors()
     BaseCpuObject::makeSensors();
 
     m_frequency = new KSysGuard::SysctlSensor<int>(QStringLiteral("frequency"), m_sysctlPrefix + QByteArrayLiteral(".freq"), 0, this);
-    m_temperature = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), m_sysctlPrefix + QByteArrayLiteral(".temperature"), 0, this);
+
+    KSysGuard::SysctlSensor<int> *temp_sensor = new KSysGuard::SysctlSensor<int>(QStringLiteral("temperature"), m_sysctlPrefix + QByteArrayLiteral(".temperature"), 0, this);
+    // The temperature value is exported in deci-kelvin in the sysctl. See FreeBSD sbin/sysctl/sysctl.c for details.
+    temp_sensor->setConversionFunction([](int raw_value) { return deciKelvinToCelsius(raw_value); });
+    m_temperature = temp_sensor;
 }
 
 void FreeBsdCpuObject::initialize()
@@ -106,7 +114,7 @@ void FreeBsdCpuObject::initialize()
     int maxTemperature;
     // This is only availabel on Intel (using the coretemp driver)
     if (readSysctl(tjmax.constData(), &maxTemperature)) {
-        m_temperature->setMax(maxTemperature);
+        m_temperature->setMax(deciKelvinToCelsius(maxTemperature));
     }
 }
 
