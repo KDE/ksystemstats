@@ -58,7 +58,8 @@ void FreeBsdMemoryBackend::makeSensors()
     m_cache = cacheSensor;
     m_sysctlSensors.push_back(cacheSensor);
 
-    auto bufferSensor = new KSysGuard::SysctlSensor<uint64_t>(QStringLiteral("buffer"), "vfs.bufspace", m_physicalObject);
+    // uint64_t can't be used here, because it's mapped to Qt type ulong, which is not registered in Qt DBus type system. See https://doc.qt.io/qt-6/qdbustypesystem.html
+    auto bufferSensor = new KSysGuard::SysctlSensor<unsigned long long>(QStringLiteral("buffer"), "vfs.bufspace", m_physicalObject);
     m_buffer = bufferSensor;
     m_sysctlSensors.push_back(bufferSensor);
 
