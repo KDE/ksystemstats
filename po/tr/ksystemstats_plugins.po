@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-08 00:43+0000\n"
 "PO-Revision-Date: 2024-06-08 13:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -460,6 +460,12 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Kullanılan"
 
+#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:55
+#, kde-format
+msgctxt "@title %1 is GPU number"
+msgid "GPU %1"
+msgstr "%1. GPU"
+
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
@@ -514,17 +520,11 @@ msgctxt "@title"
 msgid "Power"
 msgstr "Güç"
 
-#: gpu/GpuPlugin.cpp:31
+#: gpu/GpuPlugin.cpp:32
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
 msgstr "GPU"
-
-#: gpu/LinuxBackend.cpp:55
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "%1. GPU"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
