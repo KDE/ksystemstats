@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-08 00:43+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2023-11-04 22:59+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -249,7 +249,7 @@ msgstr ""
 msgid "CPUs"
 msgstr "CPUs"
 
-#: cpu/freebsdcpuplugin.cpp:151
+#: cpu/freebsdcpuplugin.cpp:159
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"

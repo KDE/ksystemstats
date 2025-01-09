@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-08 00:43+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-06-30 11:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -248,7 +248,7 @@ msgstr "所有物理 CPU 之間加總的核心數量"
 msgid "CPUs"
 msgstr "CPU"
 
-#: cpu/freebsdcpuplugin.cpp:151
+#: cpu/freebsdcpuplugin.cpp:159
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"

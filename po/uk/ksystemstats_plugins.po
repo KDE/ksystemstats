@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-08 00:43+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-06-08 16:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -248,7 +248,7 @@ msgstr "Кількість ядер процесорів для усіх фіз�
 msgid "CPUs"
 msgstr "Процесори"
 
-#: cpu/freebsdcpuplugin.cpp:151
+#: cpu/freebsdcpuplugin.cpp:159
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"
