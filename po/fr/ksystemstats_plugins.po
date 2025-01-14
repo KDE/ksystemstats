@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-09 14:09+0200\n"
+"PO-Revision-Date: 2025-01-12 18:00+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -539,7 +539,7 @@ msgstr "Mémoire physique"
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr "Mémoire d'échange « swap »"
+msgstr "Mémoire d'échange"
 
 #: memory/backend.cpp:39
 #, kde-format
@@ -664,7 +664,7 @@ msgstr "Total"
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr "Mémoire d'échange « swap » utilisée"
+msgstr "Mémoire d'échange utilisée"
 
 #: memory/backend.cpp:96
 #, kde-format
@@ -682,7 +682,7 @@ msgstr "Pourcentage de mémoire d'échange utilisée"
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr "Mémoire d'échange « swap » libre"
+msgstr "Mémoire d'échange libre"
 
 #: memory/backend.cpp:105
 #, kde-format
