@@ -9,6 +9,10 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
     target_sources(ksystemstats_plugin_cpu PRIVATE freebsdcpuplugin.cpp)
 endif()
 
+if (BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
+
 target_link_libraries(ksystemstats_plugin_cpu Qt::Core KF6::CoreAddons KF6::I18n KSysGuard::SystemStats)
 
 ecm_qt_declare_logging_category(ksystemstats_plugin_cpu HEADER debug.h
