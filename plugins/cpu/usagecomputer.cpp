@@ -31,7 +31,7 @@ void UsageComputer::setTicks(long long system, long long user, long long wait, l
     systemUsage = percentage(systemDiff);
     userUsage = percentage(userDiff);
     waitUsage = percentage(waitDiff);
-    totalUsage = percentage(systemDiff + userDiff + waitDiff);
+    totalUsage = percentage(systemDiff + userDiff);
 
     m_totalTicks = totalTicks;
     m_systemTicks = system;
