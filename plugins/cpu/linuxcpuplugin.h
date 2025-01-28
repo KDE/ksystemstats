@@ -17,7 +17,7 @@ class LoadAverages;
 
 class LinuxCpuPluginPrivate : public CpuPluginPrivate {
 public:
-    LinuxCpuPluginPrivate(CpuPlugin *q);
+    LinuxCpuPluginPrivate(CpuPlugin *q, const QString &cpuInfoPath = QString{});
     void update() override;
 private:
     void addSensors();

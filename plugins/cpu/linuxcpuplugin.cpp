@@ -18,6 +18,8 @@
 #include "linuxcpu.h"
 #include "loadaverages.h"
 
+using namespace Qt::StringLiterals;
+
 struct CpuInfo
 {
     int id = -1;
@@ -64,13 +66,15 @@ static QHash<int, QString> makeCpuNames(const QList<CpuInfo> &cpus, int cpuCount
     return result;
 }
 
-LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
+LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q, const QString &cpuInfoPath)
     : CpuPluginPrivate(q)
 {
     m_loadAverages = new LoadAverages(m_container);
 
+    auto path = cpuInfoPath.isEmpty() ? u"/proc/cpuinfo"_s : cpuInfoPath;
+
     // Parse /proc/cpuinfo for information about cpus
-    QFile cpuinfo(QStringLiteral("/proc/cpuinfo"));
+    QFile cpuinfo(path);
     cpuinfo.open(QIODevice::ReadOnly);
 
     int cpuCount = 0;
