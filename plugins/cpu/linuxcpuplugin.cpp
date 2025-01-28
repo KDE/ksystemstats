@@ -107,7 +107,10 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q)
         // /proc/cpuinfo.
         if (info.id != -1) {
             cpus.push_back(info);
-            cpuCount = std::max(cpuCount, info.id);
+
+            if (info.cpu != -1) {
+                cpuCount = std::max(cpuCount, info.cpu);
+            }
         }
     }
 
