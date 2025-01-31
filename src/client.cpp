@@ -41,16 +41,23 @@ void Client::subscribeSensors(const QStringList &sensorPaths)
 
     for (const QString &sensorPath : sensorPaths) {
         if (auto sensor = m_daemon->findSensor(sensorPath)) {
-            m_connections.insert(sensor, connect(sensor, &KSysGuard::SensorProperty::valueChanged, this, [this, sensor]() {
+            Connections connections;
+            connections.valueChanged = connect(sensor, &KSysGuard::SensorProperty::valueChanged, this, [this, sensor]() {
                 const QVariant value = sensor->value();
                 if (!value.isValid()) {
                     return;
                 }
                 m_pendingUpdates << KSysGuard::SensorData(sensor->path(), value);
-            }));
-            m_connections.insert(sensor, connect(sensor, &KSysGuard::SensorProperty::sensorInfoChanged, this, [this, sensor]() {
+            });
+            connections.infoChanged = connect(sensor, &KSysGuard::SensorProperty::sensorInfoChanged, this, [this, sensor]() {
                 m_pendingMetaDataChanges[sensor->path()] = sensor->info();
-            }));
+            });
+            connections.destroyed = connect(sensor, &KSysGuard::SensorProperty::destroyed, this, [this, sensor]() {
+                m_subscribedSensors.remove(m_subscribedSensors.key(sensor));
+                m_connections.remove(sensor);
+            });
+
+            m_connections.insert(sensor, connections);
 
             sensor->subscribe();
 
@@ -63,8 +70,10 @@ void Client::unsubscribeSensors(const QStringList &sensorPaths)
 {
     for (const QString &sensorPath : sensorPaths) {
         if (auto sensor = m_subscribedSensors.take(sensorPath)) {
-            disconnect(m_connections.take(sensor));
-            disconnect(m_connections.take(sensor));
+            auto connections = m_connections.take(sensor);
+            disconnect(connections.valueChanged);
+            disconnect(connections.infoChanged);
+            disconnect(connections.destroyed);
             sensor->unsubscribe();
         }
     }

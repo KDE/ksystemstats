@@ -30,13 +30,19 @@ public:
     void sendFrame();
 
 private:
+    struct Connections {
+        QMetaObject::Connection valueChanged;
+        QMetaObject::Connection infoChanged;
+        QMetaObject::Connection destroyed;
+    };
+
     void sendValues(const KSysGuard::SensorDataList &updates);
     void sendMetaDataChanged(const KSysGuard::SensorInfoMap &sensors);
 
     const QString m_serviceName;
     Daemon *m_daemon;
     QHash<QString, KSysGuard::SensorProperty *> m_subscribedSensors;
-    QMultiHash<KSysGuard::SensorProperty *, QMetaObject::Connection> m_connections;
+    QHash<KSysGuard::SensorProperty *, Connections> m_connections;
     KSysGuard::SensorDataList m_pendingUpdates;
     KSysGuard::SensorInfoMap m_pendingMetaDataChanges;
 };
