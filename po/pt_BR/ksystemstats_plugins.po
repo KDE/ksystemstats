@@ -3,13 +3,14 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-29 00:42+0000\n"
-"PO-Revision-Date: 2025-02-15 10:16-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-27 20:19-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -1426,7 +1427,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr ""
 "Porcentagem de tempo em que todas as tarefas ficam paralisadas aguardando "
-"recursos de  IO (leitura e escrita) disponíveis, em média, ao longo de 5 "
+"recursos de IO (leitura e escrita) disponíveis, em média, ao longo de 5 "
 "minutos"
 
 #: pressure/pressure.cpp:224
@@ -1437,7 +1438,7 @@ msgid ""
 "resources, measured in microseconds"
 msgstr ""
 "Quantidade de tempo que todas as tarefas ficam paralisadas aguardando "
-"recursos de  IO (leitura e escrita) disponíveis, medido em microssegundos"
+"recursos de IO (leitura e escrita) disponíveis, medido em microssegundos"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
