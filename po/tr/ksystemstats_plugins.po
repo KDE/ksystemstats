@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-08 13:17+0300\n"
+"PO-Revision-Date: 2025-02-27 21:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -1042,7 +1042,7 @@ msgstr "Bilinmiyor"
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr "Fabrika Kapasitesi"
+msgstr "Fabrika Sığası"
 
 #: power/power.cpp:47
 #, kde-format
@@ -1053,7 +1053,7 @@ msgstr "Pilin tutmak üzere tasarlandığı enerji miktarı"
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr "Geçerli Kapasite"
+msgstr "Geçerli Sığa"
 
 #: power/power.cpp:56
 #, kde-format
@@ -1069,7 +1069,7 @@ msgstr "Sağlık"
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
-msgstr "Pilin tutabildiği tasarım kapasitesinin yüzdesi"
+msgstr "Pilin tutabildiği tasarım sığasının yüzdesi"
 
 #: power/power.cpp:71
 #, kde-format
@@ -1092,7 +1092,7 @@ msgstr "Şarj Yüzdesi"
 #, kde-format
 msgid ""
 "Percentage of the current capacity that the battery is currently holding"
-msgstr "Pilin şu anda tuttuğu geçerli kapasitenin yüzdesi"
+msgstr "Pilin şu anda tuttuğu geçerli sığanın yüzdesi"
 
 #: power/power.cpp:90
 #, kde-format
