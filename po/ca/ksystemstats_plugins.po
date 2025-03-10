@@ -1445,11 +1445,3 @@ msgid ""
 msgstr ""
 "Quantitat de temps que totes les tasques estan estancades esperant els "
 "recursos disponibles d'E/S, mesurat en microsegons"
-
-#~ msgctxt "@title, Short for 'Current Frequency'"
-#~ msgid "Frequency"
-#~ msgstr "Freqüència"
-
-#~ msgctxt "@title, Short for Current Temperatur"
-#~ msgid "Temperature"
-#~ msgstr "Temperatura"
