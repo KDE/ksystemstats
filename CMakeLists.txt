@@ -46,7 +46,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KSYSTEMSTATS
                   )
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
-    KF 5.101
+    KF 6.12.0
 )
 
 
