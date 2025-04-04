@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-12-07 16:28+0200\n"
+"PO-Revision-Date: 2025-03-15 08:55+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,7 +28,7 @@ msgstr "Nimi"
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr "Kokonaiskäyttö"
+msgstr "käyttö yhteensä"
 
 #: cpu/cpu.cpp:39
 #, kde-format
@@ -251,11 +251,12 @@ msgctxt "@title"
 msgid "CPU %1"
 msgstr "Suoritin %1"
 
+# Tämän jälkeen tulee teksti ”…käyttö yhteensä”
 #: cpu/linuxcpuplugin.cpp:40 cpu/linuxcpuplugin.cpp:51
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr "Ydin %1"
+msgstr "Ytimen %1"
 
 #: cpu/linuxcpuplugin.cpp:61
 #, kde-format
@@ -327,13 +328,13 @@ msgstr "Suoritusjonojen töiden määrä 15 min ajalle keskiarvoistettuna"
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr "Kokonaistila"
+msgstr "tila yhteensä"
 
 #: disks/disks.cpp:83 disks/disks.cpp:280
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr "Kaikkiaan"
+msgstr "yhteensä"
 
 #: disks/disks.cpp:87 disks/disks.cpp:302
 #, kde-format
@@ -363,13 +364,13 @@ msgstr "Kirjoitus"
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr "Käytetty tila"
+msgstr "käytetty tila"
 
 #: disks/disks.cpp:102 disks/disks.cpp:295
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: disks/disks.cpp:107 disks/disks.cpp:286
 #, kde-format
@@ -387,7 +388,7 @@ msgstr "Vapaana"
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr "Käytössä oleva osuus"
+msgstr "% käytössä"
 
 #: disks/disks.cpp:118 disks/disks.cpp:316
 #, kde-format
@@ -416,7 +417,7 @@ msgstr "Vapaana"
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
@@ -440,13 +441,13 @@ msgstr "Käyttö"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "Kaikkien grafiikkasuoritinten kokonaismuisti"
+msgstr "kaikkien grafiikkasuoritinten muisti yhteensä"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr "Kaikkiaan"
+msgstr "yhteensä"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
@@ -458,7 +459,7 @@ msgstr "Kaikkien grafiikkasuoritinten käyttämä muisti"
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:55
 #, kde-format
@@ -476,25 +477,25 @@ msgstr "Käyttö"
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr "Kokonaisnäyttömuisti"
+msgstr "näyttömuisti yhteensä"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr "Kaikkiaan"
+msgstr "yhteensä"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr "Käytetty näyttömuisti"
+msgstr "käytetty näyttömuisti"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
@@ -547,31 +548,31 @@ msgstr "Sivutusmuisti"
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr "Fyysinen kokonaismuisti"
+msgstr "fyysinen muisti yhteensä"
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr "Kaikkiaan"
+msgstr "yhteensä"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr "Käytetty fyysinen muisti"
+msgstr "käytetty fyysinen muisti"
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr "Käytössä olevan fyysisen muistin osuus"
+msgstr "% fyysistä muistia käytössä"
 
 #: memory/backend.cpp:53
 #, kde-format
@@ -654,25 +655,25 @@ msgstr "Puskurimuistin osuus"
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr "Kokonaissivutusmuisti"
+msgstr "sivutusmuisti yhteensä"
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr "Kaikkiaan"
+msgstr "yhteensä"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr "Käytetty sivutusmuisti"
+msgstr "käytetty sivutusmuisti"
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr "Käytössä"
+msgstr "käytössä"
 
 #: memory/backend.cpp:100
 #, kde-format
@@ -715,21 +716,21 @@ msgstr "Kaikki verkkolaitteet"
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "Latausnopeus"
+msgstr "latausnopeus"
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr "Lataa"
+msgstr "Lataus"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "Lähetysnopeus"
+msgstr "lähetysnopeus"
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
@@ -742,7 +743,7 @@ msgstr "Lähetys"
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "Ladattu kaikkiaan"
+msgstr "ladattu yhteensä"
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
@@ -754,7 +755,7 @@ msgstr "Ladattu"
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "Lähetetty kaikkiaan"
+msgstr "lähetetty yhteensä"
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
@@ -1086,7 +1087,7 @@ msgstr "Akun nykyisen varauksen määrä"
 #, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr "Latausosuus"
+msgstr "lataus-%"
 
 #: power/power.cpp:83
 #, kde-format
@@ -1099,13 +1100,13 @@ msgstr "Akun varauksen suhde nykyiseen kapasiteettiin"
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr "Latausnopeus"
+msgstr "latausnopeus"
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr "Latausnopeus"
+msgstr "latausnopeus"
 
 #: power/power.cpp:93
 #, kde-format
