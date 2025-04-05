@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2024-06-16 11:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -460,7 +460,7 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Използвано"
 
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:55
+#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
@@ -525,6 +525,14 @@ msgstr "Захранване"
 msgctxt "@title"
 msgid "GPU"
 msgstr "Графична карта"
+
+#: gpu/LinuxIntelGpu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "User Usage"
+msgctxt "@title"
+msgid "Video Usage"
+msgstr "Използване от потребител"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format

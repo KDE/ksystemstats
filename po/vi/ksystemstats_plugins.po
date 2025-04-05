@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2022-09-28 18:37+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -466,7 +466,7 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Đã dùng"
 
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:55
+#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
 #, kde-format
 msgctxt "@title %1 is GPU number"
 msgid "GPU %1"
@@ -531,6 +531,14 @@ msgstr "Điện lượng"
 msgctxt "@title"
 msgid "GPU"
 msgstr "GPU"
+
+#: gpu/LinuxIntelGpu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "User Usage"
+msgctxt "@title"
+msgid "Video Usage"
+msgstr "Lượng dùng người dùng"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format

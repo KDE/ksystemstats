@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2020-10-25 22:30+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -504,7 +504,7 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Kasutatud"
 
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:55
+#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "GPU %1"
@@ -587,6 +587,14 @@ msgstr "Energia"
 msgctxt "@title"
 msgid "GPU"
 msgstr "GPU %1"
+
+#: gpu/LinuxIntelGpu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "User Usage"
+msgctxt "@title"
+msgid "Video Usage"
+msgstr "Kasutaja kasutus"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
