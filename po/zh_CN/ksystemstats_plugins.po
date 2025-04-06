@@ -527,12 +527,10 @@ msgid "GPU"
 msgstr "GPU"
 
 #: gpu/LinuxIntelGpu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "User Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "用户使用率"
+msgstr ""
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
