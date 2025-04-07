@@ -530,7 +530,7 @@ msgstr "GPU"
 #, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr ""
+msgstr "显卡使用率"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
