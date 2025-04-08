@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the ksystemstats package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2024-06-30 11:45+0900\n"
+"PO-Revision-Date: 2025-04-07 13:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -530,12 +530,10 @@ msgid "GPU"
 msgstr "GPU"
 
 #: gpu/LinuxIntelGpu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "User Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "使用者用量"
+msgstr "圖形用量"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
