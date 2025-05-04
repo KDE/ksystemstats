@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
 #
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2024, 2025 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2024-07-02 18:30+0200\n"
-"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"PO-Revision-Date: 2025-05-03 06:59+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -527,12 +527,10 @@ msgid "GPU"
 msgstr "GPU"
 
 #: gpu/LinuxIntelGpu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "User Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "Uso persoal"
+msgstr "Uso de vídeo"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
