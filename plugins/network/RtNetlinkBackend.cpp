@@ -189,6 +189,10 @@ void RtNetlinkBackend::stop()
 void RtNetlinkBackend::update()
 {
     const qint64 elapsedTime = m_updateTimer.restart();
+    if (elapsedTime <= 0) {
+        return;
+    }
+
     nl_cache *link_cache, *address_cache, *route_cache;
     int error = rtnl_link_alloc_cache(m_socket.get(), AF_UNSPEC, &link_cache);
     if (error != 0) {
