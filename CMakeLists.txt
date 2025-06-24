@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(PROJECT_VERSION "6.4.0")
+set(PROJECT_VERSION "6.4.1")
 project(ksystemstats VERSION ${PROJECT_VERSION})
 
 set(PROJECT_DEP_VERSION "6.4.0")
