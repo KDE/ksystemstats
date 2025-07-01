@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-02-27 20:19-0300\n"
+"PO-Revision-Date: 2025-06-30 01:33-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -529,12 +529,10 @@ msgid "GPU"
 msgstr "GPU"
 
 #: gpu/LinuxIntelGpu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "User Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "Uso do usuário"
+msgstr "Uso de vídeo"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
