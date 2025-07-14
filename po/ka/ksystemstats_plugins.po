@@ -809,13 +809,13 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr "IPv4 ნაგულისხმები რაუტერი"
+msgstr "IPv4 ნაგულისხმევი რაუტერი"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr "IPv4 ნაგულისხმები რაუტერი"
+msgstr "IPv4 ნაგულისხმევი რაუტერი"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
@@ -869,13 +869,13 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr "IPv6 ნაგულისხმები რაუტერი"
+msgstr "IPv6 ნაგულისხმევი რაუტერი"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr "IPv6 ნაგულისხმები რაუტერი"
+msgstr "IPv6 ნაგულისხმევი რაუტერი"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
