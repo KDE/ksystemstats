@@ -13,11 +13,6 @@
 #include <KLocalizedString>
 #include <QFile>
 
-#include <systemstats/SensorContainer.h>
-#include <systemstats/SensorObject.h>
-#include <systemstats/SensorProperty.h>
-
-
 /**
  * A Structure holding the data for a single line of output from /proc/pressure
  */
