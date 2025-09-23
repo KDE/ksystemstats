@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-05 00:43+0000\n"
+"POT-Creation-Date: 2025-09-23 00:44+0000\n"
 "PO-Revision-Date: 2025-04-07 15:57+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1124,26 +1124,26 @@ msgid ""
 msgstr ""
 "Energia con le qual le batteria es cargate (positive) o discargate (negative)"
 
-#: pressure/pressure.cpp:139
+#: pressure/pressure.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
 msgstr "Pression"
 
-#: pressure/pressure.cpp:141
+#: pressure/pressure.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr "Pression de memoria"
 
-#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
-#: pressure/pressure.cpp:200
+#: pressure/pressure.cpp:137 pressure/pressure.cpp:165
+#: pressure/pressure.cpp:195
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
 msgstr "Qualque (media de 10 secundas)"
 
-#: pressure/pressure.cpp:143
+#: pressure/pressure.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1153,14 +1153,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
-#: pressure/pressure.cpp:203
+#: pressure/pressure.cpp:140 pressure/pressure.cpp:168
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
 msgstr "Qualque (media de 1 secundas)"
 
-#: pressure/pressure.cpp:146
+#: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1170,14 +1170,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 1 secunda"
 
-#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
-#: pressure/pressure.cpp:206
+#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
 msgstr "Qualque (media de 5 secundas)"
 
-#: pressure/pressure.cpp:149
+#: pressure/pressure.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1187,14 +1187,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 5 secundas"
 
-#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
-#: pressure/pressure.cpp:209
+#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
 msgstr "Tempore Total de Qualque Stallo"
 
-#: pressure/pressure.cpp:152
+#: pressure/pressure.cpp:147
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1204,14 +1204,14 @@ msgstr ""
 "Amonta de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mesurate in microsecundas"
 
-#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
-#: pressure/pressure.cpp:214
+#: pressure/pressure.cpp:150 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
 msgstr "Plen (media de 10 secundas)"
 
-#: pressure/pressure.cpp:156
+#: pressure/pressure.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1221,14 +1221,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
-#: pressure/pressure.cpp:217
+#: pressure/pressure.cpp:153 pressure/pressure.cpp:182
+#: pressure/pressure.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
 msgstr "Plen (media de 1 secundas)"
 
-#: pressure/pressure.cpp:159
+#: pressure/pressure.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1238,14 +1238,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 1 secundas"
 
-#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
-#: pressure/pressure.cpp:220
+#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
 msgstr "Plen (media de 5 secundas)"
 
-#: pressure/pressure.cpp:162
+#: pressure/pressure.cpp:157
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1255,14 +1255,14 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 5 secundas"
 
-#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
-#: pressure/pressure.cpp:223
+#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
 msgstr "Tempore Total de Stallo Plen"
 
-#: pressure/pressure.cpp:165
+#: pressure/pressure.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1272,13 +1272,13 @@ msgstr ""
 "Amonta de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de CPU disponibile, mesurate in microsecundas"
 
-#: pressure/pressure.cpp:168
+#: pressure/pressure.cpp:163
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
 msgstr "Pression de CPU"
 
-#: pressure/pressure.cpp:171
+#: pressure/pressure.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1288,7 +1288,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:174
+#: pressure/pressure.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1298,7 +1298,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 1 minuta"
 
-#: pressure/pressure.cpp:177
+#: pressure/pressure.cpp:172
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1308,7 +1308,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 5 minutas"
 
-#: pressure/pressure.cpp:180
+#: pressure/pressure.cpp:175
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1318,7 +1318,7 @@ msgstr ""
 "Amonta de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de IO disponibile, mesurate in microsecundas"
 
-#: pressure/pressure.cpp:185
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1328,7 +1328,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:188
+#: pressure/pressure.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1338,7 +1338,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 1 minuta"
 
-#: pressure/pressure.cpp:191
+#: pressure/pressure.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1348,7 +1348,7 @@ msgstr ""
 "Percentage de tempore que al minus un carga es ponite in stallo expectante "
 "ressources de memoria disponibile, mediate sur 5 minutas"
 
-#: pressure/pressure.cpp:194
+#: pressure/pressure.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1358,13 +1358,13 @@ msgstr ""
 "Amonta de tempore que omne cargas es ponite in stallo expectante ressources "
 "de memoria disponibile, mesurate in microsecundas"
 
-#: pressure/pressure.cpp:198
+#: pressure/pressure.cpp:193
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
 msgstr "Pression de IO"
 
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1374,7 +1374,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1384,7 +1384,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 1 minuta"
 
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1394,7 +1394,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de CPU disponibile, mediate sur 5 minutas"
 
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1404,7 +1404,7 @@ msgstr ""
 "Amonta de tempore que omne cargas es ponite in stallo expectante ressources "
 "de CPU disponibile, mesurate in microsecundas"
 
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1414,7 +1414,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 10 secundas"
 
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1424,7 +1424,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 1 minuta"
 
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1434,7 +1434,7 @@ msgstr ""
 "Percentage de tempore que omne cargas es ponite in stallo expectante "
 "ressources de IO disponibile, mediate sur 5 minutas"
 
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid ""

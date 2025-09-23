@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-05 00:43+0000\n"
+"POT-Creation-Date: 2025-09-23 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1119,26 +1119,26 @@ msgid ""
 "(negative)"
 msgstr "电池正在充电 (正值) 或者放电 (负值) 的电量"
 
-#: pressure/pressure.cpp:139
+#: pressure/pressure.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
 msgstr "压力"
 
-#: pressure/pressure.cpp:141
+#: pressure/pressure.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr "内存压力"
 
-#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
-#: pressure/pressure.cpp:200
+#: pressure/pressure.cpp:137 pressure/pressure.cpp:165
+#: pressure/pressure.cpp:195
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
 msgstr "部分 (10 秒平均值)"
 
-#: pressure/pressure.cpp:143
+#: pressure/pressure.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1147,14 +1147,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的内存资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
-#: pressure/pressure.cpp:203
+#: pressure/pressure.cpp:140 pressure/pressure.cpp:168
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
 msgstr "部分 (1 分钟平均值)"
 
-#: pressure/pressure.cpp:146
+#: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1163,14 +1163,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的内存资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
-#: pressure/pressure.cpp:206
+#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
 msgstr "部分 (5 分钟平均值)"
 
-#: pressure/pressure.cpp:149
+#: pressure/pressure.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1179,14 +1179,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的内存资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
-#: pressure/pressure.cpp:209
+#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
 msgstr "合计部分停滞时间"
 
-#: pressure/pressure.cpp:152
+#: pressure/pressure.cpp:147
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1194,14 +1194,14 @@ msgid ""
 "memory resources, measured in microseconds"
 msgstr "至少有 1 个任务为了等待可用的内存资源而停滞的合计时间长度，单位为毫秒"
 
-#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
-#: pressure/pressure.cpp:214
+#: pressure/pressure.cpp:150 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
 msgstr "完全 (10 秒平均值)"
 
-#: pressure/pressure.cpp:156
+#: pressure/pressure.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1210,14 +1210,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 CPU 资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
-#: pressure/pressure.cpp:217
+#: pressure/pressure.cpp:153 pressure/pressure.cpp:182
+#: pressure/pressure.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
 msgstr "完全 (1 分钟平均值)"
 
-#: pressure/pressure.cpp:159
+#: pressure/pressure.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1226,14 +1226,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 CPU 资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
-#: pressure/pressure.cpp:220
+#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
 msgstr "完全 (5 分钟平均值)"
 
-#: pressure/pressure.cpp:162
+#: pressure/pressure.cpp:157
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1242,14 +1242,14 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 CPU 资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
-#: pressure/pressure.cpp:223
+#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
 msgstr "合计完全停滞时间"
 
-#: pressure/pressure.cpp:165
+#: pressure/pressure.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1257,13 +1257,13 @@ msgid ""
 "resources, measured in microseconds"
 msgstr "至少有 1 个任务为了等待可用的 CPU 资源而停滞的合计时间长度，单位为毫秒"
 
-#: pressure/pressure.cpp:168
+#: pressure/pressure.cpp:163
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
 msgstr "CPU 压力"
 
-#: pressure/pressure.cpp:171
+#: pressure/pressure.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1272,7 +1272,7 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 IO 资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:174
+#: pressure/pressure.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1281,7 +1281,7 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 IO 资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:177
+#: pressure/pressure.cpp:172
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1290,7 +1290,7 @@ msgid ""
 msgstr ""
 "至少有 1 个任务为了等待可用的 IO 资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:180
+#: pressure/pressure.cpp:175
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1298,7 +1298,7 @@ msgid ""
 "resources, measured in microseconds"
 msgstr "至少有 1 个任务为了等待可用的 IO 资源而停滞的合计时间长度，单位为毫秒"
 
-#: pressure/pressure.cpp:185
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1306,7 +1306,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr "全部任务为了等待可用的内存资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:188
+#: pressure/pressure.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1314,7 +1314,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr "全部任务为了等待可用的内存资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:191
+#: pressure/pressure.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1322,7 +1322,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr "全部任务为了等待可用的内存资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:194
+#: pressure/pressure.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1330,13 +1330,13 @@ msgid ""
 "resources, measured in microseconds"
 msgstr "全部任务为了等待可用的内存资源而停滞的合计时间长度，单位为毫秒"
 
-#: pressure/pressure.cpp:198
+#: pressure/pressure.cpp:193
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
 msgstr "IO  压力"
 
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1344,7 +1344,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr "全部任务为了等待可用的 CPU 资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1352,7 +1352,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr "全部任务为了等待可用的 CPU 资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1360,7 +1360,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr "全部任务为了等待可用的 CPU 资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1368,7 +1368,7 @@ msgid ""
 "resources, measured in microseconds"
 msgstr "全部任务为了等待可用的 CPU 资源而停滞的合计时间长度，单位为毫秒"
 
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1376,7 +1376,7 @@ msgid ""
 "resources, averaged over 10 seconds"
 msgstr "全部任务为了等待可用的 IO 资源而停滞的时间长度百分比，10 秒平均值"
 
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1384,7 +1384,7 @@ msgid ""
 "resources, averaged over 1 minutes"
 msgstr "全部任务为了等待可用的 IO 资源而停滞的时间长度百分比，1 分钟平均值"
 
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1392,7 +1392,7 @@ msgid ""
 "resources, averaged over 5 minutes"
 msgstr "全部任务为了等待可用的 IO 资源而停滞的时间长度百分比，5 分钟平均值"
 
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid ""

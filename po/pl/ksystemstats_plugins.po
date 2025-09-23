@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-05 00:43+0000\n"
+"POT-Creation-Date: 2025-09-23 00:44+0000\n"
 "PO-Revision-Date: 2025-07-19 09:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -1121,26 +1121,26 @@ msgid ""
 "(negative)"
 msgstr "Moc z jaką bateria jest ładowana (dodatnia) lub rozładowywana (ujemna)"
 
-#: pressure/pressure.cpp:139
+#: pressure/pressure.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
 msgstr "Ciśnienie"
 
-#: pressure/pressure.cpp:141
+#: pressure/pressure.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr "Ciśnienie na pamięć"
 
-#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
-#: pressure/pressure.cpp:200
+#: pressure/pressure.cpp:137 pressure/pressure.cpp:165
+#: pressure/pressure.cpp:195
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
 msgstr "Niektóre (średnia z 10 sekund)"
 
-#: pressure/pressure.cpp:143
+#: pressure/pressure.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1150,14 +1150,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
-#: pressure/pressure.cpp:203
+#: pressure/pressure.cpp:140 pressure/pressure.cpp:168
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
 msgstr "Niektóre (średnia z 1 minuty)"
 
-#: pressure/pressure.cpp:146
+#: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1167,14 +1167,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
-#: pressure/pressure.cpp:206
+#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
 msgstr "Niektóre (średnia z 5 minut)"
 
-#: pressure/pressure.cpp:149
+#: pressure/pressure.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1184,14 +1184,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć, uśredniony na 5 minutach"
 
-#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
-#: pressure/pressure.cpp:209
+#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
 msgstr "Łączny czas niektórych zblokowanych"
 
-#: pressure/pressure.cpp:152
+#: pressure/pressure.cpp:147
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1201,14 +1201,14 @@ msgstr ""
 "Ilość czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć, mierzona w mikrosekundach"
 
-#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
-#: pressure/pressure.cpp:214
+#: pressure/pressure.cpp:150 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
 msgstr "Pełne (średnia z 10 sekund)"
 
-#: pressure/pressure.cpp:156
+#: pressure/pressure.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1218,14 +1218,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępne CPU, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
-#: pressure/pressure.cpp:217
+#: pressure/pressure.cpp:153 pressure/pressure.cpp:182
+#: pressure/pressure.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
 msgstr "Pełne (średnia z 1 minuty)"
 
-#: pressure/pressure.cpp:159
+#: pressure/pressure.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1235,14 +1235,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępne CPU, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
-#: pressure/pressure.cpp:220
+#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
 msgstr "Pełne (średnia z 5 minut)"
 
-#: pressure/pressure.cpp:162
+#: pressure/pressure.cpp:157
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1252,14 +1252,14 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępne CPU, uśredniony na 5 minucie"
 
-#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
-#: pressure/pressure.cpp:223
+#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
 msgstr "Łączny czas w pełni zblokowanych"
 
-#: pressure/pressure.cpp:165
+#: pressure/pressure.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1269,13 +1269,13 @@ msgstr ""
 "Ilość czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępne CPU, mierzona w mikrosekundach"
 
-#: pressure/pressure.cpp:168
+#: pressure/pressure.cpp:163
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
 msgstr "Ciśnienie CPU"
 
-#: pressure/pressure.cpp:171
+#: pressure/pressure.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1285,7 +1285,7 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć trwałą, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:174
+#: pressure/pressure.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1295,7 +1295,7 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć trwałą, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:177
+#: pressure/pressure.cpp:172
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1305,7 +1305,7 @@ msgstr ""
 "Procent czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć trwałą, uśredniony na 5 minucie"
 
-#: pressure/pressure.cpp:180
+#: pressure/pressure.cpp:175
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1315,7 +1315,7 @@ msgstr ""
 "Ilość czasu, w którym co najmniej jedno zadanie zblokowało się czekając na "
 "dostępną pamięć trwałą, mierzona w mikrosekundach"
 
-#: pressure/pressure.cpp:185
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1325,7 +1325,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:188
+#: pressure/pressure.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1335,7 +1335,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:191
+#: pressure/pressure.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1345,7 +1345,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć, uśredniony na 5 minutach"
 
-#: pressure/pressure.cpp:194
+#: pressure/pressure.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1355,13 +1355,13 @@ msgstr ""
 "Ilość czasu, w którym wszystkie zadania zblokowały się czekając na dostępną "
 "pamięć, mierzona w mikrosekundach"
 
-#: pressure/pressure.cpp:198
+#: pressure/pressure.cpp:193
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
 msgstr "Ciśnienie pamięci trwałej"
 
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1371,7 +1371,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępne CPU, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1381,7 +1381,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępne CPU, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1391,7 +1391,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępne CPU, uśredniony na 5 minutach"
 
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1401,7 +1401,7 @@ msgstr ""
 "Ilość czasu, w którym wszystkie zadania zblokowały się czekając na dostępne "
 "CPU, mierzona w mikrosekundach"
 
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1411,7 +1411,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć trwałą, uśredniony na 10 sekundach"
 
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1421,7 +1421,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć trwałą, uśredniony na 1 minucie"
 
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1431,7 +1431,7 @@ msgstr ""
 "Procent czasu, w którym wszystkie zadania zblokowały się czekając na "
 "dostępną pamięć trwałą, uśredniony na 5 minutach"
 
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid ""

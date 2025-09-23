@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-05 00:43+0000\n"
+"POT-Creation-Date: 2025-09-23 00:44+0000\n"
 "PO-Revision-Date: 2025-04-05 14:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1120,26 +1120,26 @@ msgid ""
 "(negative)"
 msgstr "עוצמת הטעינה (חיובית) או הפריקה (שלילית) של הסוללה"
 
-#: pressure/pressure.cpp:139
+#: pressure/pressure.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
 msgstr "לחץ"
 
-#: pressure/pressure.cpp:141
+#: pressure/pressure.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
 msgstr "לחץ זיכרון"
 
-#: pressure/pressure.cpp:142 pressure/pressure.cpp:170
-#: pressure/pressure.cpp:200
+#: pressure/pressure.cpp:137 pressure/pressure.cpp:165
+#: pressure/pressure.cpp:195
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
 msgstr "כלשהי (ממוצע על פני 10 שניות)"
 
-#: pressure/pressure.cpp:143
+#: pressure/pressure.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1149,14 +1149,14 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי זיכרון זמינים, ממוצע על פני "
 "10 שניות"
 
-#: pressure/pressure.cpp:145 pressure/pressure.cpp:173
-#: pressure/pressure.cpp:203
+#: pressure/pressure.cpp:140 pressure/pressure.cpp:168
+#: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
 msgstr "כלשהי (ממוצע על פני דקה)"
 
-#: pressure/pressure.cpp:146
+#: pressure/pressure.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1166,14 +1166,14 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי זיכרון זמינים, ממוצע על פני "
 "דקה"
 
-#: pressure/pressure.cpp:148 pressure/pressure.cpp:176
-#: pressure/pressure.cpp:206
+#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
+#: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
 msgstr "כלשהי (ממוצע על פני 5 דקות)"
 
-#: pressure/pressure.cpp:149
+#: pressure/pressure.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1183,14 +1183,14 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי זיכרון זמינים, ממוצע על פני "
 "5 דקות"
 
-#: pressure/pressure.cpp:151 pressure/pressure.cpp:179
-#: pressure/pressure.cpp:209
+#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
+#: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
 msgstr "זמן עיכוב כולל של כלשהו"
 
-#: pressure/pressure.cpp:152
+#: pressure/pressure.cpp:147
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1200,14 +1200,14 @@ msgstr ""
 "כמות הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי זיכרון זמינים, נמדדת "
 "במילישניות"
 
-#: pressure/pressure.cpp:155 pressure/pressure.cpp:184
-#: pressure/pressure.cpp:214
+#: pressure/pressure.cpp:150 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
 msgstr "מלא (ממוצע על פני 10 שניות)"
 
-#: pressure/pressure.cpp:156
+#: pressure/pressure.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1217,14 +1217,14 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי מעבד זמינים, ממוצע על פני 10 "
 "שניות"
 
-#: pressure/pressure.cpp:158 pressure/pressure.cpp:187
-#: pressure/pressure.cpp:217
+#: pressure/pressure.cpp:153 pressure/pressure.cpp:182
+#: pressure/pressure.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
 msgstr "מלא (ממוצע על פני 5 דקות)"
 
-#: pressure/pressure.cpp:159
+#: pressure/pressure.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1233,14 +1233,14 @@ msgid ""
 msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי מעבד זמינים, ממוצע על פני דקה"
 
-#: pressure/pressure.cpp:161 pressure/pressure.cpp:190
-#: pressure/pressure.cpp:220
+#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
+#: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
 msgstr "מלא (ממוצע על פני 5 דקות)"
 
-#: pressure/pressure.cpp:162
+#: pressure/pressure.cpp:157
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1250,14 +1250,14 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי מעבד זמינים, ממוצע על פני 5 "
 "דקות"
 
-#: pressure/pressure.cpp:164 pressure/pressure.cpp:193
-#: pressure/pressure.cpp:223
+#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
+#: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
 msgstr "זמן עיכוב כולל של כולם"
 
-#: pressure/pressure.cpp:165
+#: pressure/pressure.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1266,13 +1266,13 @@ msgid ""
 msgstr ""
 "כמות הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי מעבד זמינים, נמדדת במילישניות"
 
-#: pressure/pressure.cpp:168
+#: pressure/pressure.cpp:163
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
 msgstr "לחץ מעבד"
 
-#: pressure/pressure.cpp:171
+#: pressure/pressure.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1282,7 +1282,7 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני "
 "10 שניות"
 
-#: pressure/pressure.cpp:174
+#: pressure/pressure.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1292,7 +1292,7 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני "
 "דקה"
 
-#: pressure/pressure.cpp:177
+#: pressure/pressure.cpp:172
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1302,7 +1302,7 @@ msgstr ""
 "אחוז הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני "
 "5 דקות"
 
-#: pressure/pressure.cpp:180
+#: pressure/pressure.cpp:175
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1312,7 +1312,7 @@ msgstr ""
 "כמות הזמן שלפחות משימה אחת מעוכבת בהמתנה למשאבי קלט/פלט זמינים, נמדדת "
 "במילישניות"
 
-#: pressure/pressure.cpp:185
+#: pressure/pressure.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1322,7 +1322,7 @@ msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי זיכרון זמינים, ממוצע על פני 10 "
 "שניות"
 
-#: pressure/pressure.cpp:188
+#: pressure/pressure.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1331,7 +1331,7 @@ msgid ""
 msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי זיכרון זמינים, ממוצע על פני דקה"
 
-#: pressure/pressure.cpp:191
+#: pressure/pressure.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1341,7 +1341,7 @@ msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי זיכרון זמינים, ממוצע על פני 5 "
 "דקות"
 
-#: pressure/pressure.cpp:194
+#: pressure/pressure.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1350,13 +1350,13 @@ msgid ""
 msgstr ""
 "כמות הזמן שכל המשימות מעוכבות בהמתנה למשאבי זיכרון זמינים, נמדדת במילישניות"
 
-#: pressure/pressure.cpp:198
+#: pressure/pressure.cpp:193
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
 msgstr "לחץ קלט/פלט"
 
-#: pressure/pressure.cpp:201
+#: pressure/pressure.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1366,7 +1366,7 @@ msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי מעבד זמינים, ממוצע על פני 10 "
 "שניות"
 
-#: pressure/pressure.cpp:204
+#: pressure/pressure.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1375,7 +1375,7 @@ msgid ""
 msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי מעבד זמינים, ממוצע על פני דקה"
 
-#: pressure/pressure.cpp:207
+#: pressure/pressure.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1384,7 +1384,7 @@ msgid ""
 msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי מעבד זמינים, ממוצע על פני 5 דקות"
 
-#: pressure/pressure.cpp:210
+#: pressure/pressure.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1393,7 +1393,7 @@ msgid ""
 msgstr ""
 "כמות הזמן שכל המשימות מעוכבות בהמתנה למשאבי מעבד זמינים, נמדדת במילישניות"
 
-#: pressure/pressure.cpp:215
+#: pressure/pressure.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1403,7 +1403,7 @@ msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני 10 "
 "שניות"
 
-#: pressure/pressure.cpp:218
+#: pressure/pressure.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1412,7 +1412,7 @@ msgid ""
 msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני דקה"
 
-#: pressure/pressure.cpp:221
+#: pressure/pressure.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1422,7 +1422,7 @@ msgstr ""
 "אחוז הזמן שכל המשימות מעוכבות בהמתנה למשאבי קלט/פלט זמינים, ממוצע על פני 5 "
 "דקות"
 
-#: pressure/pressure.cpp:224
+#: pressure/pressure.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid ""
