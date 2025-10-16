@@ -25,13 +25,13 @@ void NvidiaParserTest::testDmonParsing_data()
     QTest::addColumn<NvidiaSmiProcess::GpuData>("expected");
     QTest::newRow("520")
         << QFINDTESTDATA("fixtures/520.txt")
-        << NvidiaSmiProcess::GpuData{.index = 0, .power = 11, .temperature = 46, .usage = 3, .memoryUsed = 434, .coreFrequency = 139, .memoryFrequency = 405};
+        << NvidiaSmiProcess::GpuData{.index = 0, .power = 11, .temperature = 46, .usage = 3, .memoryUsed = 418, .coreFrequency = 139, .memoryFrequency = 405};
     QTest::newRow("525")
         << QFINDTESTDATA("fixtures/525.txt")
-        << NvidiaSmiProcess::GpuData{.index = 0, .power = 29, .temperature = 49, .usage = 1, .memoryUsed = 403, .coreFrequency = 974, .memoryFrequency = 4006};
+        << NvidiaSmiProcess::GpuData{.index = 0, .power = 29, .temperature = 49, .usage = 1, .memoryUsed = 387, .coreFrequency = 974, .memoryFrequency = 4006};
     QTest::newRow("530")
         << QFINDTESTDATA("fixtures/530.txt")
-        << NvidiaSmiProcess::GpuData{.index = 0, .power = 28, .temperature = 44, .usage = 4, .memoryUsed = 902, .coreFrequency = 210, .memoryFrequency = 405};
+        << NvidiaSmiProcess::GpuData{.index = 0, .power = 28, .temperature = 44, .usage = 4, .memoryUsed = 874, .coreFrequency = 210, .memoryFrequency = 405};
 }
 
 void NvidiaParserTest::testDmonParsing()

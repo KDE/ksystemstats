@@ -76,7 +76,7 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
             data->name = line.mid(line.indexOf(':') + 1).trimmed();
         }
 
-        if (line.startsWith("    FB Memory Usage") || line.startsWith("    BAR1 Memory Usage")) {
+        if (line.startsWith("    FB Memory Usage")) {
             readMemory = true;
         }
 
@@ -197,8 +197,8 @@ void NvidiaSmiProcess::readStatisticsData(const QString &line)
     // GPU usage equals "SM" usage + "ENC" usage + "DEC" usage
     data.usage = readDataIfFound(m_dmonIndices.sm) + readDataIfFound(m_dmonIndices.enc) + readDataIfFound(m_dmonIndices.dec);
 
-    // Total memory used equals "FB" usage + "BAR1" usage
-    data.memoryUsed = readDataIfFound(m_dmonIndices.fb) + readDataIfFound(m_dmonIndices.bar1);
+    // Total memory used equals "FB" usage
+    data.memoryUsed = readDataIfFound(m_dmonIndices.fb);
 
     data.memoryFrequency = readDataIfFound(m_dmonIndices.mclk);
     data.coreFrequency = readDataIfFound(m_dmonIndices.pclk);
