@@ -306,3 +306,5 @@ void PressurePlugin::update()
 K_PLUGIN_CLASS_WITH_JSON(PressurePlugin, "metadata.json")
 
 #include "pressure.moc"
+
+#include "moc_pressure.cpp"

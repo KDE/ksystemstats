@@ -87,3 +87,5 @@ void LinuxIntelGpu::readPerfData()
         }
     }
 }
+
+#include "moc_LinuxIntelGpu.cpp"
