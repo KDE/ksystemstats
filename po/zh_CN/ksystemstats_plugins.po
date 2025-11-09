@@ -381,7 +381,7 @@ msgstr "剩余空间"
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr "空闲"
+msgstr "剩余"
 
 #: disks/disks.cpp:114 disks/disks.cpp:320
 #, kde-format
