@@ -15,6 +15,9 @@
 #include "LinuxAmdGpu.h"
 #include "LinuxIntelGpu.h"
 #include "LinuxNvidiaGpu.h"
+#ifdef HAVE_XE_DRM_H
+#include "LinuxXeGpu.h"
+#endif
 #include "debug.h"
 
 // Vendor ID strings, as used in sysfs
@@ -25,6 +28,14 @@ static const char *nvidiaVendor = "0x10de";
 static const char *VGAController =      "0x030000";
 static const char *threeDController =   "0x030200";
 static const char *displayController =  "0x038000";
+
+#ifdef HAVE_XE_DRM_H
+static bool isXeDriver(udev_device *pciDevice)
+{
+    const char *driver = udev_device_get_driver(pciDevice);
+    return driver && strcmp(driver, "xe") == 0;
+}
+#endif
 
 LinuxBackend::LinuxBackend(QObject *parent)
     : GpuBackend(parent)
@@ -62,7 +73,15 @@ void LinuxBackend::start()
         } else if (vendor == nvidiaVendor) {
             gpu = new LinuxNvidiaGpu{gpuId, gpuName, pciDevice};
         } else if (vendor == intelVendor) {
+#ifdef HAVE_XE_DRM_H
+            if (isXeDriver(pciDevice)) {
+                gpu = new LinuxXeGpu{gpuId, gpuName, drmDevice};
+            } else {
+                gpu = new LinuxIntelGpu{gpuId, gpuName, pciDevice};
+            }
+#else
             gpu = new LinuxIntelGpu{gpuId, gpuName, pciDevice};
+#endif
         } else {
             qCDebug(KSYSTEMSTATS_GPU) << "Found unsupported GPU:" << path;
             udev_device_unref(pciDevice);
