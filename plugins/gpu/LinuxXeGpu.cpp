@@ -13,7 +13,12 @@
 #include <QFile>
 #include <QProcess>
 
+#include <fcntl.h>
 #include <libudev.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
+
+#include <drm/xe_drm.h>
 
 #include <systemstats/SysFsSensor.h>
 
@@ -22,6 +27,13 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
     , m_device(device)
 {
     udev_device_ref(m_device);
+
+    // Open DRM device for VRAM queries (doesn't require special privileges)
+    const char *sysnum = udev_device_get_sysnum(m_device);
+    if (sysnum) {
+        QString cardPath = QStringLiteral("/dev/dri/card") + QString::fromLatin1(sysnum);
+        m_drmFd = open(cardPath.toLatin1().constData(), O_RDONLY);
+    }
 
     m_helperProcess = new QProcess(this);
     m_helperProcess->setProgram(xeHelperLocation);
@@ -52,6 +64,9 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
 
 LinuxXeGpu::~LinuxXeGpu()
 {
+    if (m_drmFd >= 0) {
+        close(m_drmFd);
+    }
     udev_device_unref(m_device);
 }
 
@@ -98,6 +113,7 @@ void LinuxXeGpu::update()
     for (auto sensor : std::as_const(m_hwmonSensors)) {
         sensor->update();
     }
+    queryVram();
 }
 
 void LinuxXeGpu::makeSensors()
@@ -153,6 +169,45 @@ void LinuxXeGpu::discoverHwmonSensors()
     }
 }
 
+void LinuxXeGpu::queryVram()
+{
+    if (m_drmFd < 0) {
+        return;
+    }
+
+    drm_xe_device_query query{};
+    query.query = DRM_XE_DEVICE_QUERY_MEM_REGIONS;
+    query.size = 0;
+    query.data = 0;
+
+    if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0 || query.size == 0) {
+        return;
+    }
+
+    QByteArray buffer(query.size, 0);
+    query.data = reinterpret_cast<std::uint64_t>(buffer.data());
+
+    if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0) {
+        return;
+    }
+
+    auto *regions = reinterpret_cast<drm_xe_query_mem_regions *>(buffer.data());
+    std::uint64_t totalVram = 0;
+    std::uint64_t usedVram = 0;
+
+    for (std::uint32_t i = 0; i < regions->num_mem_regions; ++i) {
+        if (regions->mem_regions[i].mem_class == DRM_XE_MEM_REGION_CLASS_VRAM) {
+            totalVram += regions->mem_regions[i].total_size;
+            usedVram += regions->mem_regions[i].used;
+        }
+    }
+
+    if (totalVram > 0) {
+        m_totalVramProperty->setValue(static_cast<qulonglong>(totalVram));
+        m_usedVramProperty->setValue(static_cast<qulonglong>(usedVram));
+    }
+}
+
 void LinuxXeGpu::readPerfData()
 {
     while (m_helperProcess->canReadLine()) {
@@ -183,10 +238,6 @@ void LinuxXeGpu::readPerfData()
                 if (m_enhanceUsage) {
                     m_enhanceUsage->setValue(value);
                 }
-            } else if (label == QLatin1String("VramTotal")) {
-                m_totalVramProperty->setValue(value);
-            } else if (label == QLatin1String("VramUsed")) {
-                m_usedVramProperty->setValue(value);
             }
         }
     }

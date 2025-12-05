@@ -1,4 +1,5 @@
 /*
+ * SPDX-FileCopyrightText: 2021 David Redondo <kde@david-redondo.de>
  * SPDX-FileCopyrightText: 2025 Hunter Hardy <thehunterhardy@icloud.com>
  *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
@@ -17,13 +18,10 @@
 #include <string_view>
 #include <vector>
 
-#include <fcntl.h>
 #include <linux/perf_event.h>
 #include <sys/ioctl.h>
 #include <sys/syscall.h>
 #include <unistd.h>
-
-#include <drm/xe_drm.h>
 
 constexpr std::uint64_t XE_PMU_EVENT_ENGINE_ACTIVE_TICKS = 0x02;
 constexpr std::uint64_t XE_PMU_EVENT_ENGINE_TOTAL_TICKS = 0x03;
@@ -41,69 +39,6 @@ struct engine_info {
     std::uint64_t active_config;
     std::uint64_t total_config;
 };
-
-struct vram_info {
-    std::uint64_t total;
-    std::uint64_t used;
-};
-
-int openDrmDevice(std::string_view pciSlot)
-{
-    for (int i = 0; i < 16; ++i) {
-        std::string cardPath = "/dev/dri/card" + std::to_string(i);
-        int fd = open(cardPath.c_str(), O_RDONLY);
-        if (fd < 0) {
-            continue;
-        }
-
-        std::string sysPath = "/sys/class/drm/card" + std::to_string(i) + "/device";
-        char linkTarget[256];
-        ssize_t len = readlink(sysPath.c_str(), linkTarget, sizeof(linkTarget) - 1);
-        if (len > 0) {
-            linkTarget[len] = '\0';
-            std::string target(linkTarget);
-            if (target.find(pciSlot) != std::string::npos) {
-                return fd;
-            }
-        }
-        close(fd);
-    }
-    return -1;
-}
-
-vram_info queryVram(int drmFd)
-{
-    vram_info info{0, 0};
-    if (drmFd < 0) {
-        return info;
-    }
-
-    drm_xe_device_query query{};
-    query.query = DRM_XE_DEVICE_QUERY_MEM_REGIONS;
-    query.size = 0;
-    query.data = 0;
-
-    if (ioctl(drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0 || query.size == 0) {
-        return info;
-    }
-
-    std::vector<char> buffer(query.size);
-    query.data = reinterpret_cast<std::uint64_t>(buffer.data());
-
-    if (ioctl(drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0) {
-        return info;
-    }
-
-    auto *regions = reinterpret_cast<drm_xe_query_mem_regions *>(buffer.data());
-    for (std::uint32_t i = 0; i < regions->num_mem_regions; ++i) {
-        if (regions->mem_regions[i].mem_class == DRM_XE_MEM_REGION_CLASS_VRAM) {
-            info.total += regions->mem_regions[i].total_size;
-            info.used += regions->mem_regions[i].used;
-        }
-    }
-
-    return info;
-}
 
 int perf_open(int type, std::uint64_t config, int group_fd)
 {
@@ -214,7 +149,6 @@ int main(int argc, char **argv)
     }
 
     const auto engines = discoverEngines();
-    const int drmFd = openDrmDevice(requestedDevice);
 
     std::vector<std::uint64_t> events;
 
@@ -290,11 +224,6 @@ int main(int argc, char **argv)
         }
 
         std::cout << data->time_enabled;
-
-        auto vram = queryVram(drmFd);
-        if (vram.total > 0) {
-            std::cout << "|VramTotal|" << vram.total << "|VramUsed|" << vram.used;
-        }
 
         auto freqConfig = makeConfig(XE_PMU_EVENT_GT_ACTUAL_FREQUENCY);
         auto freqIt = currentValues.find(freqConfig);

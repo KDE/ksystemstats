@@ -33,9 +33,11 @@ protected:
 private:
     void readPerfData();
     void discoverHwmonSensors();
+    void queryVram();
 
     udev_device *m_device;
     QProcess *m_helperProcess;
+    int m_drmFd = -1;
 
     KSysGuard::SensorProperty *m_videoUsage = nullptr;
     KSysGuard::SensorProperty *m_copyUsage = nullptr;
