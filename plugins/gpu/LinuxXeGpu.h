@@ -44,5 +44,7 @@ private:
     KSysGuard::SensorProperty *m_enhanceUsage = nullptr;
 
     QList<KSysGuard::SysFsSensor *> m_hwmonSensors;
+    QList<KSysGuard::SysFsSensor *> m_fanSensors;
+    KSysGuard::SysFsSensor *m_vramTempSensor = nullptr;
     QString m_hwmonPath;
 };

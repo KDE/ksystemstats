@@ -28,7 +28,6 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
 {
     udev_device_ref(m_device);
 
-    // Open DRM device for VRAM queries (doesn't require special privileges)
     const char *sysnum = udev_device_get_sysnum(m_device);
     if (sysnum) {
         QString cardPath = QStringLiteral("/dev/dri/card") + QString::fromLatin1(sysnum);
@@ -106,12 +105,33 @@ void LinuxXeGpu::initialize()
     for (auto sensor : std::as_const(m_hwmonSensors)) {
         sensor->setPrefix(name());
     }
+
+    int fanIndex = 1;
+    for (auto sensor : std::as_const(m_fanSensors)) {
+        sensor->setName(i18nc("@title", "Fan %1", fanIndex));
+        sensor->setPrefix(name());
+        sensor->setMin(0);
+        sensor->setUnit(KSysGuard::UnitRpm);
+        ++fanIndex;
+    }
+
+    if (m_vramTempSensor) {
+        m_vramTempSensor->setName(i18nc("@title", "VRAM Temperature"));
+        m_vramTempSensor->setPrefix(name());
+        m_vramTempSensor->setUnit(KSysGuard::UnitCelsius);
+    }
 }
 
 void LinuxXeGpu::update()
 {
     for (auto sensor : std::as_const(m_hwmonSensors)) {
         sensor->update();
+    }
+    for (auto sensor : std::as_const(m_fanSensors)) {
+        sensor->update();
+    }
+    if (m_vramTempSensor) {
+        m_vramTempSensor->update();
     }
     queryVram();
 }
@@ -165,6 +185,38 @@ void LinuxXeGpu::discoverHwmonSensors()
             return input.toLongLong() / 1000.0;
         });
         m_temperatureProperty = sensor;
+        m_hwmonSensors << sensor;
+    }
+
+    QString vramTempPath = m_hwmonPath + QStringLiteral("/temp3_input");
+    if (QFile::exists(vramTempPath)) {
+        m_vramTempSensor = new KSysGuard::SysFsSensor(QStringLiteral("vramTemperature"),
+                                                       vramTempPath,
+                                                       0, this);
+        m_vramTempSensor->setConvertFunction([](const QByteArray &input) {
+            return input.toLongLong() / 1000.0;
+        });
+    }
+
+    for (int i = 1; i <= 5; ++i) {
+        QString fanPath = m_hwmonPath + QStringLiteral("/fan%1_input").arg(i);
+        if (QFile::exists(fanPath)) {
+            auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("fan%1").arg(i),
+                                                      fanPath,
+                                                      0, this);
+            m_fanSensors << sensor;
+        }
+    }
+
+    QString powerPath = m_hwmonPath + QStringLiteral("/power1_input");
+    if (QFile::exists(powerPath)) {
+        auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("power"),
+                                                  powerPath,
+                                                  0, this);
+        sensor->setConvertFunction([](const QByteArray &input) {
+            return input.toLongLong() / 1000000.0; // microwatts to watts
+        });
+        m_powerProperty = sensor;
         m_hwmonSensors << sensor;
     }
 }

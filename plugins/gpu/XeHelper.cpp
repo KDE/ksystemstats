@@ -204,7 +204,8 @@ int main(int argc, char **argv)
     };
 
     const size_t neededSize = sizeof(read_format) + sizeof(read_format::value) * idToConfig.size();
-    read_format *data = static_cast<read_format *>(operator new(neededSize));
+    std::vector<char> buffer(neededSize);
+    read_format *data = reinterpret_cast<read_format *>(buffer.data());
 
     std::map<std::uint64_t, std::uint64_t> lastValues;
     std::uint64_t lastTimestamp = 0;
