@@ -193,10 +193,11 @@ int main(int argc, char **argv)
             }
         }
 
-        std::cout << "|Render|" << engineCounters[I915_ENGINE_CLASS_RENDER] / enginesPerClass[I915_ENGINE_CLASS_RENDER];
-        std::cout << "|Copy|" << engineCounters[I915_ENGINE_CLASS_COPY] / enginesPerClass[I915_ENGINE_CLASS_COPY];
-        std::cout << "|Video|" << engineCounters[I915_ENGINE_CLASS_VIDEO] / enginesPerClass[I915_ENGINE_CLASS_VIDEO];
-        std::cout << "|Enhance|" << engineCounters[I915_ENGINE_CLASS_VIDEO_ENHANCE] / enginesPerClass[I915_ENGINE_CLASS_VIDEO_ENHANCE];
+        // SIGFPE fix: enginesPerClass[] can be 0 if a class is absent -> guard division by zero
+        std::cout << "|Render|" << (enginesPerClass[I915_ENGINE_CLASS_RENDER] ? (engineCounters[I915_ENGINE_CLASS_RENDER] / enginesPerClass[I915_ENGINE_CLASS_RENDER]) : 0);
+        std::cout << "|Copy|" << (enginesPerClass[I915_ENGINE_CLASS_COPY] ? (engineCounters[I915_ENGINE_CLASS_COPY] / enginesPerClass[I915_ENGINE_CLASS_COPY]) : 0);
+        std::cout << "|Video|" << (enginesPerClass[I915_ENGINE_CLASS_VIDEO] ? (engineCounters[I915_ENGINE_CLASS_VIDEO] / enginesPerClass[I915_ENGINE_CLASS_VIDEO]) : 0);
+        std::cout << "|Enhance|" << (enginesPerClass[I915_ENGINE_CLASS_VIDEO_ENHANCE] ? (engineCounters[I915_ENGINE_CLASS_VIDEO_ENHANCE] / enginesPerClass[I915_ENGINE_CLASS_VIDEO_ENHANCE]) : 0);
 
         std::cout << std::endl;
         sleep(1);
