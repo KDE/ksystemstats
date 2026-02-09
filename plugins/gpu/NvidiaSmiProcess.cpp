@@ -42,11 +42,13 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
     queryProcess.start();
 
     int gpuCounter = 0;
+    int tLimitShDn;
     auto data = m_queryResult.end();
 
     bool readMemory = false;
     bool readMaxClocks = false;
     bool readMaxPwr = false;
+    bool tLimitTemp = false;
 
     while (queryProcess.waitForReadyRead()) {
         if (!queryProcess.canReadLine()) {
@@ -94,6 +96,23 @@ std::vector<NvidiaSmiProcess::GpuQueryResult> NvidiaSmiProcess::query()
 
         if (line.startsWith("        GPU Shutdown Temp")) {
             data->maxTemperature = std::atoi(line.mid(line.indexOf(':') + 1));
+        }
+
+        if (line.startsWith("        GPU Shutdown T.Limit Temp")) {
+            // GPU T.Limit Temp = GPU Target Temperature - GPU Current Temp
+            // GPU T.Limit Temp will be < 0 at high operating temperatures
+            // GPU T.Limit Temp < GPU Max Operating T.Limit Temp | software throttling occures
+            // GPU T.Limit Temp < GPU Slowdown T.Limit Temp | hardware throttling occures
+            // GPU T.Limit Temp < GPU Shutdown T.Limit Temp | hardware shutdown occures
+            // GPU Shutdown T.Limit Temp will be < 0
+            // Use minus to convert to positive value
+            tLimitTemp = true;
+            tLimitShDn = -std::atoi(line.mid(line.indexOf(':') + 1));
+        }
+        
+        if (line.startsWith("        GPU Target Temperature") && tLimitTemp) {
+            // GPU Shutdown Temp = GPU Target Temperature + tLimitShDn
+            data->maxTemperature = std::atoi(line.mid(line.indexOf(':') + 1)) + tLimitShDn;
         }
 
         if (line.startsWith("        Graphics") && readMaxClocks) {
