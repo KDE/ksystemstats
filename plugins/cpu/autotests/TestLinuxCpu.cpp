@@ -45,6 +45,14 @@ void LinuxCpuTest::testParseCpuinfo_data()
         << 8
         << 8
         ;
+
+    QTest::newRow("ARM_no_newline")
+        << QFINDTESTDATA("fixtures/linux_arm_cpuinfo_no_newline.txt")
+        << 1
+        << 8
+        << 8
+        ;
+
 }
 
 void LinuxCpuTest::testParseCpuinfo()

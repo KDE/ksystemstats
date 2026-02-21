@@ -83,7 +83,7 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q, const QString &cpuInf
     for (QByteArray line = cpuinfo.readLine(); !line.isEmpty(); line = cpuinfo.readLine()) {
         CpuInfo info;
         // Processors are divided by empty lines
-        for (; line != "\n";  line = cpuinfo.readLine()) {
+        for (; line != "\n" && !cpuinfo.atEnd();  line = cpuinfo.readLine()) {
             // we are interested in processor number as identifier for /proc/stat, physical id (the
             // cpu the core belongs to) and the number of the core. However with hyperthreading
             // multiple entries will have the same combination of physical id and core id. So we just
