@@ -39,12 +39,9 @@ private:
     QProcess *m_helperProcess;
     int m_drmFd = -1;
 
-    KSysGuard::SensorProperty *m_videoUsage = nullptr;
-    KSysGuard::SensorProperty *m_copyUsage = nullptr;
-    KSysGuard::SensorProperty *m_enhanceUsage = nullptr;
-
     QList<KSysGuard::SysFsSensor *> m_hwmonSensors;
     QList<KSysGuard::SysFsSensor *> m_fanSensors;
     KSysGuard::SysFsSensor *m_vramTempSensor = nullptr;
+    KSysGuard::SensorProperty *m_videoUsage = nullptr;
     QString m_hwmonPath;
 };

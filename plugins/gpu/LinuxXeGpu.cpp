@@ -32,6 +32,9 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
     if (sysnum) {
         QString cardPath = QStringLiteral("/dev/dri/card") + QString::fromLatin1(sysnum);
         m_drmFd = open(cardPath.toLatin1().constData(), O_RDONLY);
+        if (m_drmFd < 0) {
+            qWarning() << "Failed to open DRM device" << cardPath;
+        }
     }
 
     m_helperProcess = new QProcess(this);
@@ -52,13 +55,6 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
     connect(m_helperProcess, &QProcess::readyReadStandardError, this, [this] {
         qCritical() << m_helperProcess->readAllStandardError();
     });
-    connect(this, &GpuDevice::subscribedChanged, this, [this](bool subscribed) {
-        if (subscribed) {
-            m_helperProcess->start();
-        } else {
-            m_helperProcess->terminate();
-        }
-    });
 }
 
 LinuxXeGpu::~LinuxXeGpu()
@@ -76,30 +72,6 @@ void LinuxXeGpu::initialize()
     const char *modelName = udev_device_get_property_value(m_device, "ID_MODEL_FROM_DATABASE");
     if (modelName) {
         m_nameProperty->setValue(QString::fromLocal8Bit(modelName));
-    }
-
-    if (m_videoUsage) {
-        m_videoUsage->setName(i18nc("@title", "Video Usage"));
-        m_videoUsage->setPrefix(name());
-        m_videoUsage->setMin(0);
-        m_videoUsage->setMax(100);
-        m_videoUsage->setUnit(KSysGuard::UnitPercent);
-    }
-
-    if (m_copyUsage) {
-        m_copyUsage->setName(i18nc("@title", "Copy Usage"));
-        m_copyUsage->setPrefix(name());
-        m_copyUsage->setMin(0);
-        m_copyUsage->setMax(100);
-        m_copyUsage->setUnit(KSysGuard::UnitPercent);
-    }
-
-    if (m_enhanceUsage) {
-        m_enhanceUsage->setName(i18nc("@title", "Enhance Usage"));
-        m_enhanceUsage->setPrefix(name());
-        m_enhanceUsage->setMin(0);
-        m_enhanceUsage->setMax(100);
-        m_enhanceUsage->setUnit(KSysGuard::UnitPercent);
     }
 
     for (auto sensor : std::as_const(m_hwmonSensors)) {
@@ -120,20 +92,46 @@ void LinuxXeGpu::initialize()
         m_vramTempSensor->setPrefix(name());
         m_vramTempSensor->setUnit(KSysGuard::UnitCelsius);
     }
+
+    m_videoUsage->setName(i18nc("@title", "Video Usage"));
+    m_videoUsage->setPrefix(name());
+    m_videoUsage->setMin(0);
+    m_videoUsage->setMax(100);
+    m_videoUsage->setUnit(KSysGuard::UnitPercent);
+
+    auto updateHelperState = [this]() {
+        bool anySubscribed = m_usageProperty->isSubscribed() || m_coreFrequencyProperty->isSubscribed() || m_videoUsage->isSubscribed();
+        if (anySubscribed && m_helperProcess->state() == QProcess::NotRunning) {
+            m_helperProcess->start();
+        } else if (!anySubscribed && m_helperProcess->state() != QProcess::NotRunning) {
+            m_helperProcess->terminate();
+            m_helperProcess->waitForFinished(3000);
+        }
+    };
+
+    connect(m_usageProperty, &KSysGuard::SensorProperty::subscribedChanged, this, updateHelperState);
+    connect(m_coreFrequencyProperty, &KSysGuard::SensorProperty::subscribedChanged, this, updateHelperState);
+    connect(m_videoUsage, &KSysGuard::SensorProperty::subscribedChanged, this, updateHelperState);
 }
 
 void LinuxXeGpu::update()
 {
     for (auto sensor : std::as_const(m_hwmonSensors)) {
-        sensor->update();
+        if (sensor->isSubscribed()) {
+            sensor->update();
+        }
     }
     for (auto sensor : std::as_const(m_fanSensors)) {
-        sensor->update();
+        if (sensor->isSubscribed()) {
+            sensor->update();
+        }
     }
-    if (m_vramTempSensor) {
+    if (m_vramTempSensor && m_vramTempSensor->isSubscribed()) {
         m_vramTempSensor->update();
     }
-    queryVram();
+    if (m_totalVramProperty->isSubscribed() || m_usedVramProperty->isSubscribed()) {
+        queryVram();
+    }
 }
 
 void LinuxXeGpu::makeSensors()
@@ -141,10 +139,17 @@ void LinuxXeGpu::makeSensors()
     GpuDevice::makeSensors();
 
     m_videoUsage = new KSysGuard::SensorProperty(QStringLiteral("video"), QStringLiteral("video"), 0, this);
-    m_copyUsage = new KSysGuard::SensorProperty(QStringLiteral("copy"), QStringLiteral("copy"), 0, this);
-    m_enhanceUsage = new KSysGuard::SensorProperty(QStringLiteral("enhance"), QStringLiteral("enhance"), 0, this);
 
     discoverHwmonSensors();
+
+    // Ensure these exist even if hwmon discovery didn't find them,
+    // since GpuDevice::initialize() will dereference them.
+    if (!m_temperatureProperty) {
+        m_temperatureProperty = new KSysGuard::SensorProperty(QStringLiteral("temperature"), this);
+    }
+    if (!m_powerProperty) {
+        m_powerProperty = new KSysGuard::SensorProperty(QStringLiteral("power"), this);
+    }
 }
 
 void LinuxXeGpu::discoverHwmonSensors()
@@ -169,11 +174,12 @@ void LinuxXeGpu::discoverHwmonSensors()
     m_hwmonPath = hwmonDir.absoluteFilePath(hwmonDirs.first());
 
     QFile nameFile(m_hwmonPath + QStringLiteral("/name"));
-    if (nameFile.open(QIODevice::ReadOnly)) {
-        QString hwmonName = QString::fromLatin1(nameFile.readAll().trimmed());
-        if (hwmonName != QStringLiteral("xe")) {
-            return;
-        }
+    if (!nameFile.open(QIODevice::ReadOnly)) {
+        return;
+    }
+    QString hwmonName = QString::fromLatin1(nameFile.readAll().trimmed());
+    if (hwmonName != QStringLiteral("xe")) {
+        return;
     }
 
     QFile tempLabelFile(m_hwmonPath + QStringLiteral("/temp2_label"));
@@ -198,14 +204,15 @@ void LinuxXeGpu::discoverHwmonSensors()
         });
     }
 
-    for (int i = 1; i <= 5; ++i) {
+    for (int i = 1; i <= 16; ++i) {
         QString fanPath = m_hwmonPath + QStringLiteral("/fan%1_input").arg(i);
-        if (QFile::exists(fanPath)) {
-            auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("fan%1").arg(i),
-                                                      fanPath,
-                                                      0, this);
-            m_fanSensors << sensor;
+        if (!QFile::exists(fanPath)) {
+            break;
         }
+        auto sensor = new KSysGuard::SysFsSensor(QStringLiteral("fan%1").arg(i),
+                                                  fanPath,
+                                                  0, this);
+        m_fanSensors << sensor;
     }
 
     QString powerPath = m_hwmonPath + QStringLiteral("/power1_input");
@@ -214,7 +221,7 @@ void LinuxXeGpu::discoverHwmonSensors()
                                                   powerPath,
                                                   0, this);
         sensor->setConvertFunction([](const QByteArray &input) {
-            return input.toLongLong() / 1000000.0; // microwatts to watts
+            return input.toLongLong() / 1e6; // microwatts to watts
         });
         m_powerProperty = sensor;
         m_hwmonSensors << sensor;
@@ -232,12 +239,13 @@ void LinuxXeGpu::queryVram()
     query.size = 0;
     query.data = 0;
 
-    if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0 || query.size == 0) {
+    constexpr __u32 maxQuerySize = 65536;
+    if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0 || query.size == 0 || query.size > maxQuerySize) {
         return;
     }
 
     QByteArray buffer(query.size, 0);
-    query.data = reinterpret_cast<std::uint64_t>(buffer.data());
+    query.data = reinterpret_cast<std::uintptr_t>(buffer.data());
 
     if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0) {
         return;
@@ -263,7 +271,7 @@ void LinuxXeGpu::queryVram()
 void LinuxXeGpu::readPerfData()
 {
     while (m_helperProcess->canReadLine()) {
-        const QString line = QString::fromLatin1(m_helperProcess->readLine());
+        const QString line = QString::fromLatin1(m_helperProcess->readLine()).trimmed();
         const auto parts = line.split(QLatin1Char('|'));
 
         if (parts.size() <= 1 || parts.size() % 2 == 0) {
@@ -279,17 +287,7 @@ void LinuxXeGpu::readPerfData()
             } else if (label == QLatin1String("Render")) {
                 m_usageProperty->setValue(value);
             } else if (label == QLatin1String("Video")) {
-                if (m_videoUsage) {
-                    m_videoUsage->setValue(value);
-                }
-            } else if (label == QLatin1String("Copy")) {
-                if (m_copyUsage) {
-                    m_copyUsage->setValue(value);
-                }
-            } else if (label == QLatin1String("Enhance")) {
-                if (m_enhanceUsage) {
-                    m_enhanceUsage->setValue(value);
-                }
+                m_videoUsage->setValue(value);
             }
         }
     }
