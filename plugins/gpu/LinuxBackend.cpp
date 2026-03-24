@@ -20,8 +20,9 @@ static const char *amdVendor = "0x1002";
 static const char *intelVendor = "0x8086";
 static const char *nvidiaVendor = "0x10de";
 // PCI Device class strings
-static const char *VGAController = "0x030000";
-static const char *threeDController = "0x030200";
+static const char *VGAController =      "0x030000";
+static const char *threeDController =   "0x030200";
+static const char *displayController =  "0x038000";
 
 LinuxBackend::LinuxBackend(QObject *parent)
     : GpuBackend(parent)
@@ -39,6 +40,7 @@ void LinuxBackend::start()
     udev_enumerate_add_match_subsystem(enumerate, "pci");
     udev_enumerate_add_match_sysattr(enumerate, "class", VGAController);
     udev_enumerate_add_match_sysattr(enumerate, "class", threeDController);
+    udev_enumerate_add_match_sysattr(enumerate, "class", displayController);
     udev_enumerate_scan_devices(enumerate);
 
     auto devices = udev_enumerate_get_list_entry(enumerate);
