@@ -19,6 +19,8 @@
 static const char *amdVendor = "0x1002";
 static const char *intelVendor = "0x8086";
 static const char *nvidiaVendor = "0x10de";
+// PCI Device class strings
+static const char *VGAController = "0x030000";
 
 LinuxBackend::LinuxBackend(QObject *parent)
     : GpuBackend(parent)
@@ -33,25 +35,19 @@ void LinuxBackend::start()
 
     auto enumerate = udev_enumerate_new(m_udev);
 
-    udev_enumerate_add_match_property(enumerate, "DEVTYPE", "drm_minor");
-    udev_enumerate_add_match_subsystem(enumerate, "drm");
+    udev_enumerate_add_match_subsystem(enumerate, "pci");
+    udev_enumerate_add_match_sysattr(enumerate, "class", VGAController);
     udev_enumerate_scan_devices(enumerate);
 
     auto devices = udev_enumerate_get_list_entry(enumerate);
+    int gpuNumber = 0;
     for (auto entry = devices; entry; entry = udev_list_entry_get_next(entry)) {
         auto path = udev_list_entry_get_name(entry);
-        auto drmDevice = udev_device_new_from_syspath(m_udev, path);
-        auto pciDevice = udev_device_get_parent(drmDevice);
-
-        if (strstr(udev_device_get_sysname(drmDevice), "render") != NULL) {
-            udev_device_unref(drmDevice);
-            continue;
-        }
+        auto pciDevice = udev_device_new_from_syspath(m_udev, path);
 
         auto vendor = QByteArray(udev_device_get_sysattr_value(pciDevice, "vendor"));
-        auto drmNumber = std::atoi(udev_device_get_sysnum(drmDevice));
-        auto gpuId = QStringLiteral("gpu%1").arg(drmNumber);
-        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", drmNumber + 1);
+        auto gpuId = QStringLiteral("gpu%1").arg(gpuNumber);
+        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", gpuNumber + 1);
 
         GpuDevice *gpu = nullptr;
         if (vendor == amdVendor) {
@@ -62,15 +58,16 @@ void LinuxBackend::start()
             gpu = new LinuxIntelGpu{gpuId, gpuName, pciDevice};
         } else {
             qCDebug(KSYSTEMSTATS_GPU) << "Found unsupported GPU:" << path;
-            udev_device_unref(drmDevice);
+            udev_device_unref(pciDevice);
             continue;
         }
 
         gpu->initialize();
         m_devices.append(gpu);
         Q_EMIT deviceAdded(gpu);
+        gpuNumber++;
 
-        udev_device_unref(drmDevice);
+        udev_device_unref(pciDevice);
     }
 
     udev_enumerate_unref(enumerate);
