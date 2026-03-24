@@ -14,6 +14,7 @@
 #include <QRegularExpression>
 
 #include <devinfo.h>
+#include <processcore/gpu_utils.h>
 
 #include "debug.h"
 #include "FreeBSDNvidiaGpu.h"
@@ -50,7 +51,14 @@ int FreeBSDBackend::findDevice(devinfo_dev* dev, void* arg) {
         devinfo_dev* parent = devinfo_handle_to_device(dev->dd_parent);
         qCInfo(KSYSTEMSTATS_GPU) << "Found nvidia GPU:" << dev->dd_name << "(" << dev->dd_desc << ") at" << parent->dd_location;
 
-        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", getGpuNumber(parent->dd_name));
+        int gpuNumber = getGpuNumber(parent->dd_name);
+        QString gpuName;
+        if (dev->dd_desc && strlen(dev->dd_desc) > 0) {
+            gpuName = QString::fromLocal8Bit(dev->dd_desc);
+        } else {
+            gpuName = KSysGuard::gpuNameFallback(gpuNumber);
+        }
+
         GpuDevice *gpu = new FreeBSDNvidiaGpu(dev->dd_name, gpuName, parent->dd_location);
         gpu->initialize();
         backend->m_devices.append(gpu);

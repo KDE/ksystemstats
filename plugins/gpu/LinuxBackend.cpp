@@ -10,6 +10,8 @@
 
 #include <libudev.h>
 
+#include <processcore/gpu_utils.h>
+
 #include "LinuxAmdGpu.h"
 #include "LinuxIntelGpu.h"
 #include "LinuxNvidiaGpu.h"
@@ -51,7 +53,8 @@ void LinuxBackend::start()
 
         auto vendor = QByteArray(udev_device_get_sysattr_value(pciDevice, "vendor"));
         auto gpuId = QStringLiteral("gpu%1").arg(gpuNumber);
-        auto gpuName = i18nc("@title %1 is GPU number", "GPU %1", gpuNumber + 1);
+
+        QString gpuName = KSysGuard::gpuName(pciDevice, gpuNumber);
 
         GpuDevice *gpu = nullptr;
         if (vendor == amdVendor) {

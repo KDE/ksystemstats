@@ -53,8 +53,6 @@ void LinuxAmdGpu::initialize()
 {
     GpuDevice::initialize();
 
-    m_nameProperty->setValue(QString::fromLocal8Bit(udev_device_get_property_value(m_device, "ID_MODEL_FROM_DATABASE")));
-
     auto result = udev_device_get_sysattr_value(m_device, "mem_info_vram_total");
     if (result) {
         m_totalVramProperty->setValue(std::atoll(result));
