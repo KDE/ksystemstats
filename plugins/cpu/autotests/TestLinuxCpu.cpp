@@ -39,6 +39,12 @@ void LinuxCpuTest::testParseCpuinfo_data()
         << 12
         << 12
         ;
+    QTest::newRow("AMD64_NUMA")
+        << QFINDTESTDATA("fixtures/linux_amd64_numa_cpuinfo.txt")
+        << 2
+        << 56
+        << 56
+        ;
     QTest::newRow("ARM")
         << QFINDTESTDATA("fixtures/linux_arm_cpuinfo.txt")
         << 1

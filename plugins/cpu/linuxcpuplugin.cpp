@@ -44,8 +44,11 @@ static QHash<int, QString> makeCpuNames(const QList<CpuInfo> &cpus, int cpuCount
         return result;
     }
 
-    int currentCpu = 0;
-    int previousCpuSiblings = 0;
+    // For multi-socket systems, the current core index needs to be tracked on a
+    // per-processor basis since /proc/cpuinfo is not guaranteed to list things in
+    // any kind of contiguous order
+
+    QVector<unsigned int> coreCount;
 
     for (const auto &info : cpus) {
         if (info.cpu == -1 || info.core == -1) {
@@ -54,13 +57,15 @@ static QHash<int, QString> makeCpuNames(const QList<CpuInfo> &cpus, int cpuCount
             continue;
         }
 
-        if (info.cpu != currentCpu) {
-            previousCpuSiblings = previousCpuSiblings + info.siblings;
-            currentCpu = info.cpu;
+        if (coreCount.count() < info.cpu + 1) {
+            coreCount.resize(info.cpu + 1);
         }
 
-        int coreNumber = info.id - previousCpuSiblings;
-        result.insert(info.id, i18nc("@title", "CPU %1 Core %2", currentCpu + 1, coreNumber));
+        int currentCore = coreCount[info.cpu];
+
+        result.insert(info.id, i18nc("@title", "CPU %1 Core %2", info.cpu + 1, currentCore + 1));
+
+        coreCount[info.cpu] = currentCore + 1;
     }
 
     return result;
