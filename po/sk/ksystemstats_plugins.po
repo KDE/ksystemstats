@@ -108,81 +108,61 @@ msgid "All"
 msgstr "Všetky"
 
 #: cpu/cpu.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "Frekvencia pamäte"
 
 #: cpu/cpu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "Frekvencia"
 
 #: cpu/cpu.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "Aktuálna frekvencia procesora"
 
 #: cpu/cpu.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "Frekvencia pamäte"
 
 #: cpu/cpu.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Current Frequency'"
-#| msgid "Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "Frekvencia"
 
 #: cpu/cpu.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "Aktuálna frekvencia procesora"
 
 #: cpu/cpu.cpp:133
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "Frekvencia pamäte"
 
 #: cpu/cpu.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Memory Frequency"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "Frekvencia pamäte"
 
 #: cpu/cpu.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Current frequency of the CPU"
+#, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "Aktuálna frekvencia procesora"
 
 #: cpu/cpu.cpp:140
 #, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "GPU %1 Teplota"
@@ -195,8 +175,6 @@ msgstr "Najvyššia teplota"
 
 #: cpu/cpu.cpp:147
 #, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "GPU %1 Temperature"
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "GPU %1 Teplota"
@@ -214,9 +192,7 @@ msgid "Average CPU Temperature"
 msgstr "Priemerná teplota CPU"
 
 #: cpu/cpu.cpp:155
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Current Temperature"
+#, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "Aktuálna teplota"
@@ -820,31 +796,31 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 brána"
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr ""
+msgstr "IPv4 brána"
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 maska podsiete"
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr ""
+msgstr "IPv4 maska podsiete"
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr ""
+msgstr "IPv4 s dĺžkou prefixu"
 
 #: network/NetworkDevice.cpp:39
 #, kde-format
@@ -853,17 +829,13 @@ msgid "IPv4"
 msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
 msgstr "IPv4"
 
 #: network/NetworkDevice.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv4 Address"
-#| msgid "IPv4"
+#, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
 msgstr "IPv4"
@@ -884,31 +856,31 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 brána"
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr ""
+msgstr "IPv6 brána"
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 maska podsiete"
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr ""
+msgstr "IPv6 maska podsiete"
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr ""
+msgstr "IPv6 s dĺžkou prefixu"
 
 #: network/NetworkDevice.cpp:59
 #, kde-format
@@ -917,17 +889,13 @@ msgid "IPv6"
 msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
 msgstr "IPv6"
 
 #: network/NetworkDevice.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@title Short of IPv6 Address"
-#| msgid "IPv6"
+#, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
 msgstr "IPv6"
@@ -1053,9 +1021,7 @@ msgid "KDE Plasma Version"
 msgstr "Verzia KDE Plasma"
 
 #: osinfo/osinfo.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "System"
+#, kde-format
 msgctxt "@title"
 msgid "Window System"
 msgstr "Systém"
