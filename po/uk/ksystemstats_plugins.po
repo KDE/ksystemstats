@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-04-05 11:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -462,12 +462,6 @@ msgstr "Використана пам'ять для усіх ГП"
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Використано"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "Гр. проц. %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1443,6 +1437,10 @@ msgid ""
 msgstr ""
 "Час, коли принаймні усі завдання призупинено, і вони очікують на доступність "
 "ресурсів введення-виведення, виміряний у мікросекундах"
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "Гр. проц. %1"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"

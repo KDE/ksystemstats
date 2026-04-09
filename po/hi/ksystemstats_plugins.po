@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -459,12 +459,6 @@ msgstr "सभी GPU प्रयुक्त मेमोरी"
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "इस्तेमाल किया गया"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "जीपीयू %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1438,3 +1432,7 @@ msgid ""
 msgstr ""
 "वह समय अवधि जिसके दौरान सभी कार्य उपलब्ध IO संसाधनों की प्रतीक्षा में रुके रहते हैं, "
 "माइक्रोसेकंड में मापा जाता है"
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "जीपीयू %1"

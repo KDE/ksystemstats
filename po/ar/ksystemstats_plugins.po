@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-04-17 09:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -460,12 +460,6 @@ msgstr "مجموع ذواكر المعالجات الرسومية المستخد
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "المستخدم"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "معالج الرسوميات %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1439,6 +1433,10 @@ msgid ""
 msgstr ""
 "مقدار الوقت الذي تتوقف فيه جميع المهام في انتظار موارد الدخل/الخرج المتاحة، "
 "يقاس بالمايكروثانية"
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "معالج الرسوميات %1"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"

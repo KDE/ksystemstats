@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-04-05 11:21+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -460,12 +460,6 @@ msgstr "Memoria usada por todas las GPU"
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Usada"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "GPU %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1441,3 +1435,7 @@ msgid ""
 msgstr ""
 "Cantidad de tiempo durante el que todas las tareas se detienen a la espera "
 "de recursos de E/S disponibles, medida en microsegundos."
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "GPU %1"

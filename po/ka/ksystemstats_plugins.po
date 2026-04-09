@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-04-05 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -460,12 +460,6 @@ msgstr "ყველა GPU-ის ჯამური გამოყენე�
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Გამოყენებული"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "GPU %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1444,6 +1438,10 @@ msgid ""
 msgstr ""
 "დროის რაოდენობა, როცა, სულ ცოტა, ერთი ამოცანა გაჭედილია და ელოდება "
 "ხელმისაწვდომ შეტანა/გამოტანის რესურსებს. იზომება მიკროწამებში"
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "GPU %1"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"

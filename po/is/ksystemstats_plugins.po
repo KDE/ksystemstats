@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-05-27 16:55+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -459,12 +459,6 @@ msgstr "Notað minni allra skjákorta"
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Notað"
-
-#: gpu/FreeBSDBackend.cpp:53 gpu/LinuxBackend.cpp:54
-#, kde-format
-msgctxt "@title %1 is GPU number"
-msgid "GPU %1"
-msgstr "Skjákort %1"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
@@ -1435,3 +1429,7 @@ msgid ""
 msgstr ""
 "Heildartími sem öll verk eru í bið eftir tiltækum IO-tilföngum, mælt í "
 "míkrósekúndum"
+
+#~ msgctxt "@title %1 is GPU number"
+#~ msgid "GPU %1"
+#~ msgstr "Skjákort %1"
