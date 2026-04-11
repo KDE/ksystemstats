@@ -1393,7 +1393,3 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr "全部任务为了等待可用的 IO 资源而停滞的合计时间长度，单位为毫秒"
-
-#~ msgctxt "@title %1 is GPU number"
-#~ msgid "GPU %1"
-#~ msgstr "GPU %1"
