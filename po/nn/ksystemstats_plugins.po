@@ -1391,7 +1391,3 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
-
-#~ msgctxt "@title %1 is GPU number"
-#~ msgid "GPU %1"
-#~ msgstr "Grafikkprosessor %1"
