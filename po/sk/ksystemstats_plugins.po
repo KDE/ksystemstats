@@ -1147,8 +1147,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available "
-"memory resources, averaged over 10 seconds"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné pamäťové prostriedky, priemer za 10 sekúnd"
 
 #: pressure/pressure.cpp:140 pressure/pressure.cpp:168
 #: pressure/pressure.cpp:198
@@ -1164,8 +1164,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available "
-"memory resources, averaged over 1 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné pamäťové prostriedky, priemer za 1 minútu"
 
 #: pressure/pressure.cpp:143 pressure/pressure.cpp:171
 #: pressure/pressure.cpp:201
@@ -1181,8 +1181,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available "
-"memory resources, averaged over 5 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné pamäťové prostriedky, priemer za 5 minút"
 
 #: pressure/pressure.cpp:146 pressure/pressure.cpp:174
 #: pressure/pressure.cpp:204
@@ -1198,8 +1198,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
-"Množstvo time that aspoň one task is stalled waiting for available memory "
-"resources, measured in microseconds"
+"Množstvo času, počas ktorého je zastavená aspoň jedna úloha čakajúca na "
+"dostupné pamäťové prostriedky, merané v mikrosekundách"
 
 #: pressure/pressure.cpp:150 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
@@ -1215,8 +1215,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available CPU "
-"resources, averaged over 10 seconds"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky CPU, priemer za 10 sekúnd"
 
 #: pressure/pressure.cpp:153 pressure/pressure.cpp:182
 #: pressure/pressure.cpp:212
@@ -1232,8 +1232,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available CPU "
-"resources, averaged over 1 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky CPU, priemer za 1 minútu"
 
 #: pressure/pressure.cpp:156 pressure/pressure.cpp:185
 #: pressure/pressure.cpp:215
@@ -1249,8 +1249,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available CPU "
-"resources, averaged over 5 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky CPU, priemer za 5 minút"
 
 #: pressure/pressure.cpp:159 pressure/pressure.cpp:188
 #: pressure/pressure.cpp:218
@@ -1266,8 +1266,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
-"Množstvo time that aspoň one task is stalled waiting for available CPU "
-"resources, measured in microseconds"
+"Množstvo času, počas ktorého je zastavená aspoň jedna úloha čakajúca na "
+"dostupné prostriedky CPU, merané v mikrosekundách"
 
 #: pressure/pressure.cpp:163
 #, kde-format
@@ -1282,8 +1282,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available IO "
-"resources, averaged over 10 seconds"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky V/V, priemer za 10 sekúnd"
 
 #: pressure/pressure.cpp:169
 #, kde-format
@@ -1292,8 +1292,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available IO "
-"resources, averaged over 1 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky V/V, priemer za 1 minútu"
 
 #: pressure/pressure.cpp:172
 #, kde-format
@@ -1302,8 +1302,8 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
-"Percentage of time that aspoň one task is stalled waiting for available IO "
-"resources, averaged over 5 minutes"
+"Percentuálny podiel času, počas ktorého je zastavená aspoň jedna úloha "
+"čakajúca na dostupné prostriedky V/V, priemer za 5 minút"
 
 #: pressure/pressure.cpp:175
 #, kde-format
@@ -1312,8 +1312,8 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
-"Množstvo time that aspoň one task is stalled waiting for available IO "
-"resources, measured in microseconds"
+"Množstvo času, počas ktorého je zastavená aspoň jedna úloha čakajúca na "
+"dostupné prostriedky V/V, merané v mikrosekundách"
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1352,8 +1352,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
-"Množstvo time that all tasks are stalled waiting for available memory "
-"resources, measured in microseconds"
+"Množstvo času, počas ktorého sú všetky úlohy zastavené čakajúc na dostupné "
+"pamäťové prostriedky, merané v mikrosekundách"
 
 #: pressure/pressure.cpp:193
 #, kde-format
@@ -1398,8 +1398,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
-"Množstvo time that all tasks are stalled waiting for available CPU "
-"resources, measured in microseconds"
+"Množstvo času, počas ktorého sú všetky úlohy zastavené čakajúc na dostupné "
+"prostriedky CPU, merané v mikrosekundách"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1438,8 +1438,8 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
-"Množstvo time that all tasks are stalled waiting for available IO resources, "
-"measured in microseconds"
+"Množstvo času, počas ktorého sú všetky úlohy zastavené čakajúc na dostupné "
+"prostriedky V/V, merané v mikrosekundách"
 
 #~ msgctxt "@title, Short for 'Current Frequency'"
 #~ msgid "Frequency"
