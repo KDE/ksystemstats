@@ -32,11 +32,10 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Test)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO Crash)
 find_package(KSysGuard ${PROJECT_DEP_VERSION} REQUIRED)
 
-find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
-set_package_properties(KF6NetworkManagerQt PROPERTIES
-    TYPE RECOMMENDED
-    PURPOSE "Provides an improved backend for Network statistics"
-)
+# there's no NetworkManager on FreeBSD'
+if (LINUX)
+    find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION} CONFIG REQUIRED)
+endif()
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)

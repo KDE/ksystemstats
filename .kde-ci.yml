@@ -10,5 +10,10 @@ Dependencies:
     'frameworks/kio': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
     'plasma/libksysguard': '@same'
+
+ - 'on': ['Linux']
+   'require':
+    'frameworks/networkmanager-qt': '@latest-kf6'
+
 Options:
  require-passing-tests-on: ['Linux', 'FreeBSD']
