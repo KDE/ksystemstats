@@ -33,6 +33,8 @@ public:
 
     bool isConnected() const;
 
+    void processPendingDisconnect();
+
     Q_SIGNAL void connected(NetworkManagerDevice *device);
     Q_SIGNAL void disconnected(NetworkManagerDevice *device);
 
@@ -46,6 +48,7 @@ private:
     bool m_connected = false;
     bool m_restoreTimer = false;
     uint m_initialStatisticsRate;
+    bool m_pendingDisconnect = false;
 };
 
 class NetworkManagerBackend : public NetworkBackend
@@ -59,6 +62,7 @@ public:
     bool isSupported() override;
     void start() override;
     void stop() override;
+    void update() override;
 
 private:
     void onDeviceAdded(const QString &uni);

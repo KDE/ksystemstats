@@ -136,13 +136,22 @@ void NetworkManagerDevice::update()
             } else {
                 m_restoreTimer = false;
             }
-            Q_EMIT disconnected(this);
+
+            m_downloadSensor->setValue(0);
+            m_downloadBitsSensor->setValue(0);
+            m_uploadSensor->setValue(0);
+            m_uploadBitsSensor->setValue(0);
+
+            m_pendingDisconnect = true;
         }
         return;
     }
 
     if (m_device->activeConnection() && !m_connected) {
         m_connected = true;
+        
+        m_pendingDisconnect = false; 
+        
         if (m_restoreTimer) {
             m_statisticsTimer->start();
         }
@@ -301,6 +310,23 @@ void NetworkManagerBackend::onDeviceRemoved(const QString& uni)
     }
 
     delete device;
+}
+
+//Processes the delayed disconnect
+void NetworkManagerDevice::processPendingDisconnect()
+{
+    if (m_pendingDisconnect) {
+        m_pendingDisconnect = false;
+        Q_EMIT disconnected(this);
+    }
+}
+
+//Overrides the global update to check for pending disconnects
+void NetworkManagerBackend::update()
+{
+    for (auto device : std::as_const(m_devices)) {
+        device->processPendingDisconnect();
+    }
 }
 
 
