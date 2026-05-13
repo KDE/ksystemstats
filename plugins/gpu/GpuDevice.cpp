@@ -6,6 +6,8 @@
 
 #include "GpuDevice.h"
 
+#include <systemstats/AggregateSensor.h>
+
 #include <KLocalizedString>
 
 GpuDevice::GpuDevice(const QString &id, const QString &name)
@@ -37,6 +39,10 @@ void GpuDevice::initialize()
     m_usedVramProperty->setShortName(i18nc("@title Short for Video Memory Used", "Used"));
     m_usedVramProperty->setMax(m_totalVramProperty);
     m_usedVramProperty->setUnit(KSysGuard::UnitByte);
+    auto m_usedVramPercentage = new KSysGuard::PercentageSensor(this, QStringLiteral("usedPercent"), i18nc("@title", "Video Memory Used Percentage"));
+    m_usedVramPercentage->setPrefix(name());
+    m_usedVramPercentage->setShortName(m_usedVramProperty->info().shortName);
+    m_usedVramPercentage->setBaseSensor(m_usedVramProperty);
 
     m_coreFrequencyProperty->setName(i18nc("@title", "Frequency"));
     m_coreFrequencyProperty->setPrefix(name());
