@@ -68,9 +68,11 @@ void LinuxBackend::start()
         GpuDevice *gpu = nullptr;
         if (isXeDriver(pciDevice)) {
 #ifdef HAVE_XE_DRM_H
-            gpu = new LinuxXeGpu{gpuId, gpuName, drmDevice};
+            gpu = new LinuxXeGpu{gpuId, gpuName, pciDevice};
 #else
             qCWarning(KSYSTEMSTATS_GPU) << "Found Xe GPU but ksystemstats compiled without Xe support";
+            udev_device_unref(pciDevice);
+            continue;
 #endif
         } else if (vendor == amdVendor) {
             gpu = new LinuxAmdGpu{gpuId, gpuName, pciDevice};

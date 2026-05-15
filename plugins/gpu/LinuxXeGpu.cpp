@@ -22,16 +22,18 @@
 
 #include <systemstats/SysFsSensor.h>
 
-LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *device)
+LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *pciDevice)
     : GpuDevice(id, name)
-    , m_device(device)
+    , m_device(pciDevice)
 {
     udev_device_ref(m_device);
 
-    const char *sysnum = udev_device_get_sysnum(m_device);
-    if (sysnum) {
-        QString cardPath = QStringLiteral("/dev/dri/card") + QString::fromLatin1(sysnum);
-        m_drmFd = open(cardPath.toLatin1().constData(), O_RDONLY);
+    const QString pciPath = QString::fromLocal8Bit(udev_device_get_syspath(m_device));
+    const QStringList cards = QDir(pciPath + QStringLiteral("/drm"))
+                                  .entryList({QStringLiteral("card[0-9]*")}, QDir::Dirs | QDir::NoDotAndDotDot);
+    if (!cards.isEmpty()) {
+        const QString cardPath = QStringLiteral("/dev/dri/") + cards.first();
+        m_drmFd = open(cardPath.toLatin1().constData(), O_RDONLY | O_CLOEXEC);
         if (m_drmFd < 0) {
             qWarning() << "Failed to open DRM device" << cardPath;
         }
@@ -40,15 +42,8 @@ LinuxXeGpu::LinuxXeGpu(const QString &id, const QString &name, udev_device *devi
     m_helperProcess = new QProcess(this);
     m_helperProcess->setProgram(xeHelperLocation);
 
-    auto pciDevice = udev_device_get_parent(m_device);
-    if (pciDevice) {
-        const char *pciSlot = udev_device_get_sysattr_value(pciDevice, "address");
-        if (!pciSlot) {
-            pciSlot = udev_device_get_sysname(pciDevice);
-        }
-        if (pciSlot) {
-            m_helperProcess->setArguments({QString::fromLatin1(pciSlot)});
-        }
+    if (const char *pciSlot = udev_device_get_sysname(m_device)) {
+        m_helperProcess->setArguments({QString::fromLatin1(pciSlot)});
     }
 
     connect(m_helperProcess, &QProcess::readyReadStandardOutput, this, &LinuxXeGpu::readPerfData);
@@ -154,12 +149,7 @@ void LinuxXeGpu::makeSensors()
 
 void LinuxXeGpu::discoverHwmonSensors()
 {
-    auto pciDevice = udev_device_get_parent(m_device);
-    if (!pciDevice) {
-        return;
-    }
-
-    QString pciPath = QString::fromLocal8Bit(udev_device_get_syspath(pciDevice));
+    const QString pciPath = QString::fromLocal8Bit(udev_device_get_syspath(m_device));
     QDir hwmonDir(pciPath + QStringLiteral("/hwmon"));
 
     if (!hwmonDir.exists()) {
@@ -239,8 +229,12 @@ void LinuxXeGpu::queryVram()
     query.size = 0;
     query.data = 0;
 
-    constexpr __u32 maxQuerySize = 65536;
+    constexpr std::uint32_t maxQuerySize = 65536;
     if (ioctl(m_drmFd, DRM_IOCTL_XE_DEVICE_QUERY, &query) != 0 || query.size == 0 || query.size > maxQuerySize) {
+        return;
+    }
+
+    if (query.size < sizeof(drm_xe_query_mem_regions)) {
         return;
     }
 
@@ -252,6 +246,12 @@ void LinuxXeGpu::queryVram()
     }
 
     auto *regions = reinterpret_cast<drm_xe_query_mem_regions *>(buffer.data());
+    const std::size_t expectedSize = sizeof(drm_xe_query_mem_regions)
+        + std::size_t{regions->num_mem_regions} * sizeof(drm_xe_mem_region);
+    if (static_cast<std::size_t>(buffer.size()) < expectedSize) {
+        return;
+    }
+
     std::uint64_t totalVram = 0;
     std::uint64_t usedVram = 0;
 
@@ -280,7 +280,7 @@ void LinuxXeGpu::readPerfData()
 
         for (int i = 1; i < parts.size(); i += 2) {
             const QString &label = parts[i];
-            const quint64 value = parts[i + 1].toULong();
+            const quint64 value = parts[i + 1].toULongLong();
 
             if (label == QLatin1String("Frequency")) {
                 m_coreFrequencyProperty->setValue(value);

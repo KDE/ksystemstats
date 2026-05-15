@@ -242,7 +242,8 @@ int main(int argc, char **argv)
         auto freqIt = currentValues.find(freqConfig);
         if (freqIt != currentValues.end()) {
             auto lastIt = lastValues.find(freqConfig);
-            if (lastIt != lastValues.end() && lastTimestamp > 0) {
+            if (lastIt != lastValues.end() && lastTimestamp > 0
+                && data->time_enabled >= lastTimestamp && freqIt->second >= lastIt->second) {
                 std::uint64_t timeDiff = data->time_enabled - lastTimestamp;
                 std::uint64_t freqDiff = freqIt->second - lastIt->second;
                 if (timeDiff > 0) {
