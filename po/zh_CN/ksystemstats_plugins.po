@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/ksystemstats/ksystemstats_plugins.pot\n"
-"X-Crowdin-File-ID: 42983\n"
+"X-Crowdin-File: /kf6-stable/messages/ksystemstats/ksystemstats_plugins.pot\n"
+"X-Crowdin-File-ID: 50932\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
