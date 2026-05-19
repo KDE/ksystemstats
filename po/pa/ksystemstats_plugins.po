@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-05-19 00:46+0000\n"
 "PO-Revision-Date: 2023-04-01 21:12-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -532,13 +532,27 @@ msgctxt "@title"
 msgid "GPU"
 msgstr "GPU"
 
-#: gpu/LinuxIntelGpu.cpp:40
+#: gpu/LinuxIntelGpu.cpp:40 gpu/LinuxXeGpu.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "User Usage"
 msgctxt "@title"
 msgid "Video Usage"
 msgstr "ਵਰਤੋਂਕਾਰ ਲਈ ਵਰਤੋਂ"
+
+#: gpu/LinuxXeGpu.cpp:78
+#, kde-format
+msgctxt "@title"
+msgid "Fan %1"
+msgstr ""
+
+#: gpu/LinuxXeGpu.cpp:86
+#, fuzzy, kde-format
+#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
+#| msgid "Max Temperature"
+msgctxt "@title"
+msgid "VRAM Temperature"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਤਾਪਮਾਨ"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
