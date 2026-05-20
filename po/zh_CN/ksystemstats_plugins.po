@@ -533,12 +533,10 @@ msgid "Fan %1"
 msgstr ""
 
 #: gpu/LinuxXeGpu.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
-#| msgid "Max Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "最高温度"
+msgstr ""
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format

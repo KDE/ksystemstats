@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2025-04-07 00:44+0300\n"
+"PO-Revision-Date: 2026-05-19 13:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -530,15 +530,13 @@ msgstr "Video Kullanımı"
 #, kde-format
 msgctxt "@title"
 msgid "Fan %1"
-msgstr ""
+msgstr "Fan %1"
 
 #: gpu/LinuxXeGpu.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
-#| msgid "Max Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "En Yüksek Sıcaklık"
+msgstr "VRAM Sıcaklığı"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
