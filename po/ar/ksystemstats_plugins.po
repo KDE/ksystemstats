@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2025-04-17 09:41+0400\n"
+"PO-Revision-Date: 2026-05-21 11:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -531,15 +531,13 @@ msgstr "استخدام الفيديو"
 #, kde-format
 msgctxt "@title"
 msgid "Fan %1"
-msgstr ""
+msgstr "المروحة %1"
 
 #: gpu/LinuxXeGpu.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
-#| msgid "Max Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "أعلى درجة"
+msgstr "درجة حرارة VRAM"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
