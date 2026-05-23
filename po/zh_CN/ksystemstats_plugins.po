@@ -530,13 +530,13 @@ msgstr "显卡使用率"
 #, kde-format
 msgctxt "@title"
 msgid "Fan %1"
-msgstr ""
+msgstr "风扇 %1"
 
 #: gpu/LinuxXeGpu.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr ""
+msgstr "显存温度"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
