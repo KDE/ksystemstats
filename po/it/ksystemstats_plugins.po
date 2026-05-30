@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2020-2022, 2024-2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2025-04-08 17:09+0200\n"
+"PO-Revision-Date: 2026-05-22 07:44+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -527,20 +527,16 @@ msgid "Video Usage"
 msgstr "Uso video"
 
 #: gpu/LinuxXeGpu.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "@title %1 is a number"
-#| msgid "Fan %1"
+#, kde-format
 msgctxt "@title"
 msgid "Fan %1"
 msgstr "Ventola %1"
 
 #: gpu/LinuxXeGpu.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
-#| msgid "Max Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "Temperatura max"
+msgstr "Temperatura della VRAM"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
