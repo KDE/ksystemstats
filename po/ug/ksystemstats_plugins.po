@@ -1,809 +1,808 @@
-# Copyright (C) 2025 This file is copyright:
+# Uyghur translation for ksystemstats_plugins.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the ksystemstats package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
 #
-# SPDX-FileCopyrightText: 2025 Gummi <gudmundure@gmail.com>
-# SPDX-FileCopyrightText: 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 12:40+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
-"Language: is\n"
+"PO-Revision-Date: 2026-05-31 19:46-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Poedit 3.9\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Name"
-msgstr "Heiti"
+msgstr "ئاتى"
 
 #: cpu/cpu.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "Total Usage"
-msgstr "Heildarnotkun"
+msgstr ""
 
 #: cpu/cpu.cpp:39
 #, kde-format
 msgctxt "@title, Short for 'Total Usage'"
 msgid "Usage"
-msgstr "Notkun"
+msgstr "ئىشلىتىلىشى"
 
 #: cpu/cpu.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "System Usage"
-msgstr "Kerfisnotkun"
+msgstr ""
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for 'System Usage'"
 msgid "System"
-msgstr "Kerfi"
+msgstr "سىستېما"
 
 #: cpu/cpu.cpp:46
 #, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "%1 Kerfi"
+msgstr ""
 
 #: cpu/cpu.cpp:52
 #, kde-format
 msgctxt "@title"
 msgid "User Usage"
-msgstr "Notkun notanda"
+msgstr ""
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for 'User Usage'"
 msgid "User"
-msgstr "Notandi"
+msgstr "ئىشلەتكۈچى"
 
 #: cpu/cpu.cpp:53
 #, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "%1 Notandi"
+msgstr ""
 
 #: cpu/cpu.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Wait Usage"
-msgstr "Biðnotkun"
+msgstr ""
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for 'Wait Load'"
 msgid "Wait"
-msgstr "Bið"
+msgstr ""
 
 #: cpu/cpu.cpp:60
 #, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "%1 bið"
+msgstr ""
 
 #: cpu/cpu.cpp:85
 #, kde-format
 msgctxt "@title"
 msgid "Current Frequency"
-msgstr "Núverandi tíðni"
+msgstr ""
 
 #: cpu/cpu.cpp:87
 #, kde-format
 msgctxt "@info"
 msgid "Current frequency of the CPU"
-msgstr "Núverandi tíðni örgjörvans"
+msgstr ""
 
 #: cpu/cpu.cpp:92
 #, kde-format
 msgctxt "@title"
 msgid "Current Temperature"
-msgstr "Núverandi hitastig"
+msgstr ""
 
 #: cpu/cpu.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "All"
-msgstr "Allt"
+msgstr "ھەممىسى"
 
 #: cpu/cpu.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
-msgstr "Hámarkshitastig örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
-msgstr "Hám. tíðni"
+msgstr ""
 
 #: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
-msgstr "Núverandi hámarkstíðni á milli allra örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:126
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
-msgstr "Lágmarkstíðni örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
-msgstr "Lágm. tíðni"
+msgstr ""
 
 #: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
-msgstr "Núverandi lágmarkstíðni á milli allra örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:133
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
-msgstr "Meðaltíðni örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
-msgstr "Meðaltíðni"
+msgstr ""
 
 #: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
-msgstr "Núverandi meðaltíðni á milli allra örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
-msgstr "Hámarks hitastig örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
-msgstr "Hám. hitastig"
+msgstr ""
 
 #: cpu/cpu.cpp:147
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
-msgstr "Lágmarkshitastig örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
-msgstr "Lágm. hitastig"
+msgstr ""
 
 #: cpu/cpu.cpp:154
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
-msgstr "Meðaltals hitastig örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
-msgstr "Meðaltals hitastig"
+msgstr ""
 
 #: cpu/cpu.cpp:171
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
-msgstr "Fjöldi örgjörva"
+msgstr ""
 
 #: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
-msgstr "Örgjörvar"
+msgstr ""
 
 #: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
-msgstr "Fjöldi örgjörva sem eru í tölvunni"
+msgstr ""
 
 #: cpu/cpu.cpp:175
 #, kde-format
 msgctxt "@title"
 msgid "Number of Cores"
-msgstr "Fjöldi kjarna"
+msgstr ""
 
 #: cpu/cpu.cpp:176
 #, kde-format
 msgctxt "@title, Short fort 'Number of Cores'"
 msgid "Cores"
-msgstr "Kjarnar"
+msgstr ""
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Number of CPU cores across all physical CPUS"
-msgstr "Fjöldi örgjörvakjarna í öllum örgjörvum"
+msgstr ""
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
 msgid "CPUs"
-msgstr "Örgjörvar"
+msgstr ""
 
 #: cpu/freebsdcpuplugin.cpp:159
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1"
-msgstr "Örgjörvi %1"
+msgstr ""
 
 #: cpu/linuxcpuplugin.cpp:42 cpu/linuxcpuplugin.cpp:56
 #, kde-format
 msgctxt "@title"
 msgid "Core %1"
-msgstr "Kjarni %1"
+msgstr ""
 
 #: cpu/linuxcpuplugin.cpp:66
 #, kde-format
 msgctxt "@title"
 msgid "CPU %1 Core %2"
-msgstr "Örgjörvi %1 kjarni %2"
+msgstr ""
 
 #: cpu/loadaverages.cpp:13
 #, kde-format
 msgctxt "@title"
 msgid "Load Averages"
-msgstr "Meðaltalsálag"
+msgstr ""
 
 #: cpu/loadaverages.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "Load average (1 minute)"
-msgstr "Meðalálag (1 mínúta)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Load average (5 minutes)"
-msgstr "Meðalálag (5 mínútur)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Load average (15 minute)"
-msgstr "Meðalálag (15 mínútur)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:18
 #, kde-format
 msgctxt "@title,  Short for 'Load average (1 minute)"
 msgid "Load average (1m)"
-msgstr "Meðalálag (1m)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:19
 #, kde-format
 msgctxt "@title,  Short for 'Load average (5 minutes)"
 msgid "Load average (5m)"
-msgstr "Meðalálag (5m)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:20
 #, kde-format
 msgctxt "@title,  Short for 'Load average (15 minutes)"
 msgid "Load average (15m)"
-msgstr "Meðalálag (15m)"
+msgstr ""
 
 #: cpu/loadaverages.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 1 minute"
-msgstr "Fjöldi verka í keyrsluröðinni að meðaltali á mínútu"
+msgstr ""
 
 #: cpu/loadaverages.cpp:23
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 5 minutes"
-msgstr "Fjöldi verka í keyrsluröðinni að meðaltali á 5 mínútum"
+msgstr ""
 
 #: cpu/loadaverages.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "Number of jobs in the run queue averaged over 15 minutes"
-msgstr "Fjöldi verka í keyrsluröðinni að meðaltali á 15 mínútum"
+msgstr ""
 
 #: disks/disks.cpp:81 disks/disks.cpp:287
 #, kde-format
 msgctxt "@title"
 msgid "Total Space"
-msgstr "Heildarpláss"
+msgstr ""
 
 #: disks/disks.cpp:83 disks/disks.cpp:288
 #, kde-format
 msgctxt "@title Short for 'Total Space'"
 msgid "Total"
-msgstr "Alls"
+msgstr "جەمئىي"
 
 #: disks/disks.cpp:87 disks/disks.cpp:310
 #, kde-format
 msgctxt "@title"
 msgid "Read Rate"
-msgstr "Lestíðni"
+msgstr ""
 
 #: disks/disks.cpp:89 disks/disks.cpp:311
 #, kde-format
 msgctxt "@title Short for 'Read Rate'"
 msgid "Read"
-msgstr "Lestur"
+msgstr "ئوقۇلغان"
 
 #: disks/disks.cpp:93 disks/disks.cpp:317
 #, kde-format
 msgctxt "@title"
 msgid "Write Rate"
-msgstr "Skriftíðni"
+msgstr ""
 
 #: disks/disks.cpp:95 disks/disks.cpp:318
 #, kde-format
 msgctxt "@title Short for 'Write Rate'"
 msgid "Write"
-msgstr "Skrift"
+msgstr "ياز"
 
 #: disks/disks.cpp:100 disks/disks.cpp:302
 #, kde-format
 msgctxt "@title"
 msgid "Used Space"
-msgstr "Notað pláss"
+msgstr ""
 
 #: disks/disks.cpp:102 disks/disks.cpp:303
 #, kde-format
 msgctxt "@title Short for 'Used Space'"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: disks/disks.cpp:107 disks/disks.cpp:294
 #, kde-format
 msgctxt "@title"
 msgid "Free Space"
-msgstr "Laust pláss"
+msgstr "بىكار بوشلۇق"
 
 #: disks/disks.cpp:109 disks/disks.cpp:295
 #, kde-format
 msgctxt "@title Short for 'Free Space'"
 msgid "Free"
-msgstr "Laust"
+msgstr "بوش"
 
 #: disks/disks.cpp:114 disks/disks.cpp:328
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Used"
-msgstr "Hlutfall notað"
+msgstr ""
 
 #: disks/disks.cpp:118 disks/disks.cpp:324
 #, kde-format
 msgctxt "@title"
 msgid "Percentage Free"
-msgstr "Hlutfall laust"
+msgstr ""
 
 #: disks/disks.cpp:165
 #, kde-format
 msgid "Disks"
-msgstr "Diskar"
+msgstr ""
 
 #: disks/disks.cpp:272
 #, kde-format
 msgctxt "@title"
 msgid "All Disks"
-msgstr "Allir diskar"
+msgstr ""
 
 #: disks/disks.cpp:325
 #, kde-format
 msgctxt "@title, Short for `Percentage Free"
 msgid "Free"
-msgstr "Laust"
+msgstr "بوش"
 
 #: disks/disks.cpp:329
 #, kde-format
 msgctxt "@title, Short for `Percentage Used"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: gpu/AllGpus.cpp:14
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs"
-msgstr "Öll skjákort"
+msgstr ""
 
 #: gpu/AllGpus.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Usage"
-msgstr "Notkun allra skjákorta"
+msgstr ""
 
 #: gpu/AllGpus.cpp:17
 #, kde-format
 msgctxt "@title Short for 'All GPUs Usage'"
 msgid "Usage"
-msgstr "Notkun"
+msgstr "ئىشلىتىلىشى"
 
 #: gpu/AllGpus.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "Heildarminni allra skjákorta"
+msgstr ""
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
 msgctxt "@title Short for 'All GPUs Total Memory'"
 msgid "Total"
-msgstr "Alls"
+msgstr "جەمئىي"
 
 #: gpu/AllGpus.cpp:31
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr "Notað minni allra skjákorta"
+msgstr ""
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
 msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: gpu/GpuDevice.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
-msgstr "Notkun"
+msgstr "ئىشلىتىلىشى"
 
 #: gpu/GpuDevice.cpp:30
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr "Skjákortsminni alls"
+msgstr ""
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
-msgstr "Alls"
+msgstr "جەمئىي"
 
 #: gpu/GpuDevice.cpp:35
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr "Notað skjákortsminni"
+msgstr ""
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: gpu/GpuDevice.cpp:41
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
-msgstr "Tíðni"
+msgstr "چاستوتا"
 
 #: gpu/GpuDevice.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
-msgstr "Minnistíðni"
+msgstr ""
 
 #: gpu/GpuDevice.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
-msgstr "Hitastig"
+msgstr "تېمپېراتۇرا"
 
 #: gpu/GpuDevice.cpp:53 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"
-msgstr "Afl"
+msgstr "توك مەنبە"
 
 #: gpu/GpuPlugin.cpp:32
 #, kde-format
 msgctxt "@title"
 msgid "GPU"
-msgstr "Skjákort"
+msgstr ""
 
 #: gpu/LinuxIntelGpu.cpp:40 gpu/LinuxXeGpu.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "Notkun myndvinnslu"
+msgstr ""
 
 #: gpu/LinuxXeGpu.cpp:78
 #, kde-format
 msgctxt "@title"
 msgid "Fan %1"
-msgstr "Vifta %1"
+msgstr "شامالدۇرغۇچ %1"
 
 #: gpu/LinuxXeGpu.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "Hitastig VRAM"
+msgstr ""
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
 msgid "Hardware Sensors"
-msgstr "Vélbúnaðarskynjarar"
+msgstr ""
 
 #: memory/backend.cpp:17
 #, kde-format
 msgctxt "@title"
 msgid "Physical Memory"
-msgstr "Vinnsluminni"
+msgstr ""
 
 #: memory/backend.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Swap Memory"
-msgstr "Diskminni"
+msgstr ""
 
 #: memory/backend.cpp:39
 #, kde-format
 msgctxt "@title"
 msgid "Total Physical Memory"
-msgstr "Vinnsluminni alls"
+msgstr ""
 
 #: memory/backend.cpp:40
 #, kde-format
 msgctxt "@title, Short for 'Total Physical Memory'"
 msgid "Total"
-msgstr "Alls"
+msgstr "جەمئىي"
 
 #: memory/backend.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory"
-msgstr "Notað vinnsluminni"
+msgstr ""
 
 #: memory/backend.cpp:45
 #, kde-format
 msgctxt "@title, Short for 'Used Physical Memory'"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: memory/backend.cpp:49
 #, kde-format
 msgctxt "@title"
 msgid "Used Physical Memory Percentage"
-msgstr "Prósenta af notuðu vinnsluminni"
+msgstr ""
 
 #: memory/backend.cpp:53
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory"
-msgstr "Laust vinnsluminni"
+msgstr ""
 
 #: memory/backend.cpp:54
 #, kde-format
 msgctxt "@title, Short for 'Free Physical Memory'"
 msgid "Free"
-msgstr "Laust"
+msgstr "بوش"
 
 #: memory/backend.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Free Physical Memory Percentage"
-msgstr "Prósenta af lausu vinnsluminni"
+msgstr ""
 
 #: memory/backend.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory"
-msgstr "Forritsminni"
+msgstr ""
 
 #: memory/backend.cpp:63
 #, kde-format
 msgctxt "@title, Short for 'Application Memory'"
 msgid "Application"
-msgstr "Forrit"
+msgstr "پىروگرامما"
 
 #: memory/backend.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Application Memory Percentage"
-msgstr "Prósenta af forritsminni"
+msgstr ""
 
 #: memory/backend.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr "Skyndiminni"
+msgstr ""
 
 #: memory/backend.cpp:72
 #, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
-msgstr "Biðminni"
+msgstr "غەملەك"
 
 #: memory/backend.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory Percentage"
-msgstr "Prósenta skyndiminnis"
+msgstr ""
 
 #: memory/backend.cpp:80
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory"
-msgstr "Biðminni"
+msgstr ""
 
 #: memory/backend.cpp:81
 #, kde-format
 msgctxt "@title, Short for 'Buffer Memory'"
 msgid "Buffer"
-msgstr "Biðminni"
+msgstr "يىغلەك"
 
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr "Magn minnis notað til að geyma diskablokkir tímabundið"
+msgstr ""
 
 #: memory/backend.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Buffer Memory Percentage"
-msgstr "Prósenta biðminnis"
+msgstr ""
 
 #: memory/backend.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Total Swap Memory"
-msgstr "Diskminni alls"
+msgstr ""
 
 #: memory/backend.cpp:91
 #, kde-format
 msgctxt "@title, Short for 'Total Swap Memory'"
 msgid "Total"
-msgstr "Alls"
+msgstr "جەمئىي"
 
 #: memory/backend.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory"
-msgstr "Notað diskminni"
+msgstr ""
 
 #: memory/backend.cpp:96
 #, kde-format
 msgctxt "@title, Short for 'Used Swap Memory'"
 msgid "Used"
-msgstr "Notað"
+msgstr "ئىشلىتىلگىنى"
 
 #: memory/backend.cpp:100
 #, kde-format
 msgctxt "@title"
 msgid "Used Swap Memory Percentage"
-msgstr "Prósenta notaðs diskminnis"
+msgstr ""
 
 #: memory/backend.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory"
-msgstr "Laust diskminni"
+msgstr ""
 
 #: memory/backend.cpp:105
 #, kde-format
 msgctxt "@title, Short for 'Free Swap Memory'"
 msgid "Free"
-msgstr "Laust"
+msgstr "بوش"
 
 #: memory/backend.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Free Swap Memory Percentage"
-msgstr "Prósenta af lausu diskminni"
+msgstr ""
 
 #: memory/memory.cpp:24
 #, kde-format
 msgctxt "@title"
 msgid "Memory"
-msgstr "Minni"
+msgstr "ئەسلەك"
 
 #: network/AllDevicesObject.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "All Network Devices"
-msgstr "Allur netbúnaður"
+msgstr ""
 
 #: network/AllDevicesObject.cpp:18 network/AllDevicesObject.cpp:28
 #: network/NetworkDevice.cpp:66 network/NetworkDevice.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Download Rate"
-msgstr "Niðurhalstíðni"
+msgstr ""
 
 #: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
 #: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
 #, kde-format
 msgctxt "@title Short for Download Rate"
 msgid "Download"
-msgstr "Niðurhal"
+msgstr "چۈشۈرۈش"
 
 #: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
 #: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Upload Rate"
-msgstr "Sent"
+msgstr ""
 
 #: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
 #: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
 #, kde-format
 msgctxt "@title Short for Upload Rate"
 msgid "Upload"
-msgstr "Upphleðsla"
+msgstr "يۈكلە"
 
 #: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Total Downloaded"
-msgstr "Sótt alls"
+msgstr ""
 
 #: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
 #, kde-format
 msgctxt "@title Short for Total Downloaded"
 msgid "Downloaded"
-msgstr "Sótt"
+msgstr "چۈشۈرۈلدى"
 
 #: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Total Uploaded"
-msgstr "Hlaðið upp alls"
+msgstr ""
 
 #: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
 #, kde-format
 msgctxt "@title Short for Total Uploaded"
 msgid "Uploaded"
-msgstr "Hlaðið upp"
+msgstr "يۈكلەندى"
 
 #: network/NetworkDevice.cpp:15
 #, kde-format
 msgctxt "@title"
 msgid "Network Name"
-msgstr "Heiti nets"
+msgstr ""
 
 #: network/NetworkDevice.cpp:16
 #, kde-format
 msgctxt "@title Short of Network Name"
 msgid "Name"
-msgstr "Heiti"
+msgstr "ئاتى"
 
 #: network/NetworkDevice.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Signal Strength"
-msgstr "Styrkur merkis"
+msgstr "سىگنال كۈچلۈكلۈكى"
 
 #: network/NetworkDevice.cpp:20
 #, kde-format
 msgctxt "@title Short of Signal Strength"
 msgid "Signal"
-msgstr "Merki"
+msgstr ""
 
 #: network/NetworkDevice.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Address"
-msgstr "IPv4-tala"
+msgstr "‍‍IPv4 ئادرېس"
 
 #: network/NetworkDevice.cpp:27
 #, kde-format
@@ -815,31 +814,31 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Gateway"
-msgstr "IPv4-gátt"
+msgstr ""
 
 #: network/NetworkDevice.cpp:31
 #, kde-format
 msgctxt "@title Short of IPv4 Gateway"
 msgid "IPv4 Gateway"
-msgstr "IPv4-gátt"
+msgstr ""
 
 #: network/NetworkDevice.cpp:34
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 Subnet Mask"
-msgstr "IPv4 undirnetsmöskvi"
+msgstr ""
 
 #: network/NetworkDevice.cpp:35
 #, kde-format
 msgctxt "@title Short of IPv4 Subnet Mask"
 msgid "IPv4 Subnet Mask"
-msgstr "IPv4 undirnetsmöskvi"
+msgstr ""
 
 #: network/NetworkDevice.cpp:38
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 with Prefix Length"
-msgstr "IPv4 með lengd forskeytis"
+msgstr ""
 
 #: network/NetworkDevice.cpp:39
 #, kde-format
@@ -851,19 +850,19 @@ msgstr "IPv4"
 #, kde-format
 msgctxt "@title"
 msgid "IPv4 DNS"
-msgstr "IPv4 DNS"
+msgstr ""
 
 #: network/NetworkDevice.cpp:43
 #, kde-format
 msgctxt "@title Short of IPv4 DNS"
 msgid "IPv4 DNS"
-msgstr "IPv4 DNS"
+msgstr ""
 
 #: network/NetworkDevice.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Address"
-msgstr "IPv6-tala"
+msgstr "‍IPv6 ئادرېس"
 
 #: network/NetworkDevice.cpp:47
 #, kde-format
@@ -875,31 +874,31 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Gateway"
-msgstr "IPv6-gátt"
+msgstr ""
 
 #: network/NetworkDevice.cpp:51
 #, kde-format
 msgctxt "@title Short of IPv6 Gateway"
 msgid "IPv6 Gateway"
-msgstr "IPv6-gátt"
+msgstr ""
 
 #: network/NetworkDevice.cpp:54
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 Subnet Mask"
-msgstr "IPv6 undirnetsmöskvi"
+msgstr ""
 
 #: network/NetworkDevice.cpp:55
 #, kde-format
 msgctxt "@title Short of IPv6 Subnet Mask"
 msgid "IPv6 Subnet Mask"
-msgstr "IPv6 undirnetsmöskvi"
+msgstr ""
 
 #: network/NetworkDevice.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 with Prefix Length"
-msgstr "IPv6 með lengd forskeytis"
+msgstr ""
 
 #: network/NetworkDevice.cpp:59
 #, kde-format
@@ -911,109 +910,109 @@ msgstr "IPv6"
 #, kde-format
 msgctxt "@title"
 msgid "IPv6 DNS"
-msgstr "IPv6 DNS"
+msgstr ""
 
 #: network/NetworkDevice.cpp:63
 #, kde-format
 msgctxt "@title Short of IPv6 DNS"
 msgid "IPv6 DNS"
-msgstr "IPv6 DNS"
+msgstr ""
 
 #: network/NetworkPlugin.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "Network Devices"
-msgstr "Netbúnaður"
+msgstr ""
 
 #: osinfo/osinfo.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Operating System"
-msgstr "Stýrikerfi"
+msgstr "مەشغۇلات سىستېمىسى"
 
 #: osinfo/osinfo.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Kernel"
-msgstr "Kjarni"
+msgstr "يادرو"
 
 #: osinfo/osinfo.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name"
-msgstr "Heiti kjarna"
+msgstr ""
 
 #: osinfo/osinfo.cpp:112
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Version"
-msgstr "Útgáfa kjarna"
+msgstr ""
 
 #: osinfo/osinfo.cpp:113
 #, kde-format
 msgctxt "@title"
 msgid "Kernel Name and Version"
-msgstr "Heiti og útgáfa kjarna"
+msgstr ""
 
 #: osinfo/osinfo.cpp:114
 #, kde-format
 msgctxt "@title Kernel Name and Version"
 msgid "Kernel"
-msgstr "Kjarni"
+msgstr "يادرو"
 
 #: osinfo/osinfo.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "System"
-msgstr "Kerfi"
+msgstr "سىستېما"
 
 #: osinfo/osinfo.cpp:117
 #, kde-format
 msgctxt "@title"
 msgid "Hostname"
-msgstr "Vélarheiti"
+msgstr "كومپيۇتېر ئاتى"
 
 #: osinfo/osinfo.cpp:118
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name"
-msgstr "Heiti stýrikerfis"
+msgstr ""
 
 #: osinfo/osinfo.cpp:119
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Version"
-msgstr "Útgáfa stýrikerfis"
+msgstr ""
 
 #: osinfo/osinfo.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Name and Version"
-msgstr "Heiti og útgáfa stýrikerfis"
+msgstr ""
 
 #: osinfo/osinfo.cpp:121
 #, kde-format
 msgctxt "@title Operating System Name and Version"
 msgid "OS"
-msgstr "Stýrikerfi"
+msgstr ""
 
 #: osinfo/osinfo.cpp:122
 #, kde-format
 msgctxt "@title"
 msgid "Operating System Logo"
-msgstr "Lógó stýrikerfis"
+msgstr ""
 
 #: osinfo/osinfo.cpp:123
 #, kde-format
 msgctxt "@title"
 msgid "Operating System URL"
-msgstr "Vefslóð stýrikerfis"
+msgstr ""
 
 #: osinfo/osinfo.cpp:124
 #, kde-format
 msgctxt "@title"
 msgid "Uptime"
-msgstr "Uppitími"
+msgstr ""
 
 #: osinfo/osinfo.cpp:127
 #, kde-format
@@ -1025,99 +1024,99 @@ msgstr "KDE Plasma"
 #, kde-format
 msgctxt "@title"
 msgid "Qt Version"
-msgstr "Útgáfa Qt"
+msgstr ""
 
 #: osinfo/osinfo.cpp:129
 #, kde-format
 msgctxt "@title"
 msgid "KDE Frameworks Version"
-msgstr "Útgáfa KDE Frameworks"
+msgstr ""
 
 #: osinfo/osinfo.cpp:130
 #, kde-format
 msgctxt "@title"
 msgid "KDE Plasma Version"
-msgstr "Útgáfa KDE Plasma"
+msgstr ""
 
 #: osinfo/osinfo.cpp:131
 #, kde-format
 msgctxt "@title"
 msgid "Window System"
-msgstr "Gluggakerfi"
+msgstr ""
 
 #: osinfo/osinfo.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid "Unknown"
-msgstr "Óþekkt"
+msgstr "يوچۇن"
 
 #: power/power.cpp:44 power/power.cpp:45
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr "Upprunaleg hleðslugeta"
+msgstr ""
 
 #: power/power.cpp:47
 #, kde-format
 msgid "Amount of energy that the Battery was designed to hold"
-msgstr "Magn þess afls sem rafhlaðan var hönnuð til að geta geymt"
+msgstr ""
 
 #: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
 #, kde-format
 msgctxt "@title"
 msgid "Current Capacity"
-msgstr "Núverandi hleðslugeta"
+msgstr ""
 
 #: power/power.cpp:56
 #, kde-format
 msgid "Amount of energy that the battery can currently hold"
-msgstr "Magn þess afls sem rafhlaðan getur geymt sem stendur"
+msgstr ""
 
 #: power/power.cpp:62 power/power.cpp:63
 #, kde-format
 msgctxt "@title"
 msgid "Health"
-msgstr "Heilsa"
+msgstr "ساغلاملىق"
 
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
-msgstr "Hundraðshlutfall af upprunalegri hleðslugetu rafhlöðunnar"
+msgstr ""
 
 #: power/power.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Charge"
-msgstr "Hleðsla"
+msgstr "توكلا"
 
 #: power/power.cpp:74
 #, kde-format
 msgid "Amount of energy that the battery is currently holding"
-msgstr "Magn þess afls sem rafhlaðan geymir sem stendur"
+msgstr ""
 
 #: power/power.cpp:80 power/power.cpp:81
 #, kde-format
 msgctxt "@title"
 msgid "Charge Percentage"
-msgstr "Hleðsluprósenta"
+msgstr "توكداننىڭ پىرسەنتى"
 
 #: power/power.cpp:83
 #, kde-format
 msgid ""
 "Percentage of the current capacity that the battery is currently holding"
-msgstr "Hundraðshlutfall af núverandi hleðslugetu rafhlöðunnar"
+msgstr ""
 
 #: power/power.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Charging Rate"
-msgstr "Hleðslutíðni"
+msgstr ""
 
 #: power/power.cpp:91
 #, kde-format
 msgctxt "@title"
 msgid "Charging  Rate"
-msgstr "Hleðslutíðni"
+msgstr ""
 
 #: power/power.cpp:93
 #, kde-format
@@ -1125,26 +1124,25 @@ msgid ""
 "Power that the battery is being charged with (positive) or discharged "
 "(negative)"
 msgstr ""
-"Aflið sem er notað til að hlaða (jákvætt) eða afhlaða (neikvætt) rafhlöðuna"
 
 #: pressure/pressure.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr "Álag"
+msgstr "بېسىم"
 
 #: pressure/pressure.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Minnisálag"
+msgstr ""
 
 #: pressure/pressure.cpp:137 pressure/pressure.cpp:165
 #: pressure/pressure.cpp:195
 #, kde-format
 msgctxt "@title"
 msgid "Some (10 second average)"
-msgstr "Smá (10 sekúndna meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:138
 #, kde-format
@@ -1153,15 +1151,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 10 seconds"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltæku minni, jafnað "
-"yfir 10 sekúndur"
 
 #: pressure/pressure.cpp:140 pressure/pressure.cpp:168
 #: pressure/pressure.cpp:198
 #, kde-format
 msgctxt "@title"
 msgid "Some (1 minute average)"
-msgstr "Smá (1 mínútu meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:141
 #, kde-format
@@ -1170,15 +1166,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 1 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltæku minni, jafnað "
-"yfir 1 mínútu"
 
 #: pressure/pressure.cpp:143 pressure/pressure.cpp:171
 #: pressure/pressure.cpp:201
 #, kde-format
 msgctxt "@title"
 msgid "Some (5 minute average)"
-msgstr "Smá (5 mínútna meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:144
 #, kde-format
@@ -1187,15 +1181,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "memory resources, averaged over 5 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltæku minni, jafnað "
-"yfir 5 mínútur"
 
 #: pressure/pressure.cpp:146 pressure/pressure.cpp:174
 #: pressure/pressure.cpp:204
 #, kde-format
 msgctxt "@title"
 msgid "Total Some Stall Time"
-msgstr "Smábiðtími alls"
+msgstr ""
 
 #: pressure/pressure.cpp:147
 #, kde-format
@@ -1204,15 +1196,13 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available "
 "memory resources, measured in microseconds"
 msgstr ""
-"Lengd tíma sem a.m.k. eitt verk er í bið eftir tiltæku minni, mælt í "
-"millisekúndum."
 
 #: pressure/pressure.cpp:150 pressure/pressure.cpp:179
 #: pressure/pressure.cpp:209
 #, kde-format
 msgctxt "@title"
 msgid "Full (10 second average)"
-msgstr "Fullur (10 sekúndna meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:151
 #, kde-format
@@ -1221,15 +1211,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 10 seconds"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir örgjörvatilföngum, sem "
-"meðaltal á 10 sekúndna bili"
 
 #: pressure/pressure.cpp:153 pressure/pressure.cpp:182
 #: pressure/pressure.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Full (1 minute average)"
-msgstr "Fullur (1 mínútu meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:154
 #, kde-format
@@ -1238,15 +1226,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 1 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltækum tilföngum "
-"örgjörva, sem meðaltal á 1 mínútu bili"
 
 #: pressure/pressure.cpp:156 pressure/pressure.cpp:185
 #: pressure/pressure.cpp:215
 #, kde-format
 msgctxt "@title"
 msgid "Full (5 minute average)"
-msgstr "Fullur (5 mínútna meðaltal)"
+msgstr ""
 
 #: pressure/pressure.cpp:157
 #, kde-format
@@ -1255,15 +1241,13 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "CPU resources, averaged over 5 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltækum tilföngum "
-"örgjörva, sem meðaltal á 5 mínútna bili"
 
 #: pressure/pressure.cpp:159 pressure/pressure.cpp:188
 #: pressure/pressure.cpp:218
 #, kde-format
 msgctxt "@title"
 msgid "Total Full Stall Time"
-msgstr "Fullur biðtími alls"
+msgstr ""
 
 #: pressure/pressure.cpp:160
 #, kde-format
@@ -1272,14 +1256,12 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
-"Heildartími sem a.m.k. eitt verk er í bið eftir tiltækum tilföngum örgjörva, "
-"mælt í míkrósekúndum."
 
 #: pressure/pressure.cpp:163
 #, kde-format
 msgctxt "@title"
 msgid "CPU Pressure"
-msgstr "Álag á örgjörva"
+msgstr ""
 
 #: pressure/pressure.cpp:166
 #, kde-format
@@ -1288,8 +1270,6 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 10 seconds"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir IO-tilföngum, sem "
-"meðaltal á 10 sekúndna bili"
 
 #: pressure/pressure.cpp:169
 #, kde-format
@@ -1298,8 +1278,6 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 1 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltækum IO-tilföngum, "
-"sem meðaltal á 1 mínútu bili"
 
 #: pressure/pressure.cpp:172
 #, kde-format
@@ -1308,8 +1286,6 @@ msgid ""
 "Percentage of time that at least one task is stalled waiting for available "
 "IO resources, averaged over 5 minutes"
 msgstr ""
-"Tímahlutfall þar sem a.m.k. eitt verk er í bið eftir tiltækum IO-tilföngum, "
-"sem meðaltal á 5 mínútu bili."
 
 #: pressure/pressure.cpp:175
 #, kde-format
@@ -1318,8 +1294,6 @@ msgid ""
 "Amount of time that at least one task is stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
-"Heildartími sem a.m.k. eitt verk er í bið eftir tiltækum IO-tilföngum, mælt "
-"í millisekúndum."
 
 #: pressure/pressure.cpp:180
 #, kde-format
@@ -1328,7 +1302,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 10 seconds"
 msgstr ""
-"Tímaprósenta sem öll verk eru í bið eftir tiltæku minni, meðaltal 10 sekúndna"
 
 #: pressure/pressure.cpp:183
 #, kde-format
@@ -1337,7 +1310,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 1 minutes"
 msgstr ""
-"Tímaprósenta sem öll verk eru í bið eftir tiltæku minni, meðaltal 1 mínútu"
 
 #: pressure/pressure.cpp:186
 #, kde-format
@@ -1346,7 +1318,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available memory "
 "resources, averaged over 5 minutes"
 msgstr ""
-"Tímaprósenta sem öll verk eru í bið eftir tiltæku minni, meðaltal 5 mínútna"
 
 #: pressure/pressure.cpp:189
 #, kde-format
@@ -1355,13 +1326,12 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available memory "
 "resources, measured in microseconds"
 msgstr ""
-"Heildartími sem öll verk eru í bið eftir tiltæku minni, mælt í míkrósekúndum"
 
 #: pressure/pressure.cpp:193
 #, kde-format
 msgctxt "@title"
 msgid "IO Pressure"
-msgstr "IO-álag"
+msgstr ""
 
 #: pressure/pressure.cpp:196
 #, kde-format
@@ -1370,8 +1340,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 10 seconds"
 msgstr ""
-"Prósenta af tíma sem öll verk eru í bið eftir tiltækri örgjörvavirkni, "
-"meðaltal 10 sekúndna"
 
 #: pressure/pressure.cpp:199
 #, kde-format
@@ -1380,8 +1348,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 1 minutes"
 msgstr ""
-"Hundraðshlutfall tíma sem öll verk eru í bið eftir tiltækri örgjörvavirkni, "
-"meðaltal 1 mínútu"
 
 #: pressure/pressure.cpp:202
 #, kde-format
@@ -1390,8 +1356,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available CPU "
 "resources, averaged over 5 minutes"
 msgstr ""
-"Hundraðshlutfall tíma sem öll verk eru í bið eftir tiltækri örgjörvavirkni, "
-"meðaltal 5 mínútna"
 
 #: pressure/pressure.cpp:205
 #, kde-format
@@ -1400,8 +1364,6 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available CPU "
 "resources, measured in microseconds"
 msgstr ""
-"Heildartími sem öll verk eru í bið eftir tiltækri örgjörvavirkni, mælt í "
-"míkrósekúndum"
 
 #: pressure/pressure.cpp:210
 #, kde-format
@@ -1410,8 +1372,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 10 seconds"
 msgstr ""
-"Tímaprósenta sem öll verk eru í bið eftir tiltækum IO-tilföngum, sem "
-"meðaltal 10 sekúndna"
 
 #: pressure/pressure.cpp:213
 #, kde-format
@@ -1420,8 +1380,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 1 minutes"
 msgstr ""
-"Tímahlutfall sem öll verk eru í bið eftir tiltækum IO-tilföngum,sem meðaltal "
-"1 mínútu"
 
 #: pressure/pressure.cpp:216
 #, kde-format
@@ -1430,8 +1388,6 @@ msgid ""
 "Percentage of time that all tasks are stalled waiting for available IO "
 "resources, averaged over 5 minutes"
 msgstr ""
-"Tímahlutfall sem öll verk eru í bið eftir tiltækum IO-tilföngum,sem meðaltal "
-"5 mínútna"
 
 #: pressure/pressure.cpp:219
 #, kde-format
@@ -1440,9 +1396,3 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
-"Heildartími sem öll verk eru í bið eftir tiltækum IO-tilföngum, mælt í "
-"míkrósekúndum"
-
-#~ msgctxt "@title %1 is GPU number"
-#~ msgid "GPU %1"
-#~ msgstr "Skjákort %1"
