@@ -1,13 +1,12 @@
 # Translation of ksystemstats_plugins to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2021, 2022.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2022-10-30 09:55+0100\n"
+"PO-Revision-Date: 2026-06-23 18:23+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -52,10 +51,10 @@ msgid "System"
 msgstr "System"
 
 #: cpu/cpu.cpp:46
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title, Short for '%1 System Usage'"
 msgid "%1 System"
-msgstr "System"
+msgstr "%1-system"
 
 #: cpu/cpu.cpp:52
 #, kde-format
@@ -70,10 +69,10 @@ msgid "User"
 msgstr "Brukar"
 
 #: cpu/cpu.cpp:53
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title, Short for '%1 User Usage'"
 msgid "%1 User"
-msgstr "Brukar"
+msgstr "%1-brukar"
 
 #: cpu/cpu.cpp:59
 #, kde-format
@@ -88,10 +87,10 @@ msgid "Wait"
 msgstr "Venting"
 
 #: cpu/cpu.cpp:60
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title, Short for '%1 Wait Load'"
 msgid "%1 Wait"
-msgstr "Venting"
+msgstr "%1-venting"
 
 #: cpu/cpu.cpp:85
 #, kde-format
@@ -524,26 +523,22 @@ msgid "GPU"
 msgstr "Grafikkprosessor"
 
 #: gpu/LinuxIntelGpu.cpp:40 gpu/LinuxXeGpu.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "User Usage"
+#, kde-format
 msgctxt "@title"
 msgid "Video Usage"
-msgstr "Brukarbruk"
+msgstr "Videobruk"
 
 #: gpu/LinuxXeGpu.cpp:78
 #, kde-format
 msgctxt "@title"
 msgid "Fan %1"
-msgstr ""
+msgstr "Vifte %1"
 
 #: gpu/LinuxXeGpu.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title, Short for 'Maximum CPU Temperature'"
-#| msgid "Max Temperature"
+#, kde-format
 msgctxt "@title"
 msgid "VRAM Temperature"
-msgstr "Høgaste temperature"
+msgstr "VRAM-temperatur"
 
 #: lmsensors/lmsensors.cpp:22
 #, kde-format
@@ -1138,13 +1133,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pressure"
-msgstr ""
+msgstr "Trykk"
 
 #: pressure/pressure.cpp:136
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title"
 msgid "Memory Pressure"
-msgstr "Minnefrekvens"
+msgstr "Minnetrykk"
 
 #: pressure/pressure.cpp:137 pressure/pressure.cpp:165
 #: pressure/pressure.cpp:195
