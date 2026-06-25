@@ -14,6 +14,7 @@ set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH}  ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+include(CMakeDependentOption)
 include(CheckIncludeFiles)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -33,7 +34,8 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS CoreAddons Solid KIO Cra
 find_package(KSysGuard ${PROJECT_DEP_VERSION} REQUIRED)
 
 # there's no NetworkManager on FreeBSD'
-if (LINUX)
+cmake_dependent_option(WITH_NM "Provide improved backend for network statistics" TRUE "LINUX" FALSE)
+if (WITH_NM)
     find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION} CONFIG REQUIRED)
 endif()
 
