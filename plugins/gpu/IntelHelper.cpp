@@ -118,6 +118,10 @@ std::filesystem::path deviceDirectory(std::string_view pciId)
 int main(int argc, char **argv)
 {
     const char *requestedDevice = argc > 1 ? argv[1] : igpuPciId;
+    if (std::string_view{requestedDevice}.find('/') != std::string_view::npos) {
+        std::cerr << "Illegal characters found in '" << requestedDevice << "'\n";
+        exit(1);
+    }
     const auto deviceDir = deviceDirectory(requestedDevice);
     if (!(std::filesystem::exists(deviceDir) && std::filesystem::is_directory(deviceDir))) {
         std::cerr << "Device directory " << deviceDir << " does not exist\n";
