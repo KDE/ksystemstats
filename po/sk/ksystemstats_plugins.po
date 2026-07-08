@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard_plugins_global\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-08 00:46+0000\n"
 "PO-Revision-Date: 2022-01-31 17:01+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.1\n"
 
-#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
+#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
@@ -459,55 +459,71 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Využité"
 
-#: gpu/GpuDevice.cpp:24
+#: gpu/AllGpus.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Allocated Memory Percentage"
+msgctxt "@title"
+msgid "All GPUs Used Memory Percentage"
+msgstr "Percento pridelenej pamäte"
+
+#: gpu/GpuDevice.cpp:26
 #, kde-format
 msgctxt "@title"
 msgid "Usage"
 msgstr "Využitie"
 
-#: gpu/GpuDevice.cpp:30
+#: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
 msgstr "Celková video pamäť"
 
-#: gpu/GpuDevice.cpp:32
+#: gpu/GpuDevice.cpp:34
 #, kde-format
 msgctxt "@title Short for Total Video Memory"
 msgid "Total"
 msgstr "Celkovo"
 
-#: gpu/GpuDevice.cpp:35
+#: gpu/GpuDevice.cpp:37
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
 msgstr "Využitie video pamäte"
 
-#: gpu/GpuDevice.cpp:37
+#: gpu/GpuDevice.cpp:39
 #, kde-format
 msgctxt "@title Short for Video Memory Used"
 msgid "Used"
 msgstr "Využité"
 
-#: gpu/GpuDevice.cpp:41
+#: gpu/GpuDevice.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Video Memory Used"
+msgctxt "@title"
+msgid "Video Memory Used Percentage"
+msgstr "Využitie video pamäte"
+
+#: gpu/GpuDevice.cpp:47
 #, kde-format
 msgctxt "@title"
 msgid "Frequency"
 msgstr "Frekvencia"
 
-#: gpu/GpuDevice.cpp:45
+#: gpu/GpuDevice.cpp:51
 #, kde-format
 msgctxt "@title"
 msgid "Memory Frequency"
 msgstr "Frekvencia pamäte"
 
-#: gpu/GpuDevice.cpp:49
+#: gpu/GpuDevice.cpp:55
 #, kde-format
 msgctxt "@title"
 msgid "Temperature"
 msgstr "Teplota"
 
-#: gpu/GpuDevice.cpp:53 power/power.cpp:116
+#: gpu/GpuDevice.cpp:59 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"
@@ -1506,10 +1522,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "Percentage of available memory."
 #~ msgstr "Percento dostupnej pamäte."
-
-#~ msgctxt "@title"
-#~ msgid "Allocated Memory Percentage"
-#~ msgstr "Percento pridelenej pamäte"
 
 #~ msgctxt "@title Allocated Memory Percentage"
 #~ msgid "Allocated"

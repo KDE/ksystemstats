@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-08 00:46+0000\n"
 "PO-Revision-Date: 2020-10-25 22:30+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.2\n"
 
-#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
+#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
 #, kde-format
 msgctxt "@title"
@@ -504,7 +504,15 @@ msgctxt "@title Short for 'All GPUs Used Memory'"
 msgid "Used"
 msgstr "Kasutatud"
 
-#: gpu/GpuDevice.cpp:24
+#: gpu/AllGpus.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Allocated Memory Percentage"
+msgctxt "@title"
+msgid "All GPUs Used Memory Percentage"
+msgstr "Eraldatud mälu protsent"
+
+#: gpu/GpuDevice.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for 'Total Usage'"
 #| msgid "Usage"
@@ -512,13 +520,13 @@ msgctxt "@title"
 msgid "Usage"
 msgstr "Kasutus"
 
-#: gpu/GpuDevice.cpp:30
+#: gpu/GpuDevice.cpp:32
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
 msgstr ""
 
-#: gpu/GpuDevice.cpp:32
+#: gpu/GpuDevice.cpp:34
 #, fuzzy, kde-format
 #| msgctxt "@title Short for 'Total Space'"
 #| msgid "Total"
@@ -526,7 +534,7 @@ msgctxt "@title Short for Total Video Memory"
 msgid "Total"
 msgstr "Kokku"
 
-#: gpu/GpuDevice.cpp:35
+#: gpu/GpuDevice.cpp:37
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "GPU %1 Memory Usage"
@@ -534,7 +542,7 @@ msgctxt "@title"
 msgid "Video Memory Used"
 msgstr "GPU %1 mälukasutus"
 
-#: gpu/GpuDevice.cpp:37
+#: gpu/GpuDevice.cpp:39
 #, fuzzy, kde-format
 #| msgctxt "@title Short for 'Used Space'"
 #| msgid "Used"
@@ -542,7 +550,15 @@ msgctxt "@title Short for Video Memory Used"
 msgid "Used"
 msgstr "Kasutatud"
 
-#: gpu/GpuDevice.cpp:41
+#: gpu/GpuDevice.cpp:42
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "GPU %1 Memory Usage"
+msgctxt "@title"
+msgid "Video Memory Used Percentage"
+msgstr "GPU %1 mälukasutus"
+
+#: gpu/GpuDevice.cpp:47
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for 'Current Frequency'"
 #| msgid "Frequency"
@@ -550,7 +566,7 @@ msgctxt "@title"
 msgid "Frequency"
 msgstr "Sagedus"
 
-#: gpu/GpuDevice.cpp:45
+#: gpu/GpuDevice.cpp:51
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for 'Current Frequency'"
 #| msgid "Frequency"
@@ -558,7 +574,7 @@ msgctxt "@title"
 msgid "Memory Frequency"
 msgstr "Sagedus"
 
-#: gpu/GpuDevice.cpp:49
+#: gpu/GpuDevice.cpp:55
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for Current Temperatur"
 #| msgid "Temperature"
@@ -566,7 +582,7 @@ msgctxt "@title"
 msgid "Temperature"
 msgstr "Temperatuur"
 
-#: gpu/GpuDevice.cpp:53 power/power.cpp:116
+#: gpu/GpuDevice.cpp:59 power/power.cpp:116
 #, kde-format
 msgctxt "@title"
 msgid "Power"
@@ -1584,10 +1600,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "Percentage of available memory."
 #~ msgstr "Saadaval oleva mälu protsent"
-
-#~ msgctxt "@title"
-#~ msgid "Allocated Memory Percentage"
-#~ msgstr "Eraldatud mälu protsent"
 
 #~ msgctxt "@title Allocated Memory Percentage"
 #~ msgid "Allocated"
