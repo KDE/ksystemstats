@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:46+0000\n"
-"PO-Revision-Date: 2026-05-19 23:58+0100\n"
+"PO-Revision-Date: 2026-07-08 21:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
@@ -463,12 +463,10 @@ msgid "Used"
 msgstr "Usada"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "Memoria usada por todas las GPU"
+msgstr "Porcentaje de memoria usada por todas las GPU"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -501,12 +499,10 @@ msgid "Used"
 msgstr "Usada"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "Memoria de vídeo usada"
+msgstr "Porcentaje de memoria de vídeo usada"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format

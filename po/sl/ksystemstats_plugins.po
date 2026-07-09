@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:46+0000\n"
-"PO-Revision-Date: 2026-05-19 07:14+0200\n"
+"PO-Revision-Date: 2026-07-08 07:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -462,12 +462,10 @@ msgid "Used"
 msgstr "Uporabljeno"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Allocated Memory Percentage"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "Dodeljeni odstotek pomnilnika"
+msgstr "Uporabljeni odstotek pomnilnika za vse GPE"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -500,12 +498,10 @@ msgid "Used"
 msgstr "Uporabljeno"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "Poraba video pomnilnika"
+msgstr "Odstotek porabe video pomnilnika"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format

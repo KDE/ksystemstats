@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:46+0000\n"
-"PO-Revision-Date: 2026-05-19 09:24+0200\n"
+"PO-Revision-Date: 2026-07-08 09:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -469,12 +469,10 @@ msgid "Used"
 msgstr "Usada"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "Memòria usada de totes les GPU"
+msgstr "Percentatge de memòria usada de totes les GPU"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -507,12 +505,10 @@ msgid "Used"
 msgstr "Usada"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "Memòria usada de vídeo"
+msgstr "Percentatge de memòria usada de vídeo"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format

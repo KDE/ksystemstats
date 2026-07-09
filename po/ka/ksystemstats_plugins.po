@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:46+0000\n"
-"PO-Revision-Date: 2026-05-19 04:18+0200\n"
+"PO-Revision-Date: 2026-07-08 05:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -462,12 +462,10 @@ msgid "Used"
 msgstr "Გამოყენებული"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "ყველა GPU-ის ჯამური გამოყენებული მეხსიერება"
+msgstr "ყველა GPU-ის ჯამური გამოყენებული მეხსიერება პროცენტებში"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -500,12 +498,10 @@ msgid "Used"
 msgstr "Გამოყენებული"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "გამოყენებული ვიდეომეხსიერება"
+msgstr "გამოყენებული ვიდეომეხსიერება პროცენტებში"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format
