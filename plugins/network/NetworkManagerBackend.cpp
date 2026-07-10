@@ -305,6 +305,15 @@ void NetworkManagerBackend::onDeviceRemoved(const QString& uni)
 
     auto device = m_devices.take(uni);
 
+    // A disconnect may still be pending, meaning the device has lost its active
+    // connection (so isConnected() is already false) but has not been removed
+    // from the SensorContainer yet, as that only happens on the next update()
+    // cycle. Process it now so the sensor object is unregistered before we
+    // delete it. Otherwise SensorObject's destructor, which does not remove
+    // itself from its container, would leave a dangling pointer behind and the
+    // next AggregateSensor::updateSensors() would crash in SensorObject::id().
+    device->processPendingDisconnect();
+
     if (device->isConnected()) {
         Q_EMIT deviceRemoved(device);
     }
