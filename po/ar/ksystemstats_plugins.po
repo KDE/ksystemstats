@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-08 00:46+0000\n"
-"PO-Revision-Date: 2026-05-21 11:16+0400\n"
+"PO-Revision-Date: 2026-07-09 10:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -462,12 +462,10 @@ msgid "Used"
 msgstr "المستخدم"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "مجموع ذواكر المعالجات الرسومية المستخدمة"
+msgstr "نسبة استخدام الذاكرة لجميع وحدات معالجة الرسومات"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -500,12 +498,10 @@ msgid "Used"
 msgstr "المستخدم"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "ذاكرة الفيديو المستخدمة"
+msgstr "نسبة استخدام ذاكرة الفيديو"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format
