@@ -461,12 +461,10 @@ msgid "Used"
 msgstr "已用"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "所有 GPU 已用内存"
+msgstr ""
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -499,12 +497,10 @@ msgid "Used"
 msgstr "已用"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "已用显存"
+msgstr ""
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format
