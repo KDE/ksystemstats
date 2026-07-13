@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2025, 2026.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-09 00:46+0000\n"
-"PO-Revision-Date: 2025-04-14 22:05+0200\n"
+"PO-Revision-Date: 2026-07-12 21:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -473,7 +473,7 @@ msgstr "Erabilera"
 #, kde-format
 msgctxt "@title"
 msgid "Total Video Memory"
-msgstr "Bideo memoria osoa"
+msgstr "Bideo-memoria osoa"
 
 #: gpu/GpuDevice.cpp:32
 #, kde-format
@@ -485,7 +485,7 @@ msgstr "Guztira"
 #, kde-format
 msgctxt "@title"
 msgid "Video Memory Used"
-msgstr "Erabilitako bideo memoria"
+msgstr "Erabilitako bideo-memoria"
 
 #: gpu/GpuDevice.cpp:37
 #, kde-format

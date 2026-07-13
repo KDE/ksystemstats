@@ -440,7 +440,7 @@ msgstr "使用率"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Total Memory"
-msgstr "所有 GPU 总内存"
+msgstr "所有 GPU 总显存"
 
 #: gpu/AllGpus.cpp:27
 #, kde-format
@@ -452,7 +452,7 @@ msgstr "总计"
 #, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory"
-msgstr "所有 GPU 已用内存"
+msgstr "所有 GPU 已用显存"
 
 #: gpu/AllGpus.cpp:32
 #, kde-format
