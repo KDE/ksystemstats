@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksysguard package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2026 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 02:46+0000\n"
-"PO-Revision-Date: 2025-04-07 15:57+0200\n"
+"PO-Revision-Date: 2026-09-01 16:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:20
 #: power/power.cpp:39
@@ -1043,13 +1043,12 @@ msgstr "Incognite"
 #, kde-format
 msgctxt "@title"
 msgid "Design Capacity"
-msgstr "Capacitate de dessigno"
+msgstr "Capacitate de designo"
 
 #: power/power.cpp:47
 #, kde-format
 msgid "Amount of energy that the Battery was designed to hold"
-msgstr ""
-"Amonta de energia per le qual le batteria esseva dessignate de mantener"
+msgstr "Amonta de energia per le qual le batteria esseva designate de mantener"
 
 #: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
 #, kde-format
@@ -1071,7 +1070,7 @@ msgstr "Sanitate"
 #: power/power.cpp:65
 #, kde-format
 msgid "Percentage of the design capacity that the battery can hold"
-msgstr "Percentage del capacitate de dessigno que le batteria pote mantener"
+msgstr "Percentage del capacitate de designo que le batteria pote mantener"
 
 #: power/power.cpp:71
 #, kde-format
