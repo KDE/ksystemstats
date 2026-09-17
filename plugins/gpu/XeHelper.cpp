@@ -175,7 +175,6 @@ int main(int argc, char **argv)
     std::map<std::uint64_t, std::uint64_t> idToConfig;
     std::set<std::uint64_t> openedConfigs;
 
-    std::vector<int> openedFds;
     for (const auto config : events) {
         const int fd = perf_open(perfType, config, group_fd);
         if (fd == -1) {
@@ -184,7 +183,6 @@ int main(int argc, char **argv)
         if (group_fd == -1) {
             group_fd = fd;
         }
-        openedFds.push_back(fd);
         std::uint64_t id = 0;
         if (ioctl(fd, PERF_EVENT_IOC_ID, &id) < 0) {
             continue;
