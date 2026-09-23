@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 00:46+0000\n"
-"PO-Revision-Date: 2026-06-26 20:41+0200\n"
+"PO-Revision-Date: 2026-09-22 21:42+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -465,12 +465,10 @@ msgid "Used"
 msgstr "Использовано"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "Объём использованной памяти всех процессоров"
+msgstr "Доля использованной памяти всех графических процессоров"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -503,12 +501,10 @@ msgid "Used"
 msgstr "Использовано"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "Использовано видеопамяти"
+msgstr "Доля использованной видеопамяти"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format
