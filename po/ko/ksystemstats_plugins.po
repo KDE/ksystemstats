@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 00:46+0000\n"
-"PO-Revision-Date: 2026-05-25 21:37+0200\n"
+"PO-Revision-Date: 2026-09-29 00:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -461,12 +461,10 @@ msgid "Used"
 msgstr "사용함"
 
 #: gpu/AllGpus.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "All GPUs Used Memory"
+#, kde-format
 msgctxt "@title"
 msgid "All GPUs Used Memory Percentage"
-msgstr "모든 GPU 사용한 메모리"
+msgstr "모든 GPU 사용한 메모리 백분율"
 
 #: gpu/GpuDevice.cpp:26
 #, kde-format
@@ -499,12 +497,10 @@ msgid "Used"
 msgstr "사용함"
 
 #: gpu/GpuDevice.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Video Memory Used"
+#, kde-format
 msgctxt "@title"
 msgid "Video Memory Used Percentage"
-msgstr "사용한 비디오 메모리"
+msgstr "사용한 비디오 메모리 백분율"
 
 #: gpu/GpuDevice.cpp:47
 #, kde-format
