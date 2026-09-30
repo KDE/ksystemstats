@@ -36,7 +36,7 @@ public:
     VolumeObject(const Solid::Device &device, KSysGuard::SensorContainer *parent);
     bool isRootDevice() const;
     void update();
-    void setBytes(quint64 read, quint64 written, qint64 elapsedTime);
+    void setBytes(quint64 read, quint64 written, quint64 ioTime, qint64 elapsedTime);
 
     const QString udi;
     const QString mountPoint;
@@ -49,8 +49,10 @@ private:
     KSysGuard::SensorProperty *m_free = nullptr;
     KSysGuard::SensorProperty *m_readRate = nullptr;
     KSysGuard::SensorProperty *m_writeRate = nullptr;
+    KSysGuard::SensorProperty *m_utilization = nullptr;
     quint64 m_bytesRead = 0;
     quint64 m_bytesWritten = 0;
+    quint64 m_ioTime = 0;
     bool m_rootDevice = false;
 };
 
@@ -95,6 +97,14 @@ VolumeObject::VolumeObject(const Solid::Device &device, KSysGuard::SensorContain
     m_writeRate->setShortName(i18nc("@title Short for 'Write Rate'", "Write"));
     m_writeRate->setUnit(KSysGuard::UnitByteRate);
     m_writeRate->setVariantType(QVariant::Double);
+
+    m_utilization = new KSysGuard::SensorProperty("utilization", i18nc("@title", "Utilization"), 0, this);
+    m_utilization->setPrefix(name());
+    m_utilization->setShortName(i18nc("@title Short for 'Utilization'", "Utilization"));
+    m_utilization->setUnit(KSysGuard::UnitPercent);
+    m_utilization->setVariantType(QVariant::Double);
+    m_utilization->setMin(0);
+    m_utilization->setMax(100);
 
     if (volume->usage() != Solid::StorageVolume::PartitionTable) {
         m_used = new KSysGuard::SensorProperty("used", i18nc("@title", "Used Space"), this);
@@ -148,15 +158,23 @@ void VolumeObject::update()
     });
 }
 
-void VolumeObject::setBytes(quint64 read, quint64 written, qint64 elapsed)
+void VolumeObject::setBytes(quint64 read, quint64 written, quint64 ioTime, qint64 elapsed)
 {
     if (elapsed != 0) {
         double seconds = elapsed / 1000.0;
         m_readRate->setValue((read - m_bytesRead) / seconds);
         m_writeRate->setValue((written - m_bytesWritten) / seconds);
+
+        double utilization =
+            static_cast<double>(ioTime - m_ioTime) /
+            static_cast<double>(elapsed) * 100.0;
+
+        m_utilization->setValue(qBound(0.0, utilization, 100.0));
     }
+
     m_bytesRead = read;
     m_bytesWritten = written;
+    m_ioTime = ioTime;
 }
 
 DisksPlugin::DisksPlugin(QObject *parent, const QVariantList &args)
@@ -382,7 +400,11 @@ void DisksPlugin::update()
         const QString device = QStringLiteral("/dev/%1").arg(QString::fromLatin1(fields[2]));
         if (m_volumesByDevice.contains(device)) {
             // A sector as reported in diskstats is 512 Bytes, see https://stackoverflow.com/a/38136179
-            m_volumesByDevice[device]->setBytes(fields[5].toULongLong() * 512, fields[9].toULongLong() * 512, elapsed);
+            m_volumesByDevice[device]->setBytes(
+                fields[5].toULongLong() * 512,
+                fields[9].toULongLong() * 512,
+                fields[12].toULongLong(),
+                elapsed);
         }
     }
 #elif defined Q_OS_FREEBSD
@@ -397,7 +419,7 @@ void DisksPlugin::update()
             if (m_volumesByDevice.contains(device)) {
                 uint64_t bytesRead, bytesWritten;
                 devstat_compute_statistics(dstat, nullptr, 0, DSM_TOTAL_BYTES_READ, &bytesRead, DSM_TOTAL_BYTES_WRITE, &bytesWritten, DSM_NONE);
-                m_volumesByDevice[device]->setBytes(bytesRead, bytesWritten, elapsed);
+                m_volumesByDevice[device]->setBytes(bytesRead, bytesWritten, 0, elapsed);
             }
         }
     }
