@@ -1,0 +1,1458 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksysguard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"PO-Revision-Date: 2026-10-04 19:09+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
+#: power/power.cpp:39
+#, kde-format
+msgctxt "@title"
+msgid "Name"
+msgstr "Ime"
+
+#: cpu/cpu.cpp:38
+#, kde-format
+msgctxt "@title"
+msgid "Total Usage"
+msgstr "Ukupno opterećenje"
+
+#: cpu/cpu.cpp:39
+#, kde-format
+msgctxt "@title, Short for 'Total Usage'"
+msgid "Usage"
+msgstr "Opterećenje"
+
+#: cpu/cpu.cpp:45
+#, kde-format
+msgctxt "@title"
+msgid "System Usage"
+msgstr "Sistemsko opterećenje"
+
+#: cpu/cpu.cpp:46
+#, kde-format
+msgctxt "@title, Short for 'System Usage'"
+msgid "System"
+msgstr "Sistem"
+
+#: cpu/cpu.cpp:46
+#, kde-format
+msgctxt "@title, Short for '%1 System Usage'"
+msgid "%1 System"
+msgstr "%1: sistem"
+
+#: cpu/cpu.cpp:52
+#, kde-format
+msgctxt "@title"
+msgid "User Usage"
+msgstr "Korisničko opterećenje"
+
+#: cpu/cpu.cpp:53
+#, kde-format
+msgctxt "@title, Short for 'User Usage'"
+msgid "User"
+msgstr "Korisnik"
+
+#: cpu/cpu.cpp:53
+#, kde-format
+msgctxt "@title, Short for '%1 User Usage'"
+msgid "%1 User"
+msgstr "%1: korisnik"
+
+#: cpu/cpu.cpp:59
+#, kde-format
+msgctxt "@title"
+msgid "Wait Usage"
+msgstr "Opterećenje čekanjem"
+
+#: cpu/cpu.cpp:60
+#, kde-format
+msgctxt "@title, Short for 'Wait Load'"
+msgid "Wait"
+msgstr "Čekanje"
+
+#: cpu/cpu.cpp:60
+#, kde-format
+msgctxt "@title, Short for '%1 Wait Load'"
+msgid "%1 Wait"
+msgstr "%1: čekanje"
+
+#: cpu/cpu.cpp:85
+#, kde-format
+msgctxt "@title"
+msgid "Current Frequency"
+msgstr "Trenutni takt"
+
+#: cpu/cpu.cpp:87
+#, kde-format
+msgctxt "@info"
+msgid "Current frequency of the CPU"
+msgstr "Trenutni takt CPU‑a"
+
+#: cpu/cpu.cpp:92
+#, kde-format
+msgctxt "@title"
+msgid "Current Temperature"
+msgstr "Trenutna temperatura"
+
+#: cpu/cpu.cpp:100
+#, kde-format
+msgctxt "@title"
+msgid "All"
+msgstr "Svi"
+
+#: cpu/cpu.cpp:119
+#, kde-format
+msgctxt "@title"
+msgid "Maximum CPU Frequency"
+msgstr "Najviši takt CPU‑a"
+
+#: cpu/cpu.cpp:120
+#, kde-format
+msgctxt "@title, Short for 'Maximum CPU Frequency'"
+msgid "Max Frequency"
+msgstr "Najviši takt"
+
+#: cpu/cpu.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Current maximum frequency between all CPUs"
+msgstr "Trenutno najviši takt među svim CPU‑ovima"
+
+#: cpu/cpu.cpp:126
+#, kde-format
+msgctxt "@title"
+msgid "Minimum CPU Frequency"
+msgstr "Najniži takt CPU‑a"
+
+#: cpu/cpu.cpp:127
+#, kde-format
+msgctxt "@title, Short for 'Minimum CPU Frequency'"
+msgid "Min Frequency"
+msgstr "Najniži takt"
+
+#: cpu/cpu.cpp:128
+#, kde-format
+msgctxt "@info"
+msgid "Current minimum frequency between all CPUs"
+msgstr "Trenutno najniži takt među svim CPU‑ovima"
+
+#: cpu/cpu.cpp:133
+#, kde-format
+msgctxt "@title"
+msgid "Average CPU Frequency"
+msgstr "Prosečan takt CPU‑a"
+
+#: cpu/cpu.cpp:134
+#, kde-format
+msgctxt "@title, Short for 'Average CPU Frequency'"
+msgid "Average Frequency"
+msgstr "Prosečan takt"
+
+#: cpu/cpu.cpp:135
+#, kde-format
+msgctxt "@info"
+msgid "Current average frequency between all CPUs"
+msgstr "Trenutni prosečan takt svih CPU‑ova"
+
+#: cpu/cpu.cpp:140
+#, kde-format
+msgctxt "@title"
+msgid "Maximum CPU Temperature"
+msgstr "Najviša temperatura CPU‑a"
+
+#: cpu/cpu.cpp:141
+#, kde-format
+msgctxt "@title, Short for 'Maximum CPU Temperature'"
+msgid "Max Temperature"
+msgstr "Najviša temperatura"
+
+#: cpu/cpu.cpp:147
+#, kde-format
+msgctxt "@title"
+msgid "Minimum CPU Temperature"
+msgstr "Najniža temperatura CPU‑a"
+
+#: cpu/cpu.cpp:148
+#, kde-format
+msgctxt "@title, Short for 'Minimum CPU Temperature'"
+msgid "Min Temperature"
+msgstr "Najniža temperatura"
+
+#: cpu/cpu.cpp:154
+#, kde-format
+msgctxt "@title"
+msgid "Average CPU Temperature"
+msgstr "Prosečna temperatura CPU‑a"
+
+#: cpu/cpu.cpp:155
+#, kde-format
+msgctxt "@title, Short for 'Average CPU Temperature'"
+msgid "Average Temperature"
+msgstr "Prosečna temperatura"
+
+#: cpu/cpu.cpp:171
+#, kde-format
+msgctxt "@title"
+msgid "Number of CPUs"
+msgstr "Broj CPU‑ova"
+
+#: cpu/cpu.cpp:172
+#, kde-format
+msgctxt "@title, Short fort 'Number of CPUs'"
+msgid "CPUs"
+msgstr "CPU‑ovi"
+
+#: cpu/cpu.cpp:173
+#, kde-format
+msgctxt "@info"
+msgid "Number of physical CPUs installed in the system"
+msgstr "Broj fizičkih CPU‑ova ugrađenih u sistem"
+
+#: cpu/cpu.cpp:175
+#, kde-format
+msgctxt "@title"
+msgid "Number of Cores"
+msgstr "Broj jezgara"
+
+#: cpu/cpu.cpp:176
+#, kde-format
+msgctxt "@title, Short fort 'Number of Cores'"
+msgid "Cores"
+msgstr "Jezgra"
+
+#: cpu/cpu.cpp:177
+#, kde-format
+msgctxt "@info"
+msgid "Number of CPU cores across all physical CPUS"
+msgstr "Broj jezgara svih fizičkih CPU‑ova"
+
+#: cpu/cpuplugin.cpp:19
+#, kde-format
+msgid "CPUs"
+msgstr "CPU‑ovi"
+
+#: cpu/freebsdcpuplugin.cpp:159
+#, kde-format
+msgctxt "@title"
+msgid "CPU %1"
+msgstr "CPU %1"
+
+#: cpu/linuxcpuplugin.cpp:42 cpu/linuxcpuplugin.cpp:56
+#, kde-format
+msgctxt "@title"
+msgid "Core %1"
+msgstr "Jezgro %1"
+
+#: cpu/linuxcpuplugin.cpp:66
+#, kde-format
+msgctxt "@title"
+msgid "CPU %1 Core %2"
+msgstr "CPU %1, jezgro %2"
+
+#: cpu/loadaverages.cpp:13
+#, kde-format
+msgctxt "@title"
+msgid "Load Averages"
+msgstr "Prosečna opterećenja"
+
+#: cpu/loadaverages.cpp:14
+#, kde-format
+msgctxt "@title"
+msgid "Load average (1 minute)"
+msgstr "Prosečno opterećenje (1 minut)"
+
+#: cpu/loadaverages.cpp:15
+#, kde-format
+msgctxt "@title"
+msgid "Load average (5 minutes)"
+msgstr "Prosečno opterećenje (5 minuta)"
+
+#: cpu/loadaverages.cpp:16
+#, kde-format
+msgctxt "@title"
+msgid "Load average (15 minute)"
+msgstr "Prosečno opterećenje (15 minuta)"
+
+#: cpu/loadaverages.cpp:18
+#, kde-format
+msgctxt "@title,  Short for 'Load average (1 minute)"
+msgid "Load average (1m)"
+msgstr "Prosečno opterećenje (1 min.)"
+
+#: cpu/loadaverages.cpp:19
+#, kde-format
+msgctxt "@title,  Short for 'Load average (5 minutes)"
+msgid "Load average (5m)"
+msgstr "Prosečno opterećenje (5 min.)"
+
+#: cpu/loadaverages.cpp:20
+#, kde-format
+msgctxt "@title,  Short for 'Load average (15 minutes)"
+msgid "Load average (15m)"
+msgstr "Prosečno opterećenje (15 min.)"
+
+#: cpu/loadaverages.cpp:22
+#, kde-format
+msgctxt "@info"
+msgid "Number of jobs in the run queue averaged over 1 minute"
+msgstr "Prosečan broj poslova u redu za izvršavanje tokom 1 minuta"
+
+#: cpu/loadaverages.cpp:23
+#, kde-format
+msgctxt "@info"
+msgid "Number of jobs in the run queue averaged over 5 minutes"
+msgstr "Prosečan broj poslova u redu za izvršavanje tokom 5 minuta"
+
+#: cpu/loadaverages.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "Number of jobs in the run queue averaged over 15 minutes"
+msgstr "Prosečan broj poslova u redu za izvršavanje tokom 15 minuta"
+
+#: disks/disks.cpp:81 disks/disks.cpp:287
+#, kde-format
+msgctxt "@title"
+msgid "Total Space"
+msgstr "Ukupan prostor"
+
+#: disks/disks.cpp:83 disks/disks.cpp:288
+#, kde-format
+msgctxt "@title Short for 'Total Space'"
+msgid "Total"
+msgstr "Ukupno"
+
+#: disks/disks.cpp:87 disks/disks.cpp:310
+#, kde-format
+msgctxt "@title"
+msgid "Read Rate"
+msgstr "Protok čitanja"
+
+#: disks/disks.cpp:89 disks/disks.cpp:311
+#, kde-format
+msgctxt "@title Short for 'Read Rate'"
+msgid "Read"
+msgstr "Čitanje"
+
+#: disks/disks.cpp:93 disks/disks.cpp:317
+#, kde-format
+msgctxt "@title"
+msgid "Write Rate"
+msgstr "Protok pisanja"
+
+#: disks/disks.cpp:95 disks/disks.cpp:318
+#, kde-format
+msgctxt "@title Short for 'Write Rate'"
+msgid "Write"
+msgstr "Pisanje"
+
+#: disks/disks.cpp:100 disks/disks.cpp:302
+#, kde-format
+msgctxt "@title"
+msgid "Used Space"
+msgstr "Popunjen prostor"
+
+#: disks/disks.cpp:102 disks/disks.cpp:303
+#, kde-format
+msgctxt "@title Short for 'Used Space'"
+msgid "Used"
+msgstr "Popunjeno"
+
+#: disks/disks.cpp:107 disks/disks.cpp:294
+#, kde-format
+msgctxt "@title"
+msgid "Free Space"
+msgstr "Slobodan prostor"
+
+#: disks/disks.cpp:109 disks/disks.cpp:295
+#, kde-format
+msgctxt "@title Short for 'Free Space'"
+msgid "Free"
+msgstr "Slobodno"
+
+#: disks/disks.cpp:114 disks/disks.cpp:328
+#, kde-format
+msgctxt "@title"
+msgid "Percentage Used"
+msgstr "Procenat popunjenosti"
+
+#: disks/disks.cpp:118 disks/disks.cpp:324
+#, kde-format
+msgctxt "@title"
+msgid "Percentage Free"
+msgstr "Procenat slobodnog prostora"
+
+#: disks/disks.cpp:165
+#, kde-format
+msgid "Disks"
+msgstr "Diskovi"
+
+#: disks/disks.cpp:272
+#, kde-format
+msgctxt "@title"
+msgid "All Disks"
+msgstr "Svi diskovi"
+
+#: disks/disks.cpp:325
+#, kde-format
+msgctxt "@title, Short for `Percentage Free"
+msgid "Free"
+msgstr "Slobodno"
+
+#: disks/disks.cpp:329
+#, kde-format
+msgctxt "@title, Short for `Percentage Used"
+msgid "Used"
+msgstr "Popunjeno"
+
+#: gpu/AllGpus.cpp:14
+#, kde-format
+msgctxt "@title"
+msgid "All GPUs"
+msgstr "Svi GPU‑ovi"
+
+#: gpu/AllGpus.cpp:16
+#, kde-format
+msgctxt "@title"
+msgid "All GPUs Usage"
+msgstr "Opterećenje svih GPU‑ova"
+
+#: gpu/AllGpus.cpp:17
+#, kde-format
+msgctxt "@title Short for 'All GPUs Usage'"
+msgid "Usage"
+msgstr "Opterećenje"
+
+#: gpu/AllGpus.cpp:26
+#, kde-format
+msgctxt "@title"
+msgid "All GPUs Total Memory"
+msgstr "Ukupna memorija svih GPU‑ova"
+
+#: gpu/AllGpus.cpp:27
+#, kde-format
+msgctxt "@title Short for 'All GPUs Total Memory'"
+msgid "Total"
+msgstr "Ukupno"
+
+#: gpu/AllGpus.cpp:31
+#, kde-format
+msgctxt "@title"
+msgid "All GPUs Used Memory"
+msgstr "Zauzeta memorija svih GPU‑ova"
+
+#: gpu/AllGpus.cpp:32
+#, kde-format
+msgctxt "@title Short for 'All GPUs Used Memory'"
+msgid "Used"
+msgstr "Zauzeto"
+
+#: gpu/AllGpus.cpp:37
+#, kde-format
+msgctxt "@title"
+msgid "All GPUs Used Memory Percentage"
+msgstr "Procenat zauzete memorije svih GPU‑ova"
+
+#: gpu/GpuDevice.cpp:26
+#, kde-format
+msgctxt "@title"
+msgid "Usage"
+msgstr "Opterećenje"
+
+#: gpu/GpuDevice.cpp:32
+#, kde-format
+msgctxt "@title"
+msgid "Total Video Memory"
+msgstr "Ukupna video memorija"
+
+#: gpu/GpuDevice.cpp:34
+#, kde-format
+msgctxt "@title Short for Total Video Memory"
+msgid "Total"
+msgstr "Ukupno"
+
+#: gpu/GpuDevice.cpp:37
+#, kde-format
+msgctxt "@title"
+msgid "Video Memory Used"
+msgstr "Zauzeta video memorija"
+
+#: gpu/GpuDevice.cpp:39
+#, kde-format
+msgctxt "@title Short for Video Memory Used"
+msgid "Used"
+msgstr "Zauzeto"
+
+#: gpu/GpuDevice.cpp:42
+#, kde-format
+msgctxt "@title"
+msgid "Video Memory Used Percentage"
+msgstr "Procenat zauzete video memorije"
+
+#: gpu/GpuDevice.cpp:47
+#, kde-format
+msgctxt "@title"
+msgid "Frequency"
+msgstr "Takt"
+
+#: gpu/GpuDevice.cpp:51
+#, kde-format
+msgctxt "@title"
+msgid "Memory Frequency"
+msgstr "Takt memorije"
+
+#: gpu/GpuDevice.cpp:55
+#, kde-format
+msgctxt "@title"
+msgid "Temperature"
+msgstr "Temperatura"
+
+#: gpu/GpuDevice.cpp:59 power/power.cpp:116
+#, kde-format
+msgctxt "@title"
+msgid "Power"
+msgstr "Napajanje"
+
+#: gpu/GpuPlugin.cpp:32
+#, kde-format
+msgctxt "@title"
+msgid "GPU"
+msgstr "GPU"
+
+#: gpu/LinuxIntelGpu.cpp:40 gpu/LinuxXeGpu.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "Video Usage"
+msgstr "Video opterećenje"
+
+#: gpu/LinuxXeGpu.cpp:78
+#, kde-format
+msgctxt "@title"
+msgid "Fan %1"
+msgstr "Ventilator %1"
+
+#: gpu/LinuxXeGpu.cpp:86
+#, kde-format
+msgctxt "@title"
+msgid "VRAM Temperature"
+msgstr "Temperatura video memorije"
+
+#: lmsensors/lmsensors.cpp:22
+#, kde-format
+msgid "Hardware Sensors"
+msgstr "Hardverski senzori"
+
+#: memory/backend.cpp:17
+#, kde-format
+msgctxt "@title"
+msgid "Physical Memory"
+msgstr "Fizička memorija"
+
+#: memory/backend.cpp:18
+#, kde-format
+msgctxt "@title"
+msgid "Swap Memory"
+msgstr "Razmenska memorija"
+
+#: memory/backend.cpp:39
+#, kde-format
+msgctxt "@title"
+msgid "Total Physical Memory"
+msgstr "Ukupna fizička memorija"
+
+#: memory/backend.cpp:40
+#, kde-format
+msgctxt "@title, Short for 'Total Physical Memory'"
+msgid "Total"
+msgstr "Ukupno"
+
+#: memory/backend.cpp:44
+#, kde-format
+msgctxt "@title"
+msgid "Used Physical Memory"
+msgstr "Zauzeta fizička memorija"
+
+#: memory/backend.cpp:45
+#, kde-format
+msgctxt "@title, Short for 'Used Physical Memory'"
+msgid "Used"
+msgstr "Zauzeto"
+
+#: memory/backend.cpp:49
+#, kde-format
+msgctxt "@title"
+msgid "Used Physical Memory Percentage"
+msgstr "Procenat zauzete fizičke memorije"
+
+#: memory/backend.cpp:53
+#, kde-format
+msgctxt "@title"
+msgid "Free Physical Memory"
+msgstr "Slobodna fizička memorija"
+
+#: memory/backend.cpp:54
+#, kde-format
+msgctxt "@title, Short for 'Free Physical Memory'"
+msgid "Free"
+msgstr "Slobodno"
+
+#: memory/backend.cpp:58
+#, kde-format
+msgctxt "@title"
+msgid "Free Physical Memory Percentage"
+msgstr "Procenat slobodne fizičke memorije"
+
+#: memory/backend.cpp:62
+#, kde-format
+msgctxt "@title"
+msgid "Application Memory"
+msgstr "Programska memorija"
+
+#: memory/backend.cpp:63
+#, kde-format
+msgctxt "@title, Short for 'Application Memory'"
+msgid "Application"
+msgstr "Programi"
+
+#: memory/backend.cpp:67
+#, kde-format
+msgctxt "@title"
+msgid "Application Memory Percentage"
+msgstr "Procenat programske memorije"
+
+#: memory/backend.cpp:71
+#, kde-format
+msgctxt "@title"
+msgid "Cache Memory"
+msgstr "Keširana memorija"
+
+#: memory/backend.cpp:72
+#, kde-format
+msgctxt "@title, Short for 'Cache Memory'"
+msgid "Cache"
+msgstr "Keš"
+
+#: memory/backend.cpp:76
+#, kde-format
+msgctxt "@title"
+msgid "Cache Memory Percentage"
+msgstr "Procenat keširane memorije"
+
+#: memory/backend.cpp:80
+#, kde-format
+msgctxt "@title"
+msgid "Buffer Memory"
+msgstr "Baferisana memorija"
+
+#: memory/backend.cpp:81
+#, kde-format
+msgctxt "@title, Short for 'Buffer Memory'"
+msgid "Buffer"
+msgstr "Bafer"
+
+#: memory/backend.cpp:82
+#, kde-format
+msgid "Amount of memory used for caching disk blocks"
+msgstr "Količina memorije za keširanje blokova diska"
+
+#: memory/backend.cpp:86
+#, kde-format
+msgctxt "@title"
+msgid "Buffer Memory Percentage"
+msgstr "Procenat baferisane memorije"
+
+#: memory/backend.cpp:90
+#, kde-format
+msgctxt "@title"
+msgid "Total Swap Memory"
+msgstr "Ukupna razmenska memorija"
+
+#: memory/backend.cpp:91
+#, kde-format
+msgctxt "@title, Short for 'Total Swap Memory'"
+msgid "Total"
+msgstr "Ukupno"
+
+#: memory/backend.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Used Swap Memory"
+msgstr "Zauzeta razmenska memorija"
+
+#: memory/backend.cpp:96
+#, kde-format
+msgctxt "@title, Short for 'Used Swap Memory'"
+msgid "Used"
+msgstr "Zauzeto"
+
+#: memory/backend.cpp:100
+#, kde-format
+msgctxt "@title"
+msgid "Used Swap Memory Percentage"
+msgstr "Procenat zauzete razmenske memorije"
+
+#: memory/backend.cpp:104
+#, kde-format
+msgctxt "@title"
+msgid "Free Swap Memory"
+msgstr "Slobodna razmenska memorija"
+
+#: memory/backend.cpp:105
+#, kde-format
+msgctxt "@title, Short for 'Free Swap Memory'"
+msgid "Free"
+msgstr "Slobodno"
+
+#: memory/backend.cpp:109
+#, kde-format
+msgctxt "@title"
+msgid "Free Swap Memory Percentage"
+msgstr "Procenat slobodne razmenske memorije"
+
+#: memory/memory.cpp:24
+#, kde-format
+msgctxt "@title"
+msgid "Memory"
+msgstr "Memorija"
+
+#: network/AllDevicesObject.cpp:16
+#, kde-format
+msgctxt "@title"
+msgid "All Network Devices"
+msgstr "Svi mrežni uređaji"
+
+#: network/AllDevicesObject.cpp:18 network/AllDevicesObject.cpp:28
+#: network/NetworkDevice.cpp:66 network/NetworkDevice.cpp:76
+#, kde-format
+msgctxt "@title"
+msgid "Download Rate"
+msgstr "Protok preuzimanja"
+
+#: network/AllDevicesObject.cpp:19 network/AllDevicesObject.cpp:29
+#: network/NetworkDevice.cpp:67 network/NetworkDevice.cpp:77
+#, kde-format
+msgctxt "@title Short for Download Rate"
+msgid "Download"
+msgstr "Preuzimanje"
+
+#: network/AllDevicesObject.cpp:23 network/AllDevicesObject.cpp:33
+#: network/NetworkDevice.cpp:71 network/NetworkDevice.cpp:81
+#, kde-format
+msgctxt "@title"
+msgid "Upload Rate"
+msgstr "Protok otpremanja"
+
+#: network/AllDevicesObject.cpp:24 network/AllDevicesObject.cpp:34
+#: network/NetworkDevice.cpp:72 network/NetworkDevice.cpp:82
+#, kde-format
+msgctxt "@title Short for Upload Rate"
+msgid "Upload"
+msgstr "Otpremanje"
+
+#: network/AllDevicesObject.cpp:38 network/NetworkDevice.cpp:86
+#, kde-format
+msgctxt "@title"
+msgid "Total Downloaded"
+msgstr "Ukupno preuzeto"
+
+#: network/AllDevicesObject.cpp:39 network/NetworkDevice.cpp:87
+#, kde-format
+msgctxt "@title Short for Total Downloaded"
+msgid "Downloaded"
+msgstr "Preuzeto"
+
+#: network/AllDevicesObject.cpp:43 network/NetworkDevice.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "Total Uploaded"
+msgstr "Ukupno otpremljeno"
+
+#: network/AllDevicesObject.cpp:44 network/NetworkDevice.cpp:92
+#, kde-format
+msgctxt "@title Short for Total Uploaded"
+msgid "Uploaded"
+msgstr "Otpremljeno"
+
+#: network/NetworkDevice.cpp:15
+#, kde-format
+msgctxt "@title"
+msgid "Network Name"
+msgstr "Ime mreže"
+
+#: network/NetworkDevice.cpp:16
+#, kde-format
+msgctxt "@title Short of Network Name"
+msgid "Name"
+msgstr "Ime"
+
+#: network/NetworkDevice.cpp:19
+#, kde-format
+msgctxt "@title"
+msgid "Signal Strength"
+msgstr "Jačina signala"
+
+#: network/NetworkDevice.cpp:20
+#, kde-format
+msgctxt "@title Short of Signal Strength"
+msgid "Signal"
+msgstr "Signal"
+
+#: network/NetworkDevice.cpp:26
+#, kde-format
+msgctxt "@title"
+msgid "IPv4 Address"
+msgstr "IPv4 adresa"
+
+#: network/NetworkDevice.cpp:27
+#, kde-format
+msgctxt "@title Short of IPv4 Address"
+msgid "IPv4"
+msgstr "IPv4"
+
+#: network/NetworkDevice.cpp:30
+#, kde-format
+msgctxt "@title"
+msgid "IPv4 Gateway"
+msgstr "IPv4 mrežni izlaz"
+
+#: network/NetworkDevice.cpp:31
+#, kde-format
+msgctxt "@title Short of IPv4 Gateway"
+msgid "IPv4 Gateway"
+msgstr "IPv4 mrežni izlaz"
+
+#: network/NetworkDevice.cpp:34
+#, kde-format
+msgctxt "@title"
+msgid "IPv4 Subnet Mask"
+msgstr "IPv4 mrežna maska"
+
+#: network/NetworkDevice.cpp:35
+#, kde-format
+msgctxt "@title Short of IPv4 Subnet Mask"
+msgid "IPv4 Subnet Mask"
+msgstr "IPv4 mrežna maska"
+
+#: network/NetworkDevice.cpp:38
+#, kde-format
+msgctxt "@title"
+msgid "IPv4 with Prefix Length"
+msgstr "IPv4 sa dužinom prefiksa"
+
+#: network/NetworkDevice.cpp:39
+#, kde-format
+msgctxt "@title Short of IPv4 Prefix Length"
+msgid "IPv4"
+msgstr "IPv4"
+
+#: network/NetworkDevice.cpp:42
+#, kde-format
+msgctxt "@title"
+msgid "IPv4 DNS"
+msgstr "IPv4 DNS"
+
+#: network/NetworkDevice.cpp:43
+#, kde-format
+msgctxt "@title Short of IPv4 DNS"
+msgid "IPv4 DNS"
+msgstr "IPv4 DNS"
+
+#: network/NetworkDevice.cpp:46
+#, kde-format
+msgctxt "@title"
+msgid "IPv6 Address"
+msgstr "IPv6 adresa"
+
+#: network/NetworkDevice.cpp:47
+#, kde-format
+msgctxt "@title Short of IPv6 Address"
+msgid "IPv6"
+msgstr "IPv6"
+
+#: network/NetworkDevice.cpp:50
+#, kde-format
+msgctxt "@title"
+msgid "IPv6 Gateway"
+msgstr "IPv6 mrežni izlaz"
+
+#: network/NetworkDevice.cpp:51
+#, kde-format
+msgctxt "@title Short of IPv6 Gateway"
+msgid "IPv6 Gateway"
+msgstr "IPv6 mrežni izlaz"
+
+#: network/NetworkDevice.cpp:54
+#, kde-format
+msgctxt "@title"
+msgid "IPv6 Subnet Mask"
+msgstr "IPv6 mrežna maska"
+
+#: network/NetworkDevice.cpp:55
+#, kde-format
+msgctxt "@title Short of IPv6 Subnet Mask"
+msgid "IPv6 Subnet Mask"
+msgstr "IPv6 mrežna maska"
+
+#: network/NetworkDevice.cpp:58
+#, kde-format
+msgctxt "@title"
+msgid "IPv6 with Prefix Length"
+msgstr "IPv6 sa dužinom prefiksa"
+
+#: network/NetworkDevice.cpp:59
+#, kde-format
+msgctxt "@title Short of IPv6 Prefix Length"
+msgid "IPv6"
+msgstr "IPv6"
+
+#: network/NetworkDevice.cpp:62
+#, kde-format
+msgctxt "@title"
+msgid "IPv6 DNS"
+msgstr "IPv6 DNS"
+
+#: network/NetworkDevice.cpp:63
+#, kde-format
+msgctxt "@title Short of IPv6 DNS"
+msgid "IPv6 DNS"
+msgstr "IPv6 DNS"
+
+#: network/NetworkPlugin.cpp:46
+#, kde-format
+msgctxt "@title"
+msgid "Network Devices"
+msgstr "Mrežni uređaji"
+
+#: osinfo/osinfo.cpp:110
+#, kde-format
+msgctxt "@title"
+msgid "Operating System"
+msgstr "Operativni sistem"
+
+#: osinfo/osinfo.cpp:112
+#, kde-format
+msgctxt "@title"
+msgid "Kernel"
+msgstr "Jezgro"
+
+#: osinfo/osinfo.cpp:113
+#, kde-format
+msgctxt "@title"
+msgid "Kernel Name"
+msgstr "Ime jezgra"
+
+#: osinfo/osinfo.cpp:114
+#, kde-format
+msgctxt "@title"
+msgid "Kernel Version"
+msgstr "Izdanje jezgra"
+
+#: osinfo/osinfo.cpp:115
+#, kde-format
+msgctxt "@title"
+msgid "Kernel Name and Version"
+msgstr "Ime i izdanje jezgra"
+
+#: osinfo/osinfo.cpp:116
+#, kde-format
+msgctxt "@title Kernel Name and Version"
+msgid "Kernel"
+msgstr "Jezgro"
+
+#: osinfo/osinfo.cpp:118
+#, kde-format
+msgctxt "@title"
+msgid "System"
+msgstr "Sistem"
+
+#: osinfo/osinfo.cpp:119
+#, kde-format
+msgctxt "@title"
+msgid "Hostname"
+msgstr "Ime domaćina"
+
+#: osinfo/osinfo.cpp:120
+#, kde-format
+msgctxt "@title"
+msgid "Operating System Name"
+msgstr "Ime operativnog sistema"
+
+#: osinfo/osinfo.cpp:121
+#, kde-format
+msgctxt "@title"
+msgid "Operating System Version"
+msgstr "Izdanje operativnog sistema"
+
+#: osinfo/osinfo.cpp:122
+#, kde-format
+msgctxt "@title"
+msgid "Operating System Name and Version"
+msgstr "Ime i izdanje operativnog sistema"
+
+#: osinfo/osinfo.cpp:123
+#, kde-format
+msgctxt "@title Operating System Name and Version"
+msgid "OS"
+msgstr "OS"
+
+#: osinfo/osinfo.cpp:124
+#, kde-format
+msgctxt "@title"
+msgid "Operating System Logo"
+msgstr "Logotip operativnog sistema"
+
+#: osinfo/osinfo.cpp:125
+#, kde-format
+msgctxt "@title"
+msgid "Operating System URL"
+msgstr "URL operativnog sistema"
+
+#: osinfo/osinfo.cpp:126
+#, kde-format
+msgctxt "@title"
+msgid "Uptime"
+msgstr "Hod"
+
+#: osinfo/osinfo.cpp:129
+#, kde-format
+msgctxt "@title"
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+#: osinfo/osinfo.cpp:130
+#, kde-format
+msgctxt "@title"
+msgid "Qt Version"
+msgstr "Izdanje Qt‑a"
+
+#: osinfo/osinfo.cpp:131
+#, kde-format
+msgctxt "@title"
+msgid "KDE Frameworks Version"
+msgstr "Izdanje Radnih okvira KDE‑a"
+
+#: osinfo/osinfo.cpp:132
+#, kde-format
+msgctxt "@title"
+msgid "KDE Plasma Version"
+msgstr "Izdanje KDE Plasme"
+
+#: osinfo/osinfo.cpp:133
+#, kde-format
+msgctxt "@title"
+msgid "Window System"
+msgstr "Prozorski sistem"
+
+#: osinfo/osinfo.cpp:175
+#, kde-format
+msgctxt "@info"
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: power/power.cpp:44 power/power.cpp:45
+#, kde-format
+msgctxt "@title"
+msgid "Design Capacity"
+msgstr "Prvobitni kapacitet"
+
+#: power/power.cpp:47
+#, kde-format
+msgid "Amount of energy that the Battery was designed to hold"
+msgstr "Količina energije koju je baterija projektovana da primi"
+
+#: power/power.cpp:53 power/power.cpp:54 power/power.cpp:72
+#, kde-format
+msgctxt "@title"
+msgid "Current Capacity"
+msgstr "Trenutni kapacitet"
+
+#: power/power.cpp:56
+#, kde-format
+msgid "Amount of energy that the battery can currently hold"
+msgstr "Količina energije koju baterija trenutno može da primi"
+
+#: power/power.cpp:62 power/power.cpp:63
+#, kde-format
+msgctxt "@title"
+msgid "Health"
+msgstr "Zdravlje"
+
+#: power/power.cpp:65
+#, kde-format
+msgid "Percentage of the design capacity that the battery can hold"
+msgstr "Procenat prvobitnog kapaciteta koji baterija može da primi"
+
+#: power/power.cpp:71
+#, kde-format
+msgctxt "@title"
+msgid "Charge"
+msgstr "Popunjenost"
+
+#: power/power.cpp:74
+#, kde-format
+msgid "Amount of energy that the battery is currently holding"
+msgstr "Količina energije koju baterija trenutno sadrži"
+
+#: power/power.cpp:80 power/power.cpp:81
+#, kde-format
+msgctxt "@title"
+msgid "Charge Percentage"
+msgstr "Procenat popunjenosti"
+
+#: power/power.cpp:83
+#, kde-format
+msgid ""
+"Percentage of the current capacity that the battery is currently holding"
+msgstr "Procenat trenutnog kapaciteta koji baterija trenutno sadrži"
+
+#: power/power.cpp:90
+#, kde-format
+msgctxt "@title"
+msgid "Charging Rate"
+msgstr "Brzina punjenja"
+
+#: power/power.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "Charging  Rate"
+msgstr "Brzina punjenja"
+
+#: power/power.cpp:93
+#, kde-format
+msgid ""
+"Power that the battery is being charged with (positive) or discharged "
+"(negative)"
+msgstr "Snaga kojom se baterija puni (pozitivna) ili prazni (negativna)"
+
+#: pressure/pressure.cpp:134
+#, kde-format
+msgctxt "@title"
+msgid "Pressure"
+msgstr "Pritisak"
+
+#: pressure/pressure.cpp:136
+#, kde-format
+msgctxt "@title"
+msgid "Memory Pressure"
+msgstr "Pritisak na memoriju"
+
+#: pressure/pressure.cpp:137 pressure/pressure.cpp:165
+#: pressure/pressure.cpp:195
+#, kde-format
+msgctxt "@title"
+msgid "Some (10 second average)"
+msgstr "Delimičan (prosek za 10 sekundi)"
+
+#: pressure/pressure.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"memory resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:140 pressure/pressure.cpp:168
+#: pressure/pressure.cpp:198
+#, kde-format
+msgctxt "@title"
+msgid "Some (1 minute average)"
+msgstr "Delimičan (prosek za 1 minut)"
+
+#: pressure/pressure.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"memory resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 1 minut"
+
+#: pressure/pressure.cpp:143 pressure/pressure.cpp:171
+#: pressure/pressure.cpp:201
+#, kde-format
+msgctxt "@title"
+msgid "Some (5 minute average)"
+msgstr "Delimičan (prosek za 5 minuta)"
+
+#: pressure/pressure.cpp:144
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"memory resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:146 pressure/pressure.cpp:174
+#: pressure/pressure.cpp:204
+#, kde-format
+msgctxt "@title"
+msgid "Total Some Stall Time"
+msgstr "Ukupno vreme delimičnog zastoja"
+
+#: pressure/pressure.cpp:147
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that at least one task is stalled waiting for available "
+"memory resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem je bar jedan zadatak u zastoju čekajući slobodne memorijske "
+"resurse, u mikrosekundama"
+
+#: pressure/pressure.cpp:150 pressure/pressure.cpp:179
+#: pressure/pressure.cpp:209
+#, kde-format
+msgctxt "@title"
+msgid "Full (10 second average)"
+msgstr "Potpun (prosek za 10 sekundi)"
+
+#: pressure/pressure.cpp:151
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"CPU resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"resurse CPU‑a, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:153 pressure/pressure.cpp:182
+#: pressure/pressure.cpp:212
+#, kde-format
+msgctxt "@title"
+msgid "Full (1 minute average)"
+msgstr "Potpun (prosek za 1 minut)"
+
+#: pressure/pressure.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"CPU resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"resurse CPU‑a, prosek za 1 minut"
+
+#: pressure/pressure.cpp:156 pressure/pressure.cpp:185
+#: pressure/pressure.cpp:215
+#, kde-format
+msgctxt "@title"
+msgid "Full (5 minute average)"
+msgstr "Potpun (prosek za 5 minuta)"
+
+#: pressure/pressure.cpp:157
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"CPU resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne "
+"resurse CPU‑a, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:159 pressure/pressure.cpp:188
+#: pressure/pressure.cpp:218
+#, kde-format
+msgctxt "@title"
+msgid "Total Full Stall Time"
+msgstr "Ukupno vreme potpunog zastoja"
+
+#: pressure/pressure.cpp:160
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that at least one task is stalled waiting for available CPU "
+"resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem je bar jedan zadatak u zastoju čekajući slobodne resurse "
+"CPU‑a, u mikrosekundama"
+
+#: pressure/pressure.cpp:163
+#, kde-format
+msgctxt "@title"
+msgid "CPU Pressure"
+msgstr "Pritisak na CPU"
+
+#: pressure/pressure.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"IO resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne U/"
+"I resurse, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"IO resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne U/"
+"I resurse, prosek za 1 minut"
+
+#: pressure/pressure.cpp:172
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that at least one task is stalled waiting for available "
+"IO resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem je bar jedan zadatak u zastoju čekajući slobodne U/"
+"I resurse, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:175
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that at least one task is stalled waiting for available IO "
+"resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem je bar jedan zadatak u zastoju čekajući slobodne U/I resurse, "
+"u mikrosekundama"
+
+#: pressure/pressure.cpp:180
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available memory "
+"resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:183
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available memory "
+"resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 1 minut"
+
+#: pressure/pressure.cpp:186
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available memory "
+"resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne "
+"memorijske resurse, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:189
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that all tasks are stalled waiting for available memory "
+"resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem su svi zadaci u zastoju čekajući slobodne memorijske resurse, "
+"u mikrosekundama"
+
+#: pressure/pressure.cpp:193
+#, kde-format
+msgctxt "@title"
+msgid "IO Pressure"
+msgstr "Pritisak na U/I"
+
+#: pressure/pressure.cpp:196
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available CPU "
+"resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne resurse "
+"CPU‑a, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:199
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available CPU "
+"resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne resurse "
+"CPU‑a, prosek za 1 minut"
+
+#: pressure/pressure.cpp:202
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available CPU "
+"resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne resurse "
+"CPU‑a, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:205
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that all tasks are stalled waiting for available CPU "
+"resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem su svi zadaci u zastoju čekajući slobodne resurse CPU‑a, u "
+"mikrosekundama"
+
+#: pressure/pressure.cpp:210
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available IO "
+"resources, averaged over 10 seconds"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne U/I "
+"resurse, prosek za 10 sekundi"
+
+#: pressure/pressure.cpp:213
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available IO "
+"resources, averaged over 1 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne U/I "
+"resurse, prosek za 1 minut"
+
+#: pressure/pressure.cpp:216
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Percentage of time that all tasks are stalled waiting for available IO "
+"resources, averaged over 5 minutes"
+msgstr ""
+"Procenat vremena u kojem su svi zadaci u zastoju čekajući slobodne U/I "
+"resurse, prosek za 5 minuta"
+
+#: pressure/pressure.cpp:219
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Amount of time that all tasks are stalled waiting for available IO "
+"resources, measured in microseconds"
+msgstr ""
+"Vreme u kojem su svi zadaci u zastoju čekajući slobodne U/I resurse, u "
+"mikrosekundama"
