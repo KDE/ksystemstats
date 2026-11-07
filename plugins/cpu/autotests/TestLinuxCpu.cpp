@@ -30,6 +30,7 @@ void LinuxCpuTest::testParseCpuinfo_data()
     QTest::addColumn<QString>("cpuinfoPath");
     QTest::addColumn<int>("expectedCpuCount");
     QTest::addColumn<int>("expectedCoreCount");
+    QTest::addColumn<int>("expectedPhysicalCoreCount");
     QTest::addColumn<int>("expectedSensorCount");
     // QTestL:
 
@@ -37,12 +38,14 @@ void LinuxCpuTest::testParseCpuinfo_data()
         << QFINDTESTDATA("fixtures/linux_amd64_cpuinfo.txt")
         << 1
         << 12
+        << 6
         << 12
         ;
     QTest::newRow("AMD64_NUMA")
         << QFINDTESTDATA("fixtures/linux_amd64_numa_cpuinfo.txt")
         << 2
         << 56
+        << 28
         << 56
         ;
     QTest::newRow("ARM")
@@ -50,11 +53,13 @@ void LinuxCpuTest::testParseCpuinfo_data()
         << 1
         << 8
         << 8
+        << 8
         ;
 
     QTest::newRow("ARM_no_newline")
         << QFINDTESTDATA("fixtures/linux_arm_cpuinfo_no_newline.txt")
         << 1
+        << 8
         << 8
         << 8
         ;
@@ -73,6 +78,9 @@ void LinuxCpuTest::testParseCpuinfo()
 
     QFETCH(int, expectedCoreCount);
     QCOMPARE(cpu.m_allCpus->m_coreCount->value(), expectedCoreCount);
+
+    QFETCH(int, expectedPhysicalCoreCount);
+    QCOMPARE(cpu.m_allCpus->m_physicalCoreCount->value(), expectedPhysicalCoreCount);
 
     QFETCH(int, expectedSensorCount);
     QCOMPARE(cpu.m_cpus.size(), expectedSensorCount);

@@ -107,6 +107,7 @@ void AllCpusObject::makeSensors()
 
     m_cpuCount = new KSysGuard::SensorProperty(QStringLiteral("cpuCount"), this);
     m_coreCount = new KSysGuard::SensorProperty(QStringLiteral("coreCount"), this);
+    m_physicalCoreCount = new KSysGuard::SensorProperty(QStringLiteral("physicalCoreCount"), this);
 
     auto maxAggregator = [](QVariant a, QVariant b) {return std::max(a.toDouble(), b.toDouble());};
     auto minAggregator = [](QVariant a, QVariant b) {return std::min(a.toDouble(), b.toDouble());};
@@ -172,13 +173,18 @@ void AllCpusObject::initialize()
     m_cpuCount->setShortName(i18nc("@title, Short fort 'Number of CPUs'", "CPUs"));
     m_cpuCount->setDescription(i18nc("@info", "Number of physical CPUs installed in the system"));
 
-    m_coreCount->setName(i18nc("@title", "Number of Cores"));
-    m_coreCount->setShortName(i18nc("@title, Short fort 'Number of Cores'", "Cores"));
-    m_coreCount->setDescription(i18nc("@info", "Number of CPU cores across all physical CPUS"));
+    m_coreCount->setName(i18nc("@title", "Number of Logical Cores"));
+    m_coreCount->setShortName(i18nc("@title, Short for 'Number of Logical Cores'", "Logical Cores"));
+    m_coreCount->setDescription(i18nc("@info", "Number of logical CPU cores across all physical CPUs, counting each hardware thread"));
+
+    m_physicalCoreCount->setName(i18nc("@title", "Number of Physical Cores"));
+    m_physicalCoreCount->setShortName(i18nc("@title, Short for 'Number of Physical Cores'", "Physical Cores"));
+    m_physicalCoreCount->setDescription(i18nc("@info", "Number of physical CPU cores across all physical CPUs"));
 }
 
-void AllCpusObject::setCounts(unsigned int cpuCount, unsigned int coreCount)
+void AllCpusObject::setCounts(unsigned int cpuCount, unsigned int coreCount, unsigned int physicalCoreCount)
 {
     m_cpuCount->setValue(cpuCount);
     m_coreCount->setValue(coreCount);
+    m_physicalCoreCount->setValue(physicalCoreCount);
 }

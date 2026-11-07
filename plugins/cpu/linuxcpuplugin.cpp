@@ -129,7 +129,6 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q, const QString &cpuInf
 
     auto names = makeCpuNames(cpus, cpuCount);
 
-    QHash<int, int> numCores;
     for (const auto &entry : std::as_const(cpus)) {
         auto cpu = new LinuxCpuObject(QStringLiteral("cpu%1").arg(entry.id), names.value(entry.id), entry.frequency, m_container);
         m_cpus.insert(entry.id, cpu);
@@ -144,7 +143,10 @@ LinuxCpuPluginPrivate::LinuxCpuPluginPrivate(CpuPlugin *q, const QString &cpuInf
     }
     m_allCpus = new LinuxAllCpusObject(m_container);
     m_allCpus->initialize();
-    m_allCpus->setCounts(cpuCount, m_cpus.size());
+    // Hyperthread siblings share a (physical id, core id) pair. Without those
+    // fields (e.g. on ARM) count each processor as a physical core.
+    const qsizetype physicalCoreCount = m_cpusBySystemIds.isEmpty() ? m_cpus.size() : m_cpusBySystemIds.uniqueKeys().size();
+    m_allCpus->setCounts(cpuCount, m_cpus.size(), physicalCoreCount);
 
 }
 

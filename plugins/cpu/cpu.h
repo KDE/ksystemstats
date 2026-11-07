@@ -37,13 +37,14 @@ protected:
 class AllCpusObject : public BaseCpuObject {
 public:
     AllCpusObject(KSysGuard::SensorContainer *parent);
-    void setCounts(unsigned int cpuCount, unsigned int coreCount);
+    void setCounts(unsigned int cpuCount, unsigned int coreCount, unsigned int physicalCoreCount);
     void initialize() override;
 protected:
     void makeSensors() override;
 
     KSysGuard::SensorProperty *m_cpuCount = nullptr;
     KSysGuard::SensorProperty *m_coreCount = nullptr;
+    KSysGuard::SensorProperty *m_physicalCoreCount = nullptr;
 };
 
 #endif
