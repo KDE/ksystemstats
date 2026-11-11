@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"POT-Creation-Date: 2026-11-07 14:19+0000\n"
 "PO-Revision-Date: 2026-09-29 00:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -114,130 +114,160 @@ msgctxt "@title"
 msgid "All"
 msgstr "모두"
 
-#: cpu/cpu.cpp:119
+#: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "최대 CPU 주파수"
 
-#: cpu/cpu.cpp:120
+#: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "최대 주파수"
 
-#: cpu/cpu.cpp:121
+#: cpu/cpu.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "모든 CPU의 현재 최대 주파수"
 
-#: cpu/cpu.cpp:126
+#: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "최소 CPU 주파수"
 
-#: cpu/cpu.cpp:127
+#: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "최소 주파수"
 
-#: cpu/cpu.cpp:128
+#: cpu/cpu.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "모든 CPU의 현재 최소 주파수"
 
-#: cpu/cpu.cpp:133
+#: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "평균 CPU 주파수"
 
-#: cpu/cpu.cpp:134
+#: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "평균 주파수"
 
-#: cpu/cpu.cpp:135
+#: cpu/cpu.cpp:136
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "모든 CPU의 현재 평균 주파수"
 
-#: cpu/cpu.cpp:140
+#: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "최대 CPU 온도"
 
-#: cpu/cpu.cpp:141
+#: cpu/cpu.cpp:142
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
 msgstr "최대 온도"
 
-#: cpu/cpu.cpp:147
+#: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "최소 CPU 온도"
 
-#: cpu/cpu.cpp:148
+#: cpu/cpu.cpp:149
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
 msgstr "최소 온도"
 
-#: cpu/cpu.cpp:154
+#: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
 msgstr "평균 CPU 온도"
 
-#: cpu/cpu.cpp:155
+#: cpu/cpu.cpp:156
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "평균 온도"
 
-#: cpu/cpu.cpp:171
+#: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
 msgstr "CPU 개수"
 
-#: cpu/cpu.cpp:172
+#: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
 msgstr "CPU"
 
-#: cpu/cpu.cpp:173
+#: cpu/cpu.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
 msgstr "시스템에 설치된 물리적 CPU 개수"
 
-#: cpu/cpu.cpp:175
-#, kde-format
-msgctxt "@title"
-msgid "Number of Cores"
-msgstr "코어 개수"
-
 #: cpu/cpu.cpp:176
-#, kde-format
-msgctxt "@title, Short fort 'Number of Cores'"
-msgid "Cores"
-msgstr "코어"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Logical Cores"
+msgstr "코어 개수"
 
 #: cpu/cpu.cpp:177
 #, kde-format
+msgctxt "@title, Short for 'Number of Logical Cores'"
+msgid "Logical Cores"
+msgstr ""
+
+#: cpu/cpu.cpp:178
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
 msgctxt "@info"
-msgid "Number of CPU cores across all physical CPUS"
+msgid ""
+"Number of logical CPU cores across all physical CPUs, counting each hardware "
+"thread"
+msgstr "모든 물리적 CPU의 코어 개수 합"
+
+#: cpu/cpu.cpp:180
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Physical Cores"
+msgstr "코어 개수"
+
+#: cpu/cpu.cpp:181
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Physical Memory"
+msgctxt "@title, Short for 'Number of Physical Cores'"
+msgid "Physical Cores"
+msgstr "물리적 메모리"
+
+#: cpu/cpu.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
+msgctxt "@info"
+msgid "Number of physical CPU cores across all physical CPUs"
 msgstr "모든 물리적 CPU의 코어 개수 합"
 
 #: cpu/cpuplugin.cpp:19
@@ -1442,6 +1472,10 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr "마이크로초 단위로 측정한 모든 작업이 사용 가능한 IO 자원을 기다린 시간"
+
+#~ msgctxt "@title, Short fort 'Number of Cores'"
+#~ msgid "Cores"
+#~ msgstr "코어"
 
 #~ msgctxt "@title %1 is GPU number"
 #~ msgid "GPU %1"

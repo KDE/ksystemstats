@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"POT-Creation-Date: 2026-11-07 14:19+0000\n"
 "PO-Revision-Date: 2026-07-08 21:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -116,130 +116,160 @@ msgctxt "@title"
 msgid "All"
 msgstr "Todo"
 
-#: cpu/cpu.cpp:119
+#: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "Frecuencia máxima de la CPU"
 
-#: cpu/cpu.cpp:120
+#: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "Frecuencia máx."
 
-#: cpu/cpu.cpp:121
+#: cpu/cpu.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "Frecuencia máxima actual entre todas las CPU"
 
-#: cpu/cpu.cpp:126
+#: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "Frecuencia mínima de la CPU"
 
-#: cpu/cpu.cpp:127
+#: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "Frecuencia mín."
 
-#: cpu/cpu.cpp:128
+#: cpu/cpu.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "Frecuencia mínima actual entre todas las CPU"
 
-#: cpu/cpu.cpp:133
+#: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "Frecuencia media de la CPU"
 
-#: cpu/cpu.cpp:134
+#: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "Frecuencia media"
 
-#: cpu/cpu.cpp:135
+#: cpu/cpu.cpp:136
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "Frecuencia media actual entre todas las CPU"
 
-#: cpu/cpu.cpp:140
+#: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "Temperatura máxima de la CPU"
 
-#: cpu/cpu.cpp:141
+#: cpu/cpu.cpp:142
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
 msgstr "Temperatura máx."
 
-#: cpu/cpu.cpp:147
+#: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "Temperatura mínima de la CPU"
 
-#: cpu/cpu.cpp:148
+#: cpu/cpu.cpp:149
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
 msgstr "Temperatura mín."
 
-#: cpu/cpu.cpp:154
+#: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
 msgstr "Temperatura media de la CPU"
 
-#: cpu/cpu.cpp:155
+#: cpu/cpu.cpp:156
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "Temperatura media"
 
-#: cpu/cpu.cpp:171
+#: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
 msgstr "Número de CPU"
 
-#: cpu/cpu.cpp:172
+#: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
 msgstr "CPU"
 
-#: cpu/cpu.cpp:173
+#: cpu/cpu.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
 msgstr "Número de CPU físicas instaladas en el sistema"
 
-#: cpu/cpu.cpp:175
-#, kde-format
-msgctxt "@title"
-msgid "Number of Cores"
-msgstr "Número de núcleos"
-
 #: cpu/cpu.cpp:176
-#, kde-format
-msgctxt "@title, Short fort 'Number of Cores'"
-msgid "Cores"
-msgstr "Núcleos"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Logical Cores"
+msgstr "Número de núcleos"
 
 #: cpu/cpu.cpp:177
 #, kde-format
+msgctxt "@title, Short for 'Number of Logical Cores'"
+msgid "Logical Cores"
+msgstr ""
+
+#: cpu/cpu.cpp:178
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
 msgctxt "@info"
-msgid "Number of CPU cores across all physical CPUS"
+msgid ""
+"Number of logical CPU cores across all physical CPUs, counting each hardware "
+"thread"
+msgstr "Número de núcleos de CPU de todas las CPU físicas"
+
+#: cpu/cpu.cpp:180
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Physical Cores"
+msgstr "Número de núcleos"
+
+#: cpu/cpu.cpp:181
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Physical Memory"
+msgctxt "@title, Short for 'Number of Physical Cores'"
+msgid "Physical Cores"
+msgstr "Memoria física"
+
+#: cpu/cpu.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
+msgctxt "@info"
+msgid "Number of physical CPU cores across all physical CPUs"
 msgstr "Número de núcleos de CPU de todas las CPU físicas"
 
 #: cpu/cpuplugin.cpp:19
@@ -1460,3 +1490,7 @@ msgid ""
 msgstr ""
 "Cantidad de tiempo durante el que todas las tareas se detienen a la espera "
 "de recursos de E/S disponibles, medida en microsegundos."
+
+#~ msgctxt "@title, Short fort 'Number of Cores'"
+#~ msgid "Cores"
+#~ msgstr "Núcleos"

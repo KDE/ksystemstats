@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"POT-Creation-Date: 2026-11-07 14:19+0000\n"
 "PO-Revision-Date: 2022-06-16 23:58+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -120,7 +120,7 @@ msgctxt "@title"
 msgid "All"
 msgstr "Bütün"
 
-#: cpu/cpu.cpp:119
+#: cpu/cpu.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Memory Frequency"
@@ -128,7 +128,7 @@ msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "Yaddaş Tezliyi"
 
-#: cpu/cpu.cpp:120
+#: cpu/cpu.cpp:121
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for 'Current Frequency'"
 #| msgid "Frequency"
@@ -136,7 +136,7 @@ msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "Tezlik"
 
-#: cpu/cpu.cpp:121
+#: cpu/cpu.cpp:122
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Current frequency of the CPU"
@@ -144,7 +144,7 @@ msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "CPU-nun hazırkı tezliyi"
 
-#: cpu/cpu.cpp:126
+#: cpu/cpu.cpp:127
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Memory Frequency"
@@ -152,7 +152,7 @@ msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "Yaddaş Tezliyi"
 
-#: cpu/cpu.cpp:127
+#: cpu/cpu.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for 'Current Frequency'"
 #| msgid "Frequency"
@@ -160,7 +160,7 @@ msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "Tezlik"
 
-#: cpu/cpu.cpp:128
+#: cpu/cpu.cpp:129
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Current frequency of the CPU"
@@ -168,7 +168,7 @@ msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "CPU-nun hazırkı tezliyi"
 
-#: cpu/cpu.cpp:133
+#: cpu/cpu.cpp:134
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Memory Frequency"
@@ -176,7 +176,7 @@ msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "Yaddaş Tezliyi"
 
-#: cpu/cpu.cpp:134
+#: cpu/cpu.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Memory Frequency"
@@ -184,7 +184,7 @@ msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "Yaddaş Tezliyi"
 
-#: cpu/cpu.cpp:135
+#: cpu/cpu.cpp:136
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Current frequency of the CPU"
@@ -192,7 +192,7 @@ msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "CPU-nun hazırkı tezliyi"
 
-#: cpu/cpu.cpp:140
+#: cpu/cpu.cpp:141
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "GPU %1 Temperature"
@@ -200,7 +200,7 @@ msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "GPU %1 Temperaturu"
 
-#: cpu/cpu.cpp:141
+#: cpu/cpu.cpp:142
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for Current Temperatur"
 #| msgid "Temperature"
@@ -208,7 +208,7 @@ msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
 msgstr "Temperatur"
 
-#: cpu/cpu.cpp:147
+#: cpu/cpu.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "GPU %1 Temperature"
@@ -216,7 +216,7 @@ msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "GPU %1 Temperaturu"
 
-#: cpu/cpu.cpp:148
+#: cpu/cpu.cpp:149
 #, fuzzy, kde-format
 #| msgctxt "@title, Short for Current Temperatur"
 #| msgid "Temperature"
@@ -224,7 +224,7 @@ msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
 msgstr "Temperatur"
 
-#: cpu/cpu.cpp:154
+#: cpu/cpu.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "GPU %1 Temperature"
@@ -232,7 +232,7 @@ msgctxt "@title"
 msgid "Average CPU Temperature"
 msgstr "GPU %1 Temperaturu"
 
-#: cpu/cpu.cpp:155
+#: cpu/cpu.cpp:156
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Current Temperature"
@@ -240,40 +240,70 @@ msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "Cari Temperatur"
 
-#: cpu/cpu.cpp:171
+#: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
 msgstr "CPU-ların nömrəsi"
 
-#: cpu/cpu.cpp:172
+#: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
 msgstr "CPU-lar"
 
-#: cpu/cpu.cpp:173
+#: cpu/cpu.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
 msgstr "Sistemə quraşdırılmış CPU-ların nömrəsi"
 
-#: cpu/cpu.cpp:175
-#, kde-format
-msgctxt "@title"
-msgid "Number of Cores"
-msgstr "Nüvələrin nömrəsi"
-
 #: cpu/cpu.cpp:176
-#, kde-format
-msgctxt "@title, Short fort 'Number of Cores'"
-msgid "Cores"
-msgstr "Nüvələr"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Logical Cores"
+msgstr "Nüvələrin nömrəsi"
 
 #: cpu/cpu.cpp:177
 #, kde-format
+msgctxt "@title, Short for 'Number of Logical Cores'"
+msgid "Logical Cores"
+msgstr ""
+
+#: cpu/cpu.cpp:178
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
 msgctxt "@info"
-msgid "Number of CPU cores across all physical CPUS"
+msgid ""
+"Number of logical CPU cores across all physical CPUs, counting each hardware "
+"thread"
+msgstr "Bütün fiziki CPU-lardakı CPU nüvələrinin sayı"
+
+#: cpu/cpu.cpp:180
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Physical Cores"
+msgstr "Nüvələrin nömrəsi"
+
+#: cpu/cpu.cpp:181
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Physical Memory"
+msgctxt "@title, Short for 'Number of Physical Cores'"
+msgid "Physical Cores"
+msgstr "Fiziki Yaddaş"
+
+#: cpu/cpu.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
+msgctxt "@info"
+msgid "Number of physical CPU cores across all physical CPUs"
 msgstr "Bütün fiziki CPU-lardakı CPU nüvələrinin sayı"
 
 #: cpu/cpuplugin.cpp:19
@@ -1459,6 +1489,10 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr ""
+
+#~ msgctxt "@title, Short fort 'Number of Cores'"
+#~ msgid "Cores"
+#~ msgstr "Nüvələr"
 
 #~ msgctxt "@title %1 is GPU number"
 #~ msgid "GPU %1"

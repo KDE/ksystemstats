@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"POT-Creation-Date: 2026-11-07 14:19+0000\n"
 "PO-Revision-Date: 2026-06-01 12:40+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -115,130 +115,160 @@ msgctxt "@title"
 msgid "All"
 msgstr "Allt"
 
-#: cpu/cpu.cpp:119
+#: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "Hámarkshitastig örgjörva"
 
-#: cpu/cpu.cpp:120
+#: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "Hám. tíðni"
 
-#: cpu/cpu.cpp:121
+#: cpu/cpu.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "Núverandi hámarkstíðni á milli allra örgjörva"
 
-#: cpu/cpu.cpp:126
+#: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "Lágmarkstíðni örgjörva"
 
-#: cpu/cpu.cpp:127
+#: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "Lágm. tíðni"
 
-#: cpu/cpu.cpp:128
+#: cpu/cpu.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "Núverandi lágmarkstíðni á milli allra örgjörva"
 
-#: cpu/cpu.cpp:133
+#: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "Meðaltíðni örgjörva"
 
-#: cpu/cpu.cpp:134
+#: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "Meðaltíðni"
 
-#: cpu/cpu.cpp:135
+#: cpu/cpu.cpp:136
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "Núverandi meðaltíðni á milli allra örgjörva"
 
-#: cpu/cpu.cpp:140
+#: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "Hámarks hitastig örgjörva"
 
-#: cpu/cpu.cpp:141
+#: cpu/cpu.cpp:142
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
 msgstr "Hám. hitastig"
 
-#: cpu/cpu.cpp:147
+#: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "Lágmarkshitastig örgjörva"
 
-#: cpu/cpu.cpp:148
+#: cpu/cpu.cpp:149
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
 msgstr "Lágm. hitastig"
 
-#: cpu/cpu.cpp:154
+#: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
 msgstr "Meðaltals hitastig örgjörva"
 
-#: cpu/cpu.cpp:155
+#: cpu/cpu.cpp:156
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "Meðaltals hitastig"
 
-#: cpu/cpu.cpp:171
+#: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
 msgstr "Fjöldi örgjörva"
 
-#: cpu/cpu.cpp:172
+#: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
 msgstr "Örgjörvar"
 
-#: cpu/cpu.cpp:173
+#: cpu/cpu.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
 msgstr "Fjöldi örgjörva sem eru í tölvunni"
 
-#: cpu/cpu.cpp:175
-#, kde-format
-msgctxt "@title"
-msgid "Number of Cores"
-msgstr "Fjöldi kjarna"
-
 #: cpu/cpu.cpp:176
-#, kde-format
-msgctxt "@title, Short fort 'Number of Cores'"
-msgid "Cores"
-msgstr "Kjarnar"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Logical Cores"
+msgstr "Fjöldi kjarna"
 
 #: cpu/cpu.cpp:177
 #, kde-format
+msgctxt "@title, Short for 'Number of Logical Cores'"
+msgid "Logical Cores"
+msgstr ""
+
+#: cpu/cpu.cpp:178
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
 msgctxt "@info"
-msgid "Number of CPU cores across all physical CPUS"
+msgid ""
+"Number of logical CPU cores across all physical CPUs, counting each hardware "
+"thread"
+msgstr "Fjöldi örgjörvakjarna í öllum örgjörvum"
+
+#: cpu/cpu.cpp:180
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Physical Cores"
+msgstr "Fjöldi kjarna"
+
+#: cpu/cpu.cpp:181
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Physical Memory"
+msgctxt "@title, Short for 'Number of Physical Cores'"
+msgid "Physical Cores"
+msgstr "Vinnsluminni"
+
+#: cpu/cpu.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
+msgctxt "@info"
+msgid "Number of physical CPU cores across all physical CPUs"
 msgstr "Fjöldi örgjörvakjarna í öllum örgjörvum"
 
 #: cpu/cpuplugin.cpp:19
@@ -1458,6 +1488,10 @@ msgid ""
 msgstr ""
 "Heildartími sem öll verk eru í bið eftir tiltækum IO-tilföngum, mælt í "
 "míkrósekúndum"
+
+#~ msgctxt "@title, Short fort 'Number of Cores'"
+#~ msgid "Cores"
+#~ msgstr "Kjarnar"
 
 #~ msgctxt "@title %1 is GPU number"
 #~ msgid "GPU %1"

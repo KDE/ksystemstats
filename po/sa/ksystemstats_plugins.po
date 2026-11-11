@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:46+0000\n"
+"POT-Creation-Date: 2026-11-07 14:19+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -116,130 +116,160 @@ msgctxt "@title"
 msgid "All"
 msgstr "सर्वे"
 
-#: cpu/cpu.cpp:119
+#: cpu/cpu.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Frequency"
 msgstr "अधिकतम CPU आवृत्ति"
 
-#: cpu/cpu.cpp:120
+#: cpu/cpu.cpp:121
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Frequency'"
 msgid "Max Frequency"
 msgstr "अधिकतम आवृत्ति"
 
-#: cpu/cpu.cpp:121
+#: cpu/cpu.cpp:122
 #, kde-format
 msgctxt "@info"
 msgid "Current maximum frequency between all CPUs"
 msgstr "सर्वेषां CPU मध्ये वर्तमान अधिकतम आवृत्तिः"
 
-#: cpu/cpu.cpp:126
+#: cpu/cpu.cpp:127
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Frequency"
 msgstr "न्यूनतम CPU आवृत्ति"
 
-#: cpu/cpu.cpp:127
+#: cpu/cpu.cpp:128
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Frequency'"
 msgid "Min Frequency"
 msgstr "न्यूनतम आवृत्ति"
 
-#: cpu/cpu.cpp:128
+#: cpu/cpu.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Current minimum frequency between all CPUs"
 msgstr "सर्वेषां CPU मध्ये वर्तमानं न्यूनतमा आवृत्तिः"
 
-#: cpu/cpu.cpp:133
+#: cpu/cpu.cpp:134
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Frequency"
 msgstr "औसत CPU आवृत्ति"
 
-#: cpu/cpu.cpp:134
+#: cpu/cpu.cpp:135
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Frequency'"
 msgid "Average Frequency"
 msgstr "औसत आवृत्ति"
 
-#: cpu/cpu.cpp:135
+#: cpu/cpu.cpp:136
 #, kde-format
 msgctxt "@info"
 msgid "Current average frequency between all CPUs"
 msgstr "सर्वेषां CPU मध्ये वर्तमान औसत आवृत्तिः"
 
-#: cpu/cpu.cpp:140
+#: cpu/cpu.cpp:141
 #, kde-format
 msgctxt "@title"
 msgid "Maximum CPU Temperature"
 msgstr "अधिकतम CPU तापमान"
 
-#: cpu/cpu.cpp:141
+#: cpu/cpu.cpp:142
 #, kde-format
 msgctxt "@title, Short for 'Maximum CPU Temperature'"
 msgid "Max Temperature"
 msgstr "अधिकतम तापमान"
 
-#: cpu/cpu.cpp:147
+#: cpu/cpu.cpp:148
 #, kde-format
 msgctxt "@title"
 msgid "Minimum CPU Temperature"
 msgstr "न्यूनतम CPU तापमान"
 
-#: cpu/cpu.cpp:148
+#: cpu/cpu.cpp:149
 #, kde-format
 msgctxt "@title, Short for 'Minimum CPU Temperature'"
 msgid "Min Temperature"
 msgstr "न्यूनतम तापमान"
 
-#: cpu/cpu.cpp:154
+#: cpu/cpu.cpp:155
 #, kde-format
 msgctxt "@title"
 msgid "Average CPU Temperature"
 msgstr "औसत CPU तापमान"
 
-#: cpu/cpu.cpp:155
+#: cpu/cpu.cpp:156
 #, kde-format
 msgctxt "@title, Short for 'Average CPU Temperature'"
 msgid "Average Temperature"
 msgstr "औसत तापमान"
 
-#: cpu/cpu.cpp:171
+#: cpu/cpu.cpp:172
 #, kde-format
 msgctxt "@title"
 msgid "Number of CPUs"
 msgstr "CPUs इत्यस्य संख्या"
 
-#: cpu/cpu.cpp:172
+#: cpu/cpu.cpp:173
 #, kde-format
 msgctxt "@title, Short fort 'Number of CPUs'"
 msgid "CPUs"
 msgstr "CPUs इति"
 
-#: cpu/cpu.cpp:173
+#: cpu/cpu.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "Number of physical CPUs installed in the system"
 msgstr "प्रणाल्यां संस्थापितानां भौतिक-सीपीयू-सङ्ख्या"
 
-#: cpu/cpu.cpp:175
-#, kde-format
-msgctxt "@title"
-msgid "Number of Cores"
-msgstr "कोरस्य संख्या"
-
 #: cpu/cpu.cpp:176
-#, kde-format
-msgctxt "@title, Short fort 'Number of Cores'"
-msgid "Cores"
-msgstr "कोर"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Logical Cores"
+msgstr "कोरस्य संख्या"
 
 #: cpu/cpu.cpp:177
 #, kde-format
+msgctxt "@title, Short for 'Number of Logical Cores'"
+msgid "Logical Cores"
+msgstr ""
+
+#: cpu/cpu.cpp:178
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
 msgctxt "@info"
-msgid "Number of CPU cores across all physical CPUS"
+msgid ""
+"Number of logical CPU cores across all physical CPUs, counting each hardware "
+"thread"
+msgstr "सर्वेषु भौतिक-CPUS मध्ये CPU कोरस्य संख्या"
+
+#: cpu/cpu.cpp:180
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Number of Cores"
+msgctxt "@title"
+msgid "Number of Physical Cores"
+msgstr "कोरस्य संख्या"
+
+#: cpu/cpu.cpp:181
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Physical Memory"
+msgctxt "@title, Short for 'Number of Physical Cores'"
+msgid "Physical Cores"
+msgstr "भौतिक स्मृति"
+
+#: cpu/cpu.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Number of CPU cores across all physical CPUS"
+msgctxt "@info"
+msgid "Number of physical CPU cores across all physical CPUs"
 msgstr "सर्वेषु भौतिक-CPUS मध्ये CPU कोरस्य संख्या"
 
 #: cpu/cpuplugin.cpp:19
@@ -1466,6 +1496,10 @@ msgid ""
 msgstr ""
 "उपलब्धानां IO संसाधनानाम् प्रतीक्षया सर्वाणि कार्याणि स्थगितानि भवन्ति इति समयः, "
 "माइक्रोसेकेण्ड् मध्ये मापितः"
+
+#~ msgctxt "@title, Short fort 'Number of Cores'"
+#~ msgid "Cores"
+#~ msgstr "कोर"
 
 #~ msgctxt "@title %1 is GPU number"
 #~ msgid "GPU %1"
