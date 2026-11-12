@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-07-08 19:40+0300\n"
+"PO-Revision-Date: 2026-11-11 20:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
@@ -223,52 +223,44 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "Sistemde takılı fiziksel CPU sayısı"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "Çekirdek Sayısı"
+msgstr "Mantıksal Çekirdeklerin Sayısı"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "Mantıksal Çekirdekler"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Fiziksel CPU’lardaki toplam çekirdek sayısı"
+msgstr ""
+"Her bir donanım iş parçacığını sayarak, tüm fiziksel CPU’lardaki toplam "
+"mantıksal çekirdeklerin sayısı"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "Çekirdek Sayısı"
+msgstr "Fiziksel Çekirdeklerin Sayısı"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "Fiziksel Bellek"
+msgstr "Fiziksel Çekirdekler"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Fiziksel CPU’lardaki toplam çekirdek sayısı"
+msgstr "Tüm fiziksel CPU’lardaki toplam fiziksel çekirdeklerin sayısı"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format

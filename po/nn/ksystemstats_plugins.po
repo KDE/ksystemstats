@@ -1491,7 +1491,3 @@ msgid ""
 msgstr ""
 "Kor lenge alle oppgåvene er stagga fordi dei ventar på inn/ut-ressursar, "
 "målt i millisekund"
-
-#~ msgctxt "@title, Short fort 'Number of Cores'"
-#~ msgid "Cores"
-#~ msgstr "Kjernar"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-08-05 21:47+0200\n"
+"PO-Revision-Date: 2026-11-11 12:25+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 # Tohle vypadá na název vlastnosti. Jméno bycvh nechal pro lidi a zvířata.
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
@@ -225,52 +225,44 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "Počet fyzických CPU nainstalovaných v systému"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "Počet jader"
+msgstr "Počet logických jader"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "Logická jádra"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Počet jader CPU napříč všemi fyzickými CPU"
+msgstr ""
+"Počet logických jader CPU napříč všemi fyzickými CPU, přičemž se počítá "
+"každé hardwarové vlákno"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "Počet jader"
+msgstr "Počet fyzických jader"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "Fyzická paměť"
+msgstr "Fyzická jádra"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Počet jader CPU napříč všemi fyzickými CPU"
+msgstr "Počet fyzických jader CPU ve všech fyzických CPU"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format

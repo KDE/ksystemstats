@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-07-22 15:26+0200\n"
+"PO-Revision-Date: 2026-11-11 18:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
@@ -223,52 +223,44 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "Брой на инсталираните физически процесори"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "Брой ядра"
+msgstr "Брой логически ядра"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "Логически ядра"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Брой на ядрата във всички физични процесори"
+msgstr ""
+"Брой логически процесорни ядра във всички физически процесори, като се брои "
+"всяка хардуерна нишка"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "Брой ядра"
+msgstr "Брой физични ядра"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "Физическа памет"
+msgstr "Физични ядра"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Брой на ядрата във всички физични процесори"
+msgstr "Брой на физичните ядра във всички физични процесори"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
@@ -1488,7 +1480,3 @@ msgid ""
 msgstr ""
 "Време, през което всички задачи са спрени в очакване на налични IO ресурси, "
 "измерено в микросекунди"
-
-#~ msgctxt "@title, Short fort 'Number of Cores'"
-#~ msgid "Cores"
-#~ msgstr "Ядра"
