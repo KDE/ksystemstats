@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1087,8 +1087,7 @@ msgstr "Ladingsprosent"
 
 #: power/power.cpp:83
 #, kde-format
-msgid ""
-"Percentage of the current capacity that the battery is currently holding"
+msgid "Percentage of the current capacity that the battery is currently holding"
 msgstr "Prosentdel av gjeldande kapasitet som batteriet faktisk har"
 
 #: power/power.cpp:90
@@ -1105,9 +1104,5 @@ msgstr "Laderate"
 
 #: power/power.cpp:93
 #, kde-format
-msgid ""
-"Power that the battery is being charged with (positive) or discharged "
-"(negative)"
-msgstr ""
-"Straumstyrken som batteriet vert lada (positivt tal) eller utlada (negativt "
-"tal) med"
+msgid "Power that the battery is being charged with (positive) or discharged (negative)"
+msgstr "Straumstyrken som batteriet vert lada (positivt tal) eller utlada (negativt tal) med"
