@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-07-10 10:26+0300\n"
+"PO-Revision-Date: 2026-11-13 13:25+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: cpu/cpu.cpp:28 disks/disks.cpp:77 disks/disks.cpp:78 gpu/GpuDevice.cpp:22
 #: power/power.cpp:39
@@ -224,52 +224,44 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "מספר המעבדים הפיזיים המותקנים במערכת"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "מספר הלבבות"
+msgstr "מספר הלבבות הלוגיים"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "לבבות הלוגיים"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "מספר לבבות המעבדים על פני כל המעבדים הפיזיים"
+msgstr ""
+"מספר לבבות המעבדים הלוגיים על פני כל המעבדים הפיזיים, תוך ספירת כל תהליך "
+"חומרה"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "מספר הלבבות"
+msgstr "מספר הלבבות הפיזיים"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "זיכרון פיזי"
+msgstr "לבבות הפיזיים"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "מספר לבבות המעבדים על פני כל המעבדים הפיזיים"
+msgstr "מספר לבבות המעבדים הפיזיים על פני כל המעבדים הפיזיים"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
