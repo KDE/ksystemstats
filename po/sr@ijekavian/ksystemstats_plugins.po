@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-10-04 19:09+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -223,52 +223,43 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "Број физичких ЦПУ‑ова уграђених у систем"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "Број језгара"
+msgstr "Број логичких језгара"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "Логичка језгра"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Број језгара свих физичких ЦПУ‑ова"
+msgstr ""
+"Број логичких језгара свих физичких ЦПУ‑ова, рачунајући сваку хардверску нит"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "Број језгара"
+msgstr "Број физичких језгара"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "Физичка меморија"
+msgstr "Физичка језгра"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Број језгара свих физичких ЦПУ‑ова"
+msgstr "Број физичких језгара свих физичких ЦПУ‑ова"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
@@ -1486,7 +1477,3 @@ msgid ""
 msgstr ""
 "Вријеме у којем су сви задаци у застоју чекајући слободне У/И ресурсе, у "
 "микросекундама"
-
-#~ msgctxt "@title, Short fort 'Number of Cores'"
-#~ msgid "Cores"
-#~ msgstr "Језгра"
