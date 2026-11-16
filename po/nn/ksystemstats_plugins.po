@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-11-12 21:48+0100\n"
+"PO-Revision-Date: 2026-11-15 09:29+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.3\n"
+"X-Generator: Lokalize 27.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -238,14 +238,14 @@ msgid "Logical Cores"
 msgstr "Logiske kjernar"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Talet på prosessor­kjerner på tvers av fysiske prosessorar"
+msgstr ""
+"Talet på logiske prosessor­kjerner på tvers av fysiske prosessorar, der ein "
+"tel kvar maskinvaretråd"
 
 #: cpu/cpu.cpp:180
 #, kde-format
@@ -260,12 +260,10 @@ msgid "Physical Cores"
 msgstr "Fysiske kjernar"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Talet på prosessor­kjerner på tvers av fysiske prosessorar"
+msgstr "Talet på fysiske prosessor­kjerner på tvers av fysiske prosessorar"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
