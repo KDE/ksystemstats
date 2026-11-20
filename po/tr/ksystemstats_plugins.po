@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksystemstats\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 14:19+0000\n"
-"PO-Revision-Date: 2026-11-11 20:40+0300\n"
+"PO-Revision-Date: 2026-11-19 19:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -659,19 +659,19 @@ msgstr "Uygulama Belleği Yüzdesi"
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory"
-msgstr "Önbellek Belleği"
+msgstr "Ön Bellek"
 
 #: memory/backend.cpp:72
 #, kde-format
 msgctxt "@title, Short for 'Cache Memory'"
 msgid "Cache"
-msgstr "Önbellek"
+msgstr "Ön Bellek"
 
 #: memory/backend.cpp:76
 #, kde-format
 msgctxt "@title"
 msgid "Cache Memory Percentage"
-msgstr "Önbellek Belleği Yüzdesi"
+msgstr "Ön Belleği Yüzdesi"
 
 #: memory/backend.cpp:80
 #, kde-format
@@ -688,7 +688,7 @@ msgstr "Arabellek"
 #: memory/backend.cpp:82
 #, kde-format
 msgid "Amount of memory used for caching disk blocks"
-msgstr "Disk bloklarını önbelleklemek için kullanılan bellek miktarı"
+msgstr "Disk bloklarını ön belleğe almak için kullanılan bellek miktarı"
 
 #: memory/backend.cpp:86
 #, kde-format

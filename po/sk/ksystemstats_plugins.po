@@ -222,52 +222,44 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "Počet fyzických procesorov nainštalovaných v systéme"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "Počet jadier"
+msgstr "Počet logických jadier"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "Logické jadrá"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "Počet jadier procesorov vo všetkých fyzických procesoroch"
+msgstr ""
+"Počet logických jadier procesora vo všetkých fyzických procesoroch, pričom "
+"sa počíta každé hardvérové vlákno"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "Počet jadier"
+msgstr "Počet fyzických jadier"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "Fyzická pamäť"
+msgstr "Fyzické jadrá"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "Počet jadier procesorov vo všetkých fyzických procesoroch"
+msgstr "Počet fyzických jadier procesora vo všetkých fyzických procesoroch"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
