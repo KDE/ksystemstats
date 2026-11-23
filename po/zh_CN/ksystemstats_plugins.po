@@ -223,52 +223,42 @@ msgid "Number of physical CPUs installed in the system"
 msgstr "系统中安装的物理 CPU 数量"
 
 #: cpu/cpu.cpp:176
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Logical Cores"
-msgstr "核心数量"
+msgstr "逻辑核心数量"
 
 #: cpu/cpu.cpp:177
 #, kde-format
 msgctxt "@title, Short for 'Number of Logical Cores'"
 msgid "Logical Cores"
-msgstr ""
+msgstr "逻辑核心"
 
 #: cpu/cpu.cpp:178
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Number of logical CPU cores across all physical CPUs, counting each hardware "
 "thread"
-msgstr "所有物理 CPU 的核心数量总和"
+msgstr "所有物理 CPU 的逻辑 CPU 核心数量，每个硬件线程均计算在内"
 
 #: cpu/cpu.cpp:180
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Number of Cores"
+#, kde-format
 msgctxt "@title"
 msgid "Number of Physical Cores"
-msgstr "核心数量"
+msgstr "物理核心数量"
 
 #: cpu/cpu.cpp:181
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Physical Memory"
+#, kde-format
 msgctxt "@title, Short for 'Number of Physical Cores'"
 msgid "Physical Cores"
-msgstr "物理内存"
+msgstr "物理核心"
 
 #: cpu/cpu.cpp:182
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Number of CPU cores across all physical CPUS"
+#, kde-format
 msgctxt "@info"
 msgid "Number of physical CPU cores across all physical CPUs"
-msgstr "所有物理 CPU 的核心数量总和"
+msgstr "所有物理 CPU 的物理 CPU 核心数量总和"
 
 #: cpu/cpuplugin.cpp:19
 #, kde-format
@@ -1447,7 +1437,3 @@ msgid ""
 "Amount of time that all tasks are stalled waiting for available IO "
 "resources, measured in microseconds"
 msgstr "全部任务为了等待可用的 IO 资源而停滞的合计时间长度，单位为毫秒"
-
-#~ msgctxt "@title, Short fort 'Number of Cores'"
-#~ msgid "Cores"
-#~ msgstr "核心"
